@@ -23,15 +23,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-mirai-darker/90 backdrop-blur-md py-4 shadow-lg shadow-black/50' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md py-4 border-b border-slate-200/60 shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0 cursor-pointer">
-            <div className="bg-mirai-cyan/20 p-2 rounded-lg mr-3">
-              <Zap className="h-6 w-6 text-mirai-cyan" fill="currentColor" />
+            <div className="bg-mirai-primary/20 p-2 rounded-lg mr-3">
+              <Zap className="h-6 w-6 text-mirai-primary" fill="currentColor" />
             </div>
-            <span className="font-heading font-bold text-2xl tracking-wide text-mirai-cyan">
+            <span className="font-heading font-bold text-2xl tracking-wide text-mirai-primary">
               Mirai Tech
             </span>
           </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-mirai-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-slate-600 hover:text-mirai-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
                 >
                   {link.name}
                 </a>
@@ -56,7 +56,7 @@ const Navbar = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-mirai-cyan text-mirai-darker font-semibold px-6 py-2 rounded-md flex items-center shadow-[0_0_15px_rgba(0,212,255,0.4)] hover:shadow-[0_0_25px_rgba(0,212,255,0.6)] transition-shadow"
+              className="bg-mirai-primary text-white font-semibold px-6 py-2 rounded-md flex items-center shadow-md shadow-blue-500/30 hover:shadow-md shadow-blue-500/30 transition-shadow"
             >
               Get RFQ &rarr;
             </motion.button>
@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-slate-600 hover:text-slate-900 focus:outline-none"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -79,20 +79,20 @@ const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-mirai-card absolute top-full left-0 w-full border-t border-white/10"
+          className="md:hidden bg-white shadow-sm absolute top-full left-0 w-full border-t border-slate-300"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-mirai-cyan block px-3 py-2 rounded-md text-base font-medium"
+                className="text-slate-600 hover:text-mirai-primary block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-            <button className="w-full text-left bg-mirai-cyan text-mirai-darker font-semibold px-3 py-2 rounded-md mt-4">
+            <button className="w-full text-left bg-mirai-primary text-white font-semibold px-3 py-2 rounded-md mt-4">
               Get RFQ &rarr;
             </button>
           </div>

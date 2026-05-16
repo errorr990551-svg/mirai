@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-mirai-dark text-white font-sans antialiased;
+    @apply bg-[#f5f3ff] text-slate-900 font-sans antialiased;
   }
 
   h1,
@@ -21,11 +21,11 @@
 
 @layer components {
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-mirai-cyan/10 border border-white/5 hover:border-mirai-cyan/30;
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-mirai-primary/10 border border-slate-200 hover:border-mirai-primary/30;
   }
 
   .glass-panel {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply bg-slate-50 backdrop-blur-md border border-slate-300;
   }
 }
 
@@ -35,14 +35,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #020813;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00d4ff;
+  background: #0ea5e9;
 }

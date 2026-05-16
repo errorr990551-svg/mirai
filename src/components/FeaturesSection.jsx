@@ -25,7 +25,7 @@ const FeaturesSection = () => {
       desc: "Send your BOM or part list and receive a competitive quote with full pricing, availability, and lead time within 24 hours — guaranteed."
     },
     {
-      icon: <Wrench className="w-8 h-8 text-gray-400" />,
+      icon: <Wrench className="w-8 h-8 text-slate-500" />,
       title: "Hard-to-Find & Obsolete Parts",
       desc: "Specialty sourcing for discontinued, end-of-life, and obsolete components that standard distributors cannot supply. We find what others can't."
     },
@@ -37,17 +37,17 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-mirai-dark relative border-t border-white/5">
+    <section className="py-24 bg-slate-50 relative border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <p className="text-mirai-cyan font-semibold text-sm tracking-widest uppercase mb-4">Why Mirai Technologies</p>
+          <p className="text-mirai-primary font-semibold text-sm tracking-widest uppercase mb-4">Why Mirai Technologies</p>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
             Your Single-Source Partner <br />
-            for <span className="text-mirai-cyan">Any Electronic Component</span>
+            for <span className="text-mirai-primary">Any Electronic Component</span>
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-slate-500 text-lg">
             From standard parts to hard-to-find and obsolete components &mdash; we source them all with full documentation, competitive pricing, and on-time delivery.
           </p>
         </div>
@@ -61,14 +61,30 @@ const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-mirai-card rounded-2xl p-8 border border-white/5 card-hover relative overflow-hidden group"
+              className="bg-white shadow-sm rounded-2xl p-8 border border-slate-200 border-t-4 border-t-mirai-primary relative overflow-hidden group cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-indigo-50"
             >
-              {/* Highlight bar on top */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mirai-cyan/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              <div className="mb-6">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
+              <motion.div
+                animate={{ y: [0, idx % 2 === 0 ? -5 : 5, 0] }}
+                transition={{ 
+                  duration: 5 + idx, 
+                  repeat: Infinity, 
+                  repeatType: "reverse",
+                  ease: "easeInOut" 
+                }}
+                className="h-full relative z-10"
+              >
+                {/* Huge background icon for depth */}
+                <div className="absolute -bottom-10 -right-10 text-slate-100/50 group-hover:text-indigo-100/50 group-hover:scale-125 transition-all duration-500 select-none pointer-events-none -z-10">
+                  {React.cloneElement(feature.icon, { size: 120, strokeWidth: 1 })}
+                </div>
+
+                {/* Highlight bar on top */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mirai-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 inline-block">{feature.icon}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-mirai-primary transition-colors">{feature.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{feature.desc}</p>
+              </motion.div>
             </motion.div>
           ))}
         </div>
