@@ -8,11 +8,12 @@ export default {
     extend: {
       colors: {
         mirai: {
-          dark: '#020813', // Deep navy background
-          darker: '#010409', // Darker sections
-          card: '#0B162C', // Deep blue cards
-          cyan: '#00d4ff', // Accent color
-          gray: '#9ca3af', // Subtext
+          light: '#f8fafc', // Premium off-white/slate-50
+          lighter: '#ffffff', // Pure white for cards
+          card: '#ffffff', 
+          primary: '#4f46e5', // Vibrant Indigo 600
+          accent: '#7c3aed', // Violet 600 for gradients
+          gray: '#64748b', 
         }
       },
       fontFamily: {

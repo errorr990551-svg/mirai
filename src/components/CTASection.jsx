@@ -24,7 +24,7 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-md shadow-blue-500/30 hover:shadow-md shadow-blue-500/30 transition-all hover:-translate-y-1">
+            <button className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-md shadow-blue-500/30 hover:shadow-lg transition-all hover:-translate-y-1">
               Submit RFQ Now
             </button>
             <button className="bg-transparent border border-slate-300 text-slate-900 font-semibold px-8 py-4 rounded-lg hover:bg-slate-50 transition-all hover:border-slate-400">
