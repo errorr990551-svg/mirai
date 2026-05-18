@@ -69,7 +69,7 @@ const PopupForm = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
-            className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl z-10 my-8"
+            className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl z-10 my-4"
           >
             {/* Close Button */}
             <button 
@@ -79,56 +79,56 @@ const PopupForm = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="p-8 sm:p-10 max-h-[85vh] overflow-y-auto custom-scrollbar rounded-3xl">
-              <div className="mb-8 text-center">
-                <h2 className="text-3xl font-black text-slate-900 mb-2">
+            <div className="p-5 sm:p-6 max-h-[90vh] overflow-y-auto custom-scrollbar rounded-3xl">
+              <div className="mb-4 text-center">
+                <h2 className="text-2xl font-black text-slate-900 mb-1">
                   Submit Your RFQ
                 </h2>
-                <p className="text-slate-600">
+                <p className="text-sm text-slate-600">
                   Fill in your requirements and our team will respond within 24 hours.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">First Name *</label>
-                    <input type="text" placeholder="Your first name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700 block">First Name *</label>
+                    <input type="text" placeholder="Your first name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
                   </div>
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">Last Name *</label>
-                    <input type="text" placeholder="Your last name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
-                  </div>
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-sm font-bold text-slate-700 block">Company Name *</label>
-                  <input type="text" placeholder="Your company name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">Business Email *</label>
-                    <input type="email" placeholder="your@company.com" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">Phone / WhatsApp *</label>
-                    <input type="tel" placeholder="+91 XXXXX XXXXX" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700 block">Last Name *</label>
+                    <input type="text" placeholder="Your last name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-sm font-bold text-slate-700 block">Inquiry Type *</label>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-700 block">Company Name *</label>
+                  <input type="text" placeholder="Your company name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700 block">Business Email *</label>
+                    <input type="email" placeholder="your@company.com" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700 block">Phone / WhatsApp *</label>
+                    <input type="tel" placeholder="+91 XXXXX XXXXX" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-700 block">Inquiry Type *</label>
                   <div className="relative" ref={dropdownRef}>
                     <button
                       type="button"
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className={`w-full bg-slate-50 border ${isDropdownOpen ? 'border-mirai-primary ring-2 ring-mirai-primary/50' : 'border-slate-200'} text-left rounded-xl px-4 py-3 focus:outline-none transition-all flex items-center justify-between`}
+                      className={`w-full bg-slate-50 border ${isDropdownOpen ? 'border-mirai-primary ring-2 ring-mirai-primary/50' : 'border-slate-200'} text-left rounded-xl px-4 py-2 focus:outline-none transition-all flex items-center justify-between text-sm`}
                     >
                       <span className={inquiryType ? 'text-slate-900' : 'text-slate-400'}>
                         {inquiryType ? inquiryOptions.find(opt => opt.value === inquiryType)?.label : "Select inquiry type"}
                       </span>
-                      <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
                     
                     <AnimatePresence>
@@ -138,7 +138,7 @@ const PopupForm = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute z-50 w-full mt-2 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden"
+                          className="absolute z-50 w-full mt-1 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden"
                         >
                           {inquiryOptions.map((option) => (
                             <button
@@ -148,7 +148,7 @@ const PopupForm = () => {
                                 setInquiryType(option.value);
                                 setIsDropdownOpen(false);
                               }}
-                              className={`w-full text-left px-4 py-3 hover:bg-slate-50 transition-colors ${inquiryType === option.value ? 'bg-mirai-primary/5 text-mirai-primary font-semibold' : 'text-slate-700'}`}
+                              className={`w-full text-left px-4 py-2 hover:bg-slate-50 transition-colors text-sm ${inquiryType === option.value ? 'bg-mirai-primary/5 text-mirai-primary font-semibold' : 'text-slate-700'}`}
                             >
                               {option.label}
                             </button>
@@ -159,18 +159,18 @@ const PopupForm = () => {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-sm font-bold text-slate-700 block">Message</label>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-700 block">Message</label>
                   <textarea 
                     placeholder="Any additional specifications, quality requirements, or questions..." 
-                    rows="3"
-                    className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none" 
+                    rows="2"
+                    className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none text-sm" 
                   ></textarea>
                 </div>
 
                 <button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-mirai-primary to-mirai-accent text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 mt-4"
+                  className="w-full bg-gradient-to-r from-mirai-primary to-mirai-accent text-white font-bold text-base px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-2"
                 >
                   Submit RFQ – Get Quote in 24 Hours <span className="text-yellow-300">✦</span>
                 </button>
