@@ -1,26 +1,39 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const PopupForm = () => {
+  const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [inquiryType, setInquiryType] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
+    console.log("PopupForm path check:", pathname);
+    // If the user is on the contact page, don't show the popup
+    if (pathname === '/contact') {
+      console.log("PopupForm: Blocked (currently on /contact page)");
+      return;
+    }
+
     // Check if the user has already seen the popup
     const hasSeenPopup = localStorage.getItem('mirai_has_seen_popup');
+    console.log("PopupForm hasSeenPopup status:", hasSeenPopup);
     
     if (!hasSeenPopup) {
-      // Show popup after 3 seconds on first visit
+      console.log("PopupForm: Initializing 3-second timer...");
       const timer = setTimeout(() => {
+        console.log("PopupForm: Timer finished, showing popup.");
         setIsOpen(true);
       }, 3000);
       
       return () => clearTimeout(timer);
+    } else {
+      console.log("PopupForm: Blocked (user already dismissed or submitted the popup previously)");
     }
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -49,6 +62,10 @@ const PopupForm = () => {
     { value: "hard-to-find", label: "Hard to Find / Obsolete Parts" },
     { value: "other", label: "Other Inquiry" }
   ];
+
+  if (pathname === '/contact') {
+    return null;
+  }
 
   return (
     <AnimatePresence>

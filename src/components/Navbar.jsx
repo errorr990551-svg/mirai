@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Zap, Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,7 +19,14 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
+    { 
+      name: 'About Us', 
+      path: '/about',
+      submenu: [
+        { name: 'About Us', path: '/about' },
+        { name: 'Certificate', path: '/certificate' }
+      ]
+    },
     { name: 'Products', path: '/products' },
     { name: 'Services', path: '/services' },
     { name: 'Contact', path: '/contact' },
@@ -43,16 +51,82 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="flex items-baseline space-x-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`transition-colors px-3 py-2 rounded-md text-sm font-medium ${location.pathname === link.path ? 'text-mirai-primary font-bold' : 'text-slate-600 hover:text-mirai-primary'}`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <div className="flex items-center space-x-6">
+              {navLinks.map((link) => {
+                if (link.submenu) {
+                  return (
+                    <div 
+                      key={link.name}
+                      className="relative group py-2"
+                      onMouseEnter={() => setAboutDropdownOpen(true)}
+                      onMouseLeave={() => setAboutDropdownOpen(false)}
+                    >
+                      <button
+                        className={`transition-colors px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none ${
+                          location.pathname === '/about' || location.pathname === '/certificate'
+                            ? 'text-mirai-primary font-bold'
+                            : 'text-slate-600 hover:text-mirai-primary'
+                        }`}
+                      >
+                        {link.name}
+                        <svg 
+                          className={`w-4 h-4 transition-transform duration-200 ${aboutDropdownOpen ? 'rotate-180' : ''}`} 
+                          fill="none"
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+
+                      {/* Dropdown Menu */}
+                      <AnimatePresence>
+                        {aboutDropdownOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            transition={{ duration: 0.15 }}
+                            className="absolute left-0 mt-2 w-48 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden z-50 origin-top-left"
+                          >
+                            {/* Top Accent Highlight Bar (matching hint screenshot style) */}
+                            <div className="h-1 w-full bg-mirai-primary" />
+                            
+                            <div className="py-1">
+                              {link.submenu.map((sub) => (
+                                <Link
+                                  key={sub.name}
+                                  to={sub.path}
+                                  onClick={() => setAboutDropdownOpen(false)}
+                                  className={`block px-4 py-3 text-sm transition-colors ${
+                                    location.pathname === sub.path
+                                      ? 'text-mirai-primary bg-mirai-primary/5 font-semibold'
+                                      : 'text-slate-700 hover:bg-slate-50 hover:text-mirai-primary'
+                                  }`}
+                                >
+                                  {sub.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`transition-colors px-3 py-2 rounded-md text-sm font-medium ${
+                      location.pathname === link.path ? 'text-mirai-primary font-bold' : 'text-slate-600 hover:text-mirai-primary'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -87,16 +161,42 @@ const Navbar = () => {
           className="md:hidden bg-white shadow-sm absolute top-full left-0 w-full border-t border-slate-300"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`w-full text-left block px-3 py-2 rounded-md text-base font-medium ${location.pathname === link.path ? 'text-mirai-primary bg-mirai-primary/10' : 'text-slate-600 hover:text-mirai-primary hover:bg-slate-50'}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              if (link.submenu) {
+                return (
+                  <div key={link.name} className="space-y-1">
+                    <span className="block px-3 py-1 text-slate-400 uppercase tracking-wider text-[10px] font-bold">
+                      {link.name}
+                    </span>
+                    {link.submenu.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        to={sub.path}
+                        className={`w-full text-left block px-6 py-2 rounded-md text-base font-medium ${
+                          location.pathname === sub.path ? 'text-mirai-primary bg-mirai-primary/10' : 'text-slate-600 hover:text-mirai-primary hover:bg-slate-50'
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`w-full text-left block px-3 py-2 rounded-md text-base font-medium ${
+                    location.pathname === link.path ? 'text-mirai-primary bg-mirai-primary/10' : 'text-slate-600 hover:text-mirai-primary hover:bg-slate-50'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             <button className="w-full text-left bg-mirai-primary text-white font-semibold px-3 py-2 rounded-md mt-4">
               Get RFQ &rarr;
             </button>

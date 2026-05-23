@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Building2, CheckCircle2, ShieldCheck, FileCheck, Award, Users, 
-  Clock, Globe, MapPin, Zap
+  Clock, Globe, MapPin, Zap, ChevronLeft, ChevronRight
 } from 'lucide-react';
+import warehouseFacility from '../assets/warehouse_facility.png';
 
 const AboutUs = () => {
+  const scrollContainerRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 352; // Width of card (320px) + Gap (32px)
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -68,7 +81,7 @@ const AboutUs = () => {
               </motion.p>
             </motion.div>
             
-            {/* Right Hero Banner Visual (Adapted from Home) */}
+            {/* Right Hero Banner Visual (Warehouse Image) */}
             <motion.div 
               className="lg:col-span-5 relative h-[500px] hidden lg:flex items-center justify-center"
               variants={containerVariants}
@@ -80,37 +93,17 @@ const AboutUs = () => {
               <motion.div 
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-[85%] h-[85%] bg-white border border-slate-100 rounded-3xl shadow-2xl overflow-hidden p-8 flex flex-col justify-between hover:border-mirai-primary/30 transition-colors"
+                className="relative w-[85%] h-[85%] bg-white border border-slate-100 rounded-3xl shadow-2xl overflow-hidden group hover:border-mirai-primary/30 transition-colors"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-mirai-primary to-mirai-accent opacity-20 blur-2xl" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-pink-500 to-violet-500 opacity-20 blur-2xl" />
+                {/* Image displaying warehouse_facility.png */}
+                <img 
+                  src={warehouseFacility} 
+                  alt="Mirai Sourcing Warehouse Facility" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 
-                <div className="relative z-10">
-                  <div className="bg-mirai-primary/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                    <Building2 className="w-6 h-6 text-mirai-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mt-2">Our Legacy</h3>
-                  <p className="text-slate-500 text-sm mt-2 font-medium">Serving the industry since 1999</p>
-                </div>
-                
-                <div className="relative z-10 grid grid-cols-2 gap-4">
-                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
-                    <div className="text-3xl font-black text-mirai-primary">25+</div>
-                    <div className="text-xs text-slate-500 mt-1 font-semibold uppercase tracking-wider">Years Exp</div>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
-                    <div className="text-3xl font-black text-mirai-primary">900+</div>
-                    <div className="text-xs text-slate-500 mt-1 font-semibold uppercase tracking-wider">Clients</div>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
-                    <div className="text-3xl font-black text-mirai-primary">40+</div>
-                    <div className="text-xs text-slate-500 mt-1 font-semibold uppercase tracking-wider">Brands</div>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
-                    <div className="text-3xl font-black text-mirai-primary">100%</div>
-                    <div className="text-xs text-slate-500 mt-1 font-semibold uppercase tracking-wider">Verified</div>
-                  </div>
-                </div>
+                {/* Premium gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none" />
               </motion.div>
             </motion.div>
 
@@ -158,33 +151,61 @@ const AboutUs = () => {
       </section>
 
       {/* 3. OUR JOURNEY */}
-      <section className="py-20 lg:py-32 bg-white relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
-            className="text-center mb-20"
-          >
-            <motion.div variants={itemVariants} className="text-sm font-bold tracking-widest text-mirai-primary uppercase mb-4 inline-block bg-mirai-primary/10 px-4 py-1.5 rounded-full">Our Journey</motion.div>
-            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6">
-              25+ Years of <span className="text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent">Excellence</span>
-            </motion.h2>
-          </motion.div>
+      <section className="py-20 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="relative">
-            {/* Animated Vertical Line (Desktop center, Mobile left) */}
-            <motion.div 
-              className="absolute left-[27px] sm:left-1/2 top-4 bottom-4 w-1 sm:w-1.5 bg-slate-100 sm:-translate-x-1/2 origin-top rounded-full"
-            />
-            <motion.div 
-              className="absolute left-[27px] sm:left-1/2 top-4 bottom-4 w-1 sm:w-1.5 bg-gradient-to-b from-mirai-primary to-mirai-accent sm:-translate-x-1/2 origin-top rounded-full z-0"
-              initial={{ scaleY: 0 }}
-              whileInView={{ scaleY: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 2.5, ease: "easeInOut" }}
-            />
+          <div className="text-center mb-12">
+            <div className="text-sm font-bold tracking-widest text-mirai-primary uppercase mb-4 inline-block bg-mirai-primary/10 px-4 py-1.5 rounded-full">Our Journey</div>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+              25+ Years of <span className="text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent">Excellence</span>
+            </h2>
+          </div>
+          
+          {/* Horizontal Timeline Container */}
+          <div className="relative h-[380px] group">
+            {/* Left Scroll Button (Desktop) */}
+            <button 
+              onClick={() => scroll('left')}
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-30 bg-white text-slate-800 p-3 rounded-full shadow-lg border border-slate-100 hover:bg-slate-50 hover:text-mirai-primary hover:border-mirai-primary/20 transition-all focus:outline-none opacity-0 group-hover:opacity-100 duration-300 md:block hidden active:scale-95"
+              aria-label="Scroll Left"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
 
-            <div className="space-y-12 sm:space-y-24 relative z-10">
+            {/* Right Scroll Button (Desktop) */}
+            <button 
+              onClick={() => scroll('right')}
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-30 bg-white text-slate-800 p-3 rounded-full shadow-lg border border-slate-100 hover:bg-slate-50 hover:text-mirai-primary hover:border-mirai-primary/20 transition-all focus:outline-none opacity-0 group-hover:opacity-100 duration-300 md:block hidden active:scale-95"
+              aria-label="Scroll Right"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
+            {/* Mobile Scroll Buttons (Always visible on mobile) */}
+            <button 
+              onClick={() => scroll('left')}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-white/95 backdrop-blur-sm text-slate-800 p-2.5 rounded-full shadow-md border border-slate-150 active:scale-95 transition-all md:hidden block"
+              aria-label="Scroll Left"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+
+            <button 
+              onClick={() => scroll('right')}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-white/95 backdrop-blur-sm text-slate-800 p-2.5 rounded-full shadow-md border border-slate-150 active:scale-95 transition-all md:hidden block"
+              aria-label="Scroll Right"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+
+            {/* Horizontal Line background */}
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-mirai-primary/30 z-0 rounded-full -translate-y-1/2" />
+            
+            {/* Scrollable Row */}
+            <div 
+              ref={scrollContainerRef}
+              className="overflow-x-auto flex gap-8 pb-4 pt-4 px-4 scrollbar-none relative z-10 h-full scroll-smooth"
+            >
               {[
                 { year: "1999", desc: "Mirai Technologies founded in Mumbai. Began as a semiconductor component trader for local OEM clients." },
                 { year: "2005", desc: "Expanded product range to include passive components (resistors, capacitors, inductors). First partnerships with international brands." },
@@ -196,48 +217,37 @@ const AboutUs = () => {
               ].map((item, idx) => {
                 const isEven = idx % 2 === 0;
                 return (
-                  <motion.div 
+                  <div 
                     key={idx} 
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6, delay: idx * 0.2, ease: "easeOut" }}
-                    className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between group"
+                    className="min-w-[280px] sm:min-w-[320px] max-w-[320px] flex-shrink-0 h-full flex flex-col relative"
                   >
-                    {/* Content Left (Desktop) */}
-                    <div className={`hidden sm:block sm:w-[45%] ${isEven ? 'text-right pr-12' : 'opacity-0 pointer-events-none'}`}>
-                      {isEven && (
-                        <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 hover:border-mirai-primary/30 hover:shadow-xl transition-all duration-300">
-                          <h4 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent mb-3">{item.year}</h4>
-                          <p className="text-slate-600 leading-relaxed">{item.desc}</p>
-                        </div>
-                      )}
-                    </div>
+                    {/* Connecting vertical line to the timeline */}
+                    <div className={`absolute left-[33px] w-0.5 bg-mirai-primary/40 z-10 ${
+                      isEven ? 'top-1/2 h-[30px]' : 'bottom-1/2 h-[30px]'
+                    }`} />
 
-                    {/* Timeline Dot */}
-                    <div className="absolute left-[15px] sm:left-1/2 w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full sm:-translate-x-1/2 border-[4px] border-slate-100 shadow-md z-10 flex items-center justify-center top-6 sm:top-auto group-hover:border-mirai-primary/30 transition-colors duration-300">
-                      <motion.div 
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ delay: 0.5 + idx * 0.2, duration: 0.4, type: "spring" }}
-                        className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-mirai-primary rounded-full shadow-[0_0_10px_rgba(99,102,241,0.8)]"
-                      />
-                    </div>
-
-                    {/* Content Right (Desktop) & Mobile Content */}
-                    <div className={`pl-16 sm:pl-0 sm:w-[45%] ${!isEven ? 'sm:text-left sm:pl-12' : 'sm:opacity-0 sm:pointer-events-none'}`}>
-                      <div className={`bg-white p-6 rounded-2xl shadow-lg border border-slate-100 hover:border-mirai-primary/30 hover:shadow-xl transition-all duration-300 ${isEven ? 'sm:hidden' : ''}`}>
-                        <h4 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent mb-3">{item.year}</h4>
-                        <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                    {/* Timeline Dot on the line */}
+                    <div className="absolute top-1/2 left-6 w-5 h-5 bg-white rounded-full border-4 border-mirai-primary shadow-md z-20 -translate-y-1/2" />
+                    
+                    {/* Card Content */}
+                    <div className={`bg-white p-6 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:border-mirai-primary/20 transition-all duration-300 w-full h-[160px] flex flex-col justify-between ${
+                      isEven ? 'mt-auto' : 'mb-auto'
+                    }`}>
+                      <div>
+                        <h4 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent mb-3">
+                          {item.year}
+                        </h4>
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
                       </div>
                     </div>
-
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
           </div>
+
         </div>
       </section>
 
@@ -280,100 +290,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* 5. CERTIFICATIONS & QUALITY */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="text-4xl lg:text-5xl font-black text-slate-900 mb-6"
-            >
-              Certified. Verified. <span className="text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent">Trusted.</span>
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="text-xl text-slate-600"
-            >
-              Every certification Mirai Technologies holds reflects our commitment to quality, traceability, and supplier integrity at every step of the supply chain.
-            </motion.p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            
-            {/* Left: Certifications Cards */}
-            <motion.div 
-              initial="hidden" whileInView="visible" viewport={{ once: true }}
-              variants={containerVariants}
-              className="space-y-6"
-            >
-              {[
-                { badge: "ACTIVE CERTIFICATION", title: "ISO 9001:2015 Certified", desc: "Our Quality Management System covers procurement, supplier verification, documentation and customer service processes end-to-end — ensuring consistent quality on every order.", color: "text-blue-600", bg: "bg-blue-50", icon: <Award className="w-4 h-4" /> },
-                { badge: "VERIFIED SELLER", title: "IndiaMart Trust Seal Verified", desc: "Verified seller on India's largest B2B platform with Trust Seal — confirming business legitimacy, active trading history, and buyer protection assurance for all clients.", color: "text-amber-600", bg: "bg-amber-50", icon: <ShieldCheck className="w-4 h-4" /> },
-                { badge: "SECTOR APPROVED", title: "Automotive & Defence Approved", desc: "Recognized supplier to automotive OEMs and defence contractors — meeting strict sector-specific quality, traceability, and documentation requirements.", color: "text-emerald-600", bg: "bg-emerald-50", icon: <CheckCircle2 className="w-4 h-4" /> },
-                { badge: "ON EVERY ORDER", title: "COC & Test Reports on Request", desc: "Certificate of Conformance, test reports & supplier verification documents available for every shipment — at no additional charge to our customers.", color: "text-purple-600", bg: "bg-purple-50", icon: <FileCheck className="w-4 h-4" /> }
-              ].map((cert, i) => (
-                <motion.div key={i} variants={itemVariants} whileHover={{ scale: 1.02, x: 5 }} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-mirai-primary/30 transition-all duration-300 cursor-default">
-                  <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider mb-4 ${cert.bg} ${cert.color}`}>
-                    {cert.icon} {cert.badge}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{cert.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{cert.desc}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* Right: Quality Commitments & Process */}
-            <motion.div 
-              initial="hidden" whileInView="visible" viewport={{ once: true }}
-              variants={containerVariants}
-              className="bg-white p-8 lg:p-10 rounded-3xl shadow-lg border border-slate-100"
-            >
-              <h3 className="text-2xl font-bold text-slate-900 mb-8">Our Quality Commitments</h3>
-              <div className="grid sm:grid-cols-2 gap-6 mb-12">
-                {[
-                  { title: "Genuine Parts Only", desc: "Sourced from authorized manufacturers & franchised distributors only", icon: <CheckCircle2 className="text-emerald-500 w-5 h-5" /> },
-                  { title: "Full Traceability", desc: "Every component traceable to the original manufacturer with lot codes", icon: <ShieldCheck className="text-blue-500 w-5 h-5" /> },
-                  { title: "Anti-Counterfeit", desc: "Strict supplier vetting & visual inspection to eliminate counterfeit components", icon: <Award className="text-purple-500 w-5 h-5" /> },
-                  { title: "24-hr RFQ Response", desc: "Guaranteed quote within 24 hours with full pricing & availability", icon: <Clock className="text-amber-500 w-5 h-5" /> },
-                  { title: "Global Supplier Network", desc: "40+ authorized partners across USA, Europe, China, Taiwan & Japan", icon: <Globe className="text-indigo-500 w-5 h-5" /> },
-                  { title: "Customer References", desc: "Client references & testimonials available on request for all sectors", icon: <Users className="text-rose-500 w-5 h-5" /> }
-                ].map((item, i) => (
-                  <motion.div key={i} variants={itemVariants} whileHover={{ scale: 1.05 }} className="bg-slate-50 p-5 rounded-xl border border-slate-100 hover:shadow-md hover:bg-white transition-all cursor-default">
-                    <div className="flex items-center gap-2 mb-2">
-                      {item.icon}
-                      <h4 className="font-bold text-slate-900 text-sm">{item.title}</h4>
-                    </div>
-                    <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              <h3 className="text-2xl font-bold text-slate-900 mb-8">Quality Assurance Process</h3>
-              <div className="space-y-6">
-                {[
-                  { step: "1", title: "Supplier Verification", desc: "All suppliers audited against ISO & manufacturer authorization criteria before onboarding" },
-                  { step: "2", title: "Order Confirmation", desc: "Part numbers, date codes & quantities cross-checked against BOM before procurement" },
-                  { step: "3", title: "Visual Inspection", desc: "Each shipment inspected for packaging integrity, labeling accuracy & counterfeit markers" },
-                  { step: "4", title: "Documentation", desc: "COC, test reports & packing lists issued with every delivery on request at no extra charge" },
-                  { step: "5", title: "After-Sales Support", desc: "Dedicated team handles returns, replacements & quality disputes within 48 hours" }
-                ].map((process, i) => (
-                  <motion.div key={i} variants={itemVariants} whileHover={{ x: 10 }} className="flex gap-4 group cursor-default transition-transform">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-mirai-primary text-white flex items-center justify-center font-bold text-sm shadow-md shadow-blue-500/20">
-                      {process.step}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 mb-1">{process.title}</h4>
-                      <p className="text-slate-600 text-sm leading-relaxed">{process.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
 
       {/* 6. CTA SECTION */}
       <section className="py-24 bg-white relative">

@@ -1,32 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, Globe, MapPin, Building2,
-  Award, ShieldCheck, CheckCircle2, ChevronDown
+  Send
 } from 'lucide-react';
 
 const Contact = () => {
-  const [inquiryType, setInquiryType] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const inquiryOptions = [
-    { value: "rfq", label: "Request for Quote (RFQ)" },
-    { value: "bom", label: "BOM Sourcing" },
-    { value: "hard-to-find", label: "Hard to Find / Obsolete Parts" },
-    { value: "other", label: "Other Inquiry" }
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -43,32 +22,7 @@ const Contact = () => {
     }
   };
 
-  const faqs = [
-    {
-      q: "What is the minimum order quantity (MOQ)?",
-      a: "Mirai Technologies works with clients of all sizes. MOQ varies by component and manufacturer. Contact us with your specific requirements and we'll find the best solution for your project, whether it's a single prototype quantity or a large production run."
-    },
-    {
-      q: "Do you supply components pan-India?",
-      a: "Yes, Mirai Technologies, based in Mumbai, supplies electronic components across India and internationally. We serve clients in Delhi, Bangalore, Pune, Chennai, Hyderabad, and all major manufacturing hubs across India."
-    },
-    {
-      q: "Are all components genuine and authentic?",
-      a: "Absolutely. We source exclusively from authorized manufacturers and franchised distributors. Every shipment undergoes anti-counterfeit visual inspection, packaging verification, and lot traceability checks. COC available on every order."
-    },
-    {
-      q: "Can you source obsolete or discontinued components?",
-      a: "Yes — this is one of our specialties. Our global supplier network allows us to locate end-of-life and hard-to-find components that standard distributors cannot supply. Contact us with your part number for sourcing assistance."
-    },
-    {
-      q: "Which brands / manufacturers does Mirai supply?",
-      a: "We are authorized partners for 40+ global brands including Infineon, Texas Instruments, STMicroelectronics, Microchip, Analog Devices, onsemi, Toshiba, Nexperia, Yageo, TDK, Rohm, Renesas, Samsung, and many more."
-    },
-    {
-      q: "Do you offer after-sales support?",
-      a: "Yes. Our dedicated team handles returns, replacements, and quality disputes within 48 hours. We stand behind every order we fulfill and are committed to resolving any issues quickly and professionally."
-    }
-  ];
+
 
   return (
     <div className="bg-white min-h-screen">
@@ -105,7 +59,7 @@ const Contact = () => {
       {/* 2. CONTACT INFO & FORM */}
       <section className="py-20 -mt-10 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left: Contact Information */}
             <motion.div 
@@ -197,30 +151,7 @@ const Contact = () => {
                 </div>
               </motion.div>
 
-              {/* Certifications Card */}
-              <motion.div variants={itemVariants} className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-100">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Our Certifications</h3>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold bg-blue-50 text-blue-700 border border-blue-100">
-                    <Award className="w-4 h-4" /> ISO 9001:2015
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
-                    <ShieldCheck className="w-4 h-4" /> DUNS Registered
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold bg-amber-50 text-amber-700 border border-amber-100">
-                    <CheckCircle2 className="w-4 h-4" /> IndiaMart Trust Seal
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
-                    <ShieldCheck className="w-4 h-4" /> Auto & Defence Approved
-                  </span>
-                </div>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 inline-block">
-                  <div className="text-sm font-semibold text-slate-800 flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-slate-500" />
-                    GSTIN: <span className="text-mirai-primary">27DEHPB4188C1ZR</span>
-                  </div>
-                </div>
-              </motion.div>
+
 
             </motion.div>
 
@@ -230,88 +161,37 @@ const Contact = () => {
               initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
               variants={containerVariants}
             >
-              <motion.div variants={itemVariants} className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-100 h-full">
-                <h3 className="text-3xl font-black text-slate-900 mb-2">Submit Your RFQ</h3>
-                <p className="text-slate-600 mb-8">Fill in your requirements and our team will respond within 24 hours with pricing and availability.</p>
+              <motion.div variants={itemVariants} className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-100">
+                <h3 className="text-3xl font-black text-slate-900 mb-8">Send Us a Message</h3>
                 
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 block">First Name *</label>
-                      <input type="text" placeholder="Your first name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <label className="text-sm font-bold text-slate-700 block">Name</label>
+                      <input type="text" placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 block">Last Name *</label>
-                      <input type="text" placeholder="Your last name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 block">Company Name *</label>
-                    <input type="text" placeholder="Your company name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 block">Business Email *</label>
-                      <input type="email" placeholder="your@company.com" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 block">Phone / WhatsApp *</label>
+                      <label className="text-sm font-bold text-slate-700 block">Phone No</label>
                       <input type="tel" placeholder="+91 XXXXX XXXXX" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 block">Inquiry Type *</label>
-                    <div className="relative" ref={dropdownRef}>
-                      <button
-                        type="button"
-                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                        className={`w-full bg-slate-50 border ${isDropdownOpen ? 'border-mirai-primary ring-2 ring-mirai-primary/50' : 'border-slate-200'} text-left rounded-xl px-4 py-3 focus:outline-none transition-all flex items-center justify-between`}
-                      >
-                        <span className={inquiryType ? 'text-slate-900' : 'text-slate-400'}>
-                          {inquiryType ? inquiryOptions.find(opt => opt.value === inquiryType)?.label : "Select inquiry type"}
-                        </span>
-                        <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                      </button>
-                      
-                      <AnimatePresence>
-                        {isDropdownOpen && (
-                          <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute z-50 w-full mt-2 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden"
-                          >
-                            {inquiryOptions.map((option) => (
-                              <button
-                                key={option.value}
-                                type="button"
-                                onClick={() => {
-                                  setInquiryType(option.value);
-                                  setIsDropdownOpen(false);
-                                }}
-                                className={`w-full text-left px-4 py-3 hover:bg-slate-50 transition-colors ${inquiryType === option.value ? 'bg-mirai-primary/5 text-mirai-primary font-semibold' : 'text-slate-700'}`}
-                              >
-                                {option.label}
-                              </button>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-sm font-bold text-slate-700 block">Email</label>
+                      <input type="email" placeholder="you@company.com" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-bold text-slate-700 block">Company</label>
+                      <input type="text" placeholder="Company Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
                     </div>
                   </div>
 
-
-
-                  {/* As requested: renamed "Additional Notes" to "Message" and no Timeline field */}
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-slate-700 block">Message</label>
                     <textarea 
-                      rows="3" 
-                      placeholder="Any additional specifications, quality requirements, or questions..." 
+                      rows="4" 
+                      placeholder="How can we help you?" 
                       className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none"
                     ></textarea>
                   </div>
@@ -320,7 +200,7 @@ const Contact = () => {
                     type="submit" 
                     className="w-full bg-gradient-to-r from-mirai-primary to-mirai-accent text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
                   >
-                    Submit RFQ – Get Quote in 24 Hours <span className="text-yellow-300">✦</span>
+                    Send Message <Send className="w-5 h-5 ml-1" />
                   </button>
                   <p className="text-center text-xs text-slate-500 mt-4">
                     By submitting, you agree our team will contact you regarding your inquiry. We never share your data.
@@ -332,40 +212,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 3. FAQ SECTION */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
-            className="text-center mb-16"
-          >
-            <motion.div variants={itemVariants} className="text-sm font-bold tracking-widest text-mirai-primary uppercase mb-4 inline-block bg-mirai-primary/10 px-4 py-1.5 rounded-full">
-              Frequently Asked Questions
-            </motion.div>
-            <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">
-              Common Questions About <span className="text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent">Mirai Technologies</span>
-            </motion.h2>
-          </motion.div>
 
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
-            className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto"
-          >
-            {faqs.map((faq, index) => (
-              <motion.div 
-                key={index} 
-                variants={itemVariants}
-                className="bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:border-mirai-primary/30 hover:shadow-xl transition-all duration-300"
-              >
-                <h4 className="text-xl font-bold text-slate-900 mb-4">{faq.q}</h4>
-                <p className="text-slate-600 leading-relaxed">{faq.a}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
     </div>
   );

@@ -1,72 +1,60 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
+import img6 from '../assets/6.png';
+import img7 from '../assets/7.png';
+import img8 from '../assets/8.png';
+import img10 from '../assets/10.png';
+import img11 from '../assets/11.png';
+import img12 from '../assets/12.jpeg';
+import img13 from '../assets/13.png';
+
 const PartnersSection = () => {
-  const brands = [
-    "Infineon", "Texas Instruments", "STMicroelectronics", "Microchip", "Analog Devices", "onsemi", "Toshiba",
-    "Nexperia", "Yageo", "Weidy", "Samsung", "Power Integrations", "LiteOn", "TDK", "XLSemi", "Renesas",
-    "Rohm", "Silicon Labs", "Everlight", "Zoetic Power", "XLSmart", "HaloChip", "Silan", "Winsemi", "Vishay",
-    "Walsin", "NXP", "OCX"
+  const clientLogos = [
+    img1, img2, img3, img4, img5, img6, img7, img8, img10, img11, img12, img13
   ];
 
   return (
-    <section className="py-24 bg-slate-50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-20 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto text-center">
         
         {/* Header */}
-        <div className="mb-16">
-          <p className="text-mirai-primary font-semibold text-sm tracking-widest uppercase mb-4">Our Brand Partners</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900">
-            40+ Authorized Global <br />
-            <span className="text-mirai-primary">Manufacturers</span>
-          </h2>
+        <div className="mb-12">
+          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-3">Our Clients</h2>
+          <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full"></div>
         </div>
 
-        {/* Brand Marquee - New Way with Dual Rows */}
-        <div className="relative overflow-hidden py-10 max-w-7xl mx-auto">
-          {/* Background decoration */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-gradient-to-br from-indigo-500/5 to-violet-500/5 blur-[100px] -z-10" />
-          
+        {/* Brand Marquee - Single Flow Row */}
+        <div className="relative overflow-hidden py-4">
           {/* Fade gradients at edges */}
-          <div className="absolute left-0 top-0 w-40 h-full bg-gradient-to-r from-slate-50 to-transparent z-10" />
-          <div className="absolute right-0 top-0 w-40 h-full bg-gradient-to-l from-slate-50 to-transparent z-10" />
+          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
           
-          {/* Row 1: Moving Left */}
+          {/* Scrolling Container */}
           <motion.div 
-            className="flex gap-4 w-max mb-6"
+            className="flex gap-16 w-max items-center"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ 
               ease: "linear", 
-              duration: 40, 
+              duration: 25, 
               repeat: Infinity 
             }}
           >
-            {[...brands, ...brands].map((brand, idx) => (
+            {[...clientLogos, ...clientLogos].map((logo, idx) => (
               <div 
                 key={idx}
-                className="bg-white shadow-sm border border-slate-100 hover:border-mirai-primary hover:shadow-lg text-slate-600 hover:text-mirai-primary px-8 py-4 rounded-2xl font-medium text-sm transition-all cursor-pointer flex items-center justify-center min-w-[150px]"
+                className="flex items-center justify-center h-16 w-40 shrink-0"
               >
-                {brand}
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Row 2: Moving Right */}
-          <motion.div 
-            className="flex gap-4 w-max"
-            animate={{ x: ["-50%", "0%"] }}
-            transition={{ 
-              ease: "linear", 
-              duration: 35, 
-              repeat: Infinity 
-            }}
-          >
-            {[...brands, ...brands].reverse().map((brand, idx) => (
-              <div 
-                key={idx}
-                className="bg-white shadow-sm border border-slate-100 hover:border-mirai-primary hover:shadow-lg text-slate-600 hover:text-mirai-primary px-8 py-4 rounded-2xl font-medium text-sm transition-all cursor-pointer flex items-center justify-center min-w-[150px]"
-              >
-                {brand}
+                <img 
+                  src={logo} 
+                  alt={`Client Logo ${idx + 1}`} 
+                  className="max-h-full max-w-full object-contain opacity-95 hover:opacity-100 transition-all duration-300"
+                />
               </div>
             ))}
           </motion.div>
