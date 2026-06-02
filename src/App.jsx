@@ -15,6 +15,8 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import PopupForm from './components/PopupForm';
 import ScrollToTop from './components/ScrollToTop';
+import ProductsPage from './components/ProductsPage';
+import ProductDetailPage from './components/ProductDetailPage';
 
 
 function Home() {
@@ -44,6 +46,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/certificate" element={<Certifications />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={
             <div className="pt-32 pb-20 text-center min-h-[60vh] flex items-center justify-center">

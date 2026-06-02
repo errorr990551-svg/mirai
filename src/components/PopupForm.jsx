@@ -7,8 +7,22 @@ const PopupForm = () => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [inquiryType, setInquiryType] = useState("");
+  const [productDetail, setProductDetail] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleOpenRFQ = (e) => {
+      console.log("PopupForm: Received open-rfq event", e.detail);
+      setIsOpen(true);
+      setInquiryType("rfq"); // Auto-set inquiry type to RFQ
+      if (e.detail && e.detail.product) {
+        setProductDetail(e.detail.product);
+      }
+    };
+    window.addEventListener('open-rfq', handleOpenRFQ);
+    return () => window.removeEventListener('open-rfq', handleOpenRFQ);
+  }, []);
 
   useEffect(() => {
     console.log("PopupForm path check:", pathname);
@@ -47,6 +61,7 @@ const PopupForm = () => {
 
   const handleClose = () => {
     setIsOpen(false);
+    setProductDetail(""); // Clear prefilled product
     localStorage.setItem('mirai_has_seen_popup', 'true');
   };
 
@@ -132,6 +147,17 @@ const PopupForm = () => {
                     <label className="text-xs font-bold text-slate-700 block">Phone / WhatsApp *</label>
                     <input type="tel" placeholder="+91 XXXXX XXXXX" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
                   </div>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-700 block">Part Number / Product Name</label>
+                  <input 
+                    type="text" 
+                    value={productDetail} 
+                    onChange={(e) => setProductDetail(e.target.value)} 
+                    placeholder="e.g. NCE1540KA" 
+                    className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                  />
                 </div>
 
                 <div className="space-y-1">

@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Zap, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import ProductsDropdown from './ProductsDropdown';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -34,7 +36,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md py-4 border-b border-slate-200/60 shadow-sm' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link 
@@ -109,6 +111,41 @@ const Navbar = () => {
                               ))}
                             </div>
                           </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
+                if (link.name === 'Products') {
+                  return (
+                    <div 
+                      key={link.name}
+                      className="group py-2"
+                      onMouseEnter={() => setProductsDropdownOpen(true)}
+                      onMouseLeave={() => setProductsDropdownOpen(false)}
+                    >
+                      <button
+                        className={`transition-colors px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none ${
+                          location.pathname.startsWith('/product')
+                            ? 'text-mirai-primary font-bold'
+                            : 'text-slate-600 hover:text-mirai-primary'
+                        }`}
+                      >
+                        {link.name}
+                        <svg 
+                          className={`w-4 h-4 transition-transform duration-200 ${productsDropdownOpen ? 'rotate-180' : ''}`} 
+                          fill="none"
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+
+                      <AnimatePresence>
+                        {productsDropdownOpen && (
+                          <ProductsDropdown closeMenu={() => setProductsDropdownOpen(false)} />
                         )}
                       </AnimatePresence>
                     </div>
