@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import { updateMeta, injectOrganizationSchema } from './utils/seo';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import FeaturesSection from './components/FeaturesSection';
@@ -20,6 +21,14 @@ import ProductDetailPage from './components/ProductDetailPage';
 
 
 function Home() {
+  useEffect(() => {
+    updateMeta(
+      'Buy Electronic Components Online India | Mirai Technologies',
+      'Mirai Technologies – authorized distributor and stockist of active and passive electronic components in Mumbai since 1999. Genuine ICs, MOSFETs, transistors, microcontrollers, and optocouplers with pan-India delivery and GST invoice.'
+    );
+    injectOrganizationSchema();
+  }, []);
+
   return (
     <>
       <HeroSection />
@@ -46,8 +55,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/certificate" element={<Certifications />} />
+          {/* Products catalog – optional :categorySlug for filtered views */}
           <Route path="/products" element={<ProductsPage />} />
-          <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/products/:categorySlug" element={<ProductsPage />} />
+          {/* Product detail – wildcard supports multi-segment slugs like /product/integrated-circuit/lm358ld08t */}
+          <Route path="/product/*" element={<ProductDetailPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={
             <div className="pt-32 pb-20 text-center min-h-[60vh] flex items-center justify-center">
