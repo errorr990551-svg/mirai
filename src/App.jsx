@@ -18,6 +18,8 @@ import PopupForm from './components/PopupForm';
 import ScrollToTop from './components/ScrollToTop';
 import ProductsPage from './components/ProductsPage';
 import ProductDetailPage from './components/ProductDetailPage';
+import BlogPage from './components/BlogPage';
+import BlogPostPage from './components/BlogPostPage';
 
 
 function Home() {
@@ -61,6 +63,8 @@ function App() {
           {/* Product detail – wildcard supports multi-segment slugs like /product/integrated-circuit/lm358ld08t */}
           <Route path="/product/*" element={<ProductDetailPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="*" element={
             <div className="pt-32 pb-20 text-center min-h-[60vh] flex items-center justify-center">
               <h2 className="text-3xl font-bold text-slate-400">Page under construction</h2>

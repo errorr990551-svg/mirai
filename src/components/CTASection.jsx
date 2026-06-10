@@ -24,10 +24,18 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-md shadow-blue-500/30 hover:shadow-lg transition-all hover:-translate-y-1">
-              Submit RFQ Now
+            <button 
+              onClick={() => window.dispatchEvent(new CustomEvent('open-rfq'))}
+              className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-md shadow-blue-500/30 hover:shadow-lg transition-all hover:-translate-y-1"
+            >
+              Request a Quote
             </button>
-            <button className="bg-transparent border border-slate-300 text-slate-900 font-semibold px-8 py-4 rounded-lg hover:bg-slate-50 transition-all hover:border-slate-400">
+            <button 
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('open-products-dropdown'));
+              }}
+              className="bg-transparent border border-slate-300 text-slate-900 font-semibold px-8 py-4 rounded-lg hover:bg-slate-50 transition-all hover:border-slate-400"
+            >
               Browse Products
             </button>
           </div>

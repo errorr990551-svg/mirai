@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ShieldCheck, Globe, Cpu, Clock } from 'lucide-react';
-import heroPlaceholder from '../assets/hero_placeholder.png';
 
 const HeroSection = () => {
   const containerVariants = {
@@ -45,8 +45,8 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative pt-32 pb-0 lg:pt-36 lg:pb-0 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroPlaceholder})` }}
+      className="relative pt-24 pb-0 lg:pt-28 lg:pb-0 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/banner.jpeg')" }}
     >
       {/* Dark background overlays */}
       <div className="absolute inset-0 bg-slate-950/80 z-0" />
@@ -64,7 +64,7 @@ const HeroSection = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 border border-blue-400/30 rounded-full px-5 py-2 mb-8 text-xs sm:text-sm font-semibold text-blue-400 tracking-widest bg-blue-400/10"
+              className="inline-flex items-center gap-2 border border-blue-400/30 rounded-full px-5 py-2 mb-4 lg:mb-6 text-xs sm:text-sm font-semibold text-blue-400 tracking-widest bg-blue-400/10"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-blue-400 shadow-md shadow-blue-400/30"></div>
               ISO 9001:2015 CERTIFIED &middot; EST. 1999
@@ -72,16 +72,16 @@ const HeroSection = () => {
             
             <motion.h1 
               variants={itemVariants}
-              className="text-5xl sm:text-6xl lg:text-[5rem] font-extrabold tracking-tight mb-8 leading-[1.1] text-white"
+              className="text-4xl sm:text-5xl lg:text-[3.75rem] font-extrabold tracking-tight mb-4 lg:mb-6 leading-[1.15] text-white"
             >
               <span className="block">India's Trusted</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Electronic Components</span>
-              <span className="block mt-3">Distributor</span>
+              <span className="block mt-2">Distributor</span>
             </motion.h1>
             
             <motion.p 
               variants={itemVariants}
-              className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-light"
+              className="text-base sm:text-lg text-slate-300 mb-6 lg:mb-8 max-w-2xl leading-relaxed font-light"
             >
               Mirai Technologies supplies ICs, MOSFETs, IGBTs, Transistors, MCUs, Capacitors & 2000+ component types from 40+ global brands. Mumbai-based. Serving OEMs, EMS & industries worldwide since 1999.
             </motion.p>
@@ -90,12 +90,18 @@ const HeroSection = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-start"
             >
-              <button className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-md shadow-blue-500/20 hover:shadow-lg hover:bg-opacity-95 transition-all hover:-translate-y-1">
-                Submit RFQ &mdash; 24hr Quote
+              <button 
+                onClick={() => window.dispatchEvent(new CustomEvent('open-rfq'))}
+                className="bg-mirai-primary text-white font-bold px-8 py-3.5 rounded-lg shadow-md shadow-blue-500/20 hover:shadow-lg hover:bg-opacity-95 transition-all hover:-translate-y-1 animate-pulse"
+              >
+                Request a Quote
               </button>
-              <button className="bg-transparent border border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-all group">
-                View Products <span className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
-              </button>
+              <Link 
+                to="/products"
+                className="bg-transparent border border-white text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-white/10 transition-all group flex items-center justify-center"
+              >
+                View Products <span className="inline-block transition-transform group-hover:translate-x-1 ml-1">&rarr;</span>
+              </Link>
             </motion.div>
           </motion.div>
           

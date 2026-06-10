@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   SlidersHorizontal, X, ChevronDown, ChevronUp,
   Cpu, Zap, Radio, Activity, Layers, Settings, Thermometer,
-  MessageCircle, Search
+  Search
 } from 'lucide-react';
 import { products, categories, getCategoryById } from '../data/products';
 import { updateMeta, injectCategorySchema } from '../utils/seo';
@@ -254,23 +254,12 @@ function ProductCard({ product, idx }) {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-1.5">
-          {product.whatsappUrl ? (
-            <a
-              href={product.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-[10px] font-bold py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1"
-            >
-              <MessageCircle className="w-3 h-3" />
-              WA
-            </a>
-          ) : <div className="flex-1" />}
+        <div>
           <button
             onClick={triggerRFQ}
-            className="flex-1 bg-slate-900 hover:bg-mirai-primary text-white text-[10px] font-bold py-1.5 rounded-lg transition-colors"
+            className="w-full bg-slate-900 hover:bg-mirai-primary text-white text-[10px] font-bold py-2 rounded-lg transition-colors text-center"
           >
-            Get RFQ
+            Request a Quote
           </button>
         </div>
       </div>
@@ -281,8 +270,11 @@ function ProductCard({ product, idx }) {
 // ── Main Component ────────────────────────────────────────────────────────────
 const ProductsPage = () => {
   const { categorySlug } = useParams();
+  const [searchParams] = useSearchParams();
+  const queryParam = searchParams.get('q') || '';
+
   const [sortBy, setSortBy]         = useState('priority');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(queryParam);
   const [activeFilters, setActiveFilters] = useState({ brand: [], package: [], stock: [] });
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [isSortOpen, setIsSortOpen] = useState(false);
@@ -309,13 +301,13 @@ const ProductsPage = () => {
     return products;
   }, [categorySlug]);
 
-  // Auto-scroll to top when category changes
+  // Auto-scroll to top when category changes or query changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setActiveFilters({ brand: [], package: [], stock: [] });
-    setSearchQuery('');
+    setSearchQuery(queryParam);
     setSortBy('priority');
-  }, [categorySlug]);
+  }, [categorySlug, queryParam]);
 
   // Update page meta + schema
   useEffect(() => {
@@ -389,37 +381,39 @@ const ProductsPage = () => {
           </nav>
 
           {categoryData ? (
-            <div className="bg-white border border-slate-200/60 rounded-3xl p-6 sm:p-8 shadow-sm">
+            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-mirai-primary/10 rounded-full blur-3xl pointer-events-none" />
+
               {/* Header row: icon + title + count */}
-              <div className="flex items-start justify-between gap-4 mb-4">
+              <div className="flex items-start justify-between gap-4 mb-5 relative z-10">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-mirai-primary/20 border border-mirai-primary/30 flex items-center justify-center shrink-0">
                     <CategoryIcon className="w-6 h-6 text-mirai-primary" />
                   </div>
                   <div>
                     <p className="text-[11px] font-bold text-mirai-primary uppercase tracking-widest mb-0.5">
                       Product Category
                     </p>
-                    <h1 className="text-xl sm:text-2xl font-heading font-extrabold text-slate-800 leading-tight">
+                    <h1 className="text-xl sm:text-2xl font-heading font-extrabold text-white leading-tight">
                       {categoryData.name}
                     </h1>
                   </div>
                 </div>
-                <span className="shrink-0 bg-mirai-primary/10 text-mirai-primary text-sm font-black px-3 py-1.5 rounded-xl border border-mirai-primary/20">
+                <span className="shrink-0 bg-mirai-primary/20 text-white text-sm font-black px-3 py-1.5 rounded-xl border border-mirai-primary/30">
                   {filteredProducts.length} parts
                 </span>
               </div>
 
-              {/* Description */}
+              {/* Description (Complete, not truncated) */}
               {categoryData.description && (
-                <p className="text-sm text-slate-500 leading-relaxed mb-5 max-w-3xl border-l-2 border-mirai-primary/30 pl-4">
-                  {categoryData.description.slice(0, 220)}…
+                <p className="text-sm text-slate-300 leading-relaxed mb-6 max-w-4xl border-l-2 border-mirai-primary/40 pl-4 relative z-10">
+                  {categoryData.description}
                 </p>
               )}
 
               {/* Quick Links */}
               {categoryData.navigationLinks?.length > 0 && (
-                <div>
+                <div className="relative z-10 mb-6">
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2.5">
                     ⚡ Quick Links
                   </p>
@@ -428,7 +422,7 @@ const ProductsPage = () => {
                       <Link
                         key={i}
                         to={`/product/${link.toSlug}`}
-                        className="text-[11px] font-semibold text-slate-600 bg-slate-50 border border-slate-200 hover:bg-mirai-primary hover:text-white hover:border-mirai-primary px-3 py-1.5 rounded-full transition-all duration-200"
+                        className="text-[11px] font-semibold text-slate-300 bg-white/5 border border-white/10 hover:bg-mirai-primary hover:text-white hover:border-mirai-primary px-3 py-1.5 rounded-full transition-all duration-200"
                       >
                         {link.anchorText}
                       </Link>
@@ -436,13 +430,30 @@ const ProductsPage = () => {
                   </div>
                 </div>
               )}
+
+              {/* Related Search Tags (Originally at the bottom) */}
+              {categoryData.lsiKeywords && (
+                <div className="mt-5 pt-5 border-t border-white/10 relative z-10">
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2.5">
+                    🔍 Related Search Tags
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {categoryData.lsiKeywords.split(',').map(kw => (
+                      <span key={kw} className="text-[10px] text-slate-300 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full font-medium">
+                        {kw.trim()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ) : (
-            <div className="bg-white border border-slate-200/60 rounded-3xl p-6 sm:p-8 shadow-sm">
-              <h1 className="text-xl sm:text-2xl font-heading font-extrabold text-slate-800">
+            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-mirai-primary/10 rounded-full blur-3xl pointer-events-none" />
+              <h1 className="text-xl sm:text-2xl font-heading font-extrabold text-white relative z-10">
                 Electronic Components Catalog
               </h1>
-              <p className="text-sm text-slate-500 mt-2">
+              <p className="text-sm text-slate-300 mt-2 relative z-10">
                 83+ genuine electronic components — ICs, MOSFETs, transistors, microcontrollers and more.
               </p>
             </div>
@@ -634,31 +645,6 @@ const ProductsPage = () => {
           </div>
         </div>
 
-        {/* ── Category SEO description block ─────────────────────────────── */}
-        {categoryData?.description && (
-          <div className="mt-16 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 shadow-xl">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-mirai-primary/20 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
-                <Cpu className="w-5 h-5 text-mirai-primary" />
-              </div>
-              <div className="flex-1">
-                <h2 className="text-base font-bold text-white mb-2">
-                  About {categoryData.name} at Mirai Technologies
-                </h2>
-                <p className="text-sm text-slate-400 leading-relaxed">{categoryData.description}</p>
-                {categoryData.lsiKeywords && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {categoryData.lsiKeywords.split(',').map(kw => (
-                      <span key={kw} className="text-[10px] text-slate-400 bg-white/10 border border-white/10 px-2.5 py-1 rounded-full font-medium">
-                        {kw.trim()}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
 
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zap, Building2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -45,10 +46,10 @@ const Footer = () => {
                 <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
               </h3>
               <ul className="space-y-4 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Products</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Services</a></li>
+                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
+                <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
               </ul>
             </div>
 
@@ -85,7 +86,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs gap-4 text-slate-600">
           <p>&copy; 2026 Mirai Technologies. All rights reserved.</p>
-          <p className="text-right">ISO 9001:2015 | GSTIN: 27DEHPB416SC1ZR</p>
+          <p className="text-right">
+            Designed and Promoted By <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">Errorr.in</a> - Best Digital Marketing Company in India.
+          </p>
         </div>
 
       </div>

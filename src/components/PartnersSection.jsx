@@ -19,45 +19,40 @@ const PartnersSection = () => {
     img1, img2, img3, img4, img5, img6, img7, img8, img10, img11, img12, img13
   ];
 
+  // Duplicate the logos to fill the grid nicely, similar to the reference image
+  const gridLogos = [...clientLogos, ...clientLogos];
+
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="py-20 bg-slate-50 relative border-t border-b border-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-3">Our Clients</h2>
-          <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Our Clients</h2>
+          <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full mb-4"></div>
+          <p className="text-slate-500 max-w-2xl mx-auto text-sm md:text-base">
+            Trusted by leading manufacturers and global electronic component brands.
+          </p>
         </div>
 
-        {/* Brand Marquee - Single Flow Row */}
-        <div className="relative overflow-hidden py-4">
-          {/* Fade gradients at edges */}
-          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
-          
-          {/* Scrolling Container */}
-          <motion.div 
-            className="flex gap-16 w-max items-center"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ 
-              ease: "linear", 
-              duration: 25, 
-              repeat: Infinity 
-            }}
-          >
-            {[...clientLogos, ...clientLogos].map((logo, idx) => (
-              <div 
-                key={idx}
-                className="flex items-center justify-center h-16 w-40 shrink-0"
-              >
-                <img 
-                  src={logo} 
-                  alt={`Client Logo ${idx + 1}`} 
-                  className="max-h-full max-w-full object-contain opacity-95 hover:opacity-100 transition-all duration-300"
-                />
-              </div>
-            ))}
-          </motion.div>
+        {/* Brand Grid Container */}
+        <div className="max-w-6xl mx-auto bg-slate-200 border border-slate-200 rounded-2xl overflow-hidden shadow-sm grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[1px]">
+          {gridLogos.map((logo, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: (idx % 6) * 0.05 }}
+              className="bg-white p-6 flex items-center justify-center h-24 sm:h-28 hover:bg-slate-50/50 hover:shadow-inner transition-all duration-300 group cursor-pointer"
+            >
+              <img 
+                src={logo} 
+                alt={`Partner Brand Logo ${idx + 1}`} 
+                className="max-h-full max-w-full object-contain transition-all duration-300 ease-in-out transform group-hover:scale-105"
+              />
+            </motion.div>
+          ))}
         </div>
 
       </div>

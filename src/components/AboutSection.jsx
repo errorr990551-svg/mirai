@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
-import warehouseFacility from '../assets/warehouse_facility.png';
 
 const AboutSection = () => {
   return (
@@ -20,7 +19,7 @@ const AboutSection = () => {
               className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100"
             >
               <img 
-                src={warehouseFacility} 
+                src="/about.jpeg" 
                 alt="Mirai Sourcing Facility" 
                 className="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -32,7 +31,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="absolute -bottom-6 -right-2 bg-gradient-to-br from-mirai-primary to-mirai-accent text-white p-6 rounded-2xl shadow-xl max-w-[200px] border border-white/20"
+              className="absolute -bottom-6 -right-2 bg-mirai-primary text-white p-6 rounded-2xl shadow-xl max-w-[200px] border border-white/20"
             >
               <div className="text-4xl font-extrabold mb-1">25+</div>
               <div className="text-sm font-semibold opacity-90 leading-snug">Years of Sourcing Excellence</div>

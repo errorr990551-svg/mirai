@@ -19,6 +19,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleOpenProducts = () => {
+      setProductsDropdownOpen(true);
+    };
+    window.addEventListener('open-products-dropdown', handleOpenProducts);
+    return () => window.removeEventListener('open-products-dropdown', handleOpenProducts);
+  }, []);
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { 
@@ -30,7 +38,7 @@ const Navbar = () => {
       ]
     },
     { name: 'Products', path: '/products' },
-    { name: 'Services', path: '/services' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -170,11 +178,12 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <motion.button 
+              onClick={() => window.dispatchEvent(new CustomEvent('open-rfq'))}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-mirai-primary text-white font-semibold px-6 py-2 rounded-md flex items-center shadow-md shadow-blue-500/30 hover:shadow-lg transition-shadow"
             >
-              Get RFQ &rarr;
+              Request a Quote &rarr;
             </motion.button>
           </div>
 
@@ -234,8 +243,14 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <button className="w-full text-left bg-mirai-primary text-white font-semibold px-3 py-2 rounded-md mt-4">
-              Get RFQ &rarr;
+            <button 
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-rfq'));
+              }}
+              className="w-full text-left bg-mirai-primary text-white font-semibold px-3 py-2 rounded-md mt-4"
+            >
+              Request a Quote &rarr;
             </button>
           </div>
         </motion.div>

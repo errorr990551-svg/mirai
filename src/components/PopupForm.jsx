@@ -1,23 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronDown } from 'lucide-react';
+import { X, Send } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 const PopupForm = () => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [inquiryType, setInquiryType] = useState("");
-  const [productDetail, setProductDetail] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    company: '',
+    message: ''
+  });
 
   useEffect(() => {
     const handleOpenRFQ = (e) => {
       console.log("PopupForm: Received open-rfq event", e.detail);
       setIsOpen(true);
-      setInquiryType("rfq"); // Auto-set inquiry type to RFQ
+      window.miraiPopupShown = true; // Mark as shown on manual trigger
       if (e.detail && e.detail.product) {
-        setProductDetail(e.detail.product);
+        setFormData(prev => ({
+          ...prev,
+          message: `Sourcing Inquiry for: ${e.detail.product}. `
+        }));
       }
     };
     window.addEventListener('open-rfq', handleOpenRFQ);
@@ -25,58 +31,52 @@ const PopupForm = () => {
   }, []);
 
   useEffect(() => {
-    console.log("PopupForm path check:", pathname);
     // If the user is on the contact page, don't show the popup
     if (pathname === '/contact') {
-      console.log("PopupForm: Blocked (currently on /contact page)");
       return;
     }
 
-    // Check if the user has already seen the popup
-    const hasSeenPopup = localStorage.getItem('mirai_has_seen_popup');
-    console.log("PopupForm hasSeenPopup status:", hasSeenPopup);
-    
-    if (!hasSeenPopup) {
-      console.log("PopupForm: Initializing 3-second timer...");
-      const timer = setTimeout(() => {
-        console.log("PopupForm: Timer finished, showing popup.");
-        setIsOpen(true);
-      }, 3000);
-      
-      return () => clearTimeout(timer);
-    } else {
-      console.log("PopupForm: Blocked (user already dismissed or submitted the popup previously)");
+    // Check if popup has already been shown in this SPA session
+    if (window.miraiPopupShown) {
+      console.log("PopupForm: Already shown in this session, skipping navigation trigger.");
+      return;
     }
-  }, [pathname]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    // Trigger popup on page load/reload
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+      window.miraiPopupShown = true; // Mark as shown
+    }, 1500);
+    
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   const handleClose = () => {
     setIsOpen(false);
-    setProductDetail(""); // Clear prefilled product
-    localStorage.setItem('mirai_has_seen_popup', 'true');
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    const to = 'sales@miraitechnologies.net';
+    const cc = 'vp390123@gmail.com,errorr990551@gmail.com';
+    const subject = `Sourcing Inquiry from ${formData.name} - ${formData.company}`;
+    const body = `Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Company: ${formData.company}
+
+Message:
+${formData.message}`;
+
+    const mailtoUrl = `mailto:${to}?cc=${encodeURIComponent(cc)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
     handleClose();
   };
-
-  const inquiryOptions = [
-    { value: "rfq", label: "Request for Quote (RFQ)" },
-    { value: "bom", label: "BOM Sourcing" },
-    { value: "hard-to-find", label: "Hard to Find / Obsolete Parts" },
-    { value: "other", label: "Other Inquiry" }
-  ];
 
   if (pathname === '/contact') {
     return null;
@@ -106,117 +106,96 @@ const PopupForm = () => {
             {/* Close Button */}
             <button 
               onClick={handleClose}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors z-20"
+              className="absolute top-5 right-5 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors z-20"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="p-5 sm:p-6 max-h-[90vh] overflow-y-auto custom-scrollbar rounded-3xl">
-              <div className="mb-4 text-center">
-                <h2 className="text-2xl font-black text-slate-900 mb-1">
-                  Submit Your RFQ
+            <div className="p-6 sm:p-8 max-h-[90vh] overflow-y-auto custom-scrollbar rounded-3xl">
+              <div className="mb-6">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
+                  Send Us a Message
                 </h2>
-                <p className="text-sm text-slate-600">
-                  Fill in your requirements and our team will respond within 24 hours.
-                </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold text-slate-700 block">First Name *</label>
-                    <input type="text" placeholder="Your first name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="text-sm font-bold text-slate-700 block">Name</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your Name" 
+                      required 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                    />
                   </div>
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold text-slate-700 block">Last Name *</label>
-                    <input type="text" placeholder="Your last name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 block">Company Name *</label>
-                  <input type="text" placeholder="Your company name" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold text-slate-700 block">Business Email *</label>
-                    <input type="email" placeholder="your@company.com" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold text-slate-700 block">Phone / WhatsApp *</label>
-                    <input type="tel" placeholder="+91 XXXXX XXXXX" required className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 block">Part Number / Product Name</label>
-                  <input 
-                    type="text" 
-                    value={productDetail} 
-                    onChange={(e) => setProductDetail(e.target.value)} 
-                    placeholder="e.g. NCE1540KA" 
-                    className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
-                  />
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 block">Inquiry Type *</label>
-                  <div className="relative" ref={dropdownRef}>
-                    <button
-                      type="button"
-                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className={`w-full bg-slate-50 border ${isDropdownOpen ? 'border-mirai-primary ring-2 ring-mirai-primary/50' : 'border-slate-200'} text-left rounded-xl px-4 py-2 focus:outline-none transition-all flex items-center justify-between text-sm`}
-                    >
-                      <span className={inquiryType ? 'text-slate-900' : 'text-slate-400'}>
-                        {inquiryType ? inquiryOptions.find(opt => opt.value === inquiryType)?.label : "Select inquiry type"}
-                      </span>
-                      <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                    </button>
-                    
-                    <AnimatePresence>
-                      {isDropdownOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute z-50 w-full mt-1 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden"
-                        >
-                          {inquiryOptions.map((option) => (
-                            <button
-                              key={option.value}
-                              type="button"
-                              onClick={() => {
-                                setInquiryType(option.value);
-                                setIsDropdownOpen(false);
-                              }}
-                              className={`w-full text-left px-4 py-2 hover:bg-slate-50 transition-colors text-sm ${inquiryType === option.value ? 'bg-mirai-primary/5 text-mirai-primary font-semibold' : 'text-slate-700'}`}
-                            >
-                              {option.label}
-                            </button>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                  <div className="space-y-1.5">
+                    <label className="text-sm font-bold text-slate-700 block">Phone No</label>
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="+91 XXXXX XXXXX" 
+                      required 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                    />
                   </div>
                 </div>
 
-                <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 block">Message</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="text-sm font-bold text-slate-700 block">Email</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="you@company.com" 
+                      required 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="text-sm font-bold text-slate-700 block">Company</label>
+                    <input 
+                      type="text" 
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      placeholder="Company Name" 
+                      required 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-sm font-bold text-slate-700 block">Message</label>
                   <textarea 
-                    placeholder="Any additional specifications, quality requirements, or questions..." 
-                    rows="2"
-                    className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none text-sm" 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="How can we help you?" 
+                    rows="4"
+                    required
+                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none text-sm" 
                   ></textarea>
                 </div>
 
                 <button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-mirai-primary to-mirai-accent text-white font-bold text-base px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-2"
+                  className="w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-4"
                 >
-                  Submit RFQ – Get Quote in 24 Hours <span className="text-yellow-300">✦</span>
+                  Send Message <Send className="w-4 h-4" />
                 </button>
+
+                <p className="text-xs text-slate-400 text-center mt-4 leading-relaxed">
+                  By submitting, you agree our team will contact you regarding your inquiry. We never share your data.
+                </p>
               </form>
             </div>
           </motion.div>

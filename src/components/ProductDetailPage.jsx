@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronRight, Cpu, BadgeCheck, FileText,
   Download, ArrowLeft, ArrowRight, ShieldCheck, Award,
-  HeartHandshake, MessageCircle, Phone, ChevronDown, ChevronUp,
+  HeartHandshake, ChevronDown, ChevronUp,
   Zap, Package, Hash, Layers, Activity
 } from 'lucide-react';
 import { getProductBySlug, getProductsByCategory, getCategoryById } from '../data/products';
@@ -218,11 +218,6 @@ const ProductDetailPage = () => {
                   {product.categoryLabel || product.category}
                 </span>
                 <span className="text-xs font-bold text-slate-400">{product.brand}</span>
-                {product.priority === 'High' && (
-                  <span className="bg-amber-50 text-amber-600 border border-amber-200 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                    ★ Popular
-                  </span>
-                )}
               </div>
 
               {/* H1 Title */}
@@ -272,12 +267,10 @@ const ProductDetailPage = () => {
                 }`}>
                   • {product.stockStatus}
                 </span>
-                <span className="text-[11px] text-slate-400 font-medium">MOQ: {product.moq} pcs</span>
-                <span className="text-[11px] text-slate-400 font-medium">{product.gstRate}</span>
               </div>
 
               {/* Price + CTA block */}
-              <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200/50 space-y-3">
+              <div className="bg-transparent py-4 border-t border-slate-100 mt-4 space-y-3">
                 <div className="flex items-center justify-between flex-wrap gap-3">
                   <div>
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Price</span>
@@ -287,40 +280,12 @@ const ProductDetailPage = () => {
                   </div>
                   <button
                     onClick={triggerRFQ}
-                    className="bg-gradient-to-r from-mirai-primary to-mirai-accent text-white text-sm font-bold px-6 py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"
+                    className="bg-mirai-primary hover:bg-opacity-90 text-white text-sm font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"
                   >
-                    Get Quote
+                    Request a Quote
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-
-                {/* WhatsApp + Phone */}
-                <div className="flex gap-2">
-                  {product.whatsappUrl && (
-                    <a
-                      href={product.whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      WhatsApp
-                    </a>
-                  )}
-                  <a
-                    href="tel:+917942964662"
-                    className="flex-1 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2"
-                  >
-                    <Phone className="w-4 h-4 text-mirai-primary" />
-                    Call Us
-                  </a>
-                </div>
-
-                {product.bulkNote && (
-                  <p className="text-[11px] text-slate-500 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2">
-                    💡 {product.bulkNote}
-                  </p>
-                )}
               </div>
 
             </div>
@@ -717,7 +682,7 @@ const ProductDetailPage = () => {
                       onClick={() => window.dispatchEvent(new CustomEvent('open-rfq', { detail: { product: rp.name } }))}
                       className="w-full bg-white hover:bg-slate-900 border border-slate-800 text-slate-800 hover:text-white text-[10px] font-bold py-2 rounded-xl transition-all tracking-wider uppercase mt-auto"
                     >
-                      Get RFQ
+                      Request a Quote
                     </button>
                   </div>
                 </div>

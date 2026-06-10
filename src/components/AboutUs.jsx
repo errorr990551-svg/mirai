@@ -4,7 +4,6 @@ import {
   Building2, CheckCircle2, ShieldCheck, FileCheck, Award, Users, 
   Clock, Globe, MapPin, Zap, ChevronLeft, ChevronRight
 } from 'lucide-react';
-import warehouseFacility from '../assets/warehouse_facility.png';
 
 const AboutUs = () => {
   const scrollContainerRef = useRef(null);
@@ -97,7 +96,7 @@ const AboutUs = () => {
               >
                 {/* Image displaying warehouse_facility.png */}
                 <img 
-                  src={warehouseFacility} 
+                  src="/about.jpeg" 
                   alt="Mirai Sourcing Warehouse Facility" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -308,7 +307,10 @@ const AboutUs = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1">
+              <button 
+                onClick={() => window.dispatchEvent(new CustomEvent('open-rfq'))}
+                className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1"
+              >
                 Get In Touch
               </button>
               <button className="bg-transparent border border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-slate-800 transition-all hover:border-slate-500">

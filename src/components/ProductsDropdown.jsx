@@ -21,6 +21,17 @@ const ProductsDropdown = ({ closeMenu }) => {
   const Icon = categoryIcons[activeCat?.id] || Cpu;
   const count = products.filter(p => p.category === activeCat?.id).length;
 
+  const getPartLink = (partName) => {
+    const matched = products.find(p => 
+      p.name.toLowerCase().includes(partName.toLowerCase()) || 
+      p.partNumber.toLowerCase().includes(partName.toLowerCase())
+    );
+    if (matched) {
+      return `/product/${matched.fullSlug}`;
+    }
+    return `/products?q=${encodeURIComponent(partName)}`;
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 8, x: '-50%' }}
@@ -43,8 +54,10 @@ const ProductsDropdown = ({ closeMenu }) => {
           const isActive = cat.id === activeCategory;
           const catCount = products.filter(p => p.category === cat.id).length;
           return (
-            <div
+            <Link
               key={cat.id}
+              to={`/products/${cat.slug}`}
+              onClick={closeMenu}
               onMouseEnter={() => setActiveCategory(cat.id)}
               className={`flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-150 ${
                 isActive
@@ -61,7 +74,7 @@ const ProductsDropdown = ({ closeMenu }) => {
               }`}>
                 {catCount}
               </span>
-            </div>
+            </Link>
           );
         })}
 
@@ -81,15 +94,27 @@ const ProductsDropdown = ({ closeMenu }) => {
       <div className="flex-1 p-6 flex flex-col gap-5 bg-white">
         {/* Header */}
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <div className="w-8 h-8 bg-mirai-primary/10 rounded-lg flex items-center justify-center">
+          <Link
+            to={`/products/${activeCat?.slug}`}
+            onClick={closeMenu}
+            className="flex items-center gap-2 mb-1 group/header cursor-pointer text-slate-800 hover:text-mirai-primary transition-colors"
+          >
+            <div className="w-8 h-8 bg-mirai-primary/10 rounded-lg flex items-center justify-center group-hover/header:bg-mirai-primary/25 transition-colors">
               <Icon className="w-4 h-4 text-mirai-primary" />
             </div>
-            <h4 className="text-base font-bold text-slate-800">{activeCat?.name}</h4>
+            <h4 className="text-base font-bold">{activeCat?.name}</h4>
             <span className="ml-1 text-xs text-slate-400 font-medium">{count} parts</span>
-          </div>
-          <p className="text-xs text-slate-500 leading-relaxed line-clamp-2 pl-10">
-            {activeCat?.description?.slice(0, 130)}…
+          </Link>
+          <p className="text-xs text-slate-500 leading-relaxed pl-10">
+            {activeCat?.description?.slice(0, 130)}…{' '}
+            <Link
+              to={`/products/${activeCat?.slug}`}
+              onClick={closeMenu}
+              className="text-mirai-primary hover:text-mirai-accent font-semibold inline-flex items-center gap-0.5 hover:underline"
+            >
+              Learn More
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </p>
         </div>
 
@@ -99,14 +124,17 @@ const ProductsDropdown = ({ closeMenu }) => {
             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">
               Featured Parts
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-col gap-1.5 mt-1">
               {activeCat.featuredProducts.slice(0, 5).map(part => (
-                <span
+                <Link
                   key={part}
-                  className="bg-slate-100 hover:bg-mirai-primary/10 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg font-mono transition-colors cursor-default"
+                  to={getPartLink(part)}
+                  onClick={closeMenu}
+                  className="bg-slate-50 hover:bg-mirai-primary text-slate-700 hover:text-white text-[13px] font-bold px-3.5 py-2.5 rounded-xl font-mono transition-all cursor-pointer flex items-center justify-between group border border-slate-100/80 hover:border-mirai-primary shadow-sm hover:shadow-md"
                 >
-                  {part}
-                </span>
+                  <span>{part}</span>
+                  <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors transform group-hover:translate-x-1 duration-150" />
+                </Link>
               ))}
             </div>
           </div>

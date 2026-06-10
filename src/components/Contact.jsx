@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, Globe, MapPin, Building2,
@@ -6,6 +6,36 @@ import {
 } from 'lucide-react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const to = 'sales@miraitechnologies.net';
+    const cc = 'vp390123@gmail.com,errorr990551@gmail.com';
+    const subject = `Contact Form Inquiry from ${formData.name} - ${formData.company}`;
+    const body = `Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Company: ${formData.company}
+
+Message:
+${formData.message}`;
+
+    const mailtoUrl = `mailto:${to}?cc=${encodeURIComponent(cc)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -164,26 +194,26 @@ const Contact = () => {
               <motion.div variants={itemVariants} className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-100">
                 <h3 className="text-3xl font-black text-slate-900 mb-8">Send Us a Message</h3>
                 
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Name</label>
-                      <input type="text" placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Phone No</label>
-                      <input type="tel" placeholder="+91 XXXXX XXXXX" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+91 XXXXX XXXXX" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Email</label>
-                      <input type="email" placeholder="you@company.com" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="you@company.com" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Company</label>
-                      <input type="text" placeholder="Company Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="text" name="company" value={formData.company} onChange={handleChange} required placeholder="Company Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
                     </div>
                   </div>
 
@@ -191,6 +221,10 @@ const Contact = () => {
                     <label className="text-sm font-bold text-slate-700 block">Message</label>
                     <textarea 
                       rows="4" 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
                       placeholder="How can we help you?" 
                       className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none"
                     ></textarea>
@@ -198,7 +232,7 @@ const Contact = () => {
 
                   <button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-mirai-primary to-mirai-accent text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                    className="w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
                   >
                     Send Message <Send className="w-5 h-5 ml-1" />
                   </button>
