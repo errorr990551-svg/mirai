@@ -222,7 +222,7 @@ const BlogPage = () => {
 
         {/* ── BOTTOM CONVERSION BLOCK ───────────────────────────────────── */}
         <section className="mt-16 bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-2xl p-8 sm:p-10 shadow-lg text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.08),transparent_35%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.08),transparent_35%)] pointer-events-none" />
           
           <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-4">
             <Cpu className="w-6 h-6 text-mirai-accent" />
@@ -235,16 +235,22 @@ const BlogPage = () => {
             Get genuine active and passive parts directly from authorized sources with full traceability. Upload your BOM and let our Mumbai team quote it within 24 hours.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-3">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-2">
             <button
-              onClick={() => window.dispatchEvent(new CustomEvent('open-rfq'))}
-              className="bg-mirai-primary hover:bg-opacity-95 text-white text-xs font-bold px-6 py-3 rounded-lg shadow-md hover:-translate-y-0.5 transition-all"
+              onClick={() => {
+                if (window.openMiraiRFQ) {
+                  window.openMiraiRFQ();
+                } else {
+                  window.dispatchEvent(new CustomEvent('open-rfq'));
+                }
+              }}
+              className="bg-mirai-primary hover:bg-opacity-90 text-white text-xs font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5 cursor-pointer uppercase tracking-wider"
             >
               Request a Quote
             </button>
             <Link
               to="/products"
-              className="bg-white/10 hover:bg-white/15 border border-white/10 text-white text-xs font-bold px-6 py-3 rounded-lg transition-all"
+              className="bg-transparent border-2 border-white/80 hover:border-white text-white text-xs font-bold px-8 py-3.5 rounded-xl hover:bg-white/10 transition-all hover:-translate-y-0.5 cursor-pointer flex items-center justify-center uppercase tracking-wider shadow-sm hover:shadow"
             >
               Browse Products
             </Link>

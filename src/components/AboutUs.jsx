@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Building2, CheckCircle2, ShieldCheck, FileCheck, Award, Users, 
@@ -98,7 +99,7 @@ const AboutUs = () => {
                 <img 
                   src="/about.jpeg" 
                   alt="Mirai Sourcing Warehouse Facility" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-[12%_center] transition-transform duration-500 group-hover:scale-105"
                 />
                 
                 {/* Premium gradient overlay */}
@@ -309,13 +310,16 @@ const AboutUs = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button 
                 onClick={() => window.dispatchEvent(new CustomEvent('open-rfq'))}
-                className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1"
+                className="bg-mirai-primary text-white font-bold px-8 py-4 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 cursor-pointer"
               >
                 Get In Touch
               </button>
-              <button className="bg-transparent border border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-slate-800 transition-all hover:border-slate-500">
+              <Link 
+                to="/products"
+                className="bg-transparent border border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-slate-800 transition-all hover:border-slate-500 cursor-pointer flex items-center justify-center"
+              >
                 Our Services &rarr;
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

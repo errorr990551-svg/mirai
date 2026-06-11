@@ -27,7 +27,23 @@ const PopupForm = () => {
       }
     };
     window.addEventListener('open-rfq', handleOpenRFQ);
-    return () => window.removeEventListener('open-rfq', handleOpenRFQ);
+
+    window.openMiraiRFQ = (productName) => {
+      console.log("PopupForm: openMiraiRFQ called", productName);
+      setIsOpen(true);
+      window.miraiPopupShown = true;
+      if (productName) {
+        setFormData(prev => ({
+          ...prev,
+          message: `Sourcing Inquiry for: ${productName}. `
+        }));
+      }
+    };
+
+    return () => {
+      window.removeEventListener('open-rfq', handleOpenRFQ);
+      delete window.openMiraiRFQ;
+    };
   }, []);
 
   useEffect(() => {

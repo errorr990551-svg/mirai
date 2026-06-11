@@ -449,7 +449,11 @@ const BlogPostPage = () => {
   const relatedPosts = getRelatedPosts(post, 3);
 
   const triggerRFQ = () => {
-    window.dispatchEvent(new CustomEvent('open-rfq'));
+    if (window.openMiraiRFQ) {
+      window.openMiraiRFQ();
+    } else {
+      window.dispatchEvent(new CustomEvent('open-rfq'));
+    }
   };
 
   return (
@@ -561,7 +565,7 @@ const BlogPostPage = () => {
 
           {/* Sourcing Callout/CTA */}
           <div className="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-2xl p-8 mt-12 text-center relative overflow-hidden max-w-3xl mx-auto border border-white/5">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.06),transparent_35%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.06),transparent_35%)] pointer-events-none" />
             <Cpu className="w-8 h-8 text-mirai-accent mx-auto mb-3" />
             <h4 className="text-base font-heading font-black tracking-tight mb-2">
               Consolidated BOM Sourcing Service
@@ -571,7 +575,7 @@ const BlogPostPage = () => {
             </p>
             <button
               onClick={triggerRFQ}
-              className="bg-mirai-primary hover:bg-opacity-90 text-white text-xs font-bold px-8 py-3.5 rounded-xl shadow-md transition-all inline-flex items-center gap-1.5"
+              className="bg-mirai-primary hover:bg-opacity-90 text-white text-xs font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all inline-flex items-center gap-1.5 cursor-pointer hover:-translate-y-0.5 uppercase tracking-wider"
             >
               <FileText className="w-4 h-4" />
               Request a Quote

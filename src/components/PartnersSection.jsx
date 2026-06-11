@@ -15,12 +15,41 @@ import img12 from '../assets/12.jpeg';
 import img13 from '../assets/13.png';
 
 const PartnersSection = () => {
-  const clientLogos = [
-    img1, img2, img3, img4, img5, img6, img7, img8, img10, img11, img12, img13
+  const originalLogos = [
+    { src: img1, invert: false },
+    { src: img3, invert: false }, // Removed img2 (duplicate onsemi)
+    { src: img4, invert: false },
+    { src: img5, invert: false },
+    { src: img6, invert: false },
+    { src: img7, invert: false },
+    { src: img8, invert: false },
+    { src: img10, invert: false },
+    { src: img11, invert: false },
+    { src: img12, invert: false },
+    { src: img13, invert: false }
   ];
 
-  // Duplicate the logos to fill the grid nicely, similar to the reference image
-  const gridLogos = [...clientLogos, ...clientLogos];
+  const newLogos = [
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (2).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (3).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM.jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (1).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (2).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (2).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (3).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM.jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (1).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (2).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (3).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM.jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (1).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (2).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (3).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM.jpeg", invert: true }
+  ];
+
+  // Combine original and new logos, appending non-duplicate items at the end to make exactly 30 cells
+  const gridLogos = [...originalLogos, ...newLogos, originalLogos[1], originalLogos[2], originalLogos[3]];
 
   return (
     <section className="py-20 bg-slate-50 relative border-t border-b border-slate-100">
@@ -47,9 +76,9 @@ const PartnersSection = () => {
               className="bg-white p-6 flex items-center justify-center h-24 sm:h-28 hover:bg-slate-50/50 hover:shadow-inner transition-all duration-300 group cursor-pointer"
             >
               <img 
-                src={logo} 
+                src={logo.src} 
                 alt={`Partner Brand Logo ${idx + 1}`} 
-                className="max-h-full max-w-full object-contain transition-all duration-300 ease-in-out transform group-hover:scale-105"
+                className={`max-h-full max-w-full object-contain transition-all duration-300 ease-in-out transform group-hover:scale-105 ${logo.invert ? 'invert' : ''}`}
               />
             </motion.div>
           ))}

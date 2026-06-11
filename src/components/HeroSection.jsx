@@ -45,12 +45,12 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative pt-24 pb-0 lg:pt-28 lg:pb-0 bg-cover bg-center bg-no-repeat"
+      className="relative pt-24 pb-0 lg:pt-28 lg:pb-0 bg-cover bg-[position:10%_center] bg-no-repeat"
       style={{ backgroundImage: "url('/banner.jpeg')" }}
     >
       {/* Dark background overlays */}
-      <div className="absolute inset-0 bg-slate-950/80 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent z-0" />
+      <div className="absolute inset-0 bg-slate-950/45 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:grid lg:grid-cols-12 gap-8 items-center">
@@ -81,7 +81,7 @@ const HeroSection = () => {
             
             <motion.p 
               variants={itemVariants}
-              className="text-base sm:text-lg text-slate-300 mb-6 lg:mb-8 max-w-2xl leading-relaxed font-light"
+              className="text-base sm:text-lg text-slate-300 mb-6 lg:mb-8 max-w-lg leading-relaxed font-light"
             >
               Mirai Technologies supplies ICs, MOSFETs, IGBTs, Transistors, MCUs, Capacitors & 2000+ component types from 40+ global brands. Mumbai-based. Serving OEMs, EMS & industries worldwide since 1999.
             </motion.p>

@@ -7,7 +7,7 @@ import {
   HeartHandshake, ChevronDown, ChevronUp,
   Zap, Package, Hash, Layers, Activity
 } from 'lucide-react';
-import { getProductBySlug, getProductsByCategory, getCategoryById } from '../data/products';
+import { products, getProductBySlug, getProductsByCategory, getCategoryById } from '../data/products';
 import { updateMeta, injectProductSchema } from '../utils/seo';
 
 // ── FAQ Accordion Item ────────────────────────────────────────────────────────
@@ -157,6 +157,19 @@ const ProductDetailPage = () => {
     .slice(0, 4);
 
   const categoryData = getCategoryById(product.category);
+
+  const getAlternativeLink = (altName) => {
+    const trimmed = altName.trim();
+    const matchedProduct = products.find(p => 
+      p.partNumber.toLowerCase() === trimmed.toLowerCase() ||
+      p.partNumber.toLowerCase().includes(trimmed.toLowerCase()) ||
+      trimmed.toLowerCase().includes(p.partNumber.toLowerCase())
+    );
+    if (matchedProduct) {
+      return `/product/${matchedProduct.fullSlug}`;
+    }
+    return `/products?q=${encodeURIComponent(trimmed)}`;
+  };
 
   const triggerRFQ = () => {
     window.dispatchEvent(new CustomEvent('open-rfq', { detail: { product: product.name } }));
@@ -385,9 +398,13 @@ const ProductDetailPage = () => {
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {product.alternatives.split(',').map(alt => (
-                          <span key={alt.trim()} className="bg-white border border-slate-200 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg font-mono">
+                          <Link
+                            key={alt.trim()}
+                            to={getAlternativeLink(alt)}
+                            className="bg-white border border-slate-200 hover:border-mirai-primary hover:text-mirai-primary text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg font-mono transition-all duration-200 cursor-pointer shadow-sm hover:shadow"
+                          >
                             {alt.trim()}
-                          </span>
+                          </Link>
                         ))}
                       </div>
                     </div>

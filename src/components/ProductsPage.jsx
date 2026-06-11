@@ -431,21 +431,7 @@ const ProductsPage = () => {
                 </div>
               )}
 
-              {/* Related Search Tags (Originally at the bottom) */}
-              {categoryData.lsiKeywords && (
-                <div className="mt-5 pt-5 border-t border-white/10 relative z-10">
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2.5">
-                    🔍 Related Search Tags
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {categoryData.lsiKeywords.split(',').map(kw => (
-                      <span key={kw} className="text-[10px] text-slate-300 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full font-medium">
-                        {kw.trim()}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+
             </div>
           ) : (
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
