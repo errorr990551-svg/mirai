@@ -30,10 +30,12 @@ const PartnersSection = () => {
   ];
 
   const newLogos = [
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (1).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (2).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (3).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (1).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (2).jpeg", invert: true },
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (1).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (2).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (3).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM.jpeg", invert: true },
@@ -42,10 +44,20 @@ const PartnersSection = () => {
     { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM.jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (1).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (2).jpeg", invert: true },
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (3).jpeg", invert: true }
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (3).jpeg", invert: true },
+    { src: "/Walsin.jpg.jpeg", invert: false },
+    { src: "/bourns.png", invert: false },
+    { src: "/hornby.png", invert: false },
+    { src: "/iksemicon.jpeg", invert: false },
+    { src: "/microchip1.png", invert: false },
+    { src: "/royalohm.jpeg", invert: false },
+    { src: "/stmicro.png", invert: false },
+    { src: "/taejin.png", invert: false },
+    { src: "/texas instruments.jpeg", invert: false },
+    { src: "/utc.jpeg", invert: false }
   ];
 
-  // Combine original and new logos to make exactly 24 unique/distinct cells (4 rows of 6 cols)
+  // Combine original and new logos to make cells
   const gridLogos = [...originalLogos, ...newLogos];
 
   return (
@@ -54,7 +66,7 @@ const PartnersSection = () => {
         
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Our Clients</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Our Channel Partners</h2>
           <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full mb-4"></div>
           <p className="text-slate-500 max-w-2xl mx-auto text-sm md:text-base">
             Trusted by leading manufacturers and global electronic component brands.

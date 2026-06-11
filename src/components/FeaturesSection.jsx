@@ -73,11 +73,6 @@ const FeaturesSection = () => {
                 }}
                 className="h-full relative z-10"
               >
-                {/* Huge background icon for depth */}
-                <div className="absolute -bottom-10 -right-10 text-slate-100/50 group-hover:text-indigo-100/50 group-hover:scale-125 transition-all duration-500 select-none pointer-events-none -z-10">
-                  {React.cloneElement(feature.icon, { size: 120, strokeWidth: 1 })}
-                </div>
-
                 {/* Highlight bar on top */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mirai-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 

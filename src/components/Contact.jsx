@@ -60,8 +60,8 @@ ${formData.message}`;
       {/* 1. HERO SECTION */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-50">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-          <div className="absolute top-[10%] left-[-5%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-mirai-primary/20 to-mirai-accent/20 blur-[150px]" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[60%] rounded-full bg-gradient-to-tl from-pink-500/10 to-mirai-primary/20 blur-[150px]" />
+          <div className="absolute top-[10%] left-[-5%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-blue-500/15 to-indigo-500/15 blur-[150px]" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[60%] rounded-full bg-gradient-to-tl from-pink-500/5 to-blue-500/15 blur-[150px]" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzkuNSAwdi00MCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHkiPSIwLjAzIi8+PC9zdmc+')] [mask-image:linear-gradient(to_bottom,white,transparent)]" />
         </div>
 
@@ -71,12 +71,12 @@ ${formData.message}`;
               initial="hidden" animate="visible"
               variants={containerVariants}
             >
-              <motion.div variants={itemVariants} className="text-sm font-bold tracking-widest text-mirai-primary uppercase mb-4 inline-block bg-mirai-primary/10 px-4 py-1.5 rounded-full">
+              <motion.div variants={itemVariants} className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 inline-block bg-blue-50 border border-blue-100 px-4 py-1.5 rounded-full">
                 Contact Mirai Technologies
               </motion.div>
               <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-8 leading-[1.1]">
                 Get Your Quote in<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent">24 Hours – Guaranteed</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">24 Hours – Guaranteed</span>
               </motion.h1>
               <motion.p variants={itemVariants} className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
                 Submit your RFQ, BOM, or part list today. Our sourcing experts will respond with competitive pricing, full availability, and traceability within 24 hours.
@@ -246,7 +246,43 @@ ${formData.message}`;
         </div>
       </section>
 
+      {/* 3. GOOGLE MAP SECTION */}
+      <section className="w-full h-[450px] relative overflow-hidden border-t border-slate-100 shadow-inner">
+        <iframe 
+          title="Mirai Technologies Office Location Map"
+          src="https://maps.google.com/maps?q=Aditya%20Residency%2C%20Chunabhatti%20Lane%2C%20Lamington%20Road%2C%20Mumbai%20400007&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen="" 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full h-full filter grayscale-[15%] contrast-[105%] hover:grayscale-0 transition-all duration-500"
+        ></iframe>
 
+        {/* Floating Google Maps Link Card */}
+        <div className="absolute top-6 left-6 md:left-10 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl border border-slate-100 max-w-xs z-20 flex flex-col gap-2.5">
+          <div className="flex gap-2.5">
+            <div className="bg-mirai-primary/10 p-2 rounded-xl h-9 w-9 shrink-0 flex items-center justify-center">
+              <MapPin className="w-5 h-5 text-mirai-primary" />
+            </div>
+            <div>
+              <h4 className="text-xs font-black text-slate-900 tracking-wide uppercase">Mirai Technologies</h4>
+              <p className="text-[11px] text-slate-500 font-medium leading-normal mt-0.5">
+                401, Aditya Residency, Chunabhatti Lane, Lamington Road, Mumbai 400 007
+              </p>
+            </div>
+          </div>
+          <a 
+            href="https://share.google/t5WBdLWIaTa08NkUl" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="w-full bg-slate-900 hover:bg-mirai-primary text-white text-[11px] font-bold py-2 rounded-xl text-center transition-all shadow hover:shadow-md hover:-translate-y-0.5"
+          >
+            Open in Google Maps
+          </a>
+        </div>
+      </section>
 
     </div>
   );

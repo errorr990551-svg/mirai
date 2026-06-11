@@ -397,15 +397,27 @@ const ProductDetailPage = () => {
                         Alternative / Compatible Parts
                       </span>
                       <div className="flex flex-wrap gap-2">
-                        {product.alternatives.split(',').map(alt => (
-                          <Link
-                            key={alt.trim()}
-                            to={getAlternativeLink(alt)}
-                            className="bg-white border border-slate-200 hover:border-mirai-primary hover:text-mirai-primary text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg font-mono transition-all duration-200 cursor-pointer shadow-sm hover:shadow"
-                          >
-                            {alt.trim()}
-                          </Link>
-                        ))}
+                        {product.alternatives
+                          .split(',')
+                          .map(alt => {
+                            const trimmed = alt.trim();
+                            const matchedProduct = products.find(p => 
+                              p.partNumber.toLowerCase() === trimmed.toLowerCase() ||
+                              p.partNumber.toLowerCase().includes(trimmed.toLowerCase()) ||
+                              trimmed.toLowerCase().includes(p.partNumber.toLowerCase())
+                            );
+                            if (!matchedProduct) return null;
+                            return (
+                              <Link
+                                key={trimmed}
+                                to={`/product/${matchedProduct.fullSlug}`}
+                                className="bg-white border border-slate-200 hover:border-mirai-primary hover:text-mirai-primary text-slate-700 text-[11px] font-bold px-2.5 py-1.5 rounded-lg font-mono transition-all duration-200 cursor-pointer shadow-sm hover:shadow"
+                              >
+                                {trimmed}
+                              </Link>
+                            );
+                          })
+                          .filter(Boolean)}
                       </div>
                     </div>
                     {product.alternativesLinks?.length > 0 && (

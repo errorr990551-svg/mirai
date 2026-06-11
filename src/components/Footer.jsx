@@ -59,37 +59,39 @@ const Footer = () => {
                 Products
                 <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
               </h3>
-              <ul className="space-y-4 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">ICs / Microchips</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">MOSFETs & IGBTs</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Power Electronics</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Capacitors</a></li>
+            <ul className="space-y-4 text-sm">
+                <li><Link to="/products/integrated-circuit" className="hover:text-white transition-colors">ICs / Microchips</Link></li>
+                <li><Link to="/products/mosfet-transistor" className="hover:text-white transition-colors">MOSFETs & IGBTs</Link></li>
+                <li><Link to="/products/voltage-regulator" className="hover:text-white transition-colors">Power Electronics</Link></li>
+                <li><Link to="/products?q=capacitors" className="hover:text-white transition-colors">Capacitors</Link></li>
               </ul>
             </div>
-
-            {/* Contact */}
-            <div>
-              <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
-                Contact
-                <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
-              </h3>
-              <ul className="space-y-4 text-sm">
-                <li><span className="block text-slate-600 text-xs mb-1">Sales</span> <a href="tel:+919321398188" className="hover:text-white transition-colors text-slate-300">+91 93213 98188</a></li>
-                <li><span className="block text-slate-600 text-xs mb-1">Email</span> <a href="mailto:sales@miraitechnologies.net" className="hover:text-white transition-colors text-slate-300">sales@miraitechnologies.net</a></li>
-                <li><span className="block text-slate-600 text-xs mb-1">Location</span> <span className="text-slate-300">Mumbai, India</span></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs gap-4 text-slate-600">
-          <p>&copy; 2026 Mirai Technologies. All rights reserved.</p>
-          <p className="text-right">
-            Designed and Promoted By <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">Errorr.in</a> - Best Digital Marketing Company in India.
-          </p>
-        </div>
+ 
+             {/* Contact */}
+             <div>
+               <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
+                 Contact
+                 <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
+               </h3>
+               <ul className="space-y-4 text-sm">
+                 <li><span className="block text-slate-600 text-xs mb-1">Sales</span> <a href="tel:+919321398188" className="hover:text-white transition-colors text-slate-300">+91 93213 98188</a></li>
+                 <li><span className="block text-slate-600 text-xs mb-1">Email</span> <a href="mailto:sales@miraitechnologies.net" className="hover:text-white transition-colors text-slate-300">sales@miraitechnologies.net</a></li>
+                 <li><span className="block text-slate-600 text-xs mb-1">Location</span> <span className="text-slate-300">Mumbai, India</span></li>
+               </ul>
+             </div>
+           </div>
+ 
+         </div>
+ 
+         {/* Bottom Bar */}
+         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs gap-4 text-slate-600">
+           <p>&copy; 2026 Mirai Technologies. All rights reserved.</p>
+           <p className="text-right">
+             <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">
+               Designed and Promoted By Errorr.in - Best Digital Marketing Company in India.
+             </a>
+           </p>
+         </div>
 
       </div>
     </footer>
