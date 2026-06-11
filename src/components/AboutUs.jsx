@@ -318,7 +318,7 @@ const AboutUs = () => {
                 to="/products"
                 className="bg-transparent border border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-slate-800 transition-all hover:border-slate-500 cursor-pointer flex items-center justify-center"
               >
-                Our Services &rarr;
+                Our Products &rarr;
               </Link>
             </div>
           </motion.div>

@@ -60,10 +60,10 @@ const Footer = () => {
                 <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
               </h3>
             <ul className="space-y-4 text-sm">
-                <li><Link to="/products/integrated-circuit" className="hover:text-white transition-colors">ICs / Microchips</Link></li>
-                <li><Link to="/products/mosfet-transistor" className="hover:text-white transition-colors">MOSFETs & IGBTs</Link></li>
-                <li><Link to="/products/voltage-regulator" className="hover:text-white transition-colors">Power Electronics</Link></li>
-                <li><Link to="/products?q=capacitors" className="hover:text-white transition-colors">Capacitors</Link></li>
+                <li><Link to="/products/integrated-circuit" className="hover:text-white transition-colors">Integrated Circuits</Link></li>
+                <li><Link to="/products/mosfet-transistor" className="hover:text-white transition-colors">MOSFET Transistors</Link></li>
+                <li><Link to="/products/transistor" className="hover:text-white transition-colors">Transistors & Optocouplers</Link></li>
+                <li><Link to="/products/microcontroller" className="hover:text-white transition-colors">Microcontrollers</Link></li>
               </ul>
             </div>
  
