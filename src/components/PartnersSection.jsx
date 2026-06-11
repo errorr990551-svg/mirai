@@ -32,24 +32,21 @@ const PartnersSection = () => {
   const newLogos = [
     { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (2).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (3).jpeg", invert: true },
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM.jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (1).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (2).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (2).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (3).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM.jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (1).jpeg", invert: true },
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (2).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (3).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM.jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (1).jpeg", invert: true },
     { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (2).jpeg", invert: true },
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (3).jpeg", invert: true },
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM.jpeg", invert: true }
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (3).jpeg", invert: true }
   ];
 
-  // Combine original and new logos, appending non-duplicate items at the end to make exactly 30 cells
-  const gridLogos = [...originalLogos, ...newLogos, originalLogos[1], originalLogos[2], originalLogos[3]];
+  // Combine original and new logos to make exactly 24 unique/distinct cells (4 rows of 6 cols)
+  const gridLogos = [...originalLogos, ...newLogos];
 
   return (
     <section className="py-20 bg-slate-50 relative border-t border-b border-slate-100">

@@ -6,8 +6,16 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
+const excelPath = path.join(ROOT, 'Mirai-Technologies-20-Article-SEO-Master.xlsx');
+
+if (!fs.existsSync(excelPath)) {
+  console.log(`⚠️ Warning: Mirai-Technologies-20-Article-SEO-Master.xlsx not found at ${excelPath}`);
+  console.log("Skipping blog generation (using existing src/data/blog.js).");
+  process.exit(0);
+}
+
 // Read the excel workbook
-const wb = XLSX.readFile(path.join(ROOT, 'Mirai-Technologies-20-Article-SEO-Master.xlsx'));
+const wb = XLSX.readFile(excelPath);
 
 const trackerSheet = XLSX.utils.sheet_to_json(wb.Sheets['Master Tracker']);
 const metaSheet    = XLSX.utils.sheet_to_json(wb.Sheets['SEO Metadata']);
