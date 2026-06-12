@@ -42,8 +42,23 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const getLinkClass = (link) => {
+    let isActive = false;
+    if (link.submenu) {
+      isActive = link.submenu.some(sub => location.pathname === sub.path);
+    } else if (link.name === 'Products') {
+      isActive = location.pathname.startsWith('/product');
+    } else {
+      isActive = location.pathname === link.path;
+    }
+
+    return isActive 
+      ? 'text-mirai-primary font-bold' 
+      : 'text-slate-600 hover:text-mirai-primary';
+  };
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md py-4 border-b border-slate-200/60 shadow-sm' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-sm ${isScrolled || mobileMenuOpen ? 'py-4' : 'py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -61,7 +76,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
               {navLinks.map((link) => {
                 if (link.submenu) {
                   return (
@@ -72,11 +87,7 @@ const Navbar = () => {
                       onMouseLeave={() => setAboutDropdownOpen(false)}
                     >
                       <button
-                        className={`transition-colors px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none ${
-                          location.pathname === '/about' || location.pathname === '/certificate'
-                            ? 'text-mirai-primary font-bold'
-                            : 'text-slate-600 hover:text-mirai-primary'
-                        }`}
+                        className={`transition-colors px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none ${getLinkClass(link)}`}
                       >
                         {link.name}
                         <svg 
@@ -134,11 +145,7 @@ const Navbar = () => {
                       onMouseLeave={() => setProductsDropdownOpen(false)}
                     >
                       <button
-                        className={`transition-colors px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none ${
-                          location.pathname.startsWith('/product')
-                            ? 'text-mirai-primary font-bold'
-                            : 'text-slate-600 hover:text-mirai-primary'
-                        }`}
+                        className={`transition-colors px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none ${getLinkClass(link)}`}
                       >
                         {link.name}
                         <svg 
@@ -164,9 +171,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`transition-colors px-3 py-2 rounded-md text-sm font-medium ${
-                      location.pathname === link.path ? 'text-mirai-primary font-bold' : 'text-slate-600 hover:text-mirai-primary'
-                    }`}
+                    className={`transition-colors px-3 py-2 rounded-md text-sm font-medium ${getLinkClass(link)}`}
                   >
                     {link.name}
                   </Link>
@@ -191,7 +196,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-slate-600 hover:text-slate-900 focus:outline-none"
+              className="text-slate-600 hover:text-slate-900 focus:outline-none transition-colors"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -204,7 +209,7 @@ const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white shadow-sm absolute top-full left-0 w-full border-t border-slate-300"
+          className="md:hidden bg-white shadow-sm absolute top-full left-0 w-full border-t border-slate-350"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => {

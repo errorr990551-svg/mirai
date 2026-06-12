@@ -76,7 +76,7 @@ const Footer = () => {
                <ul className="space-y-4 text-sm">
                  <li><span className="block text-slate-600 text-xs mb-1">Sales</span> <a href="tel:+919321398188" className="hover:text-white transition-colors text-slate-300">+91 93213 98188</a></li>
                  <li><span className="block text-slate-600 text-xs mb-1">Email</span> <a href="mailto:sales@miraitechnologies.net" className="hover:text-white transition-colors text-slate-300">sales@miraitechnologies.net</a></li>
-                 <li><span className="block text-slate-600 text-xs mb-1">Location</span> <span className="text-slate-300">Mumbai, India</span></li>
+                 <li><span className="block text-slate-600 text-xs mb-1">Location / Address</span> <span className="text-slate-300 block leading-relaxed">401, Aditya Residency, Chunabhatti Lane,<br/>Lamington Road, Mumbai 400 007</span></li>
                </ul>
              </div>
            </div>
