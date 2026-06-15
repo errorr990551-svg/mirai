@@ -46,7 +46,7 @@ const HeroSection = () => {
   return (
     <section 
       className="relative pt-24 pb-0 lg:pt-28 lg:pb-0 bg-cover bg-[position:10%_center] bg-no-repeat"
-      style={{ backgroundImage: "url('/banner.jpeg')" }}
+      style={{ backgroundImage: "url('/banner.webp')" }}
     >
       {/* Dark background overlays */}
       <div className="absolute inset-0 bg-slate-950/45 z-0" />

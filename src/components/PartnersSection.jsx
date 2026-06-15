@@ -25,25 +25,25 @@ const PartnersSection = () => {
     { src: img8, invert: false }, // NXP
     { src: img10, invert: false, scale: 1.25 }, // Analog Devices
     { src: img13, invert: false }, // Infineon
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (3).jpeg", invert: true }, // On-Bright
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (1).jpeg", invert: true }, // BPS
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (1).jpeg", invert: true }, // Silergy
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (2).jpeg", invert: true }, // Lite-On
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (3).jpeg", invert: true }, // Everlight
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM.jpeg", invert: true }, // Silan
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (3).jpeg", invert: true }, // Zoetic Power
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM.jpeg", invert: true }, // XL Smart
-    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (3).jpeg", invert: true }, // Renesas
-    { src: "/Walsin.jpg.jpeg", invert: false, scale: 1.3 }, // Walsin
-    { src: "/bourns.png", invert: false, scale: 1.25 }, // Bourns
-    { src: "/hornby.png", invert: false, scale: 1.25 }, // Hornby
-    { src: "/iksemicon.jpeg", invert: false, scale: 1.15 }, // KSemicon
-    { src: "/microchip1.png", invert: false }, // Microchip
-    { src: "/royalohm.jpeg", invert: false, scale: 1.15 }, // Royalohm
-    { src: "/stmicro.png", invert: false, scale: 1.3 }, // STMicroelectronics
-    { src: "/taejin.png", invert: false, scale: 1.6, clipPath: "inset(6.5% 18%)" }, // Taejin
-    { src: "/texas instruments.jpeg", invert: false }, // Texas Instruments
-    { src: "/utc.jpeg", invert: false } // UTC
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.28 AM (3).webp", invert: true }, // On-Bright
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.29 AM (1).webp", invert: true }, // BPS
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (1).webp", invert: true }, // Silergy
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (2).webp", invert: true }, // Lite-On
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM (3).webp", invert: true }, // Everlight
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.30 AM.webp", invert: true }, // Silan
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM (3).webp", invert: true }, // Zoetic Power
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.31 AM.webp", invert: true }, // XL Smart
+    { src: "/WhatsApp Image 2026-06-11 at 11.33.32 AM (3).webp", invert: true }, // Renesas
+    { src: "/Walsin.webp", invert: false, scale: 1.3 }, // Walsin
+    { src: "/bourns.webp", invert: false, scale: 1.25 }, // Bourns
+    { src: "/hornby.webp", invert: false, scale: 1.25 }, // Hornby
+    { src: "/iksemicon.webp", invert: false, scale: 1.15 }, // KSemicon
+    { src: "/microchip1.webp", invert: false }, // Microchip
+    { src: "/royalohm.webp", invert: false, scale: 1.15 }, // Royalohm
+    { src: "/stmicro.webp", invert: false, scale: 1.3 }, // STMicroelectronics
+    { src: "/taejin.webp", invert: false, scale: 1.6, clipPath: "inset(6.5% 18%)" }, // Taejin
+    { src: "/texas instruments.webp", invert: false }, // Texas Instruments
+    { src: "/utc.webp", invert: false } // UTC
   ];
 
   return (

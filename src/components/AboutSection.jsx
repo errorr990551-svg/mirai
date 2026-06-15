@@ -19,7 +19,7 @@ const AboutSection = () => {
               className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100"
             >
               <img 
-                src="/about.jpeg" 
+                src="/about.webp" 
                 alt="Mirai Sourcing Facility" 
                 className="w-full h-[450px] object-cover object-[12%_center] hover:scale-105 transition-transform duration-700"
               />

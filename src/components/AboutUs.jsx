@@ -97,7 +97,7 @@ const AboutUs = () => {
               >
                 {/* Image displaying warehouse_facility.png */}
                 <img 
-                  src="/about.jpeg" 
+                  src="/about.webp" 
                   alt="Mirai Sourcing Warehouse Facility" 
                   className="w-full h-full object-cover object-[12%_center] transition-transform duration-500 group-hover:scale-105"
                 />

@@ -203,18 +203,28 @@ function ProductCard({ product, idx }) {
         <div className="aspect-square bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center relative overflow-hidden">
           {/* Hover tint */}
           <div className="absolute inset-0 bg-mirai-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-          <Cpu className="w-10 h-10 text-slate-200 group-hover:text-mirai-primary/30 transition-colors duration-200" />
+          
+          {product.heroImage?.filename ? (
+            <img
+              src={`/${product.heroImage.filename}`}
+              alt={product.heroImage.alt || product.name}
+              title={product.heroImage.title || product.name}
+              className="w-full h-full object-contain p-4 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
+            />
+          ) : (
+            <Cpu className="w-10 h-10 text-slate-200 group-hover:text-mirai-primary/30 transition-colors duration-200" />
+          )}
 
           {/* Package badge — bottom left */}
           {product.package && (
-            <span className="absolute bottom-2 left-2 bg-slate-900/75 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-0.5 rounded font-mono">
+            <span className="absolute bottom-2 left-2 bg-slate-900/75 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-0.5 rounded font-mono z-20">
               {product.package}
             </span>
           )}
 
           {/* Popular badge — top right */}
           {product.priority === 'High' && (
-            <span className="absolute top-2 right-2 bg-amber-400 text-white text-[8px] font-black px-1.5 py-0.5 rounded-full tracking-wide">
+            <span className="absolute top-2 right-2 bg-amber-400 text-white text-[8px] font-black px-1.5 py-0.5 rounded-full tracking-wide z-20">
               ★ Popular
             </span>
           )}

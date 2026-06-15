@@ -60,11 +60,12 @@ function ImagePanel({ product }) {
       <div className="aspect-square bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200/80 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-br from-mirai-primary/5 to-mirai-accent/5 opacity-40" />
         {current?.img?.filename ? (
-          <div className="text-center p-6">
-            <Cpu className="w-20 h-20 text-slate-200 mx-auto mb-3 group-hover:scale-105 transition-transform duration-300" />
-            <p className="text-xs text-slate-400 font-mono">{current.img.filename}</p>
-            <p className="text-[10px] text-slate-300 mt-1">{current.img.alt?.slice(0, 60)}…</p>
-          </div>
+          <img
+            src={`/${current.img.filename}`}
+            alt={current.img.alt || product.name}
+            title={current.img.title || product.name}
+            className="w-full h-full object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
+          />
         ) : (
           <>
             <Cpu className="w-16 h-16 text-slate-300 group-hover:scale-105 transition-transform" />
@@ -72,7 +73,7 @@ function ImagePanel({ product }) {
           </>
         )}
         {/* Image type badge */}
-        <div className="absolute top-3 left-3">
+        <div className="absolute top-3 left-3 z-20">
           <span className="bg-white/90 backdrop-blur-sm text-xs font-bold text-slate-600 px-2 py-0.5 rounded-full border border-slate-200/60 shadow-sm">
             {current?.label}
           </span>
@@ -687,10 +688,23 @@ const ProductDetailPage = () => {
                   <Link to={`/product/${rp.fullSlug}`} className="block">
                     <div className="aspect-[4/3] bg-slate-50 border-b border-slate-100 flex flex-col items-center justify-center relative overflow-hidden group-hover:bg-slate-100/50 transition-colors">
                       <div className="absolute inset-0 bg-gradient-to-br from-mirai-primary/5 to-mirai-accent/5 opacity-40" />
-                      <Cpu className="w-8 h-8 text-slate-300 group-hover:text-mirai-primary/40 transition-all duration-300" />
-                      <span className="text-[9px] uppercase tracking-widest text-slate-400 font-extrabold mt-2">
-                        {rp.package}
-                      </span>
+                      {rp.heroImage?.filename ? (
+                        <img
+                          src={`/${rp.heroImage.filename}`}
+                          alt={rp.heroImage.alt || rp.name}
+                          title={rp.heroImage.title || rp.name}
+                          className="w-full h-full object-contain p-4 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
+                        />
+                      ) : (
+                        <Cpu className="w-8 h-8 text-slate-300 group-hover:text-mirai-primary/40 transition-all duration-300" />
+                      )}
+
+                      {/* Package badge — bottom left */}
+                      {rp.package && (
+                        <span className="absolute bottom-2 left-2 bg-slate-900/75 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-0.5 rounded font-mono z-20">
+                          {rp.package}
+                        </span>
+                      )}
                     </div>
                   </Link>
 
