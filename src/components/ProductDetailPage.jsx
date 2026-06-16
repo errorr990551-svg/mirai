@@ -87,14 +87,24 @@ function ImagePanel({ product }) {
             <button
               key={img.key}
               onClick={() => setActiveImg(img.key)}
-              className={`flex-1 aspect-square rounded-xl border-2 transition-all flex flex-col items-center justify-center text-[9px] font-bold uppercase tracking-wider gap-1 ${
+              className={`flex-1 aspect-square rounded-xl border-2 overflow-hidden relative transition-all duration-200 flex flex-col items-center justify-center bg-white ${
                 activeImg === img.key
-                  ? 'border-mirai-primary bg-mirai-primary/5 text-mirai-primary'
-                  : 'border-slate-200 bg-slate-50 text-slate-400 hover:border-slate-300'
+                  ? 'border-mirai-primary bg-mirai-primary/5 shadow-sm'
+                  : 'border-slate-200 hover:border-slate-400 hover:shadow-sm'
               }`}
             >
-              <Layers className="w-4 h-4" />
-              {img.label}
+              <img
+                src={`/${img.img.filename}`}
+                alt={img.label}
+                className="w-full h-full object-contain p-1.5 transition-transform duration-300 hover:scale-105"
+              />
+              <div className={`absolute bottom-0 inset-x-0 text-[8px] font-bold uppercase tracking-wider py-0.5 text-center transition-colors duration-200 ${
+                activeImg === img.key
+                  ? 'bg-mirai-primary text-white'
+                  : 'bg-slate-900/60 backdrop-blur-[1px] text-white'
+              }`}>
+                {img.label}
+              </div>
             </button>
           ))}
         </div>
