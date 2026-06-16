@@ -191,17 +191,17 @@ const products = masterData.map(raw => {
     // Images
     heroImage: {
       filename: raw['Hero Image Filename'] || '',
-      alt:      raw['Hero Image Alt Text'] || '',
+      alt:      raw['Hero Image Filename'] || '',
       title:    imgs.hero?.['Title Attribute'] || `Buy ${partNum} Online India`,
     },
     pinoutImage: {
       filename: raw['Pinout Image Filename'] || '',
-      alt:      raw['Pinout Image Alt Text'] || '',
+      alt:      raw['Pinout Image Filename'] || '',
       title:    imgs.pinout?.['Title Attribute'] || `${partNum} Pinout Diagram`,
     },
     appCircuitImage: {
       filename: raw['App Circuit Image Filename'] || '',
-      alt:      raw['App Circuit Image Alt Text'] || '',
+      alt:      raw['App Circuit Image Filename'] || '',
       title:    imgs.appCircuit?.['Title Attribute'] || `${partNum} Application Circuit`,
     },
     alternativesLinks,

@@ -62,7 +62,7 @@ function ImagePanel({ product }) {
         {current?.img?.filename ? (
           <img
             src={`/${current.img.filename}`}
-            alt={current.img.alt || product.name}
+            alt={current.img.filename}
             title={current.img.title || product.name}
             className="w-full h-full object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
           />
@@ -595,18 +595,46 @@ const ProductDetailPage = () => {
                 <div className="grid sm:grid-cols-2 gap-4 mt-8">
                   {product.pinoutImage?.filename && (
                     <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 flex flex-col items-center text-center">
-                      <Layers className="w-10 h-10 text-slate-200 mb-3" />
-                      <span className="text-xs font-bold text-slate-500">Pinout Diagram</span>
-                      <span className="text-[10px] text-slate-400 mt-1 font-mono">{product.pinoutImage.filename}</span>
-                      <p className="text-[10px] text-slate-400 mt-1">{product.pinoutImage.alt}</p>
+                      <span className="text-xs font-bold text-slate-500 mb-3">Pinout Diagram</span>
+                      <div className="w-full aspect-[4/3] bg-white border border-slate-200/80 rounded-xl flex items-center justify-center p-2 relative overflow-hidden group shadow-sm mb-3">
+                        <img
+                          src={`/${product.pinoutImage.filename}`}
+                          alt={product.pinoutImage.filename}
+                          className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            const fallback = e.target.parentNode.querySelector('.fallback-icon');
+                            if (fallback) fallback.style.display = 'flex';
+                          }}
+                        />
+                        <div className="fallback-icon hidden flex-col items-center justify-center text-slate-300">
+                          <Layers className="w-12 h-12 mb-2" />
+                          <span className="text-[10px] uppercase font-bold tracking-wider">Image Not Available</span>
+                        </div>
+                      </div>
+                      <span className="text-[10px] text-slate-400 font-mono">{product.pinoutImage.filename}</span>
                     </div>
                   )}
                   {product.appCircuitImage?.filename && (
                     <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 flex flex-col items-center text-center">
-                      <Activity className="w-10 h-10 text-slate-200 mb-3" />
-                      <span className="text-xs font-bold text-slate-500">Application Circuit</span>
-                      <span className="text-[10px] text-slate-400 mt-1 font-mono">{product.appCircuitImage.filename}</span>
-                      <p className="text-[10px] text-slate-400 mt-1">{product.appCircuitImage.alt}</p>
+                      <span className="text-xs font-bold text-slate-500 mb-3">Application Circuit</span>
+                      <div className="w-full aspect-[4/3] bg-white border border-slate-200/80 rounded-xl flex items-center justify-center p-2 relative overflow-hidden group shadow-sm mb-3">
+                        <img
+                          src={`/${product.appCircuitImage.filename}`}
+                          alt={product.appCircuitImage.filename}
+                          className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            const fallback = e.target.parentNode.querySelector('.fallback-icon');
+                            if (fallback) fallback.style.display = 'flex';
+                          }}
+                        />
+                        <div className="fallback-icon hidden flex-col items-center justify-center text-slate-300">
+                          <Activity className="w-12 h-12 mb-2" />
+                          <span className="text-[10px] uppercase font-bold tracking-wider">Image Not Available</span>
+                        </div>
+                      </div>
+                      <span className="text-[10px] text-slate-400 font-mono">{product.appCircuitImage.filename}</span>
                     </div>
                   )}
                 </div>
@@ -691,7 +719,7 @@ const ProductDetailPage = () => {
                       {rp.heroImage?.filename ? (
                         <img
                           src={`/${rp.heroImage.filename}`}
-                          alt={rp.heroImage.alt || rp.name}
+                          alt={rp.heroImage.filename}
                           title={rp.heroImage.title || rp.name}
                           className="w-full h-full object-contain p-4 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
                         />

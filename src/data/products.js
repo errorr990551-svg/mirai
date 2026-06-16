@@ -330,17 +330,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lm358ld08t-mirai-technologies.webp",
-      "alt": "LM358L-D08-T Dual op-amp, 3V–32V, 1MHz GBW, DIP-8 – Buy Online India Mirai Technologies",
+      "alt": "lm358ld08t-mirai-technologies.webp",
       "title": "Buy LM358L-D08-T Online India"
     },
     "pinoutImage": {
       "filename": "lm358ld08t-pinout-diagram.webp",
-      "alt": "LM358L-D08-T DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "lm358ld08t-pinout-diagram.webp",
       "title": "LM358L-D08-T Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lm358ld08t-application-circuit.webp",
-      "alt": "LM358L-D08-T application circuit diagram for Signal conditioning, active filters",
+      "alt": "lm358ld08t-application-circuit.webp",
       "title": "LM358L-D08-T Application Circuit"
     },
     "alternativesLinks": [],
@@ -412,17 +412,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "uln2003ld16t-mirai-technologies.webp",
-      "alt": "ULN2003L-D16-T 7-ch NPN Darlington, TTL/CMOS, 50V/500mA – Buy Online India Mirai Technologies",
+      "alt": "uln2003ld16t-mirai-technologies.webp",
       "title": "Buy ULN2003L-D16-T Online India"
     },
     "pinoutImage": {
       "filename": "uln2003ld16t-pinout-diagram.webp",
-      "alt": "ULN2003L-D16-T DIP-16 pinout diagram all 16 pins labeled",
+      "alt": "uln2003ld16t-pinout-diagram.webp",
       "title": "ULN2003L-D16-T Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "uln2003ld16t-application-circuit.webp",
-      "alt": "ULN2003L-D16-T application circuit diagram for Stepper motor drivers, relay arrays",
+      "alt": "uln2003ld16t-application-circuit.webp",
       "title": "ULN2003L-D16-T Application Circuit"
     },
     "alternativesLinks": [
@@ -495,17 +495,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "4n33m-mirai-technologies.webp",
-      "alt": "4N33M Phototransistor optocoupler, 3.55kV isol – Buy Online India Mirai Technologies",
+      "alt": "4n33m-mirai-technologies.webp",
       "title": "Buy 4N33M Online India"
     },
     "pinoutImage": {
       "filename": "4n33m-pinout-diagram.webp",
-      "alt": "4N33M DIP-6 pinout diagram all 6 pins labeled",
+      "alt": "4n33m-pinout-diagram.webp",
       "title": "4N33M Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "4n33m-application-circuit.webp",
-      "alt": "4N33M application circuit diagram for SMPS feedback isolation, industrial",
+      "alt": "4n33m-application-circuit.webp",
       "title": "4N33M Application Circuit"
     },
     "alternativesLinks": [
@@ -580,17 +580,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "stm8s003f3p6tr-mirai-technologies.webp",
-      "alt": "STM8S003F3P6TR 8-bit STM8S, 16MHz, 8KB Flash, 1KB RAM,  – Buy Online India Mirai Technologies",
+      "alt": "stm8s003f3p6tr-mirai-technologies.webp",
       "title": "Buy STM8S003F3P6TR Online India"
     },
     "pinoutImage": {
       "filename": "stm8s003f3p6tr-pinout-diagram.webp",
-      "alt": "STM8S003F3P6TR TSSOP-20 pinout diagram all 20 pins labeled",
+      "alt": "stm8s003f3p6tr-pinout-diagram.webp",
       "title": "STM8S003F3P6TR Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "stm8s003f3p6tr-application-circuit.webp",
-      "alt": "STM8S003F3P6TR application circuit diagram for Home appliances, BLDC motor control",
+      "alt": "stm8s003f3p6tr-application-circuit.webp",
       "title": "STM8S003F3P6TR Application Circuit"
     },
     "alternativesLinks": [],
@@ -672,17 +672,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "ds1307-mirai-technologies.webp",
-      "alt": "DS1307 I2C RTC, battery backup, 56-byte NV SRAM – Buy Online India Mirai Technologies",
+      "alt": "ds1307-mirai-technologies.webp",
       "title": "Buy DS1307 Online India"
     },
     "pinoutImage": {
       "filename": "ds1307-pinout-diagram.webp",
-      "alt": "DS1307 DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "ds1307-pinout-diagram.webp",
       "title": "DS1307 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "ds1307-application-circuit.webp",
-      "alt": "DS1307 application circuit diagram for Arduino RTC projects, data loggers,",
+      "alt": "ds1307-application-circuit.webp",
       "title": "DS1307 Application Circuit"
     },
     "alternativesLinks": [
@@ -773,17 +773,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lm339ld14t-mirai-technologies.webp",
-      "alt": "LM339L-D14-T Quad voltage comparator, 2V–36V, open-co – Buy Online India Mirai Technologies",
+      "alt": "lm339ld14t-mirai-technologies.webp",
       "title": "Buy LM339L-D14-T Online India"
     },
     "pinoutImage": {
       "filename": "lm339ld14t-pinout-diagram.webp",
-      "alt": "LM339L-D14-T DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "lm339ld14t-pinout-diagram.webp",
       "title": "LM339L-D14-T Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lm339ld14t-application-circuit.webp",
-      "alt": "LM339L-D14-T application circuit diagram for Battery chargers, window comparator",
+      "alt": "lm339ld14t-application-circuit.webp",
       "title": "LM339L-D14-T Application Circuit"
     },
     "alternativesLinks": [],
@@ -856,17 +856,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "icl8038ccpd-mirai-technologies.webp",
-      "alt": "ICL8038CCPD Function generator, sine/square/triangle – Buy Online India Mirai Technologies",
+      "alt": "icl8038ccpd-mirai-technologies.webp",
       "title": "Buy ICL8038CCPD Online India"
     },
     "pinoutImage": {
       "filename": "icl8038ccpd-pinout-diagram.webp",
-      "alt": "ICL8038CCPD DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "icl8038ccpd-pinout-diagram.webp",
       "title": "ICL8038CCPD Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "icl8038ccpd-application-circuit.webp",
-      "alt": "ICL8038CCPD application circuit diagram for Function generators, VCO circuits, ",
+      "alt": "icl8038ccpd-application-circuit.webp",
       "title": "ICL8038CCPD Application Circuit"
     },
     "alternativesLinks": [],
@@ -929,17 +929,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "sn74ls06n-mirai-technologies.webp",
-      "alt": "SN74LS06N Hex inverter, open-collector 30V/40mA ou – Buy Online India Mirai Technologies",
+      "alt": "sn74ls06n-mirai-technologies.webp",
       "title": "Buy SN74LS06N Online India"
     },
     "pinoutImage": {
       "filename": "sn74ls06n-pinout-diagram.webp",
-      "alt": "SN74LS06N DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "sn74ls06n-pinout-diagram.webp",
       "title": "SN74LS06N Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "sn74ls06n-application-circuit.webp",
-      "alt": "SN74LS06N application circuit diagram for LED drivers, relay drivers, 5V-to-1",
+      "alt": "sn74ls06n-application-circuit.webp",
       "title": "SN74LS06N Application Circuit"
     },
     "alternativesLinks": [],
@@ -1002,17 +1002,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "ds12c887-mirai-technologies.webp",
-      "alt": "DS12C887 Self-contained RTC, built-in crystal+bat – Buy Online India Mirai Technologies",
+      "alt": "ds12c887-mirai-technologies.webp",
       "title": "Buy DS12C887 Online India"
     },
     "pinoutImage": {
       "filename": "ds12c887-pinout-diagram.webp",
-      "alt": "DS12C887 DIP-24 pinout diagram all 24 pins labeled",
+      "alt": "ds12c887-pinout-diagram.webp",
       "title": "DS12C887 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "ds12c887-application-circuit.webp",
-      "alt": "DS12C887 application circuit diagram for Legacy PC/AT systems, industrial ti",
+      "alt": "ds12c887-application-circuit.webp",
       "title": "DS12C887 Application Circuit"
     },
     "alternativesLinks": [],
@@ -1077,17 +1077,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "op07cp-mirai-technologies.webp",
-      "alt": "OP07CP Precision op-amp, ±75µV offset, 1.3µV/°C – Buy Online India Mirai Technologies",
+      "alt": "op07cp-mirai-technologies.webp",
       "title": "Buy OP07CP Online India"
     },
     "pinoutImage": {
       "filename": "op07cp-pinout-diagram.webp",
-      "alt": "OP07CP DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "op07cp-pinout-diagram.webp",
       "title": "OP07CP Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "op07cp-application-circuit.webp",
-      "alt": "OP07CP application circuit diagram for Thermocouple amps, strain gauges, p",
+      "alt": "op07cp-application-circuit.webp",
       "title": "OP07CP Application Circuit"
     },
     "alternativesLinks": [],
@@ -1151,17 +1151,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "ua741cp-mirai-technologies.webp",
-      "alt": "UA741CP Classic 741 op-amp, 1MHz GBW, ±15V, DIP- – Buy Online India Mirai Technologies",
+      "alt": "ua741cp-mirai-technologies.webp",
       "title": "Buy UA741CP Online India"
     },
     "pinoutImage": {
       "filename": "ua741cp-pinout-diagram.webp",
-      "alt": "UA741CP DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "ua741cp-pinout-diagram.webp",
       "title": "UA741CP Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "ua741cp-application-circuit.webp",
-      "alt": "UA741CP application circuit diagram for Audio amplifiers, comparators, inte",
+      "alt": "ua741cp-application-circuit.webp",
       "title": "UA741CP Application Circuit"
     },
     "alternativesLinks": [],
@@ -1224,17 +1224,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lnk364pn-mirai-technologies.webp",
-      "alt": "LNK364PN Off-line switcher, integrated MOSFET+con – Buy Online India Mirai Technologies",
+      "alt": "lnk364pn-mirai-technologies.webp",
       "title": "Buy LNK364PN Online India"
     },
     "pinoutImage": {
       "filename": "lnk364pn-pinout-diagram.webp",
-      "alt": "LNK364PN DIP-4 pinout diagram all 4 pins labeled",
+      "alt": "lnk364pn-pinout-diagram.webp",
       "title": "LNK364PN Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lnk364pn-application-circuit.webp",
-      "alt": "LNK364PN application circuit diagram for Mobile chargers, power adapters, st",
+      "alt": "lnk364pn-application-circuit.webp",
       "title": "LNK364PN Application Circuit"
     },
     "alternativesLinks": [],
@@ -1299,17 +1299,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "moc3023m-mirai-technologies.webp",
-      "alt": "MOC3023M TRIAC driver optocoupler, random-phase,  – Buy Online India Mirai Technologies",
+      "alt": "moc3023m-mirai-technologies.webp",
       "title": "Buy MOC3023M Online India"
     },
     "pinoutImage": {
       "filename": "moc3023m-pinout-diagram.webp",
-      "alt": "MOC3023M DIP-6 pinout diagram all 6 pins labeled",
+      "alt": "moc3023m-pinout-diagram.webp",
       "title": "MOC3023M Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "moc3023m-application-circuit.webp",
-      "alt": "MOC3023M application circuit diagram for AC lamp dimmers, heater controllers",
+      "alt": "moc3023m-application-circuit.webp",
       "title": "MOC3023M Application Circuit"
     },
     "alternativesLinks": [],
@@ -1381,17 +1381,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "fl7733amx-mirai-technologies.webp",
-      "alt": "FL7733AMX PSR LED driver controller, offline, SOP- – Buy Online India Mirai Technologies",
+      "alt": "fl7733amx-mirai-technologies.webp",
       "title": "Buy FL7733AMX Online India"
     },
     "pinoutImage": {
       "filename": "fl7733amx-pinout-diagram.webp",
-      "alt": "FL7733AMX SOP-8 pinout diagram all 8 pins labeled",
+      "alt": "fl7733amx-pinout-diagram.webp",
       "title": "FL7733AMX Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "fl7733amx-application-circuit.webp",
-      "alt": "FL7733AMX application circuit diagram for LED bulbs 9W–20W, LED tube lights, ",
+      "alt": "fl7733amx-application-circuit.webp",
       "title": "FL7733AMX Application Circuit"
     },
     "alternativesLinks": [],
@@ -1456,17 +1456,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "ch340g-mirai-technologies.webp",
-      "alt": "CH340G USB to UART bridge, virtual COM port, 2M – Buy Online India Mirai Technologies",
+      "alt": "ch340g-mirai-technologies.webp",
       "title": "Buy CH340G Online India"
     },
     "pinoutImage": {
       "filename": "ch340g-pinout-diagram.webp",
-      "alt": "CH340G SOIC-16 pinout diagram all 16 pins labeled",
+      "alt": "ch340g-pinout-diagram.webp",
       "title": "CH340G Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "ch340g-application-circuit.webp",
-      "alt": "CH340G application circuit diagram for Arduino Nano/Pro Mini boards, USB-U",
+      "alt": "ch340g-application-circuit.webp",
       "title": "CH340G Application Circuit"
     },
     "alternativesLinks": [],
@@ -1530,17 +1530,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "ad633jn-mirai-technologies.webp",
-      "alt": "AD633JN Precision analog multiplier, ±10V inputs – Buy Online India Mirai Technologies",
+      "alt": "ad633jn-mirai-technologies.webp",
       "title": "Buy AD633JN Online India"
     },
     "pinoutImage": {
       "filename": "ad633jn-pinout-diagram.webp",
-      "alt": "AD633JN DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "ad633jn-pinout-diagram.webp",
       "title": "AD633JN Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "ad633jn-application-circuit.webp",
-      "alt": "AD633JN application circuit diagram for AC power measurement, AM modulation",
+      "alt": "ad633jn-application-circuit.webp",
       "title": "AD633JN Application Circuit"
     },
     "alternativesLinks": [],
@@ -1604,17 +1604,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "sn74hc541dwr-mirai-technologies.webp",
-      "alt": "SN74HC541DWR Octal 3-state non-inverting buffer, SOIC – Buy Online India Mirai Technologies",
+      "alt": "sn74hc541dwr-mirai-technologies.webp",
       "title": "Buy SN74HC541DWR Online India"
     },
     "pinoutImage": {
       "filename": "sn74hc541dwr-pinout-diagram.webp",
-      "alt": "SN74HC541DWR SOIC-20 pinout diagram all 20 pins labeled",
+      "alt": "sn74hc541dwr-pinout-diagram.webp",
       "title": "SN74HC541DWR Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "sn74hc541dwr-application-circuit.webp",
-      "alt": "SN74HC541DWR application circuit diagram for Microprocessor bus buffering, memor",
+      "alt": "sn74hc541dwr-application-circuit.webp",
       "title": "SN74HC541DWR Application Circuit"
     },
     "alternativesLinks": [],
@@ -1677,17 +1677,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "hef4049bt-mirai-technologies.webp",
-      "alt": "HEF4049BT Hex inverting CMOS buffer, 3V–15V, level – Buy Online India Mirai Technologies",
+      "alt": "hef4049bt-mirai-technologies.webp",
       "title": "Buy HEF4049BT Online India"
     },
     "pinoutImage": {
       "filename": "hef4049bt-pinout-diagram.webp",
-      "alt": "HEF4049BT SOIC-16 pinout diagram all 16 pins labeled",
+      "alt": "hef4049bt-pinout-diagram.webp",
       "title": "HEF4049BT Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "hef4049bt-application-circuit.webp",
-      "alt": "HEF4049BT application circuit diagram for CMOS-to-TTL level translation, mixe",
+      "alt": "hef4049bt-application-circuit.webp",
       "title": "HEF4049BT Application Circuit"
     },
     "alternativesLinks": [],
@@ -1751,17 +1751,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "uln2003d-mirai-technologies.webp",
-      "alt": "ULN2003D 7-ch NPN Darlington DIP-16, TTL-optimise – Buy Online India Mirai Technologies",
+      "alt": "uln2003d-mirai-technologies.webp",
       "title": "Buy ULN2003D Online India"
     },
     "pinoutImage": {
       "filename": "uln2003d-pinout-diagram.webp",
-      "alt": "ULN2003D DIP-16 pinout diagram all 16 pins labeled",
+      "alt": "uln2003d-pinout-diagram.webp",
       "title": "ULN2003D Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "uln2003d-application-circuit.webp",
-      "alt": "ULN2003D application circuit diagram for Arduino relay drivers, stepper moto",
+      "alt": "uln2003d-application-circuit.webp",
       "title": "ULN2003D Application Circuit"
     },
     "alternativesLinks": [
@@ -1851,17 +1851,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cd4046be-mirai-technologies.webp",
-      "alt": "CD4046BE CMOS PLL with VCO and dual phase compara – Buy Online India Mirai Technologies",
+      "alt": "cd4046be-mirai-technologies.webp",
       "title": "Buy CD4046BE Online India"
     },
     "pinoutImage": {
       "filename": "cd4046be-pinout-diagram.webp",
-      "alt": "CD4046BE DIP-16 pinout diagram all 16 pins labeled",
+      "alt": "cd4046be-pinout-diagram.webp",
       "title": "CD4046BE Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cd4046be-application-circuit.webp",
-      "alt": "CD4046BE application circuit diagram for FM demodulation, frequency synthesi",
+      "alt": "cd4046be-application-circuit.webp",
       "title": "CD4046BE Application Circuit"
     },
     "alternativesLinks": [],
@@ -1924,17 +1924,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lm2902dt-mirai-technologies.webp",
-      "alt": "LM2902DT Quad op-amp, 3V–32V, SOIC-14 SMD, LM324  – Buy Online India Mirai Technologies",
+      "alt": "lm2902dt-mirai-technologies.webp",
       "title": "Buy LM2902DT Online India"
     },
     "pinoutImage": {
       "filename": "lm2902dt-pinout-diagram.webp",
-      "alt": "LM2902DT SOIC-14 pinout diagram all 14 pins labeled",
+      "alt": "lm2902dt-pinout-diagram.webp",
       "title": "LM2902DT Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lm2902dt-application-circuit.webp",
-      "alt": "LM2902DT application circuit diagram for Signal processing, active filters, ",
+      "alt": "lm2902dt-application-circuit.webp",
       "title": "LM2902DT Application Circuit"
     },
     "alternativesLinks": [],
@@ -1997,17 +1997,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "ads1230ipw-mirai-technologies.webp",
-      "alt": "ADS1230IPW 20-bit delta-sigma ADC, internal PGA 64/ – Buy Online India Mirai Technologies",
+      "alt": "ads1230ipw-mirai-technologies.webp",
       "title": "Buy ADS1230IPW Online India"
     },
     "pinoutImage": {
       "filename": "ads1230ipw-pinout-diagram.webp",
-      "alt": "ADS1230IPW TSSOP-10 pinout diagram all 10 pins labeled",
+      "alt": "ads1230ipw-pinout-diagram.webp",
       "title": "ADS1230IPW Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "ads1230ipw-application-circuit.webp",
-      "alt": "ADS1230IPW application circuit diagram for Weigh scales, industrial load cells",
+      "alt": "ads1230ipw-application-circuit.webp",
       "title": "ADS1230IPW Application Circuit"
     },
     "alternativesLinks": [],
@@ -2070,17 +2070,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "74hc245d-mirai-technologies.webp",
-      "alt": "74HC245D 8-bit bidirectional 3-state bus transcei – Buy Online India Mirai Technologies",
+      "alt": "74hc245d-mirai-technologies.webp",
       "title": "Buy 74HC245D Online India"
     },
     "pinoutImage": {
       "filename": "74hc245d-pinout-diagram.webp",
-      "alt": "74HC245D SOIC-20 pinout diagram all 20 pins labeled",
+      "alt": "74hc245d-pinout-diagram.webp",
       "title": "74HC245D Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "74hc245d-application-circuit.webp",
-      "alt": "74HC245D application circuit diagram for Data bus interfaces, memory bus buf",
+      "alt": "74hc245d-application-circuit.webp",
       "title": "74HC245D Application Circuit"
     },
     "alternativesLinks": [],
@@ -2143,17 +2143,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "m57962l-mirai-technologies.webp",
-      "alt": "M57962L Hybrid IGBT gate driver, ±15V supply, fa – Buy Online India Mirai Technologies",
+      "alt": "m57962l-mirai-technologies.webp",
       "title": "Buy M57962L Online India"
     },
     "pinoutImage": {
       "filename": "m57962l-pinout-diagram.webp",
-      "alt": "M57962L DIP-16 pinout diagram all 16 pins labeled",
+      "alt": "m57962l-pinout-diagram.webp",
       "title": "M57962L Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "m57962l-application-circuit.webp",
-      "alt": "M57962L application circuit diagram for IGBT inverters, three-phase motor d",
+      "alt": "m57962l-application-circuit.webp",
       "title": "M57962L Application Circuit"
     },
     "alternativesLinks": [],
@@ -2216,17 +2216,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cs5460a-mirai-technologies.webp",
-      "alt": "CS5460A Precision power meter IC, dual 24-bit AD – Buy Online India Mirai Technologies",
+      "alt": "cs5460a-mirai-technologies.webp",
       "title": "Buy CS5460A Online India"
     },
     "pinoutImage": {
       "filename": "cs5460a-pinout-diagram.webp",
-      "alt": "CS5460A SOIC-16 pinout diagram all 16 pins labeled",
+      "alt": "cs5460a-pinout-diagram.webp",
       "title": "CS5460A Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cs5460a-application-circuit.webp",
-      "alt": "CS5460A application circuit diagram for Smart meters, energy billing, power",
+      "alt": "cs5460a-application-circuit.webp",
       "title": "CS5460A Application Circuit"
     },
     "alternativesLinks": [],
@@ -2290,17 +2290,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "si2302-mirai-technologies.webp",
-      "alt": "Si2302 N-ch MOSFET, 30V, 4A, Rds(on)=8mΩ, SOT-2 – Buy Online India Mirai Technologies",
+      "alt": "si2302-mirai-technologies.webp",
       "title": "Buy Si2302 Online India"
     },
     "pinoutImage": {
       "filename": "si2302-pinout-diagram.webp",
-      "alt": "Si2302 SOT-23 pinout diagram all 3 pins labeled",
+      "alt": "si2302-pinout-diagram.webp",
       "title": "Si2302 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "si2302-application-circuit.webp",
-      "alt": "Si2302 application circuit diagram for Load switches, battery protection, ",
+      "alt": "si2302-application-circuit.webp",
       "title": "Si2302 Application Circuit"
     },
     "alternativesLinks": [],
@@ -2363,17 +2363,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lf357n-mirai-technologies.webp",
-      "alt": "LF357N JFET op-amp, 20MHz GBW, 50V/µs slew rate – Buy Online India Mirai Technologies",
+      "alt": "lf357n-mirai-technologies.webp",
       "title": "Buy LF357N Online India"
     },
     "pinoutImage": {
       "filename": "lf357n-pinout-diagram.webp",
-      "alt": "LF357N DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "lf357n-pinout-diagram.webp",
       "title": "LF357N Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lf357n-application-circuit.webp",
-      "alt": "LF357N application circuit diagram for Video amplifiers, active filters, S",
+      "alt": "lf357n-application-circuit.webp",
       "title": "LF357N Application Circuit"
     },
     "alternativesLinks": [],
@@ -2436,17 +2436,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "at28c16b-mirai-technologies.webp",
-      "alt": "AT28C16B 16Kbit parallel EEPROM, 2K×8, 150ns, sof – Buy Online India Mirai Technologies",
+      "alt": "at28c16b-mirai-technologies.webp",
       "title": "Buy AT28C16B Online India"
     },
     "pinoutImage": {
       "filename": "at28c16b-pinout-diagram.webp",
-      "alt": "AT28C16B DIP-28 pinout diagram all 28 pins labeled",
+      "alt": "at28c16b-pinout-diagram.webp",
       "title": "AT28C16B Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "at28c16b-application-circuit.webp",
-      "alt": "AT28C16B application circuit diagram for Embedded NV storage, code tables, c",
+      "alt": "at28c16b-application-circuit.webp",
       "title": "AT28C16B Application Circuit"
     },
     "alternativesLinks": [],
@@ -2511,17 +2511,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "irfp4668-mirai-technologies.webp",
-      "alt": "IRFP4668 N-ch MOSFET, 200V, 130A, Rds(on)=3.0mΩ,  – Buy Online India Mirai Technologies",
+      "alt": "irfp4668-mirai-technologies.webp",
       "title": "Buy IRFP4668 Online India"
     },
     "pinoutImage": {
       "filename": "irfp4668-pinout-diagram.webp",
-      "alt": "IRFP4668 TO-247AC pinout diagram all 3 pins labeled",
+      "alt": "irfp4668-pinout-diagram.webp",
       "title": "IRFP4668 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "irfp4668-application-circuit.webp",
-      "alt": "IRFP4668 application circuit diagram for Solar inverters, three-phase motor ",
+      "alt": "irfp4668-application-circuit.webp",
       "title": "IRFP4668 Application Circuit"
     },
     "alternativesLinks": [
@@ -2603,17 +2603,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "irf4668-mirai-technologies.webp",
-      "alt": "IRF4668 N-ch MOSFET, 200V, 130A, Rds(on)=3.2mΩ,  – Buy Online India Mirai Technologies",
+      "alt": "irf4668-mirai-technologies.webp",
       "title": "Buy IRF4668 Online India"
     },
     "pinoutImage": {
       "filename": "irf4668-pinout-diagram.webp",
-      "alt": "IRF4668 TO-220AB pinout diagram all 3 pins labeled",
+      "alt": "irf4668-pinout-diagram.webp",
       "title": "IRF4668 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "irf4668-application-circuit.webp",
-      "alt": "IRF4668 application circuit diagram for Compact motor drives, EV auxiliary,",
+      "alt": "irf4668-application-circuit.webp",
       "title": "IRF4668 Application Circuit"
     },
     "alternativesLinks": [
@@ -2686,17 +2686,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "irfp460-mirai-technologies.webp",
-      "alt": "IRFP460 N-ch MOSFET, 500V, 20A, Rds(on)=0.27Ω, a – Buy Online India Mirai Technologies",
+      "alt": "irfp460-mirai-technologies.webp",
       "title": "Buy IRFP460 Online India"
     },
     "pinoutImage": {
       "filename": "irfp460-pinout-diagram.webp",
-      "alt": "IRFP460 TO-247 pinout diagram all 3 pins labeled",
+      "alt": "irfp460-pinout-diagram.webp",
       "title": "IRFP460 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "irfp460-application-circuit.webp",
-      "alt": "IRFP460 application circuit diagram for SMPS 100W–500W, motor speed control",
+      "alt": "irfp460-application-circuit.webp",
       "title": "IRFP460 Application Circuit"
     },
     "alternativesLinks": [],
@@ -2769,17 +2769,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "p55nf06-mirai-technologies.webp",
-      "alt": "P55NF06 N-ch MOSFET, 60V, 55A, Rds(on)=16mΩ, TO- – Buy Online India Mirai Technologies",
+      "alt": "p55nf06-mirai-technologies.webp",
       "title": "Buy P55NF06 Online India"
     },
     "pinoutImage": {
       "filename": "p55nf06-pinout-diagram.webp",
-      "alt": "P55NF06 TO-220 pinout diagram all 3 pins labeled",
+      "alt": "p55nf06-pinout-diagram.webp",
       "title": "P55NF06 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "p55nf06-application-circuit.webp",
-      "alt": "P55NF06 application circuit diagram for DC motor drives, synchronous rectif",
+      "alt": "p55nf06-application-circuit.webp",
       "title": "P55NF06 Application Circuit"
     },
     "alternativesLinks": [],
@@ -2842,17 +2842,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "stw4n150-mirai-technologies.webp",
-      "alt": "STW4N150 N-ch MOSFET, 1500V, 4A, ultra-high volta – Buy Online India Mirai Technologies",
+      "alt": "stw4n150-mirai-technologies.webp",
       "title": "Buy STW4N150 Online India"
     },
     "pinoutImage": {
       "filename": "stw4n150-pinout-diagram.webp",
-      "alt": "STW4N150 TO-247 pinout diagram all 3 pins labeled",
+      "alt": "stw4n150-pinout-diagram.webp",
       "title": "STW4N150 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "stw4n150-application-circuit.webp",
-      "alt": "STW4N150 application circuit diagram for Ultra-high voltage power supplies, ",
+      "alt": "stw4n150-application-circuit.webp",
       "title": "STW4N150 Application Circuit"
     },
     "alternativesLinks": [],
@@ -2914,17 +2914,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "dopf20n65-mirai-technologies.webp",
-      "alt": "DOPF20N65 N-ch MOSFET, 650V, 20A, low gate charge, – Buy Online India Mirai Technologies",
+      "alt": "dopf20n65-mirai-technologies.webp",
       "title": "Buy DOPF20N65 Online India"
     },
     "pinoutImage": {
       "filename": "dopf20n65-pinout-diagram.webp",
-      "alt": "DOPF20N65 TO-220 pinout diagram all 3 pins labeled",
+      "alt": "dopf20n65-pinout-diagram.webp",
       "title": "DOPF20N65 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "dopf20n65-application-circuit.webp",
-      "alt": "DOPF20N65 application circuit diagram for SMPS, inverters, motor drives, LED ",
+      "alt": "dopf20n65-application-circuit.webp",
       "title": "DOPF20N65 Application Circuit"
     },
     "alternativesLinks": [],
@@ -2987,17 +2987,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "l7824cv-mirai-technologies.webp",
-      "alt": "L7824CV +24V fixed linear regulator, 1A, TO-220 – Buy Online India Mirai Technologies",
+      "alt": "l7824cv-mirai-technologies.webp",
       "title": "Buy L7824CV Online India"
     },
     "pinoutImage": {
       "filename": "l7824cv-pinout-diagram.webp",
-      "alt": "L7824CV TO-220 pinout diagram all 3 pins labeled",
+      "alt": "l7824cv-pinout-diagram.webp",
       "title": "L7824CV Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "l7824cv-application-circuit.webp",
-      "alt": "L7824CV application circuit diagram for 24V regulated supplies, industrial ",
+      "alt": "l7824cv-application-circuit.webp",
       "title": "L7824CV Application Circuit"
     },
     "alternativesLinks": [],
@@ -3059,17 +3059,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "16tts12-mirai-technologies.webp",
-      "alt": "16TTS12 SCR thyristor, 1200V, 16A, TO-220 – Buy Online India Mirai Technologies",
+      "alt": "16tts12-mirai-technologies.webp",
       "title": "Buy 16TTS12 Online India"
     },
     "pinoutImage": {
       "filename": "16tts12-pinout-diagram.webp",
-      "alt": "16TTS12 TO-220 pinout diagram all 3 pins labeled",
+      "alt": "16tts12-pinout-diagram.webp",
       "title": "16TTS12 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "16tts12-application-circuit.webp",
-      "alt": "16TTS12 application circuit diagram for AC motor controls, battery chargers",
+      "alt": "16tts12-application-circuit.webp",
       "title": "16TTS12 Application Circuit"
     },
     "alternativesLinks": [],
@@ -3130,17 +3130,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "40tps12-mirai-technologies.webp",
-      "alt": "40TPS12 High-current SCR, 1200V, 40A, TO-247 – Buy Online India Mirai Technologies",
+      "alt": "40tps12-mirai-technologies.webp",
       "title": "Buy 40TPS12 Online India"
     },
     "pinoutImage": {
       "filename": "40tps12-pinout-diagram.webp",
-      "alt": "40TPS12 TO-247 pinout diagram all 3 pins labeled",
+      "alt": "40tps12-pinout-diagram.webp",
       "title": "40TPS12 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "40tps12-application-circuit.webp",
-      "alt": "40TPS12 application circuit diagram for High-power AC controllers, industri",
+      "alt": "40tps12-application-circuit.webp",
       "title": "40TPS12 Application Circuit"
     },
     "alternativesLinks": [],
@@ -3202,17 +3202,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "dop90nf06-mirai-technologies.webp",
-      "alt": "DOP90NF06 N-ch MOSFET, 60V, 90A, Rds(on)=8mΩ, TO-2 – Buy Online India Mirai Technologies",
+      "alt": "dop90nf06-mirai-technologies.webp",
       "title": "Buy DOP90NF06 Online India"
     },
     "pinoutImage": {
       "filename": "dop90nf06-pinout-diagram.webp",
-      "alt": "DOP90NF06 TO-220 pinout diagram all 3 pins labeled",
+      "alt": "dop90nf06-pinout-diagram.webp",
       "title": "DOP90NF06 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "dop90nf06-application-circuit.webp",
-      "alt": "DOP90NF06 application circuit diagram for Synchronous DC-DC converters, batte",
+      "alt": "dop90nf06-application-circuit.webp",
       "title": "DOP90NF06 Application Circuit"
     },
     "alternativesLinks": [],
@@ -3274,17 +3274,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "utc4n80l-mirai-technologies.webp",
-      "alt": "UTC4N80L N-ch MOSFET, 800V, 4A, isolated TO-220F  – Buy Online India Mirai Technologies",
+      "alt": "utc4n80l-mirai-technologies.webp",
       "title": "Buy UTC4N80L Online India"
     },
     "pinoutImage": {
       "filename": "utc4n80l-pinout-diagram.webp",
-      "alt": "UTC4N80L TO-220F pinout diagram all 3 pins labeled",
+      "alt": "utc4n80l-pinout-diagram.webp",
       "title": "UTC4N80L Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "utc4n80l-application-circuit.webp",
-      "alt": "UTC4N80L application circuit diagram for Flyback converters, UPS, offline SM",
+      "alt": "utc4n80l-application-circuit.webp",
       "title": "UTC4N80L Application Circuit"
     },
     "alternativesLinks": [],
@@ -3346,17 +3346,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "k1500-mirai-technologies.webp",
-      "alt": "K1500 N-ch MOSFET, 900V, 8A, TO-3P through-hol – Buy Online India Mirai Technologies",
+      "alt": "k1500-mirai-technologies.webp",
       "title": "Buy K1500 Online India"
     },
     "pinoutImage": {
       "filename": "k1500-pinout-diagram.webp",
-      "alt": "K1500 TO-3P pinout diagram all 3 pins labeled",
+      "alt": "k1500-pinout-diagram.webp",
       "title": "K1500 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "k1500-application-circuit.webp",
-      "alt": "K1500 application circuit diagram for High-voltage audio amplifiers, indu",
+      "alt": "k1500-application-circuit.webp",
       "title": "K1500 Application Circuit"
     },
     "alternativesLinks": [],
@@ -3418,17 +3418,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "gt40j121-mirai-technologies.webp",
-      "alt": "GT40J121 N-ch IGBT, 600V, 50A, TO-3P – Buy Online India Mirai Technologies",
+      "alt": "gt40j121-mirai-technologies.webp",
       "title": "Buy GT40J121 Online India"
     },
     "pinoutImage": {
       "filename": "gt40j121-pinout-diagram.webp",
-      "alt": "GT40J121 TO-3P pinout diagram all 3 pins labeled",
+      "alt": "gt40j121-pinout-diagram.webp",
       "title": "GT40J121 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "gt40j121-application-circuit.webp",
-      "alt": "GT40J121 application circuit diagram for Inverters, motor drives, welding ma",
+      "alt": "gt40j121-application-circuit.webp",
       "title": "GT40J121 Application Circuit"
     },
     "alternativesLinks": [],
@@ -3490,17 +3490,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "a7847-mirai-technologies.webp",
-      "alt": "A7847 PNP power transistor, 140V, 12A, 5-pin T – Buy Online India Mirai Technologies",
+      "alt": "a7847-mirai-technologies.webp",
       "title": "Buy A7847 Online India"
     },
     "pinoutImage": {
       "filename": "a7847-pinout-diagram.webp",
-      "alt": "A7847 TO-3P pinout diagram all 3 pins labeled",
+      "alt": "a7847-pinout-diagram.webp",
       "title": "A7847 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "a7847-application-circuit.webp",
-      "alt": "A7847 application circuit diagram for Power amplifiers, motor controls, s",
+      "alt": "a7847-application-circuit.webp",
       "title": "A7847 Application Circuit"
     },
     "alternativesLinks": [],
@@ -3563,17 +3563,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "17n80c3-mirai-technologies.webp",
-      "alt": "17N80C3 N-ch CoolMOS, 800V, 17A, Rds(on)=0.29Ω,  – Buy Online India Mirai Technologies",
+      "alt": "17n80c3-mirai-technologies.webp",
       "title": "Buy 17N80C3 Online India"
     },
     "pinoutImage": {
       "filename": "17n80c3-pinout-diagram.webp",
-      "alt": "17N80C3 TO-220 pinout diagram all 3 pins labeled",
+      "alt": "17n80c3-pinout-diagram.webp",
       "title": "17N80C3 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "17n80c3-application-circuit.webp",
-      "alt": "17N80C3 application circuit diagram for SMPS, PFC converters, flyback conve",
+      "alt": "17n80c3-application-circuit.webp",
       "title": "17N80C3 Application Circuit"
     },
     "alternativesLinks": [],
@@ -3636,17 +3636,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "20d511k-mirai-technologies.webp",
-      "alt": "20D511K MOV varistor, 510V clamping, 20mm disc,  – Buy Online India Mirai Technologies",
+      "alt": "20d511k-mirai-technologies.webp",
       "title": "Buy 20D511K Online India"
     },
     "pinoutImage": {
       "filename": "20d511k-pinout-diagram.webp",
-      "alt": "20D511K Disc 20mm pinout diagram all 2 pins labeled",
+      "alt": "20d511k-pinout-diagram.webp",
       "title": "20D511K Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "20d511k-application-circuit.webp",
-      "alt": "20D511K application circuit diagram for AC mains surge protection, SMPS inp",
+      "alt": "20d511k-application-circuit.webp",
       "title": "20D511K Application Circuit"
     },
     "alternativesLinks": [],
@@ -3718,17 +3718,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "irf9z24n-mirai-technologies.webp",
-      "alt": "IRF9Z24N P-ch MOSFET, -55V, -11A, Rds(on)=0.175Ω, – Buy Online India Mirai Technologies",
+      "alt": "irf9z24n-mirai-technologies.webp",
       "title": "Buy IRF9Z24N Online India"
     },
     "pinoutImage": {
       "filename": "irf9z24n-pinout-diagram.webp",
-      "alt": "IRF9Z24N TO-220 pinout diagram all 3 pins labeled",
+      "alt": "irf9z24n-pinout-diagram.webp",
       "title": "IRF9Z24N Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "irf9z24n-application-circuit.webp",
-      "alt": "IRF9Z24N application circuit diagram for Complementary H-bridges, P-ch load ",
+      "alt": "irf9z24n-application-circuit.webp",
       "title": "IRF9Z24N Application Circuit"
     },
     "alternativesLinks": [],
@@ -3800,17 +3800,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "irfz24n-mirai-technologies.webp",
-      "alt": "IRFZ24N N-ch logic-level MOSFET, 55V, 17A, Rds(o – Buy Online India Mirai Technologies",
+      "alt": "irfz24n-mirai-technologies.webp",
       "title": "Buy IRFZ24N Online India"
     },
     "pinoutImage": {
       "filename": "irfz24n-pinout-diagram.webp",
-      "alt": "IRFZ24N TO-220 pinout diagram all 3 pins labeled",
+      "alt": "irfz24n-pinout-diagram.webp",
       "title": "IRFZ24N Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "irfz24n-application-circuit.webp",
-      "alt": "IRFZ24N application circuit diagram for DC motor H-bridges, battery managem",
+      "alt": "irfz24n-application-circuit.webp",
       "title": "IRFZ24N Application Circuit"
     },
     "alternativesLinks": [],
@@ -3882,17 +3882,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cd4051be-mirai-technologies.webp",
-      "alt": "CD4051BE 8-ch analog MUX/DEMUX, 3-ch binary addre – Buy Online India Mirai Technologies",
+      "alt": "cd4051be-mirai-technologies.webp",
       "title": "Buy CD4051BE Online India"
     },
     "pinoutImage": {
       "filename": "cd4051be-pinout-diagram.webp",
-      "alt": "CD4051BE DIP-16 pinout diagram all 16 pins labeled",
+      "alt": "cd4051be-pinout-diagram.webp",
       "title": "CD4051BE Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cd4051be-application-circuit.webp",
-      "alt": "CD4051BE application circuit diagram for Data acquisition, audio switching, ",
+      "alt": "cd4051be-application-circuit.webp",
       "title": "CD4051BE Application Circuit"
     },
     "alternativesLinks": [],
@@ -3955,17 +3955,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "bt139-mirai-technologies.webp",
-      "alt": "BT139 TRIAC, 16A, 600V, sensitive gate, TO-220 – Buy Online India Mirai Technologies",
+      "alt": "bt139-mirai-technologies.webp",
       "title": "Buy BT139 Online India"
     },
     "pinoutImage": {
       "filename": "bt139-pinout-diagram.webp",
-      "alt": "BT139 TO-220 pinout diagram all 3 pins labeled",
+      "alt": "bt139-pinout-diagram.webp",
       "title": "BT139 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "bt139-application-circuit.webp",
-      "alt": "BT139 application circuit diagram for AC lamp dimmers, heater controllers",
+      "alt": "bt139-application-circuit.webp",
       "title": "BT139 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4037,17 +4037,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "irfb4227-mirai-technologies.webp",
-      "alt": "IRFB4227 N-ch MOSFET, 200V, 76A, Rds(on)=20mΩ, TO – Buy Online India Mirai Technologies",
+      "alt": "irfb4227-mirai-technologies.webp",
       "title": "Buy IRFB4227 Online India"
     },
     "pinoutImage": {
       "filename": "irfb4227-pinout-diagram.webp",
-      "alt": "IRFB4227 TO-220AB pinout diagram all 3 pins labeled",
+      "alt": "irfb4227-pinout-diagram.webp",
       "title": "IRFB4227 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "irfb4227-application-circuit.webp",
-      "alt": "IRFB4227 application circuit diagram for Motor drive H-bridges, DC-DC conver",
+      "alt": "irfb4227-application-circuit.webp",
       "title": "IRFB4227 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4109,17 +4109,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "fgl60n100-mirai-technologies.webp",
-      "alt": "FGL60N100 N-ch IGBT, 1000V, 60A, TO-264 – Buy Online India Mirai Technologies",
+      "alt": "fgl60n100-mirai-technologies.webp",
       "title": "Buy FGL60N100 Online India"
     },
     "pinoutImage": {
       "filename": "fgl60n100-pinout-diagram.webp",
-      "alt": "FGL60N100 TO-264 pinout diagram all 3 pins labeled",
+      "alt": "fgl60n100-pinout-diagram.webp",
       "title": "FGL60N100 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "fgl60n100-application-circuit.webp",
-      "alt": "FGL60N100 application circuit diagram for Solar inverters, industrial motor d",
+      "alt": "fgl60n100-application-circuit.webp",
       "title": "FGL60N100 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4181,17 +4181,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "75n60-mirai-technologies.webp",
-      "alt": "75N60 N-ch IGBT, 600V, 75A, TO-247 – Buy Online India Mirai Technologies",
+      "alt": "75n60-mirai-technologies.webp",
       "title": "Buy 75N60 Online India"
     },
     "pinoutImage": {
       "filename": "75n60-pinout-diagram.webp",
-      "alt": "75N60 TO-247 pinout diagram all 3 pins labeled",
+      "alt": "75n60-pinout-diagram.webp",
       "title": "75N60 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "75n60-application-circuit.webp",
-      "alt": "75N60 application circuit diagram for Inverters, UPS repair, induction co",
+      "alt": "75n60-application-circuit.webp",
       "title": "75N60 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4255,17 +4255,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "ntc10d11-mirai-technologies.webp",
-      "alt": "NTC10D11 10Ω NTC thermistor, 11mm disc, inrush li – Buy Online India Mirai Technologies",
+      "alt": "ntc10d11-mirai-technologies.webp",
       "title": "Buy NTC10D11 Online India"
     },
     "pinoutImage": {
       "filename": "ntc10d11-pinout-diagram.webp",
-      "alt": "NTC10D11 Disc 11mm pinout diagram all 2 pins labeled",
+      "alt": "ntc10d11-pinout-diagram.webp",
       "title": "NTC10D11 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "ntc10d11-application-circuit.webp",
-      "alt": "NTC10D11 application circuit diagram for Inrush current limiting in SMPS and",
+      "alt": "ntc10d11-application-circuit.webp",
       "title": "NTC10D11 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4339,17 +4339,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "mje2955t-mirai-technologies.webp",
-      "alt": "MJE2955T PNP power transistor, -60V, -10A, 75W, c – Buy Online India Mirai Technologies",
+      "alt": "mje2955t-mirai-technologies.webp",
       "title": "Buy MJE2955T Online India"
     },
     "pinoutImage": {
       "filename": "mje2955t-pinout-diagram.webp",
-      "alt": "MJE2955T TO-220 pinout diagram all 3 pins labeled",
+      "alt": "mje2955t-pinout-diagram.webp",
       "title": "MJE2955T Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "mje2955t-application-circuit.webp",
-      "alt": "MJE2955T application circuit diagram for Audio power amplifier output stages",
+      "alt": "mje2955t-application-circuit.webp",
       "title": "MJE2955T Application Circuit"
     },
     "alternativesLinks": [],
@@ -4412,17 +4412,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "hef4081bp-mirai-technologies.webp",
-      "alt": "HEF4081BP Quad 2-input CMOS AND gate, 3V–15V, high – Buy Online India Mirai Technologies",
+      "alt": "hef4081bp-mirai-technologies.webp",
       "title": "Buy HEF4081BP Online India"
     },
     "pinoutImage": {
       "filename": "hef4081bp-pinout-diagram.webp",
-      "alt": "HEF4081BP DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "hef4081bp-pinout-diagram.webp",
       "title": "HEF4081BP Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "hef4081bp-application-circuit.webp",
-      "alt": "HEF4081BP application circuit diagram for Digital enable logic, coincidence d",
+      "alt": "hef4081bp-application-circuit.webp",
       "title": "HEF4081BP Application Circuit"
     },
     "alternativesLinks": [],
@@ -4483,17 +4483,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "f4n65-mirai-technologies.webp",
-      "alt": "F4N65 N-ch MOSFET, 650V, 4A, low gate charge,  – Buy Online India Mirai Technologies",
+      "alt": "f4n65-mirai-technologies.webp",
       "title": "Buy F4N65 Online India"
     },
     "pinoutImage": {
       "filename": "f4n65-pinout-diagram.webp",
-      "alt": "F4N65 TO-220AB pinout diagram all 3 pins labeled",
+      "alt": "f4n65-pinout-diagram.webp",
       "title": "F4N65 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "f4n65-application-circuit.webp",
-      "alt": "F4N65 application circuit diagram for SMPS, flyback converters, LED drive",
+      "alt": "f4n65-application-circuit.webp",
       "title": "F4N65 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4556,17 +4556,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cd4001be-mirai-technologies.webp",
-      "alt": "CD4001BE Quad 2-input CMOS NOR gate, 3V–18V, DIP- – Buy Online India Mirai Technologies",
+      "alt": "cd4001be-mirai-technologies.webp",
       "title": "Buy CD4001BE Online India"
     },
     "pinoutImage": {
       "filename": "cd4001be-pinout-diagram.webp",
-      "alt": "CD4001BE DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "cd4001be-pinout-diagram.webp",
       "title": "CD4001BE Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cd4001be-application-circuit.webp",
-      "alt": "CD4001BE application circuit diagram for Logic design, RS flip-flops, gate o",
+      "alt": "cd4001be-application-circuit.webp",
       "title": "CD4001BE Application Circuit"
     },
     "alternativesLinks": [],
@@ -4629,17 +4629,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "uln2804a-mirai-technologies.webp",
-      "alt": "ULN2804A 8-ch NPN Darlington, 5V CMOS optimised,  – Buy Online India Mirai Technologies",
+      "alt": "uln2804a-mirai-technologies.webp",
       "title": "Buy ULN2804A Online India"
     },
     "pinoutImage": {
       "filename": "uln2804a-pinout-diagram.webp",
-      "alt": "ULN2804A DIP-18 pinout diagram all 18 pins labeled",
+      "alt": "uln2804a-pinout-diagram.webp",
       "title": "ULN2804A Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "uln2804a-application-circuit.webp",
-      "alt": "ULN2804A application circuit diagram for 8-bit relay output cards, 2-phase s",
+      "alt": "uln2804a-application-circuit.webp",
       "title": "ULN2804A Application Circuit"
     },
     "alternativesLinks": [],
@@ -4710,17 +4710,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "a2031-mirai-technologies.webp",
-      "alt": "A2031 PNP power transistor, 60V, 7A, metal TO- – Buy Online India Mirai Technologies",
+      "alt": "a2031-mirai-technologies.webp",
       "title": "Buy A2031 Online India"
     },
     "pinoutImage": {
       "filename": "a2031-pinout-diagram.webp",
-      "alt": "A2031 TO-3 pinout diagram all 3 pins labeled",
+      "alt": "a2031-pinout-diagram.webp",
       "title": "A2031 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "a2031-application-circuit.webp",
-      "alt": "A2031 application circuit diagram for Audio power amplifiers, linear regu",
+      "alt": "a2031-application-circuit.webp",
       "title": "A2031 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4784,17 +4784,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "el817c-mirai-technologies.webp",
-      "alt": "EL817C SMD optocoupler PC817 equivalent, 5kV is – Buy Online India Mirai Technologies",
+      "alt": "el817c-mirai-technologies.webp",
       "title": "Buy EL817C Online India"
     },
     "pinoutImage": {
       "filename": "el817c-pinout-diagram.webp",
-      "alt": "EL817C SOP-4 pinout diagram all 4 pins labeled",
+      "alt": "el817c-pinout-diagram.webp",
       "title": "EL817C Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "el817c-application-circuit.webp",
-      "alt": "EL817C application circuit diagram for SMPS feedback isolation, battery mo",
+      "alt": "el817c-application-circuit.webp",
       "title": "EL817C Application Circuit"
     },
     "alternativesLinks": [
@@ -4867,17 +4867,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lm2596r5-mirai-technologies.webp",
-      "alt": "LM2596R5 Fixed 5V 3A buck switching regulator, 15 – Buy Online India Mirai Technologies",
+      "alt": "lm2596r5-mirai-technologies.webp",
       "title": "Buy LM2596R5 Online India"
     },
     "pinoutImage": {
       "filename": "lm2596r5-pinout-diagram.webp",
-      "alt": "LM2596R5 TO-263-5 pinout diagram all 5 pins labeled",
+      "alt": "lm2596r5-pinout-diagram.webp",
       "title": "LM2596R5 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lm2596r5-application-circuit.webp",
-      "alt": "LM2596R5 application circuit diagram for 5V supply from 12V/24V, Arduino pow",
+      "alt": "lm2596r5-application-circuit.webp",
       "title": "LM2596R5 Application Circuit"
     },
     "alternativesLinks": [],
@@ -4949,17 +4949,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lm2576adj-mirai-technologies.webp",
-      "alt": "LM2576ADJ Adjustable 3A step-down buck regulator,  – Buy Online India Mirai Technologies",
+      "alt": "lm2576adj-mirai-technologies.webp",
       "title": "Buy LM2576ADJ Online India"
     },
     "pinoutImage": {
       "filename": "lm2576adj-pinout-diagram.webp",
-      "alt": "LM2576ADJ TO-220-5 pinout diagram all 5 pins labeled",
+      "alt": "lm2576adj-pinout-diagram.webp",
       "title": "LM2576ADJ Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lm2576adj-application-circuit.webp",
-      "alt": "LM2576ADJ application circuit diagram for Adjustable regulated supplies, batt",
+      "alt": "lm2576adj-application-circuit.webp",
       "title": "LM2576ADJ Application Circuit"
     },
     "alternativesLinks": [],
@@ -5031,17 +5031,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "lm2596r5v2-mirai-technologies.webp",
-      "alt": "LM2596R5v2 Fixed 5V 3A buck converter, 150kHz, SMD  – Buy Online India Mirai Technologies",
+      "alt": "lm2596r5v2-mirai-technologies.webp",
       "title": "Buy LM2596R5v2 Online India"
     },
     "pinoutImage": {
       "filename": "lm2596r5v2-pinout-diagram.webp",
-      "alt": "LM2596R5v2 TO-263-5 pinout diagram all 5 pins labeled",
+      "alt": "lm2596r5v2-pinout-diagram.webp",
       "title": "LM2596R5v2 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "lm2596r5v2-application-circuit.webp",
-      "alt": "LM2596R5v2 application circuit diagram for Switch-mode 5V supplies, 5V point-o",
+      "alt": "lm2596r5v2-application-circuit.webp",
       "title": "LM2596R5v2 Application Circuit"
     },
     "alternativesLinks": [],
@@ -5109,17 +5109,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "atmega32aau-mirai-technologies.webp",
-      "alt": "ATMEGA32A-AU 8-bit AVR, 32KB Flash, 2KB SRAM, 16MHz,  – Buy Online India Mirai Technologies",
+      "alt": "atmega32aau-mirai-technologies.webp",
       "title": "Buy ATMEGA32A-AU Online India"
     },
     "pinoutImage": {
       "filename": "atmega32aau-pinout-diagram.webp",
-      "alt": "ATMEGA32A-AU TQFP-44 pinout diagram all 44 pins labeled",
+      "alt": "atmega32aau-pinout-diagram.webp",
       "title": "ATMEGA32A-AU Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "atmega32aau-application-circuit.webp",
-      "alt": "ATMEGA32A-AU application circuit diagram for Industrial automation, robotics, da",
+      "alt": "atmega32aau-application-circuit.webp",
       "title": "ATMEGA32A-AU Application Circuit"
     },
     "alternativesLinks": [],
@@ -5194,17 +5194,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "at89s52-mirai-technologies.webp",
-      "alt": "AT89S52 8051-compatible, 8KB ISP Flash, 256B RAM – Buy Online India Mirai Technologies",
+      "alt": "at89s52-mirai-technologies.webp",
       "title": "Buy AT89S52 Online India"
     },
     "pinoutImage": {
       "filename": "at89s52-pinout-diagram.webp",
-      "alt": "AT89S52 DIP-40 pinout diagram all 40 pins labeled",
+      "alt": "at89s52-pinout-diagram.webp",
       "title": "AT89S52 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "at89s52-application-circuit.webp",
-      "alt": "AT89S52 application circuit diagram for Engineering lab projects, 8051 lear",
+      "alt": "at89s52-application-circuit.webp",
       "title": "AT89S52 Application Circuit"
     },
     "alternativesLinks": [
@@ -5278,17 +5278,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "mg82f6d17ae20-mirai-technologies.webp",
-      "alt": "MG82F6D17AE20 Enhanced 8051, built-in Flash, 20MHz, LQ – Buy Online India Mirai Technologies",
+      "alt": "mg82f6d17ae20-mirai-technologies.webp",
       "title": "Buy MG82F6D17AE20 Online India"
     },
     "pinoutImage": {
       "filename": "mg82f6d17ae20-pinout-diagram.webp",
-      "alt": "MG82F6D17AE20 LQFP-32 pinout diagram all 32 pins labeled",
+      "alt": "mg82f6d17ae20-pinout-diagram.webp",
       "title": "MG82F6D17AE20 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "mg82f6d17ae20-application-circuit.webp",
-      "alt": "MG82F6D17AE20 application circuit diagram for Home appliances, LED controllers, s",
+      "alt": "mg82f6d17ae20-application-circuit.webp",
       "title": "MG82F6D17AE20 Application Circuit"
     },
     "alternativesLinks": [],
@@ -5353,17 +5353,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "stm8s003k3t6-mirai-technologies.webp",
-      "alt": "STM8S003K3T6 8-bit STM8S, 16MHz, 8KB Flash, LQFP-32 S – Buy Online India Mirai Technologies",
+      "alt": "stm8s003k3t6-mirai-technologies.webp",
       "title": "Buy STM8S003K3T6 Online India"
     },
     "pinoutImage": {
       "filename": "stm8s003k3t6-pinout-diagram.webp",
-      "alt": "STM8S003K3T6 LQFP-32 pinout diagram all 32 pins labeled",
+      "alt": "stm8s003k3t6-pinout-diagram.webp",
       "title": "STM8S003K3T6 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "stm8s003k3t6-application-circuit.webp",
-      "alt": "STM8S003K3T6 application circuit diagram for Home appliances, motor control, sma",
+      "alt": "stm8s003k3t6-application-circuit.webp",
       "title": "STM8S003K3T6 Application Circuit"
     },
     "alternativesLinks": [],
@@ -5426,17 +5426,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "at89s5224pu-mirai-technologies.webp",
-      "alt": "AT89S5224PU 8051-compatible, 8KB ISP Flash, 24MHz, D – Buy Online India Mirai Technologies",
+      "alt": "at89s5224pu-mirai-technologies.webp",
       "title": "Buy AT89S5224PU Online India"
     },
     "pinoutImage": {
       "filename": "at89s5224pu-pinout-diagram.webp",
-      "alt": "AT89S5224PU DIP-40 pinout diagram all 40 pins labeled",
+      "alt": "at89s5224pu-pinout-diagram.webp",
       "title": "AT89S5224PU Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "at89s5224pu-application-circuit.webp",
-      "alt": "AT89S5224PU application circuit diagram for 8051 educational projects, legacy i",
+      "alt": "at89s5224pu-application-circuit.webp",
       "title": "AT89S5224PU Application Circuit"
     },
     "alternativesLinks": [],
@@ -5500,17 +5500,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "in1307dt-mirai-technologies.webp",
-      "alt": "IN1307DT DS1307-compatible RTC, I2C, battery back – Buy Online India Mirai Technologies",
+      "alt": "in1307dt-mirai-technologies.webp",
       "title": "Buy IN1307DT Online India"
     },
     "pinoutImage": {
       "filename": "in1307dt-pinout-diagram.webp",
-      "alt": "IN1307DT DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "in1307dt-pinout-diagram.webp",
       "title": "IN1307DT Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "in1307dt-application-circuit.webp",
-      "alt": "IN1307DT application circuit diagram for Arduino RTC projects, data loggers,",
+      "alt": "in1307dt-application-circuit.webp",
       "title": "IN1307DT Application Circuit"
     },
     "alternativesLinks": [
@@ -5582,17 +5582,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "pcf85163t-mirai-technologies.webp",
-      "alt": "PCF85163T Ultra-precise RTC, built-in crystal, ±1p – Buy Online India Mirai Technologies",
+      "alt": "pcf85163t-mirai-technologies.webp",
       "title": "Buy PCF85163T Online India"
     },
     "pinoutImage": {
       "filename": "pcf85163t-pinout-diagram.webp",
-      "alt": "PCF85163T SOIC-20 pinout diagram all 20 pins labeled",
+      "alt": "pcf85163t-pinout-diagram.webp",
       "title": "PCF85163T Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "pcf85163t-application-circuit.webp",
-      "alt": "PCF85163T application circuit diagram for Smart meters, billing systems, indu",
+      "alt": "pcf85163t-application-circuit.webp",
       "title": "PCF85163T Application Circuit"
     },
     "alternativesLinks": [],
@@ -5655,17 +5655,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "tbd62083apg-mirai-technologies.webp",
-      "alt": "TBD62083APG 7-ch NPN Darlington, ULN2003-compatible, – Buy Online India Mirai Technologies",
+      "alt": "tbd62083apg-mirai-technologies.webp",
       "title": "Buy TBD62083APG Online India"
     },
     "pinoutImage": {
       "filename": "tbd62083apg-pinout-diagram.webp",
-      "alt": "TBD62083APG DIP-18 pinout diagram all 18 pins labeled",
+      "alt": "tbd62083apg-pinout-diagram.webp",
       "title": "TBD62083APG Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "tbd62083apg-application-circuit.webp",
-      "alt": "TBD62083APG application circuit diagram for Relay arrays, stepper motor drives,",
+      "alt": "tbd62083apg-application-circuit.webp",
       "title": "TBD62083APG Application Circuit"
     },
     "alternativesLinks": [],
@@ -5729,17 +5729,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cd4011be-mirai-technologies.webp",
-      "alt": "CD4011BE Quad 2-input CMOS NAND gate, 3V–18V, DIP – Buy Online India Mirai Technologies",
+      "alt": "cd4011be-mirai-technologies.webp",
       "title": "Buy CD4011BE Online India"
     },
     "pinoutImage": {
       "filename": "cd4011be-pinout-diagram.webp",
-      "alt": "CD4011BE DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "cd4011be-pinout-diagram.webp",
       "title": "CD4011BE Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cd4011be-application-circuit.webp",
-      "alt": "CD4011BE application circuit diagram for Logic circuits, RC oscillators, RS ",
+      "alt": "cd4011be-application-circuit.webp",
       "title": "CD4011BE Application Circuit"
     },
     "alternativesLinks": [],
@@ -5812,17 +5812,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cd4060bl-mirai-technologies.webp",
-      "alt": "CD4060BL 14-stage binary ripple counter with buil – Buy Online India Mirai Technologies",
+      "alt": "cd4060bl-mirai-technologies.webp",
       "title": "Buy CD4060BL Online India"
     },
     "pinoutImage": {
       "filename": "cd4060bl-pinout-diagram.webp",
-      "alt": "CD4060BL DIP-16 pinout diagram all 16 pins labeled",
+      "alt": "cd4060bl-pinout-diagram.webp",
       "title": "CD4060BL Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cd4060bl-application-circuit.webp",
-      "alt": "CD4060BL application circuit diagram for Clock dividers, timers, crystal osc",
+      "alt": "cd4060bl-application-circuit.webp",
       "title": "CD4060BL Application Circuit"
     },
     "alternativesLinks": [],
@@ -5886,17 +5886,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "sn74hct00n-mirai-technologies.webp",
-      "alt": "SN74HCT00N HCT quad 2-input NAND, TTL-compatible in – Buy Online India Mirai Technologies",
+      "alt": "sn74hct00n-mirai-technologies.webp",
       "title": "Buy SN74HCT00N Online India"
     },
     "pinoutImage": {
       "filename": "sn74hct00n-pinout-diagram.webp",
-      "alt": "SN74HCT00N DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "sn74hct00n-pinout-diagram.webp",
       "title": "SN74HCT00N Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "sn74hct00n-application-circuit.webp",
-      "alt": "SN74HCT00N application circuit diagram for TTL-to-CMOS interfacing, 5V TTL sys",
+      "alt": "sn74hct00n-application-circuit.webp",
       "title": "SN74HCT00N Application Circuit"
     },
     "alternativesLinks": [],
@@ -5960,17 +5960,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cd4047be-mirai-technologies.webp",
-      "alt": "CD4047BE CMOS monostable/astable multivibrator, e – Buy Online India Mirai Technologies",
+      "alt": "cd4047be-mirai-technologies.webp",
       "title": "Buy CD4047BE Online India"
     },
     "pinoutImage": {
       "filename": "cd4047be-pinout-diagram.webp",
-      "alt": "CD4047BE DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "cd4047be-pinout-diagram.webp",
       "title": "CD4047BE Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cd4047be-application-circuit.webp",
-      "alt": "CD4047BE application circuit diagram for Inverter oscillators, pulse generat",
+      "alt": "cd4047be-application-circuit.webp",
       "title": "CD4047BE Application Circuit"
     },
     "alternativesLinks": [],
@@ -6043,17 +6043,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "at24c16-mirai-technologies.webp",
-      "alt": "AT24C16 16Kbit I2C EEPROM, 2K×8, 400kHz, 1M writ – Buy Online India Mirai Technologies",
+      "alt": "at24c16-mirai-technologies.webp",
       "title": "Buy AT24C16 Online India"
     },
     "pinoutImage": {
       "filename": "at24c16-pinout-diagram.webp",
-      "alt": "AT24C16 DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "at24c16-pinout-diagram.webp",
       "title": "AT24C16 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "at24c16-application-circuit.webp",
-      "alt": "AT24C16 application circuit diagram for Arduino EEPROM, settings storage, c",
+      "alt": "at24c16-application-circuit.webp",
       "title": "AT24C16 Application Circuit"
     },
     "alternativesLinks": [],
@@ -6119,17 +6119,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "atmega16apu-mirai-technologies.webp",
-      "alt": "ATMEGA16A-PU 8-bit AVR, 16KB Flash, 1KB SRAM, DIP-40  – Buy Online India Mirai Technologies",
+      "alt": "atmega16apu-mirai-technologies.webp",
       "title": "Buy ATMEGA16A-PU Online India"
     },
     "pinoutImage": {
       "filename": "atmega16apu-pinout-diagram.webp",
-      "alt": "ATMEGA16A-PU DIP-40 pinout diagram all 40 pins labeled",
+      "alt": "atmega16apu-pinout-diagram.webp",
       "title": "ATMEGA16A-PU Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "atmega16apu-application-circuit.webp",
-      "alt": "ATMEGA16A-PU application circuit diagram for Breadboard prototyping, educational",
+      "alt": "atmega16apu-application-circuit.webp",
       "title": "ATMEGA16A-PU Application Circuit"
     },
     "alternativesLinks": [],
@@ -6201,17 +6201,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "byq28e200-mirai-technologies.webp",
-      "alt": "BYQ28E200 Dual ultrafast rectifier, 200V, 10A, 35n – Buy Online India Mirai Technologies",
+      "alt": "byq28e200-mirai-technologies.webp",
       "title": "Buy BYQ28E200 Online India"
     },
     "pinoutImage": {
       "filename": "byq28e200-pinout-diagram.webp",
-      "alt": "BYQ28E200 TO-220AB pinout diagram all 3 pins labeled",
+      "alt": "byq28e200-pinout-diagram.webp",
       "title": "BYQ28E200 Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "byq28e200-application-circuit.webp",
-      "alt": "BYQ28E200 application circuit diagram for SMPS output rectifiers, freewheelin",
+      "alt": "byq28e200-application-circuit.webp",
       "title": "BYQ28E200 Application Circuit"
     },
     "alternativesLinks": [],
@@ -6271,17 +6271,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "nsip83086cd-mirai-technologies.webp",
-      "alt": "NSIP83086CD Constant-current LED driver IC, DIP-8 – Buy Online India Mirai Technologies",
+      "alt": "nsip83086cd-mirai-technologies.webp",
       "title": "Buy NSIP83086CD Online India"
     },
     "pinoutImage": {
       "filename": "nsip83086cd-pinout-diagram.webp",
-      "alt": "NSIP83086CD DIP-8 pinout diagram all 8 pins labeled",
+      "alt": "nsip83086cd-pinout-diagram.webp",
       "title": "NSIP83086CD Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "nsip83086cd-application-circuit.webp",
-      "alt": "NSIP83086CD application circuit diagram for LED bulb drivers, LED display backl",
+      "alt": "nsip83086cd-application-circuit.webp",
       "title": "NSIP83086CD Application Circuit"
     },
     "alternativesLinks": [],
@@ -6343,17 +6343,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "cd74hc4514e-mirai-technologies.webp",
-      "alt": "CD74HC4514E 4-to-16 line decoder/demultiplexer with  – Buy Online India Mirai Technologies",
+      "alt": "cd74hc4514e-mirai-technologies.webp",
       "title": "Buy CD74HC4514E Online India"
     },
     "pinoutImage": {
       "filename": "cd74hc4514e-pinout-diagram.webp",
-      "alt": "CD74HC4514E DIP-24 pinout diagram all 24 pins labeled",
+      "alt": "cd74hc4514e-pinout-diagram.webp",
       "title": "CD74HC4514E Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "cd74hc4514e-application-circuit.webp",
-      "alt": "CD74HC4514E application circuit diagram for Address decoding, memory chip selec",
+      "alt": "cd74hc4514e-application-circuit.webp",
       "title": "CD74HC4514E Application Circuit"
     },
     "alternativesLinks": [],
@@ -6415,17 +6415,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "hcf4075bey-mirai-technologies.webp",
-      "alt": "HCF4075BEY Triple 3-input CMOS OR gate, 3V–15V, DIP – Buy Online India Mirai Technologies",
+      "alt": "hcf4075bey-mirai-technologies.webp",
       "title": "Buy HCF4075BEY Online India"
     },
     "pinoutImage": {
       "filename": "hcf4075bey-pinout-diagram.webp",
-      "alt": "HCF4075BEY DIP-14 pinout diagram all 14 pins labeled",
+      "alt": "hcf4075bey-pinout-diagram.webp",
       "title": "HCF4075BEY Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "hcf4075bey-application-circuit.webp",
-      "alt": "HCF4075BEY application circuit diagram for Logic design, combinational circuit",
+      "alt": "hcf4075bey-application-circuit.webp",
       "title": "HCF4075BEY Application Circuit"
     },
     "alternativesLinks": [],
@@ -6487,17 +6487,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "hcf4097be-mirai-technologies.webp",
-      "alt": "HCF4097BE Differential 8-channel analog switch/MUX – Buy Online India Mirai Technologies",
+      "alt": "hcf4097be-mirai-technologies.webp",
       "title": "Buy HCF4097BE Online India"
     },
     "pinoutImage": {
       "filename": "hcf4097be-pinout-diagram.webp",
-      "alt": "HCF4097BE DIP-16 pinout diagram all 16 pins labeled",
+      "alt": "hcf4097be-pinout-diagram.webp",
       "title": "HCF4097BE Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "hcf4097be-application-circuit.webp",
-      "alt": "HCF4097BE application circuit diagram for Differential signal routing, audio ",
+      "alt": "hcf4097be-application-circuit.webp",
       "title": "HCF4097BE Application Circuit"
     },
     "alternativesLinks": [],
@@ -6559,17 +6559,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "mb6s-mirai-technologies.webp",
-      "alt": "MB6S SMD bridge rectifier, 600V, 0.5A, SOIC-4 – Buy Online India Mirai Technologies",
+      "alt": "mb6s-mirai-technologies.webp",
       "title": "Buy MB6S Online India"
     },
     "pinoutImage": {
       "filename": "mb6s-pinout-diagram.webp",
-      "alt": "MB6S SOIC-4 pinout diagram all 4 pins labeled",
+      "alt": "mb6s-pinout-diagram.webp",
       "title": "MB6S Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "mb6s-application-circuit.webp",
-      "alt": "MB6S application circuit diagram for Low-power AC-DC rectification, char",
+      "alt": "mb6s-application-circuit.webp",
       "title": "MB6S Application Circuit"
     },
     "alternativesLinks": [],
@@ -6631,17 +6631,17 @@ export const products = [
     ],
     "heroImage": {
       "filename": "dopf2n65c-mirai-technologies.webp",
-      "alt": "DOPF2N65C N-ch MOSFET, 650V, 2A, low gate charge,  – Buy Online India Mirai Technologies",
+      "alt": "dopf2n65c-mirai-technologies.webp",
       "title": "Buy DOPF2N65C Online India"
     },
     "pinoutImage": {
       "filename": "dopf2n65c-pinout-diagram.webp",
-      "alt": "DOPF2N65C TO-220 pinout diagram all 3 pins labeled",
+      "alt": "dopf2n65c-pinout-diagram.webp",
       "title": "DOPF2N65C Pinout Diagram"
     },
     "appCircuitImage": {
       "filename": "dopf2n65c-application-circuit.webp",
-      "alt": "DOPF2N65C application circuit diagram for Offline SMPS, flyback converters, s",
+      "alt": "dopf2n65c-application-circuit.webp",
       "title": "DOPF2N65C Application Circuit"
     },
     "alternativesLinks": [],

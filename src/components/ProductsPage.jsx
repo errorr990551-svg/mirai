@@ -207,7 +207,7 @@ function ProductCard({ product, idx }) {
           {product.heroImage?.filename ? (
             <img
               src={`/${product.heroImage.filename}`}
-              alt={product.heroImage.alt || product.name}
+              alt={product.heroImage.filename}
               title={product.heroImage.title || product.name}
               className="w-full h-full object-contain p-4 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
             />
