@@ -45,12 +45,26 @@ function FaqItem({ q, a, idx }) {
 // ── Image Panel ───────────────────────────────────────────────────────────────
 function ImagePanel({ product }) {
   const [activeImg, setActiveImg] = useState('hero');
+  const [failedKeys, setFailedKeys] = useState([]);
+
+  const handleImageError = (key) => {
+    setFailedKeys(prev => {
+      if (prev.includes(key)) return prev;
+      return [...prev, key];
+    });
+  };
 
   const images = [
     { key: 'hero',       label: 'Product',    img: product.heroImage },
     { key: 'pinout',     label: 'Pinout',     img: product.pinoutImage },
     { key: 'appCircuit', label: 'App Circuit', img: product.appCircuitImage },
-  ].filter(i => i.img?.filename);
+  ].filter(i => i.img?.filename && !failedKeys.includes(i.key));
+
+  useEffect(() => {
+    if (activeImg !== 'hero' && !images.some(i => i.key === activeImg)) {
+      setActiveImg('hero');
+    }
+  }, [failedKeys, activeImg, images]);
 
   const current = images.find(i => i.key === activeImg) || images[0];
 
@@ -65,6 +79,7 @@ function ImagePanel({ product }) {
             alt={current.img.filename}
             title={current.img.title || product.name}
             className="w-full h-full object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
+            onError={() => handleImageError(current.key)}
           />
         ) : (
           <>
@@ -97,6 +112,7 @@ function ImagePanel({ product }) {
                 src={`/${img.img.filename}`}
                 alt={img.label}
                 className="w-full h-full object-contain p-1.5 transition-transform duration-300 hover:scale-105"
+                onError={() => handleImageError(img.key)}
               />
               <div className={`absolute bottom-0 inset-x-0 text-[8px] font-bold uppercase tracking-wider py-0.5 text-center transition-colors duration-200 ${
                 activeImg === img.key
