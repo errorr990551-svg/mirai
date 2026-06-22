@@ -10,30 +10,58 @@ const Contact = () => {
     name: '',
     phone: '',
     email: '',
+    location: '',
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [statusMessage, setStatusMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const to = 'sales@miraitechnologies.net';
-    const cc = 'vp390123@gmail.com,errorr990551@gmail.com';
-    const subject = `Contact Form Inquiry from ${formData.name} - ${formData.company}`;
-    const body = `Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email}
-Company: ${formData.company}
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setStatusMessage('');
 
-Message:
-${formData.message}`;
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:4000/api'}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const mailtoUrl = `mailto:${to}?cc=${encodeURIComponent(cc)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoUrl;
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitStatus('success');
+        setStatusMessage(data.message || 'Message sent successfully!');
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          location: '',
+          company: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setStatusMessage(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+      setStatusMessage('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -198,23 +226,36 @@ ${formData.message}`;
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Name</label>
-                      <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="text" name="name" value={formData.name} onChange={handleChange} required disabled={isSubmitting} placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 disabled:opacity-75 disabled:cursor-not-allowed" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Phone No</label>
-                      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+91 XXXXX XXXXX" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required disabled={isSubmitting} placeholder="+91 XXXXX XXXXX" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 disabled:opacity-75 disabled:cursor-not-allowed" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Email</label>
-                      <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="you@company.com" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="email" name="email" value={formData.email} onChange={handleChange} required disabled={isSubmitting} placeholder="you@company.com" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 disabled:opacity-75 disabled:cursor-not-allowed" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 block">Company</label>
-                      <input type="text" name="company" value={formData.company} onChange={handleChange} required placeholder="Company Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400" />
+                      <input type="text" name="company" value={formData.company} onChange={handleChange} required disabled={isSubmitting} placeholder="Company Name" className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 disabled:opacity-75 disabled:cursor-not-allowed" />
                     </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-slate-700 block">Location</label>
+                    <input 
+                      type="text" 
+                      name="location" 
+                      value={formData.location} 
+                      onChange={handleChange} 
+                      disabled={isSubmitting} 
+                      placeholder="e.g., Mumbai, India" 
+                      className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 disabled:opacity-75 disabled:cursor-not-allowed" 
+                    />
                   </div>
 
                   <div className="space-y-2">
@@ -225,16 +266,30 @@ ${formData.message}`;
                       value={formData.message}
                       onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                       placeholder="How can we help you?" 
-                      className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none"
+                      className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none disabled:opacity-75 disabled:cursor-not-allowed"
                     ></textarea>
                   </div>
 
+                  {submitStatus && (
+                    <div className={`p-4 rounded-xl text-sm font-semibold border ${
+                      submitStatus === 'success' 
+                        ? 'bg-emerald-50 border-emerald-200 text-emerald-800' 
+                        : 'bg-rose-50 border-rose-200 text-rose-800'
+                    }`}>
+                      {statusMessage}
+                    </div>
+                  )}
+
                   <button 
                     type="submit" 
-                    className="w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 ${
+                      isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                    }`}
                   >
-                    Send Message <Send className="w-5 h-5 ml-1" />
+                    {isSubmitting ? 'Sending...' : 'Send Message'} <Send className="w-5 h-5 ml-1" />
                   </button>
                   <p className="text-center text-xs text-slate-500 mt-4">
                     By submitting, you agree our team will contact you regarding your inquiry. We never share your data.

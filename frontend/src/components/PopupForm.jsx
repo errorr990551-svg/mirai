@@ -10,9 +10,13 @@ const PopupForm = () => {
     name: '',
     phone: '',
     email: '',
+    location: '',
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [statusMessage, setStatusMessage] = useState('');
 
   useEffect(() => {
     const handleOpenRFQ = (e) => {
@@ -76,22 +80,51 @@ const PopupForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const to = 'sales@miraitechnologies.net';
-    const cc = 'vp390123@gmail.com,errorr990551@gmail.com';
-    const subject = `Sourcing Inquiry from ${formData.name} - ${formData.company}`;
-    const body = `Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email}
-Company: ${formData.company}
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setStatusMessage('');
 
-Message:
-${formData.message}`;
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:4000/api'}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const mailtoUrl = `mailto:${to}?cc=${encodeURIComponent(cc)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoUrl;
-    handleClose();
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitStatus('success');
+        setStatusMessage(data.message || 'Message sent successfully!');
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          location: '',
+          company: '',
+          message: ''
+        });
+        // Auto-close modal after 2.5 seconds on success
+        setTimeout(() => {
+          handleClose();
+          setSubmitStatus(null);
+          setStatusMessage('');
+        }, 2500);
+      } else {
+        setSubmitStatus('error');
+        setStatusMessage(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+      setStatusMessage('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (pathname === '/contact') {
@@ -145,7 +178,8 @@ ${formData.message}`;
                       onChange={handleChange}
                       placeholder="Your Name" 
                       required 
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                      disabled={isSubmitting}
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -157,7 +191,8 @@ ${formData.message}`;
                       onChange={handleChange}
                       placeholder="+91 XXXXX XXXXX" 
                       required 
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                      disabled={isSubmitting}
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
                 </div>
@@ -172,7 +207,8 @@ ${formData.message}`;
                       onChange={handleChange}
                       placeholder="you@company.com" 
                       required 
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                      disabled={isSubmitting}
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -184,9 +220,23 @@ ${formData.message}`;
                       onChange={handleChange}
                       placeholder="Company Name" 
                       required 
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm" 
+                      disabled={isSubmitting}
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-sm font-bold text-slate-700 block">Location</label>
+                  <input 
+                    type="text" 
+                    name="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    placeholder="e.g., Mumbai, India" 
+                    disabled={isSubmitting}
+                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
+                  />
                 </div>
 
                 <div className="space-y-1.5">
@@ -198,15 +248,29 @@ ${formData.message}`;
                     placeholder="How can we help you?" 
                     rows="4"
                     required
-                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none text-sm" 
+                    disabled={isSubmitting}
+                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                   ></textarea>
                 </div>
 
+                {submitStatus && (
+                  <div className={`p-4 rounded-xl text-sm font-semibold border ${
+                    submitStatus === 'success' 
+                      ? 'bg-emerald-50 border-emerald-200 text-emerald-800' 
+                      : 'bg-rose-50 border-rose-200 text-rose-800'
+                  }`}>
+                    {statusMessage}
+                  </div>
+                )}
+
                 <button 
                   type="submit" 
-                  className="w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-4"
+                  disabled={isSubmitting}
+                  className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-4 ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
                 >
-                  Send Message <Send className="w-4 h-4" />
+                  {isSubmitting ? 'Sending...' : 'Send Message'} <Send className="w-4 h-4" />
                 </button>
 
                 <p className="text-xs text-slate-400 text-center mt-4 leading-relaxed">
