@@ -30,7 +30,7 @@ const Contact = () => {
     setStatusMessage('');
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:4000/api'}/contact`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://mirai-i53w.onrender.com/api'}/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

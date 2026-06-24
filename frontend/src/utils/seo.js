@@ -9,6 +9,51 @@ export function updateMeta(title, description) {
   metaDesc.content = description;
 }
 
+export function updatePageSEO(title, description, canonical, robots, ogTitle, ogDescription) {
+  document.title = title || 'Mirai Technologies';
+
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement('meta');
+    metaDesc.name = 'description';
+    document.head.appendChild(metaDesc);
+  }
+  metaDesc.content = description || '';
+
+  let metaRobots = document.querySelector('meta[name="robots"]');
+  if (!metaRobots) {
+    metaRobots = document.createElement('meta');
+    metaRobots.name = 'robots';
+    document.head.appendChild(metaRobots);
+  }
+  metaRobots.content = robots || 'index, follow';
+
+  let linkCanonical = document.querySelector('link[rel="canonical"]');
+  if (!linkCanonical) {
+    linkCanonical = document.createElement('link');
+    linkCanonical.rel = 'canonical';
+    document.head.appendChild(linkCanonical);
+  }
+  linkCanonical.href = canonical || window.location.href;
+
+  let metaOgTitle = document.querySelector('meta[property="og:title"]');
+  if (!metaOgTitle) {
+    metaOgTitle = document.createElement('meta');
+    metaOgTitle.setAttribute('property', 'og:title');
+    document.head.appendChild(metaOgTitle);
+  }
+  metaOgTitle.content = ogTitle || title || '';
+
+  let metaOgDesc = document.querySelector('meta[property="og:description"]');
+  if (!metaOgDesc) {
+    metaOgDesc = document.createElement('meta');
+    metaOgDesc.setAttribute('property', 'og:description');
+    document.head.appendChild(metaOgDesc);
+  }
+  metaOgDesc.content = ogDescription || description || '';
+}
+
+
 export function updateSchemaScripts(schemas) {
   // Clear any existing dynamic schema script tags
   const existing = document.querySelectorAll('script[data-dynamic-schema]');

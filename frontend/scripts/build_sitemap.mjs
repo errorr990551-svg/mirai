@@ -9,6 +9,8 @@ const ROOT = path.resolve(__dirname, '..');
 
 const BASE_URL = 'https://miraitechnologies.net';
 const TODAY = new Date().toISOString().split('T')[0];
+const cityPages = JSON.parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'cityPages.json'), 'utf8'));
+
 
 // 1. Generate sitemap.xml content
 let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -47,11 +49,19 @@ blogPosts.forEach(post => {
   addUrl(`/blog/${post.slug}`, '0.6', 'weekly');
 });
 
+// Add market area
+addUrl('/market-area', '0.7', 'weekly');
+
+// Add city pages
+cityPages.forEach(page => {
+  addUrl(page.slug, '0.6', 'weekly');
+});
+
 xml += `</urlset>\n`;
 
 // Write to public/sitemap.xml
 fs.writeFileSync(path.join(ROOT, 'public', 'sitemap.xml'), xml, 'utf8');
-console.log(`✅ Generated public/sitemap.xml with ${categories.length} categories, ${products.length} products, and ${blogPosts.length} blog posts.`);
+console.log(`✅ Generated public/sitemap.xml with ${categories.length} categories, ${products.length} products, ${blogPosts.length} blog posts, and ${cityPages.length} city pages.`);
 
 // 2. Generate robots.txt content
 const robotsTxt = `User-agent: *

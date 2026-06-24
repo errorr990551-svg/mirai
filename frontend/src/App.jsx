@@ -20,6 +20,10 @@ import ProductsPage from './components/ProductsPage';
 import ProductDetailPage from './components/ProductDetailPage';
 import BlogPage from './components/BlogPage';
 import BlogPostPage from './components/BlogPostPage';
+import MarketArea from './components/MarketArea';
+import CitySEOPage from './components/CitySEOPage';
+import cityPages from './data/cityPages.json';
+
 
 
 function Home() {
@@ -65,6 +69,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/market-area" element={<MarketArea />} />
+          {cityPages.map((page) => (
+            <Route key={page.slug} path={page.slug} element={<CitySEOPage page={page} />} />
+          ))}
           <Route path="*" element={
             <div className="pt-32 pb-20 text-center min-h-[60vh] flex items-center justify-center">
               <h2 className="text-3xl font-bold text-slate-400">Page under construction</h2>
