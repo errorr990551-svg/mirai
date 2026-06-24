@@ -4,20 +4,186 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2, CheckCircle2, ShieldCheck, Award, 
   MapPin, Zap, ChevronDown, ChevronUp, MessageSquare, Mail, Phone,
-  Cpu, Activity, Radio, Shield, Car, Anchor, Info, ArrowRight
+  Cpu, Activity, Radio, Shield, Car, Anchor, Info, ArrowRight,
+  Waves, Sprout, Gem, TrendingUp, ShoppingBag, FlaskConical, Pill, 
+  Truck, Factory, GraduationCap, Hammer
 } from 'lucide-react';
 import { updatePageSEO, updateSchemaScripts } from '../utils/seo';
 
 const getIndustryIcon = (industryName) => {
   const name = industryName.toLowerCase();
-  if (name.includes('automotive')) return <Car className="h-6 w-6 text-indigo-500" />;
-  if (name.includes('defense') || name.includes('defence')) return <Shield className="h-6 w-6 text-red-500" />;
-  if (name.includes('power')) return <Zap className="h-6 w-6 text-amber-500" />;
-  if (name.includes('telecom') || name.includes('telecommunication')) return <Radio className="h-6 w-6 text-blue-500" />;
-  if (name.includes('it')) return <Cpu className="h-6 w-6 text-emerald-500" />;
-  if (name.includes('shipping')) return <Anchor className="h-6 w-6 text-cyan-500" />;
-  if (name.includes('medical')) return <Activity className="h-6 w-6 text-rose-500" />;
+  if (name.includes('automotive') || name.includes('car') || name.includes('vehicle')) {
+    return <Car className="h-6 w-6 text-indigo-500" />;
+  }
+  if (name.includes('defense') || name.includes('defence') || name.includes('military') || name.includes('aerospace')) {
+    return <Shield className="h-6 w-6 text-red-500" />;
+  }
+  if (name.includes('power') || name.includes('energy') || name.includes('solar') || name.includes('inverter')) {
+    return <Zap className="h-6 w-6 text-amber-500" />;
+  }
+  if (name.includes('telecom') || name.includes('telecommunication') || name.includes('communication') || name.includes('network')) {
+    return <Radio className="h-6 w-6 text-blue-500" />;
+  }
+  if (name.includes('it ') || name.includes('it_') || name.includes('software') || name.includes('information technology')) {
+    return <Cpu className="h-6 w-6 text-emerald-500" />;
+  }
+  if (name.includes('shipping') || name.includes('port') || name.includes('cargo')) {
+    return <Anchor className="h-6 w-6 text-cyan-500" />;
+  }
+  if (name.includes('medical') || name.includes('healthcare') || name.includes('hospital')) {
+    return <Activity className="h-6 w-6 text-rose-500" />;
+  }
+  if (name.includes('aquaculture') || name.includes('fishery') || name.includes('shrimp') || name.includes('marine') || name.includes('fish')) {
+    return <Waves className="h-6 w-6 text-teal-500" />;
+  }
+  if (name.includes('agriculture') || name.includes('farming') || name.includes('agro') || name.includes('crop') || name.includes('food')) {
+    return <Sprout className="h-6 w-6 text-green-500" />;
+  }
+  if (name.includes('mining') || name.includes('mineral') || name.includes('quarry')) {
+    return <Gem className="h-6 w-6 text-purple-500" />;
+  }
+  if (name.includes('trade') || name.includes('commerce') || name.includes('retail') || name.includes('wholesal')) {
+    return <TrendingUp className="h-6 w-6 text-orange-500" />;
+  }
+  if (name.includes('logistics') || name.includes('transport') || name.includes('distribution')) {
+    return <Truck className="h-6 w-6 text-amber-600" />;
+  }
+  if (name.includes('pharma') || name.includes('pharmaceutical') || name.includes('pill')) {
+    return <Pill className="h-6 w-6 text-rose-600" />;
+  }
+  if (name.includes('chemical') || name.includes('flask')) {
+    return <FlaskConical className="h-6 w-6 text-violet-500" />;
+  }
+  if (name.includes('steel') || name.includes('metal') || name.includes('factory')) {
+    return <Factory className="h-6 w-6 text-slate-600" />;
+  }
+  if (name.includes('education') || name.includes('academic') || name.includes('university') || name.includes('college')) {
+    return <GraduationCap className="h-6 w-6 text-indigo-600" />;
+  }
+  if (name.includes('cement') || name.includes('construction')) {
+    return <Hammer className="h-6 w-6 text-yellow-600" />;
+  }
   return <Building2 className="h-6 w-6 text-slate-500" />;
+};
+
+const highlightPartNumbers = (text) => text;
+
+const parseProductCategories = (text) => {
+  if (!text) return { intro: '', outro: '', categories: [] };
+  
+  const paragraphs = text.split('\n').map(p => p.trim()).filter(Boolean);
+  let intro = '';
+  let outro = '';
+  const categories = [];
+  
+  paragraphs.forEach(p => {
+    if (p.startsWith('Our component portfolio')) {
+      intro = p;
+    } else if (p.startsWith('All components ship')) {
+      outro = p;
+    } else {
+      const colonIdx = p.indexOf(':');
+      if (colonIdx !== -1) {
+        const title = p.substring(0, colonIdx).trim();
+        const details = p.substring(colonIdx + 1).trim();
+        categories.push({ title, details });
+      } else {
+        categories.push({ title: 'Other Components', details: p });
+      }
+    }
+  });
+  
+  return { intro, outro, categories };
+};
+
+const getCategoryIcon = (title) => {
+  const t = title.toLowerCase();
+  if (t.includes('mosfet')) return <Zap className="h-5 w-5 text-amber-500" />;
+  if (t.includes('igbt') || t.includes('thyristor')) return <Activity className="h-5 w-5 text-rose-500" />;
+  if (t.includes('integrated') || t.includes('ic ')) return <Cpu className="h-5 w-5 text-emerald-500" />;
+  if (t.includes('diode') || t.includes('passive') || t.includes('rectifier')) return <ShieldCheck className="h-5 w-5 text-blue-500" />;
+  if (t.includes('optocoupler') || t.includes('transistor')) return <Radio className="h-5 w-5 text-indigo-500" />;
+  return <Cpu className="h-5 w-5 text-slate-500" />;
+};
+
+const getFallbackDescription = (industryName, city) => {
+  const name = industryName.toLowerCase();
+  if (name.includes('mining')) {
+    return `Mining and mineral processing operations in ${city} rely on ruggedised active components, high-temperature sensors, and heavy-duty power electronics. Mirai Technologies supplies certified MOSFETs and controllers suitable for mining telemetry and automation systems.`;
+  }
+  if (name.includes('agriculture') || name.includes('agro') || name.includes('farming')) {
+    return `Modern agricultural units and processing plants in the ${city} region utilise electronic components for automated sorting, irrigation controllers, and processing machinery. We deliver reliable ICs and diodes with pan-India traceability.`;
+  }
+  if (name.includes('trade') || name.includes('commerce') || name.includes('retail') || name.includes('wholesale')) {
+    return `As a key commercial hub, ${city} hosts trade and wholesale networks that require logistics tracking, smart retail terminals, and supply-chain hardware. Mirai Technologies supports regional OEMs with ready component stock.`;
+  }
+  return `Industrial and commercial operations in ${city} require certified semiconductors, active and passive components for high-reliability systems. Mirai Technologies supports regional businesses with fast dispatch, low MOQ, and full traceability.`;
+};
+
+const parseIndustriesText = (text, industriesList, city) => {
+  if (!text) return { intro: '', mapping: {} };
+  
+  const paragraphs = text.split('\n\n').map(p => p.trim()).filter(Boolean);
+  let intro = '';
+  let detailsText = '';
+  
+  if (paragraphs.length > 1) {
+    intro = paragraphs[0];
+    detailsText = paragraphs.slice(1).join('\n\n');
+  } else {
+    const colonIdx = text.indexOf(':');
+    if (colonIdx !== -1) {
+      intro = text.substring(0, colonIdx + 1).trim();
+      detailsText = text.substring(colonIdx + 1).trim();
+    } else {
+      intro = `${city} is a major commercial and industrial hub demanding high-reliability electronic components.`;
+      detailsText = text;
+    }
+  }
+  
+  const sentences = detailsText.split(/(?<=[.!?])\s+/).filter(Boolean);
+  const mapping = {};
+  
+  industriesList.forEach(ind => {
+    const lowerInd = ind.toLowerCase();
+    let match = '';
+    
+    if (lowerInd.includes('aquaculture') || lowerInd.includes('fishery') || lowerInd.includes('marine') || lowerInd.includes('fish') || lowerInd.includes('shrimp')) {
+      match = sentences.find(s => /aquaculture|shrimp|marine|fish/i.test(s));
+    } else if (lowerInd.includes('mining') || lowerInd.includes('mineral')) {
+      match = sentences.find(s => /mining|mineral|quarry/i.test(s));
+    } else if (lowerInd.includes('agriculture') || lowerInd.includes('agro') || lowerInd.includes('farming') || lowerInd.includes('crop') || lowerInd.includes('food')) {
+      match = sentences.find(s => /agriculture|agro|farming|crop|food/i.test(s));
+    } else if (lowerInd.includes('trade') || lowerInd.includes('commerce') || lowerInd.includes('retail') || lowerInd.includes('wholesale')) {
+      match = sentences.find(s => /trade|commerce|retail|wholesal/i.test(s));
+    } else if (lowerInd.includes('automotive') || lowerInd.includes('vehicle') || lowerInd.includes('car')) {
+      match = sentences.find(s => /automotive|car|vehicle/i.test(s));
+    } else if (lowerInd.includes('defense') || lowerInd.includes('defence') || lowerInd.includes('aerospace') || lowerInd.includes('military')) {
+      match = sentences.find(s => /defence|defense|aerospace|military/i.test(s));
+    } else if (lowerInd.includes('telecom') || lowerInd.includes('communication')) {
+      match = sentences.find(s => /telecom|communication/i.test(s));
+    } else if (lowerInd.includes('it ') || lowerInd.includes('it_') || lowerInd.includes('information technology') || lowerInd.includes('software')) {
+      match = sentences.find(s => /it |information technology|software|logic gate|microcontroller/i.test(s));
+    } else if (lowerInd.includes('power') || lowerInd.includes('energy') || lowerInd.includes('solar')) {
+      match = sentences.find(s => /power electronics|energy|solar|rectifier|thyristor/i.test(s));
+    } else if (lowerInd.includes('shipping') || lowerInd.includes('port')) {
+      match = sentences.find(s => /shipping|port|cargo/i.test(s));
+    } else if (lowerInd.includes('medical') || lowerInd.includes('healthcare') || lowerInd.includes('pharma') || lowerInd.includes('pharmaceutical')) {
+      match = sentences.find(s => /medical|healthcare|pharma/i.test(s));
+    }
+    
+    if (!match) {
+      match = sentences.find(s => new RegExp(lowerInd, 'i').test(s));
+    }
+    
+    if (!match) {
+      match = getFallbackDescription(ind, city);
+    }
+    
+    mapping[ind] = match;
+  });
+  
+  return { intro, mapping };
 };
 
 const renderParagraphs = (text, customClass = "mb-4 text-slate-600 leading-relaxed text-sm sm:text-base") => {
@@ -129,6 +295,17 @@ const parseInternalLinks = (linksStr) => {
 const CitySEOPage = ({ page }) => {
   const [openFaq, setOpenFaq] = useState(0); // Open first FAQ by default
   const location = useLocation();
+  const [activeIndustry, setActiveIndustry] = useState('');
+
+  // Set active industry when page changes
+  useEffect(() => {
+    if (page && page.targetIndustries) {
+      const industries = page.targetIndustries.split(',').map(s => s.trim()).filter(Boolean);
+      if (industries.length > 0) {
+        setActiveIndustry(industries[0]);
+      }
+    }
+  }, [page]);
 
   // Contact Form State
   const [formData, setFormData] = useState({
@@ -423,43 +600,219 @@ const CitySEOPage = ({ page }) => {
 
           </div>
 
-          <div className="mt-10 bg-slate-50 p-6 rounded-2xl border border-slate-200/60 text-xs text-slate-500 leading-relaxed">
-            <span className="font-bold text-slate-700 block mb-1">Categories Info & Part Numbers:</span>
-            {page.productCategories}
-          </div>
+          {(() => {
+            const { intro, outro, categories } = parseProductCategories(page.productCategories);
+            return (
+              <div className="mt-16 bg-slate-50/50 p-6 sm:p-8 rounded-3xl border border-slate-200/60">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-mirai-primary/10 rounded-xl">
+                    <Cpu className="h-6 w-6 text-mirai-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-black text-slate-900 text-lg sm:text-xl">
+                      Categories Info & Part Numbers
+                    </h3>
+                    {intro && (
+                      <p className="text-slate-500 text-xs sm:text-sm font-semibold mt-1">
+                        {intro}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {categories.map((cat, idx) => (
+                    <div 
+                      key={idx} 
+                      className="bg-white p-5 rounded-2xl border border-slate-100 hover:border-mirai-primary/30 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                    >
+                      <div>
+                        <div className="flex items-center gap-2.5 mb-3">
+                          {getCategoryIcon(cat.title)}
+                          <span className="font-heading font-black text-slate-800 text-xs sm:text-sm uppercase tracking-wider">
+                            {cat.title}
+                          </span>
+                        </div>
+                        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                          {highlightPartNumbers(cat.details)}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {outro && (
+                  <div className="mt-6 flex items-center gap-3 bg-emerald-50 border border-emerald-100 px-5 py-3.5 rounded-2xl text-xs sm:text-sm text-emerald-800 font-semibold leading-relaxed">
+                    <ShieldCheck className="h-5 w-5 text-emerald-600 shrink-0" />
+                    <span>{outro}</span>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
 
         </div>
       </section>
 
-      {/* 4. INDUSTRIES WE SERVE (Side-by-Side visual design) */}
+      {/* 4. INDUSTRIES WE SERVE (Interactive dashboard design) */}
       <section className="py-20 bg-slate-50/50 border-t border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Info Column */}
-            <div className="lg:col-span-5 space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-900">
-                {page.h2s[2] || `Industries We Serve in ${page.city}`}
-              </h2>
-              <div className="w-16 h-1.5 bg-mirai-primary rounded-full" />
-              <div>
-                {renderParagraphs(page.industriesWeServe, "text-slate-600 leading-relaxed text-sm sm:text-base")}
-              </div>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-900 mb-4">
+              {page.h2s[2] || `Industries We Serve in ${page.city}`}
+            </h2>
+            <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full" />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            {/* Left Info Column & Active Industry Box */}
+            <div className="lg:col-span-6 space-y-6">
+              {(() => {
+                const { intro, mapping } = parseIndustriesText(page.industriesWeServe, industriesList, page.city);
+                const activeText = mapping[activeIndustry || industriesList[0]];
+                
+                return (
+                  <>
+                    <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+                      {intro}
+                    </p>
+
+                    {/* Featured Active Industry Card */}
+                    <AnimatePresence mode="wait">
+                      {activeIndustry && activeText && (
+                        <motion.div
+                          key={activeIndustry}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          transition={{ duration: 0.2 }}
+                          className="bg-white p-6 sm:p-8 rounded-3xl border border-indigo-100/60 shadow-md relative overflow-hidden"
+                        >
+                          {/* Accent color bar */}
+                          <div className="absolute top-0 left-0 w-1.5 h-full bg-mirai-primary" />
+                          
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="p-2.5 bg-mirai-primary/10 rounded-xl">
+                              {getIndustryIcon(activeIndustry)}
+                            </div>
+                            <div>
+                              <span className="text-xs font-bold text-mirai-primary uppercase tracking-widest block">
+                                Featured Sector
+                              </span>
+                              <h3 className="text-base sm:text-lg font-heading font-black text-slate-900">
+                                {activeIndustry} Requirements
+                              </h3>
+                            </div>
+                          </div>
+
+                          <p className="text-slate-700 text-sm leading-relaxed font-semibold">
+                            {highlightPartNumbers(activeText)}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* General Regional Sourcing Requirements Collapsible */}
+                    <div className="bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden px-5">
+                      <div className="py-3">
+                        <button
+                          className="w-full text-left py-2 flex justify-between items-center text-slate-800 hover:text-mirai-primary transition-colors focus:outline-none"
+                          onClick={() => setOpenFaq(openFaq === 'general_sourcing' ? null : 'general_sourcing')}
+                        >
+                          <span className="font-heading font-bold text-slate-800 text-xs sm:text-sm flex items-center gap-2">
+                            <Info className="h-4.5 w-4.5 text-mirai-primary shrink-0" />
+                            View Other Regional Industry Requirements
+                          </span>
+                          {openFaq === 'general_sourcing' 
+                            ? <ChevronUp className="h-4.5 w-4.5 text-mirai-primary shrink-0 transition-colors" />
+                            : <ChevronDown className="h-4.5 w-4.5 text-slate-400 shrink-0 transition-colors" />
+                          }
+                        </button>
+                        
+                        <AnimatePresence initial={false}>
+                          {openFaq === 'general_sourcing' && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2, ease: 'easeInOut' }}
+                              className="overflow-hidden"
+                            >
+                              <div className="pt-4 pb-2 text-slate-600 text-xs sm:text-sm space-y-3.5 border-t border-slate-100 mt-2 text-left">
+                                {(() => {
+                                  const textVal = page.industriesWeServe || '';
+                                  const parts = textVal.split(/:\n\n|:\n|:/);
+                                  const details = parts.slice(1).join(':').trim();
+                                  const allSentences = details.split(/(?<=[.!?])\s+/).filter(Boolean);
+                                  
+                                  let renderedAny = false;
+                                  
+                                  const elements = allSentences.map((sentence, idx) => {
+                                    if (sentence === activeText) return null;
+                                    renderedAny = true;
+                                    return (
+                                      <div key={idx} className="flex gap-2.5 items-start">
+                                        <CheckCircle2 className="h-4 w-4 text-mirai-primary/75 shrink-0 mt-0.5" />
+                                        <p>{highlightPartNumbers(sentence)}</p>
+                                      </div>
+                                    );
+                                  });
+                                  
+                                  return renderedAny ? elements : <p className="text-slate-400 italic">No additional regional sectors found.</p>;
+                                })()}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    </div>
+                  </>
+                );
+              })()}
             </div>
 
             {/* Right Industries Cards Grid */}
-            <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-5">
-              {industriesList.map((industry, index) => (
-                <div key={index} className="bg-white p-5 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col items-center text-center group hover:border-mirai-primary hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                  <div className="p-3 bg-slate-50 rounded-xl mb-4 group-hover:bg-mirai-primary/10 transition-colors border border-slate-100">
-                    {getIndustryIcon(industry)}
-                  </div>
-                  <span className="text-sm font-bold text-slate-700 group-hover:text-slate-900 transition-colors">
-                    {industry}
-                  </span>
-                </div>
-              ))}
+            <div className="lg:col-span-6 grid grid-cols-2 gap-4">
+              {industriesList.map((industry, index) => {
+                const isActive = (activeIndustry || industriesList[0]) === industry;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setActiveIndustry(industry)}
+                    className={`p-5 rounded-2xl border text-left transition-all duration-300 flex flex-col items-start focus:outline-none relative overflow-hidden group ${
+                      isActive 
+                        ? 'bg-white border-mirai-primary shadow-lg ring-2 ring-mirai-primary/20 scale-[1.02]' 
+                        : 'bg-white border-slate-200/60 hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5'
+                    }`}
+                  >
+                    {isActive && (
+                      <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-mirai-primary/5 blur-xl pointer-events-none" />
+                    )}
+
+                    <div className={`p-3 rounded-xl mb-4 transition-colors border ${
+                      isActive 
+                        ? 'bg-mirai-primary/10 border-mirai-primary/10' 
+                        : 'bg-slate-50 border-slate-100 group-hover:bg-slate-100'
+                    }`}>
+                      {getIndustryIcon(industry)}
+                    </div>
+                    <span className={`text-sm font-bold block leading-snug transition-colors ${
+                      isActive ? 'text-slate-900 font-extrabold' : 'text-slate-700 group-hover:text-slate-900'
+                    }`}>
+                      {industry}
+                    </span>
+                    <span className={`text-[10px] uppercase font-bold tracking-widest mt-1 ${
+                      isActive ? 'text-mirai-primary' : 'text-slate-400 group-hover:text-slate-500'
+                    }`}>
+                      {isActive ? 'Selected' : 'View Details'}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
+            
           </div>
 
         </div>
