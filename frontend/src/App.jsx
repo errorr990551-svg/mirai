@@ -26,11 +26,21 @@ import cityPages from './data/cityPages.json';
 
 
 
+function SitemapRedirect() {
+  useEffect(() => {
+    window.location.replace('/sitemap.xml');
+  }, []);
+  return null;
+}
+
 function Home() {
   useEffect(() => {
     updateMeta(
       'Buy Electronic Components Online India | Mirai Technologies',
-      'Mirai Technologies – authorized distributor and stockist of active and passive electronic components in Mumbai since 1999. Genuine ICs, MOSFETs, transistors, microcontrollers, and optocouplers with pan-India delivery and GST invoice.'
+      'Mirai Technologies – authorized distributor and stockist of active and passive electronic components in Mumbai since 1999. Genuine ICs, MOSFETs, transistors, microcontrollers, and optocouplers with pan-India delivery and GST invoice.',
+      'electronic components, active electronic components, passive electronic components, semiconductor distributor, IC distributor, MOSFET supplier, transistor distributor, microcontroller dealer, optocoupler stockist, buy electronic components online, India, Mirai Technologies',
+      'Mirai Technologies',
+      'Mirai Technologies'
     );
     injectOrganizationSchema();
   }, []);
@@ -50,6 +60,18 @@ function Home() {
 }
 
 function App() {
+  useEffect(() => {
+    // Wake up Render backend on app mount
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://mirai-i53w.onrender.com/api';
+    const healthUrl = apiUrl.endsWith('/api') 
+      ? apiUrl.replace(/\/api$/, '/health') 
+      : `${apiUrl}/health`;
+    
+    fetch(healthUrl)
+      .then(res => console.log('Backend server keep-warm ping status:', res.status))
+      .catch(err => console.warn('Backend server keep-warm ping failed:', err));
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
@@ -70,6 +92,8 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/market-area" element={<MarketArea />} />
+          <Route path="/sitemap" element={<SitemapRedirect />} />
+          <Route path="/sitemap.xml" element={<SitemapRedirect />} />
           {cityPages.map((page) => (
             <Route key={page.slug} path={page.slug} element={<CitySEOPage page={page} />} />
           ))}

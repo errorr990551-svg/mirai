@@ -13,7 +13,10 @@ const MarketArea = () => {
       'https://miraitechnologies.net/market-area',
       'index, follow',
       'Market Area | India Cities We Serve | Mirai Technologies',
-      'Mirai Technologies authorized semiconductor distributor serves clients across all states and major cities in India.'
+      'Mirai Technologies authorized semiconductor distributor serves clients across all states and major cities in India.',
+      'market area, cities we serve, electronics distributor india, semiconductor delivery cities, Mirai Technologies market area',
+      'Mirai Technologies',
+      'Mirai Technologies'
     );
   }, []);
 

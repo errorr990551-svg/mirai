@@ -12,7 +12,7 @@ const StatsSection = () => {
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-indigo-500/10 to-violet-500/10 blur-[120px] -z-10" />
+      <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-blue-500/10 to-sky-500/10 blur-[120px] -z-10" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -37,7 +37,7 @@ const StatsSection = () => {
                 className="bg-white border border-slate-100 border-t-4 border-t-mirai-primary rounded-2xl p-10 text-center flex flex-col items-center justify-center min-h-[200px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 group cursor-pointer relative overflow-hidden"
               >
                 {/* Huge background number for depth */}
-                <div className="absolute -bottom-4 -right-2 font-black text-8xl text-slate-50 select-none pointer-events-none group-hover:text-indigo-50/50 group-hover:scale-110 transition-all duration-500">
+                <div className="absolute -bottom-4 -right-2 font-black text-8xl text-slate-50 select-none pointer-events-none group-hover:text-blue-50/50 group-hover:scale-110 transition-all duration-500">
                   {stat.number.replace('+', '')}
                 </div>
 

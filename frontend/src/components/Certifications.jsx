@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Award, ShieldCheck, CheckCircle2, FileCheck, Clock, Globe, Users
 } from 'lucide-react';
+import { updateMeta } from '../utils/seo';
 
 const Certifications = () => {
+  useEffect(() => {
+    updateMeta(
+      'ISO Certifications & Quality Assurance | Mirai Technologies',
+      'Mirai Technologies is an ISO 9001:2015 certified electronic components distributor in Mumbai. Read about our quality inspection standards, counterfeit detection, and industry certifications.',
+      'iso 9001 2015 distributor, quality electronics components, semiconductor certifications, counterfeit components detection, electronic components testing',
+      'Mirai Technologies',
+      'Mirai Technologies'
+    );
+  }, []);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -76,7 +86,7 @@ const Certifications = () => {
               { badge: "ACTIVE CERTIFICATION", title: "ISO 9001:2015 Certified", desc: "Our Quality Management System covers procurement, supplier verification, documentation and customer service processes end-to-end — ensuring consistent quality on every order.", color: "text-blue-600", bg: "bg-blue-50", icon: <Award className="w-4 h-4" /> },
               { badge: "VERIFIED SELLER", title: "IndiaMart Trust Seal Verified", desc: "Verified seller on India's largest B2B platform with Trust Seal — confirming business legitimacy, active trading history, and buyer protection assurance for all clients.", color: "text-amber-600", bg: "bg-amber-50", icon: <ShieldCheck className="w-4 h-4" /> },
               { badge: "SECTOR APPROVED", title: "Automotive & Defence Approved", desc: "Recognized supplier to automotive OEMs and defence contractors — meeting strict sector-specific quality, traceability, and documentation requirements.", color: "text-emerald-600", bg: "bg-emerald-50", icon: <CheckCircle2 className="w-4 h-4" /> },
-              { badge: "ON EVERY ORDER", title: "COC & Test Reports on Request", desc: "Certificate of Conformance, test reports & supplier verification documents available for every shipment — at no additional charge to our customers.", color: "text-purple-600", bg: "bg-purple-50", icon: <FileCheck className="w-4 h-4" /> }
+              { badge: "ON EVERY ORDER", title: "COC & Test Reports on Request", desc: "Certificate of Conformance, test reports & supplier verification documents available for every shipment — at no additional charge to our customers.", color: "text-sky-600", bg: "bg-sky-50", icon: <FileCheck className="w-4 h-4" /> }
             ].map((cert, i) => (
               <motion.div key={i} variants={itemVariants} whileHover={{ scale: 1.02, x: 5 }} className="bg-white p-8 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl hover:border-mirai-primary/30 transition-all duration-300 cursor-default">
                 <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider mb-4 ${cert.bg} ${cert.color}`}>
@@ -99,9 +109,9 @@ const Certifications = () => {
               {[
                 { title: "Genuine Parts Only", desc: "Sourced from authorized manufacturers & franchised distributors only", icon: <CheckCircle2 className="text-emerald-500 w-5 h-5" /> },
                 { title: "Full Traceability", desc: "Every component traceable to the original manufacturer with lot codes", icon: <ShieldCheck className="text-blue-500 w-5 h-5" /> },
-                { title: "Anti-Counterfeit", desc: "Strict supplier vetting & visual inspection to eliminate counterfeit components", icon: <Award className="text-purple-500 w-5 h-5" /> },
+                { title: "Anti-Counterfeit", desc: "Strict supplier vetting & visual inspection to eliminate counterfeit components", icon: <Award className="text-sky-500 w-5 h-5" /> },
                 { title: "24-hr RFQ Response", desc: "Guaranteed quote within 24 hours with full pricing & availability", icon: <Clock className="text-amber-500 w-5 h-5" /> },
-                { title: "Global Supplier Network", desc: "40+ authorized partners across USA, Europe, China, Taiwan & Japan", icon: <Globe className="text-indigo-500 w-5 h-5" /> },
+                { title: "Global Supplier Network", desc: "40+ authorized partners across USA, Europe, China, Taiwan & Japan", icon: <Globe className="text-blue-500 w-5 h-5" /> },
                 { title: "Customer References", desc: "Client references & testimonials available on request for all sectors", icon: <Users className="text-rose-500 w-5 h-5" /> }
               ].map((item, i) => (
                 <motion.div key={i} variants={itemVariants} whileHover={{ scale: 1.05 }} className="bg-slate-50 p-5 rounded-xl border border-slate-100 hover:shadow-md hover:bg-white transition-all cursor-default">

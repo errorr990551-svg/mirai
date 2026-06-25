@@ -1,13 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Building2, CheckCircle2, ShieldCheck, FileCheck, Award, Users, 
   Clock, Globe, MapPin, Zap, ChevronLeft, ChevronRight
 } from 'lucide-react';
+import { updateMeta } from '../utils/seo';
 
 const AboutUs = () => {
   const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    updateMeta(
+      'About Mirai Technologies | Authorized Semiconductor Distributor',
+      'Learn about Mirai Technologies, established in 1999. We are a leading authorized distributor and stockist of active and passive electronic components in Mumbai, India. We serve OEMs and EMS providers with factory traceable parts.',
+      'about mirai technologies, semiconductor distributor india, electronic component supplier mumbai, active components stockist, passive components distributor',
+      'Mirai Technologies',
+      'Mirai Technologies'
+    );
+  }, []);
 
   const scroll = (direction) => {
     if (scrollContainerRef.current) {
@@ -88,7 +99,7 @@ const AboutUs = () => {
               initial="hidden"
               animate="visible"
             >
-              <div className="absolute w-[80%] h-[80%] bg-gradient-to-br from-indigo-600 to-violet-600 rounded-3xl shadow-2xl opacity-10 blur-[30px] animate-pulse" />
+              <div className="absolute w-[80%] h-[80%] bg-gradient-to-br from-blue-600 to-sky-600 rounded-3xl shadow-2xl opacity-10 blur-[30px] animate-pulse" />
               
               <motion.div 
                 animate={{ y: [0, -15, 0] }}
@@ -276,13 +287,13 @@ const AboutUs = () => {
             {/* Vision Card */}
             <motion.div variants={itemVariants} whileHover={{ scale: 1.02, rotate: 1, y: -10 }} className="bg-mirai-primary rounded-3xl p-10 lg:p-14 shadow-2xl shadow-blue-500/20 relative overflow-hidden group transition-all duration-300">
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -z-10 group-hover:bg-white/20 transition-colors" />
-              <div className="text-sm font-bold tracking-widest text-indigo-200 uppercase mb-6 flex items-center gap-2">
+              <div className="text-sm font-bold tracking-widest text-blue-200 uppercase mb-6 flex items-center gap-2">
                 <Globe className="w-4 h-4" /> Our Vision
               </div>
               <h3 className="text-3xl lg:text-4xl font-black text-white mb-6 leading-tight">
                 India's Most Trusted<br/>Component Partner
               </h3>
-              <p className="text-indigo-100 text-lg leading-relaxed">
+              <p className="text-blue-100 text-lg leading-relaxed">
                 To be recognized globally as the go-to electronic component distributor for Indian manufacturing — built on a foundation of reliability, traceability, and long-term partnerships. Single source, any component, any brand, anywhere.
               </p>
             </motion.div>

@@ -40,7 +40,7 @@ const getIndustryIcon = (industryName) => {
     return <Sprout className="h-6 w-6 text-green-500" />;
   }
   if (name.includes('mining') || name.includes('mineral') || name.includes('quarry')) {
-    return <Gem className="h-6 w-6 text-purple-500" />;
+    return <Gem className="h-6 w-6 text-sky-500" />;
   }
   if (name.includes('trade') || name.includes('commerce') || name.includes('retail') || name.includes('wholesal')) {
     return <TrendingUp className="h-6 w-6 text-orange-500" />;
@@ -52,13 +52,13 @@ const getIndustryIcon = (industryName) => {
     return <Pill className="h-6 w-6 text-rose-600" />;
   }
   if (name.includes('chemical') || name.includes('flask')) {
-    return <FlaskConical className="h-6 w-6 text-violet-500" />;
+    return <FlaskConical className="h-6 w-6 text-sky-500" />;
   }
   if (name.includes('steel') || name.includes('metal') || name.includes('factory')) {
     return <Factory className="h-6 w-6 text-slate-600" />;
   }
   if (name.includes('education') || name.includes('academic') || name.includes('university') || name.includes('college')) {
-    return <GraduationCap className="h-6 w-6 text-indigo-600" />;
+    return <GraduationCap className="h-6 w-6 text-blue-600" />;
   }
   if (name.includes('cement') || name.includes('construction')) {
     return <Hammer className="h-6 w-6 text-yellow-600" />;
@@ -102,7 +102,7 @@ const getCategoryIcon = (title) => {
   if (t.includes('igbt') || t.includes('thyristor')) return <Activity className="h-5 w-5 text-rose-500" />;
   if (t.includes('integrated') || t.includes('ic ')) return <Cpu className="h-5 w-5 text-emerald-500" />;
   if (t.includes('diode') || t.includes('passive') || t.includes('rectifier')) return <ShieldCheck className="h-5 w-5 text-blue-500" />;
-  if (t.includes('optocoupler') || t.includes('transistor')) return <Radio className="h-5 w-5 text-indigo-500" />;
+  if (t.includes('optocoupler') || t.includes('transistor')) return <Radio className="h-5 w-5 text-blue-500" />;
   return <Cpu className="h-5 w-5 text-slate-500" />;
 };
 
@@ -371,13 +371,17 @@ const CitySEOPage = ({ page }) => {
   useEffect(() => {
     if (page) {
       // Update SEO Meta Tags
+      const pageKeywords = [page.primaryKeyword, page.secondaryKeywords].filter(Boolean).join(', ');
       updatePageSEO(
         page.metaTitle,
         page.metaDescription,
         page.canonicalUrl,
         page.robotsMeta,
         page.ogTitle,
-        page.ogDescription
+        page.ogDescription,
+        pageKeywords,
+        'Mirai Technologies',
+        'Mirai Technologies'
       );
       
       // Update Dynamic Schema
@@ -471,7 +475,7 @@ const CitySEOPage = ({ page }) => {
             </div>
 
             {/* Right Card: Why Mirai Brand Block (Blue/Indigo Gradient) */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-mirai-primary to-indigo-900 text-white p-8 sm:p-10 rounded-2xl shadow-md flex flex-col justify-between relative overflow-hidden">
+            <div className="lg:col-span-5 bg-gradient-to-br from-mirai-primary to-blue-900 text-white p-8 sm:p-10 rounded-2xl shadow-md flex flex-col justify-between relative overflow-hidden">
               <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-white/5 blur-2xl pointer-events-none" />
               <div className="absolute -left-16 -bottom-16 w-48 h-48 rounded-full bg-white/5 blur-2xl pointer-events-none" />
               
@@ -526,7 +530,7 @@ const CitySEOPage = ({ page }) => {
                     Vds 30V–1500V, Id 1A–200A. In stock: IRFP4668, IRFP460, and STP55NF06, supplied with full manufacturer data.
                   </p>
                 </div>
-                <Link to="/products/mosfet-transistor" className="mt-4 text-xs font-bold text-mirai-primary hover:text-indigo-800 flex items-center gap-1">
+                <Link to="/products/mosfet-transistor" className="mt-4 text-xs font-bold text-mirai-primary hover:text-blue-800 flex items-center gap-1">
                   Browse MOSFETs <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>
@@ -548,7 +552,7 @@ const CitySEOPage = ({ page }) => {
                     Power switching components (600V–1700V) for motor controllers, UPS systems, welding drives, and inverters.
                   </p>
                 </div>
-                <Link to="/products" className="mt-4 text-xs font-bold text-mirai-primary hover:text-indigo-800 flex items-center gap-1">
+                <Link to="/products" className="mt-4 text-xs font-bold text-mirai-primary hover:text-blue-800 flex items-center gap-1">
                   Browse IGBTs <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>
@@ -570,7 +574,7 @@ const CitySEOPage = ({ page }) => {
                     Operational amplifiers, logic gates, real-time clocks, microcontrollers, and gate drivers (LM358L, ULN2003).
                   </p>
                 </div>
-                <Link to="/products/integrated-circuit" className="mt-4 text-xs font-bold text-mirai-primary hover:text-indigo-800 flex items-center gap-1">
+                <Link to="/products/integrated-circuit" className="mt-4 text-xs font-bold text-mirai-primary hover:text-blue-800 flex items-center gap-1">
                   Browse ICs <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>
@@ -592,7 +596,7 @@ const CitySEOPage = ({ page }) => {
                     Schottky diodes, bridge rectifiers (MB6S, MB10S series), Zeners, and NTC thermistors for B2B supply.
                   </p>
                 </div>
-                <Link to="/products" className="mt-4 text-xs font-bold text-mirai-primary hover:text-indigo-800 flex items-center gap-1">
+                <Link to="/products" className="mt-4 text-xs font-bold text-mirai-primary hover:text-blue-800 flex items-center gap-1">
                   Browse Passives <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>
@@ -688,7 +692,7 @@ const CitySEOPage = ({ page }) => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="bg-white p-6 sm:p-8 rounded-3xl border border-indigo-100/60 shadow-md relative overflow-hidden"
+                          className="bg-white p-6 sm:p-8 rounded-3xl border border-blue-100/60 shadow-md relative overflow-hidden"
                         >
                           {/* Accent color bar */}
                           <div className="absolute top-0 left-0 w-1.5 h-full bg-mirai-primary" />
@@ -945,8 +949,8 @@ const CitySEOPage = ({ page }) => {
         
         {/* Dark Background mesh */}
         <div className="absolute inset-0 overflow-hidden -z-10 select-none pointer-events-none opacity-40">
-          <div className="absolute top-[-30%] right-[-10%] w-[70%] h-[70%] bg-indigo-700/20 rounded-full blur-[150px]" />
-          <div className="absolute bottom-[-30%] left-[-20%] w-[70%] h-[70%] bg-indigo-800/10 rounded-full blur-[150px]" />
+          <div className="absolute top-[-30%] right-[-10%] w-[70%] h-[70%] bg-blue-700/20 rounded-full blur-[150px]" />
+          <div className="absolute bottom-[-30%] left-[-20%] w-[70%] h-[70%] bg-blue-800/10 rounded-full blur-[150px]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -967,7 +971,7 @@ const CitySEOPage = ({ page }) => {
 
             {/* RFQ Form exactly matching Contact.jsx design */}
             <div className="lg:col-span-7 bg-white text-slate-800 p-8 lg:p-10 rounded-3xl shadow-xl border border-slate-100">
-              <h3 className="text-2xl font-heading font-bold text-indigo-950 mb-6">
+              <h3 className="text-2xl font-heading font-bold text-blue-950 mb-6">
                 Submit BOM Request for {page.city}
               </h3>
               
@@ -1057,7 +1061,7 @@ const CitySEOPage = ({ page }) => {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-mirai-primary hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl text-sm transition-all duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-mirai-primary hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl text-sm transition-all duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending Request...' : 'Submit Quote Request'}
                 </button>

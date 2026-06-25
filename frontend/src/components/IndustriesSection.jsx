@@ -10,10 +10,10 @@ const IndustriesSection = () => {
     { icon: <Sun className="text-amber-500" />, name: "Solar & Renewable", image: "/solar.webp" },
     { icon: <Factory className="text-orange-500" />, name: "Industrial Automation", image: "/industrialautomation.webp" },
     { icon: <Plane className="text-blue-500" />, name: "Defence & Aerospace", image: "/defense.webp" },
-    { icon: <Radio className="text-purple-500" />, name: "IoT & Embedded", image: "/iot.webp" },
-    { icon: <Zap className="text-indigo-600" />, name: "Power Electronics", image: "/power.webp" },
+    { icon: <Radio className="text-sky-500" />, name: "IoT & Embedded", image: "/iot.webp" },
+    { icon: <Zap className="text-blue-600" />, name: "Power Electronics", image: "/power.webp" },
     { icon: <BatteryCharging className="text-emerald-500" />, name: "UPS & Stabilizers", image: "/ups.webp" },
-    { icon: <Bot className="text-indigo-500" />, name: "Drones & Robotics", image: "/drone.webp" },
+    { icon: <Bot className="text-blue-500" />, name: "Drones & Robotics", image: "/drone.webp" },
     { icon: <Activity className="text-rose-500" />, name: "Medical Equipment", image: "/medical.webp" },
     { icon: <Signal className="text-sky-500" />, name: "Telecommunications", image: "/telecommunication.webp" }
   ];

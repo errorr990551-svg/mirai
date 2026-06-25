@@ -1,15 +1,4 @@
-export function updateMeta(title, description) {
-  document.title = title;
-  let metaDesc = document.querySelector('meta[name="description"]');
-  if (!metaDesc) {
-    metaDesc = document.createElement('meta');
-    metaDesc.name = 'description';
-    document.head.appendChild(metaDesc);
-  }
-  metaDesc.content = description;
-}
-
-export function updatePageSEO(title, description, canonical, robots, ogTitle, ogDescription) {
+export function updatePageSEO(title, description, canonical, robots, ogTitle, ogDescription, keywords, author, publisher) {
   document.title = title || 'Mirai Technologies';
 
   let metaDesc = document.querySelector('meta[name="description"]');
@@ -34,7 +23,7 @@ export function updatePageSEO(title, description, canonical, robots, ogTitle, og
     linkCanonical.rel = 'canonical';
     document.head.appendChild(linkCanonical);
   }
-  linkCanonical.href = canonical || window.location.href;
+  linkCanonical.href = canonical || (window.location.origin + window.location.pathname);
 
   let metaOgTitle = document.querySelector('meta[property="og:title"]');
   if (!metaOgTitle) {
@@ -51,6 +40,47 @@ export function updatePageSEO(title, description, canonical, robots, ogTitle, og
     document.head.appendChild(metaOgDesc);
   }
   metaOgDesc.content = ogDescription || description || '';
+
+  // Keywords
+  let metaKeywords = document.querySelector('meta[name="keywords"]');
+  if (!metaKeywords) {
+    metaKeywords = document.createElement('meta');
+    metaKeywords.name = 'keywords';
+    document.head.appendChild(metaKeywords);
+  }
+  metaKeywords.content = keywords || 'electronic components, IC distributor, MOSFETs, transistors, microcontrollers, optocouplers, active components, passive components, buy electronic components online, India, Mirai Technologies';
+
+  // Author
+  let metaAuthor = document.querySelector('meta[name="author"]');
+  if (!metaAuthor) {
+    metaAuthor = document.createElement('meta');
+    metaAuthor.name = 'author';
+    document.head.appendChild(metaAuthor);
+  }
+  metaAuthor.content = author || 'Mirai Technologies';
+
+  // Publisher
+  let metaPublisher = document.querySelector('meta[name="publisher"]');
+  if (!metaPublisher) {
+    metaPublisher = document.createElement('meta');
+    metaPublisher.name = 'publisher';
+    document.head.appendChild(metaPublisher);
+  }
+  metaPublisher.content = publisher || 'Mirai Technologies';
+}
+
+export function updateMeta(title, description, keywords, author, publisher) {
+  updatePageSEO(
+    title,
+    description,
+    null,
+    'index, follow',
+    title,
+    description,
+    keywords,
+    author,
+    publisher
+  );
 }
 
 

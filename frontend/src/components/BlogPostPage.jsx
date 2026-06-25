@@ -263,7 +263,7 @@ const MarkdownRenderer = ({ markdown }) => {
         <ol key={`ol-${key}`} className="space-y-3 mb-6 text-sm text-slate-600 leading-relaxed pl-1">
           {listItems.map((item, idx) => (
             <li key={idx} className="flex items-start gap-2.5">
-              <span className="w-5 h-5 rounded-full bg-indigo-50 text-mirai-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-indigo-100">
+              <span className="w-5 h-5 rounded-full bg-blue-50 text-mirai-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-blue-100">
                 {idx + 1}
               </span>
               <span>{item}</span>
@@ -420,9 +420,13 @@ const BlogPostPage = () => {
   // Update SEO meta and schemas
   useEffect(() => {
     if (post) {
+      const postKeywords = [post.primaryKeyword, ...(post.secondaryKeywords || [])].filter(Boolean).join(', ');
       updateMeta(
         post.seoTitle || `${post.title} | Mirai Technologies Blog`,
-        post.metaDescription || post.excerpt
+        post.metaDescription || post.excerpt,
+        postKeywords,
+        'Mirai Technologies',
+        'Mirai Technologies'
       );
     }
   }, [post]);
@@ -485,7 +489,7 @@ const BlogPostPage = () => {
           
           {/* Category + Read Time */}
           <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="bg-indigo-50 text-mirai-primary text-[10px] font-black tracking-wider px-2.5 py-1 rounded-lg uppercase">
+            <span className="bg-blue-50 text-mirai-primary text-[10px] font-black tracking-wider px-2.5 py-1 rounded-lg uppercase">
               {post.category}
             </span>
             <span className="text-slate-400 text-xs font-medium flex items-center gap-1">
@@ -500,7 +504,7 @@ const BlogPostPage = () => {
 
           {/* Author & Date metadata */}
           <div className="flex items-center justify-center gap-3 pb-8 border-b border-slate-100 mb-8">
-            <div className="w-9 h-9 rounded-full bg-indigo-50 text-mirai-primary font-bold text-sm flex items-center justify-center border border-indigo-100">
+            <div className="w-9 h-9 rounded-full bg-blue-50 text-mirai-primary font-bold text-sm flex items-center justify-center border border-blue-100">
               MS
             </div>
             <div className="text-left">
@@ -564,7 +568,7 @@ const BlogPostPage = () => {
           )}
 
           {/* Sourcing Callout/CTA */}
-          <div className="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-2xl p-8 mt-12 text-center relative overflow-hidden max-w-3xl mx-auto border border-white/5">
+          <div className="bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-2xl p-8 mt-12 text-center relative overflow-hidden max-w-3xl mx-auto border border-white/5">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.06),transparent_35%)] pointer-events-none" />
             <Cpu className="w-8 h-8 text-mirai-accent mx-auto mb-3" />
             <h4 className="text-base font-heading font-black tracking-tight mb-2">

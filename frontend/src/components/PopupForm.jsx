@@ -266,7 +266,7 @@ const PopupForm = () => {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-4 ${
+                  className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-4 ${
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                   }`}
                 >

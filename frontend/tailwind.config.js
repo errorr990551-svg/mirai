@@ -11,8 +11,8 @@ export default {
           light: '#f8fafc', // Premium off-white/slate-50
           lighter: '#ffffff', // Pure white for cards
           card: '#ffffff', 
-          primary: '#4f46e5', // Vibrant Indigo 600
-          accent: '#7c3aed', // Violet 600 for gradients
+          primary: '#2563eb', // Vibrant Royal Blue (Tailwind blue-600)
+          accent: '#1d4ed8', // Deep Blue (Tailwind blue-700) for gradients
           gray: '#64748b', 
         }
       },

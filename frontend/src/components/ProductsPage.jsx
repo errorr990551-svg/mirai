@@ -322,15 +322,22 @@ const ProductsPage = () => {
   // Update page meta + schema
   useEffect(() => {
     if (categoryData) {
+      const keywords = [categoryData.primaryKeyword, categoryData.lsiKeywords].filter(Boolean).join(', ');
       updateMeta(
         categoryData.metaTitle || `${categoryData.name} – Mirai Technologies`,
-        categoryData.metaDescription || ''
+        categoryData.metaDescription || '',
+        keywords,
+        'Mirai Technologies',
+        'Mirai Technologies'
       );
       injectCategorySchema(categoryData, poolProducts);
     } else {
       updateMeta(
         'Electronic Components Catalog – Mirai Technologies Mumbai',
-        'Shop 83+ genuine electronic components – ICs, MOSFETs, transistors, microcontrollers, optocouplers. Authorized distributor since 1999. Pan-India delivery. GST invoice.'
+        'Shop 83+ genuine electronic components – ICs, MOSFETs, transistors, microcontrollers, optocouplers. Authorized distributor since 1999. Pan-India delivery. GST invoice.',
+        'electronic components catalog, buy ICs online, power MOSFETs India, microcontrollers Mumbai, active components, passive components, electronic components store',
+        'Mirai Technologies',
+        'Mirai Technologies'
       );
     }
   }, [categoryData, poolProducts]);

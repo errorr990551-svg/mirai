@@ -152,7 +152,10 @@ const ProductDetailPage = () => {
     if (product) {
       updateMeta(
         product.metaTitle || `${product.partNumber} – Buy Online India | Mirai Technologies`,
-        product.metaDescription || `Buy ${product.partNumber} from Mirai Technologies Mumbai. Authorized distributor. Fast pan-India delivery.`
+        product.metaDescription || `Buy ${product.partNumber} from Mirai Technologies Mumbai. Authorized distributor. Fast pan-India delivery.`,
+        product.lsiKeywords,
+        'Mirai Technologies',
+        'Mirai Technologies'
       );
       injectProductSchema(product, product.category);
     }

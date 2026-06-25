@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, Globe, MapPin, Building2,
   Send
 } from 'lucide-react';
+import { updateMeta } from '../utils/seo';
 
 const Contact = () => {
+  useEffect(() => {
+    updateMeta(
+      'Contact Us | Get a Quote | Mirai Technologies Mumbai',
+      'Get in touch with Mirai Technologies, authorized semiconductor distributor in Mumbai. Call +91 93213 98188 or request a quote online for genuine electronic components with pan-India shipping.',
+      'contact mirai technologies, request a quote electronics, component distributor mumbai, bulk component sourcing, semiconductor dealer contact',
+      'Mirai Technologies',
+      'Mirai Technologies'
+    );
+  }, []);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -88,7 +98,7 @@ const Contact = () => {
       {/* 1. HERO SECTION */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-50">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-          <div className="absolute top-[10%] left-[-5%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-blue-500/15 to-indigo-500/15 blur-[150px]" />
+          <div className="absolute top-[10%] left-[-5%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-blue-500/15 to-sky-500/15 blur-[150px]" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[60%] rounded-full bg-gradient-to-tl from-pink-500/5 to-blue-500/15 blur-[150px]" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzkuNSAwdi00MCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHkiPSIwLjAzIi8+PC9zdmc+')] [mask-image:linear-gradient(to_bottom,white,transparent)]" />
         </div>
@@ -104,7 +114,7 @@ const Contact = () => {
               </motion.div>
               <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-8 leading-[1.1]">
                 Get Your Quote in<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">24 Hours – Guaranteed</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-600">24 Hours – Guaranteed</span>
               </motion.h1>
               <motion.p variants={itemVariants} className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
                 Submit your RFQ, BOM, or part list today. Our sourcing experts will respond with competitive pricing, full availability, and traceability within 24 hours.
@@ -285,7 +295,7 @@ const Contact = () => {
                   <button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 ${
+                    className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 ${
                       isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                     }`}
                   >

@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-[#f5f3ff] text-slate-900 font-sans antialiased;
+    @apply bg-[#f8fafc] text-slate-900 font-sans antialiased;
   }
 
   h1,
@@ -45,4 +45,38 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #0ea5e9;
+}
+
+/* Theme Color Overrides to force Blue theme and bypass caching */
+.text-mirai-primary {
+  color: #2563eb !important;
+}
+.bg-mirai-primary {
+  background-color: #2563eb !important;
+}
+.border-mirai-primary {
+  border-color: #2563eb !important;
+}
+.border-t-mirai-primary {
+  border-top-color: #2563eb !important;
+}
+.text-mirai-accent {
+  color: #1d4ed8 !important;
+}
+.bg-mirai-accent {
+  background-color: #1d4ed8 !important;
+}
+.to-mirai-accent {
+  --tw-gradient-to: #1d4ed8 !important;
+}
+.from-mirai-primary {
+  --tw-gradient-from: #2563eb !important;
+  --tw-gradient-to: rgb(37 99 235 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.hover\:bg-mirai-primary:hover {
+  background-color: #2563eb !important;
+}
+.hover\:border-mirai-primary:hover {
+  border-color: #2563eb !important;
 }

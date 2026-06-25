@@ -8,9 +8,9 @@ import { updateMeta } from '../utils/seo';
 // Category style mapping for consistent premium tags & accent borders
 const categoryStyles = {
   'Sourcing & Supply Chain': {
-    bg: 'bg-indigo-50 text-indigo-700 border-indigo-100 hover:bg-indigo-100',
-    shadow: 'hover:shadow-indigo-500/5',
-    accent: 'from-indigo-500 to-indigo-600'
+    bg: 'bg-blue-50 text-blue-700 border-blue-100 hover:bg-blue-100',
+    shadow: 'hover:shadow-blue-500/5',
+    accent: 'from-blue-500 to-blue-600'
   },
   'Semiconductors': {
     bg: 'bg-amber-50 text-amber-700 border-amber-100 hover:bg-amber-100',
@@ -45,7 +45,8 @@ const BlogPage = () => {
   useEffect(() => {
     updateMeta(
       'Sourcing Guides & Industry Insights | Mirai Technologies Blog',
-      'Read professional semiconductor sourcing articles, electronic procurement guides, EV components analysis, and supply chain best practices from Mirai Technologies Mumbai.'
+      'Read professional semiconductor sourcing articles, electronic procurement guides, EV components analysis, and supply chain best practices from Mirai Technologies Mumbai.',
+      'semiconductor blog, electronic components sourcing, procurement guides, manufacturing supply chain, EV component analysis, Mirai Technologies blog'
     );
     window.scrollTo(0, 0);
   }, []);
@@ -83,7 +84,7 @@ const BlogPage = () => {
     <div className="bg-slate-50 min-h-screen pt-28 pb-24 font-sans">
       
       {/* ── HERO HEADER ─────────────────────────────────────────────────── */}
-      <section className="py-12 mb-10 relative overflow-hidden bg-gradient-to-b from-indigo-50/50 via-slate-50 to-slate-50">
+      <section className="py-12 mb-10 relative overflow-hidden bg-gradient-to-b from-blue-50/50 via-slate-50 to-slate-50">
         <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative text-center">
@@ -92,7 +93,7 @@ const BlogPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="bg-indigo-50 border border-indigo-100 text-mirai-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-3">
+            <span className="bg-blue-50 border border-blue-100 text-mirai-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-3">
               Knowledge Hub
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold tracking-tight text-slate-900 mb-4 leading-tight">
@@ -221,8 +222,8 @@ const BlogPage = () => {
         )}
 
         {/* ── BOTTOM CONVERSION BLOCK ───────────────────────────────────── */}
-        <section className="mt-16 bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-2xl p-8 sm:p-10 shadow-lg text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.08),transparent_35%)] pointer-events-none" />
+        <section className="mt-16 bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-2xl p-8 sm:p-10 shadow-lg text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.08),transparent_35%)] pointer-events-none" />
           
           <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-4">
             <Cpu className="w-6 h-6 text-mirai-accent" />
