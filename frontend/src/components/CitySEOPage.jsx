@@ -962,21 +962,7 @@ const CitySEOPage = ({ page }) => {
                 {page.ctaText}
               </div>
 
-              {/* Call details */}
-              <div className="pt-4 space-y-3.5">
-                <a 
-                  href="tel:+919321398188" 
-                  className="inline-flex items-center gap-3 bg-white text-indigo-950 hover:bg-slate-100 font-bold px-6 py-3.5 rounded-xl text-sm transition-all duration-300 shadow-md mr-3"
-                >
-                  <Phone className="h-4 w-4 text-indigo-900" /> Call Sales: +91 93213 98188
-                </a>
-                <a 
-                  href="mailto:sales@miraitechnologies.net" 
-                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all duration-300"
-                >
-                  <Mail className="h-4 w-4 text-white/90" /> Email BOM
-                </a>
-              </div>
+
             </div>
 
             {/* RFQ Form exactly matching Contact.jsx design */}
