@@ -2,6 +2,16 @@
   RewriteEngine On
   RewriteBase /
 
+  # Enforce non-www domain
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # Redirect legacy .php pages
+  RewriteRule ^index\.php$ / [R=301,L,NC]
+  RewriteRule ^about\.php$ /about [R=301,L,NC]
+  RewriteRule ^products\.php$ /products [R=301,L,NC]
+  RewriteRule ^contact\.php$ /contact [R=301,L,NC]
+
   # Redirect /sitemap to /sitemap.xml
   RewriteRule ^sitemap$ /sitemap.xml [R=301,L]
 

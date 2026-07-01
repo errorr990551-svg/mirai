@@ -23,7 +23,7 @@ export function updatePageSEO(title, description, canonical, robots, ogTitle, og
     linkCanonical.rel = 'canonical';
     document.head.appendChild(linkCanonical);
   }
-  linkCanonical.href = canonical || (window.location.origin + window.location.pathname);
+  linkCanonical.href = canonical || (`https://miraitechnologies.net` + window.location.pathname);
 
   let metaOgTitle = document.querySelector('meta[property="og:title"]');
   if (!metaOgTitle) {
@@ -104,8 +104,8 @@ export function injectOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Mirai Technologies",
-    "url": "https://mirai-technologies.com",
-    "logo": "https://mirai-technologies.com/images/mirai-technologies-logo.webp",
+    "url": "https://miraitechnologies.net",
+    "logo": "https://miraitechnologies.net/images/mirai-technologies-logo.webp",
     "description": "Authorized distributor of ICs, MOSFETs, transistors, optocouplers & microcontrollers. Mumbai, India. Est. 1999.",
     "address": {
       "@type": "PostalAddress",
@@ -133,8 +133,8 @@ export function injectProductSchema(product, categorySlug) {
     "name": `${product.partNumber} ${product.name}`,
     "image": [
       product.heroImage?.filename 
-        ? `https://mirai-technologies.com/images/${product.heroImage.filename}`
-        : "https://mirai-technologies.com/images/default.webp"
+        ? `https://miraitechnologies.net/images/${product.heroImage.filename}`
+        : "https://miraitechnologies.net/images/default.webp"
     ],
     "description": product.shortDescription,
     "sku": product.partNumber,
@@ -145,7 +145,7 @@ export function injectProductSchema(product, categorySlug) {
     },
     "offers": {
       "@type": "Offer",
-      "url": `https://mirai-technologies.com/product/${product.fullSlug}`,
+      "url": `https://miraitechnologies.net/product/${product.fullSlug}`,
       "priceCurrency": "INR",
       "price": product.price || 0,
       "priceValidUntil": "2027-03-31",
@@ -154,7 +154,7 @@ export function injectProductSchema(product, categorySlug) {
       "seller": {
         "@type": "Organization",
         "name": "Mirai Technologies",
-        "url": "https://mirai-technologies.com"
+        "url": "https://miraitechnologies.net"
       }
     },
     "aggregateRating": {
@@ -185,19 +185,19 @@ export function injectProductSchema(product, categorySlug) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://mirai-technologies.com"
+        "item": "https://miraitechnologies.net"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": product.categoryLabel || categorySlug,
-        "item": `https://mirai-technologies.com/products/${categorySlug}`
+        "item": `https://miraitechnologies.net/products/${categorySlug}`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": product.partNumber,
-        "item": `https://mirai-technologies.com/product/${product.fullSlug}`
+        "item": `https://miraitechnologies.net/product/${product.fullSlug}`
       }
     ]
   };
@@ -214,7 +214,7 @@ export function injectCategorySchema(category, categoryProducts) {
     "itemListElement": categoryProducts.map((p, idx) => ({
       "@type": "ListItem",
       "position": idx + 1,
-      "url": `https://mirai-technologies.com/product/${p.fullSlug}`
+      "url": `https://miraitechnologies.net/product/${p.fullSlug}`
     }))
   };
 
@@ -226,13 +226,13 @@ export function injectCategorySchema(category, categoryProducts) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://mirai-technologies.com"
+        "item": "https://miraitechnologies.net"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": category.name,
-        "item": `https://mirai-technologies.com/products/${category.slug}`
+        "item": `https://miraitechnologies.net/products/${category.slug}`
       }
     ]
   };
