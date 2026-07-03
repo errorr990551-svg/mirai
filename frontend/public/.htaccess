@@ -11,6 +11,7 @@
   RewriteRule ^about\.php$ /about [R=301,L,NC]
   RewriteRule ^products\.php$ /products [R=301,L,NC]
   RewriteRule ^contact\.php$ /contact [R=301,L,NC]
+  RewriteRule ^brands\.php$ / [R=301,L,NC]
 
   # Redirect /sitemap to /sitemap.xml
   RewriteRule ^sitemap$ /sitemap.xml [R=301,L]
