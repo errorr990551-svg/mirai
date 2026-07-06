@@ -62,13 +62,13 @@ const PopupForm = () => {
       return;
     }
 
-    // Trigger popup on page load/reload
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-      window.miraiPopupShown = true; // Mark as shown
-    }, 1500);
+    // Trigger popup on page load/reload (disabled to prevent automatic opening on load)
+    // const timer = setTimeout(() => {
+    //   setIsOpen(true);
+    //   window.miraiPopupShown = true; // Mark as shown
+    // }, 1500);
     
-    return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
   }, [pathname]);
 
   const handleClose = () => {

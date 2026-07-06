@@ -132,7 +132,7 @@ export function injectProductSchema(product, categorySlug) {
     "@type": "Product",
     "name": `${product.partNumber} ${product.name}`,
     "image": [
-      product.heroImage?.filename 
+      product.heroImage?.filename
         ? `https://miraitechnologies.net/images/${product.heroImage.filename}`
         : "https://miraitechnologies.net/images/default.webp"
     ],

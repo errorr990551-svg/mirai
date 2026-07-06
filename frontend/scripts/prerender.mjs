@@ -23,12 +23,12 @@ const cityPages = JSON.parse(fs.readFileSync(CITY_PAGES_PATH, 'utf8'));
 function mdToHtml(md) {
   if (!md) return '';
   let html = md.replace(/\r\n/g, '\n');
-  
+
   // Headers
   html = html.replace(/^# (.*?)$/gm, '<h1>$1</h1>');
   html = html.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
   html = html.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
-  
+
   // Bullet lists
   let inList = false;
   const lines = html.split('\n');
@@ -54,7 +54,7 @@ function mdToHtml(md) {
     processedLines.push('</ul>');
   }
   html = processedLines.join('\n');
-  
+
   // Paragraphs
   html = html.split('\n\n').map(p => {
     p = p.trim();
@@ -99,18 +99,18 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
   let cleanRoute = route.replace(/^\//, '').replace(/\/$/, '');
   let outputDir = DIST;
   let targetFile = path.join(DIST, 'index.html'); // Fallback for root homepage
-  
+
   if (cleanRoute !== '') {
     outputDir = path.join(DIST, cleanRoute);
     fs.mkdirSync(outputDir, { recursive: true });
     targetFile = path.join(outputDir, 'index.html');
   }
-  
+
   let html = baseTemplate;
-  
+
   // Replace Title
   html = html.replace(/<title>.*?<\/title>/i, `<title>${seoDetails.title}</title>`);
-  
+
   // Replace Meta Description
   const descTag = `<meta name="description" content="${seoDetails.description.replace(/"/g, '&quot;')}" />`;
   if (html.match(/<meta\s+name="description"\s+content="[^"]*"\s*\/?>/i)) {
@@ -118,7 +118,7 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
   } else {
     html = html.replace(/<\/head>/i, `  ${descTag}\n</head>`);
   }
-  
+
   // Replace Canonical Link
   const canonicalUrl = seoDetails.canonical || `https://miraitechnologies.net/${cleanRoute}`;
   const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" />`;
@@ -130,12 +130,12 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
 
   // Inject Schemas in Head
   if (schemas && schemas.length > 0) {
-    const schemaTags = schemas.map(schema => 
+    const schemaTags = schemas.map(schema =>
       `  <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`
     ).join('\n');
     html = html.replace(/<\/head>/i, `${schemaTags}\n</head>`);
   }
-  
+
   // Inject Pre-rendered Body content inside <div id="root"></div>
   const fullBodyHtml = `
     <header style="padding: 20px; background-color: #030712; color: #fff;">
@@ -157,9 +157,9 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
       <p>&copy; 2026 Mirai Technologies. All rights reserved. Mumbai, India.</p>
     </footer>
   `;
-  
+
   html = html.replace(/<div\s+id="root">\s*<\/div>/i, `<div id="root">${fullBodyHtml}</div>`);
-  
+
   fs.writeFileSync(targetFile, html, 'utf8');
 }
 
@@ -296,7 +296,7 @@ categories.forEach(category => {
       </tbody>
     </table>
   `;
-  
+
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -340,7 +340,7 @@ products.forEach(product => {
   const specList = Object.entries(product.specs || {})
     .map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`)
     .join('\n');
-    
+
   const faqList = (product.faqs || [])
     .map(faq => `<div><h3>${faq.q}</h3><p>${faq.a}</p></div>`)
     .join('\n');
@@ -374,7 +374,7 @@ products.forEach(product => {
     "@type": "Product",
     "name": `${product.partNumber} ${product.name}`,
     "image": [
-      product.heroImage?.filename 
+      product.heroImage?.filename
         ? `https://miraitechnologies.net/images/${product.heroImage.filename}`
         : "https://miraitechnologies.net/images/default.webp"
     ],
@@ -485,7 +485,7 @@ blogPosts.forEach(post => {
       ${mdToHtml(post.body)}
     </div>
   `;
-  
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -537,7 +537,7 @@ console.log(`✅ Prerendered: ${blogPosts.length} blog posts`);
 // 10. City Pages
 cityPages.forEach(page => {
   const cleanSlug = page.slug.replace(/^\//, '').replace(/\/$/, '');
-  
+
   const faqList = (page.faqs || [])
     .map(faq => `<div><h3>${faq.q}</h3><p>${faq.a}</p></div>`)
     .join('\n');
