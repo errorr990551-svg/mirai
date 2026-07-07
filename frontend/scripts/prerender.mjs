@@ -138,24 +138,43 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
 
   // Inject Pre-rendered Body content inside <div id="root"></div>
   const fullBodyHtml = `
-    <header style="padding: 20px; background-color: #030712; color: #fff;">
-      <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-weight: bold; font-size: 20px;">Mirai Technologies</span>
-        <nav>
-          <a href="/" style="color: #fff; margin-right: 15px; text-decoration: none;">Home</a>
-          <a href="/about" style="color: #fff; margin-right: 15px; text-decoration: none;">About</a>
-          <a href="/products" style="color: #fff; margin-right: 15px; text-decoration: none;">Products</a>
-          <a href="/blog" style="color: #fff; margin-right: 15px; text-decoration: none;">Blog</a>
-          <a href="/contact" style="color: #fff; text-decoration: none;">Contact</a>
-        </nav>
+    <div class="sr-only">
+      <header style="padding: 20px; background-color: #030712; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: bold; font-size: 20px;">Mirai Technologies</span>
+          <nav>
+            <a href="/" style="color: #fff; margin-right: 15px; text-decoration: none;">Home</a>
+            <a href="/about" style="color: #fff; margin-right: 15px; text-decoration: none;">About</a>
+            <a href="/products" style="color: #fff; margin-right: 15px; text-decoration: none;">Products</a>
+            <a href="/blog" style="color: #fff; margin-right: 15px; text-decoration: none;">Blog</a>
+            <a href="/contact" style="color: #fff; text-decoration: none;">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        ${bodyHtml}
+      </main>
+      <footer style="padding: 40px 20px; background-color: #030712; color: #94a3b8; text-align: center; font-size: 14px;">
+        <p>&copy; 2026 Mirai Technologies. All rights reserved. Mumbai, India.</p>
+      </footer>
+    </div>
+    
+    <div class="app-loading-screen">
+      <div class="loading-container">
+        <div class="loading-logo-container">
+          <div class="loading-logo-icon">
+            <svg class="zap-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <span class="loading-logo-text">Mirai Tech</span>
+        </div>
+        <div class="loading-bar-wrapper">
+          <div class="loading-bar-progress"></div>
+        </div>
+        <p class="loading-subtitle">Loading premium experience...</p>
       </div>
-    </header>
-    <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-      ${bodyHtml}
-    </main>
-    <footer style="padding: 40px 20px; background-color: #030712; color: #94a3b8; text-align: center; font-size: 14px;">
-      <p>&copy; 2026 Mirai Technologies. All rights reserved. Mumbai, India.</p>
-    </footer>
+    </div>
   `;
 
   html = html.replace(/<div\s+id="root">\s*<\/div>/i, `<div id="root">${fullBodyHtml}</div>`);
