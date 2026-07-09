@@ -93,6 +93,63 @@ const ORG_SCHEMA = {
   "sameAs": ["https://www.indiamart.com/mirai-technologies/"]
 };
 
+function truncateToWordBoundary(text, maxLen) {
+  if (text.length <= maxLen) return text;
+  const truncated = text.slice(0, maxLen);
+  const lastSpace = truncated.lastIndexOf(' ');
+  if (lastSpace > 0) {
+    return truncated.slice(0, lastSpace).trim();
+  }
+  return truncated.trim();
+}
+
+// Dynamic BreadcrumbList generator
+function getBreadcrumbSchema(route, name) {
+  const cleanRoute = route.replace(/^\//, '').replace(/\/$/, '');
+  const segments = cleanRoute.split('/').filter(Boolean);
+  const itemListElement = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://miraitechnologies.net"
+    }
+  ];
+  
+  let currentPath = '';
+  segments.forEach((seg, index) => {
+    currentPath += `/${seg}`;
+    let segName = seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    if (index === segments.length - 1 && name) {
+      segName = name;
+    }
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": segName,
+      "item": `https://miraitechnologies.net${currentPath}`
+    });
+  });
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": itemListElement
+  };
+}
+
+// Nearby cities helper
+function getNearbyCities(currentCity, currentState) {
+  let siblings = cityPages.filter(c => c.state === currentState && c.city !== currentCity);
+  if (siblings.length < 6) {
+    const others = cityPages.filter(c => c.state !== currentState && c.city !== currentCity);
+    siblings = [...siblings, ...others].slice(0, 7);
+  } else if (siblings.length > 8) {
+    siblings = siblings.slice(0, 7);
+  }
+  return siblings;
+}
+
 // Main prerender helper
 function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
   // Normalize route to directory path
@@ -119,8 +176,11 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
     html = html.replace(/<\/head>/i, `  ${descTag}\n</head>`);
   }
 
-  // Replace Canonical Link
-  const canonicalUrl = seoDetails.canonical || `https://miraitechnologies.net/${cleanRoute}`;
+  // Remove keywords tag if it exists in template
+  html = html.replace(/<meta\s+name="keywords"\s+content="[^"]*"\s*\/?>/i, '');
+
+  // Replace Canonical Link (standardizing non-www and non-trailing slash)
+  const canonicalUrl = (seoDetails.canonical || `https://miraitechnologies.net/${cleanRoute}`).replace(/\/$/, '');
   const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" />`;
   if (html.match(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i)) {
     html = html.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i, canonicalTag);
@@ -128,9 +188,59 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
     html = html.replace(/<\/head>/i, `  ${canonicalTag}\n</head>`);
   }
 
+  // Build final schemas array
+  const finalSchemas = [...schemas];
+  
+  // Check if Organization/LocalBusiness is present
+  const hasOrg = finalSchemas.some(s => 
+    s["@type"] === "Organization" || 
+    s["@type"] === "LocalBusiness" ||
+    (s["@graph"] && s["@graph"].some(sub => sub["@type"] === "Organization" || sub["@type"] === "LocalBusiness"))
+  );
+  if (!hasOrg) {
+    finalSchemas.push(ORG_SCHEMA);
+  }
+
+  // Check if BreadcrumbList is present
+  const hasBreadcrumb = finalSchemas.some(s => 
+    s["@type"] === "BreadcrumbList" || 
+    (s["@graph"] && s["@graph"].some(sub => sub["@type"] === "BreadcrumbList"))
+  );
+  if (!hasBreadcrumb) {
+    let pageName = seoDetails.title.split('|')[0].trim();
+    finalSchemas.push(getBreadcrumbSchema(route, pageName));
+  }
+
+  // Inject Article schema for blog posts
+  if (cleanRoute.startsWith('blog/')) {
+    const hasArticle = finalSchemas.some(s => s["@type"] === "Article" || s["@type"] === "BlogPosting");
+    if (!hasArticle) {
+      const blogSlug = cleanRoute.split('/').pop();
+      const post = blogPosts.find(p => p.slug === blogSlug);
+      if (post) {
+        finalSchemas.push({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.metaDescription || post.excerpt,
+          "datePublished": post.publishDate,
+          "author": {
+            "@type": "Organization",
+            "name": "Mirai Technologies"
+          },
+          "publisher": ORG_SCHEMA,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://miraitechnologies.net/blog/${post.slug}`
+          }
+        });
+      }
+    }
+  }
+
   // Inject Schemas in Head
-  if (schemas && schemas.length > 0) {
-    const schemaTags = schemas.map(schema =>
+  if (finalSchemas && finalSchemas.length > 0) {
+    const schemaTags = finalSchemas.map(schema =>
       `  <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`
     ).join('\n');
     html = html.replace(/<\/head>/i, `${schemaTags}\n</head>`);
@@ -147,6 +257,7 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
             <a href="/about" style="color: #fff; margin-right: 15px; text-decoration: none;">About</a>
             <a href="/products" style="color: #fff; margin-right: 15px; text-decoration: none;">Products</a>
             <a href="/blog" style="color: #fff; margin-right: 15px; text-decoration: none;">Blog</a>
+            <a href="/market-area" style="color: #fff; margin-right: 15px; text-decoration: none;">Market Area</a>
             <a href="/contact" style="color: #fff; text-decoration: none;">Contact</a>
           </nav>
         </div>
@@ -155,6 +266,32 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
         ${bodyHtml}
       </main>
       <footer style="padding: 40px 20px; background-color: #030712; color: #94a3b8; text-align: center; font-size: 14px;">
+        <div style="margin-bottom: 20px;">
+          <p style="font-weight: bold; color: #fff;">We Deliver Across India</p>
+          <p style="line-height: 1.8;">
+            <a href="/electronic-component-distributor-in-mumbai" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Mumbai</a> |
+            <a href="/electronic-component-distributor-in-delhi" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Delhi</a> |
+            <a href="/electronic-component-distributor-in-bengaluru" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Bengaluru</a> |
+            <a href="/electronic-component-distributor-in-hyderabad" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Hyderabad</a> |
+            <a href="/electronic-component-distributor-in-chennai" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Chennai</a> |
+            <a href="/electronic-component-distributor-in-pune" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Pune</a> |
+            <a href="/electronic-component-distributor-in-ahmedabad" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Ahmedabad</a> |
+            <a href="/electronic-component-distributor-in-kolkata" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Kolkata</a> |
+            <a href="/electronic-component-distributor-in-surat" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Surat</a> |
+            <a href="/electronic-component-distributor-in-jaipur" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Jaipur</a> |
+            <a href="/electronic-component-distributor-in-noida" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Noida</a> |
+            <a href="/electronic-component-distributor-in-faridabad" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Faridabad</a> |
+            <a href="/electronic-component-distributor-in-coimbatore" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Coimbatore</a> |
+            <a href="/electronic-component-distributor-in-indore" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Indore</a> |
+            <a href="/electronic-component-distributor-in-nagpur" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Nagpur</a> |
+            <a href="/electronic-component-distributor-in-lucknow" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Lucknow</a> |
+            <a href="/electronic-component-distributor-in-vadodara" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Vadodara</a> |
+            <a href="/electronic-component-distributor-in-chandigarh" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Chandigarh</a> |
+            <a href="/electronic-component-distributor-in-kochi" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Kochi</a> |
+            <a href="/electronic-component-distributor-in-visakhapatnam" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Visakhapatnam</a> |
+            <a href="/market-area" style="color: #2563eb; font-weight: bold; text-decoration: none; margin-left: 10px;">View all cities &rarr;</a>
+          </p>
+        </div>
         <p>&copy; 2026 Mirai Technologies. All rights reserved. Mumbai, India.</p>
       </footer>
     </div>
@@ -287,6 +424,7 @@ console.log('✅ Prerendered: /products');
 // 6. Category Pages
 categories.forEach(category => {
   const catProducts = products.filter(p => p.category === category.slug);
+  if (catProducts.length === 0) return;
   const catBody = `
     <h1>${category.h1}</h1>
     <p>${category.description}</p>
@@ -347,9 +485,24 @@ categories.forEach(category => {
     ]
   };
 
+  let catTitle = category.metaTitle || `${category.name} — Buy Online India | Mirai Technologies`;
+  if (catTitle.length > 60) {
+    catTitle = truncateToWordBoundary(catTitle, 60);
+  }
+  
+  let catDesc = category.metaDescription || `Buy ${category.name} online from Mirai Technologies. Genuine components, low MOQs, and fast delivery in India. GST invoice available.`;
+  if (catDesc.length > 160) {
+    catDesc = truncateToWordBoundary(catDesc, 157) + '...';
+  } else if (catDesc.length < 140) {
+    const suffix = ' Pan-India delivery.';
+    if (catDesc.length + suffix.length <= 160) {
+      catDesc = catDesc + suffix;
+    }
+  }
+
   prerenderPage(`/products/${category.slug}`, {
-    title: category.metaTitle || `${category.name} - Mirai Technologies`,
-    description: category.metaDescription || `Buy ${category.name} online from Mirai Technologies. Genuine components, low MOQs, and fast delivery in India.`
+    title: catTitle,
+    description: catDesc
   }, catBody, [itemListSchema, breadcrumbSchema]);
 });
 console.log(`✅ Prerendered: ${categories.length} category listing pages`);
@@ -561,6 +714,8 @@ cityPages.forEach(page => {
     .map(faq => `<div><h3>${faq.q}</h3><p>${faq.a}</p></div>`)
     .join('\n');
 
+  const nearby = getNearbyCities(page.city, page.state);
+
   const cityBody = `
     <h1>${page.h1}</h1>
     <p>${page.introduction}</p>
@@ -579,6 +734,18 @@ cityPages.forEach(page => {
     
     ${faqList ? `<h2>Frequently Asked Questions - Sourcing in ${page.city}</h2>${faqList}` : ''}
     
+    <div style="margin-top: 40px; border-top: 1px solid #e2e8f0; padding-top: 20px; font-size: 12px; color: #64748b;">
+      <p><strong>Quick Resource Links:</strong></p>
+      <p>
+        <a href="/market-area">Market Area Hub</a> | 
+        ${categories.map(cat => `<a href="/products/${cat.slug}">Buy ${cat.name}</a>`).join(' | ')}
+      </p>
+      <p><strong>Other Cities We Serve:</strong></p>
+      <p>
+        ${nearby.map(sibling => `<a href="/${sibling.slug.replace(/^\//, '').replace(/\/$/, '')}">Sourcing in ${sibling.city}</a>`).join(' | ')}
+      </p>
+    </div>
+
     <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0;" />
     <p style="font-size: 12px; color: #64748b; font-style: italic;">${page.footerGeoText}</p>
   `;
@@ -592,14 +759,33 @@ cityPages.forEach(page => {
 console.log(`✅ Prerendered: ${cityPages.length} city geo-landing pages`);
 
 // 11. Market Area Page
+const citiesByState = {};
+cityPages.forEach(page => {
+  const state = page.state || 'Other';
+  if (!citiesByState[state]) {
+    citiesByState[state] = [];
+  }
+  citiesByState[state].push(page);
+});
+const sortedStates = Object.keys(citiesByState).sort();
+sortedStates.forEach(state => {
+  citiesByState[state].sort((a, b) => a.city.localeCompare(b.city));
+});
+
 const marketBody = `
   <h1>Electronics Manufacturing & Distribution Hubs in India</h1>
   <p>Mirai Technologies serves as a trusted semiconductor and active/passive component supplier to all major industrial clusters across India. Below are the key manufacturing markets where we offer local credit terms, technical cross-references, and fast shipping.</p>
   
-  <h2>Major Hubs Served</h2>
-  <ul>
-    ${cityPages.map(page => `<li><a href="${page.slug}"><strong>Sourcing in ${page.city}</strong></a> - ${page.metaDescription}</li>`).join('\n')}
-  </ul>
+  ${sortedStates.map(state => `
+    <h2>${state}</h2>
+    <ul>
+      ${citiesByState[state].map(page => `
+        <li>
+          <a href="/${page.slug.replace(/^\//, '').replace(/\/$/, '')}"><strong>Sourcing in ${page.city}</strong></a> - ${page.metaDescription}
+        </li>
+      `).join('\n')}
+    </ul>
+  `).join('\n')}
 `;
 prerenderPage('/market-area', {
   title: 'Electronics Manufacturing & Distribution Hubs India | Mirai',

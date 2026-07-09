@@ -79,8 +79,8 @@ const CATEGORY_SLUG_MAP = {
   'MOSFET Transistor':    'mosfet-transistor',
   'Transistor':           'transistor',
   'Microcontroller':      'microcontroller',
-  'IC Chip':              'ic-chip',
-  'Ic':                   'ic-chip',
+  'IC Chip':              'integrated-circuit',
+  'Ic':                   'integrated-circuit',
   'Electronic Components':'electronic-components',
 };
 
@@ -110,6 +110,73 @@ function parseKeySpecs(raw) {
   return specs;
 }
 
+function truncateToWordBoundary(text, maxLen) {
+  if (text.length <= maxLen) return text;
+  const truncated = text.slice(0, maxLen);
+  const lastSpace = truncated.lastIndexOf(' ');
+  if (lastSpace > 0) {
+    return truncated.slice(0, lastSpace).trim();
+  }
+  return truncated.trim();
+}
+
+function cleanMetaTitle(title, partNumber) {
+  if (!title) return `${partNumber} — Buy Online India | Mirai Technologies`;
+  if (title.includes('Rds') || title.includes('Rds(on') || title.includes('Rds(o') || title.includes('Rds(')) {
+    const rdsIndex = title.search(/,\s*Rds/i);
+    if (rdsIndex !== -1) {
+      const prefix = title.substring(0, rdsIndex).trim();
+      title = `${prefix} | Buy Online India`;
+    }
+  }
+  if (title.length > 60) {
+    title = truncateToWordBoundary(title, 60);
+  }
+  return title;
+}
+
+function cleanMetaDescription(desc, partNumber, specs) {
+  if (!desc) return `Buy ${partNumber} online from Mirai Technologies Mumbai. Genuine components, low MOQs, and fast delivery in India. GST invoice available.`;
+  
+  let rdsSpec = '';
+  for (const key of Object.keys(specs)) {
+    if (key.toLowerCase().includes('rds(on)')) {
+      rdsSpec = specs[key].split(' ')[0].trim();
+      break;
+    }
+  }
+  
+  if (rdsSpec) {
+    desc = desc.replace(/Rds\(on\)=.*?(\s*₹)/i, `Rds(on)=${rdsSpec}. $1`);
+  }
+  
+  desc = desc.replace(/\.\./g, '.');
+  desc = desc.replace(/,\s*\./g, '.');
+  desc = desc.replace(/\s+/g, ' ').trim();
+  
+  if (desc.length > 160) {
+    desc = truncateToWordBoundary(desc, 157) + '...';
+  } else if (desc.length < 140) {
+    const suffix = ' Pan-India delivery.';
+    if (desc.length + suffix.length <= 160) {
+      desc = desc + suffix;
+    }
+  }
+  return desc;
+}
+
+function normalizeProductSlug(urlSlug, catSlug, partNum) {
+  let slug = urlSlug || `${catSlug}/${partNum.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+  const productId = slug.split('/').pop();
+  if (slug.startsWith('integrated-circuits/') || 
+      slug.startsWith('ic-chip/') || 
+      slug.startsWith('ic/') || 
+      slug.startsWith('integrated-circuit/')) {
+    slug = `integrated-circuit/${productId}`;
+  }
+  return slug;
+}
+
 // ── 5. Parse price ────────────────────────────────────────────────────────
 function parsePrice(part) {
   const p = priceMap[part];
@@ -126,8 +193,8 @@ const products = masterData.map(raw => {
   const imgs    = imageMap[partNum] || {};
   const catSlug = getCategorySlug(raw);
 
-  // Use the URL Slug from the JSON data
-  const urlSlug  = raw['URL Slug'] || `${catSlug}/${partNum.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+  // Use the URL Slug from the JSON data, normalized
+  const urlSlug  = normalizeProductSlug(raw['URL Slug'], catSlug, partNum);
   const productId = urlSlug.split('/').pop();
 
   // Resolve links for this product
@@ -137,7 +204,8 @@ const products = masterData.map(raw => {
     let toSlug = '';
     if (targetProduct) {
       const targetCatSlug = getCategorySlug(targetProduct);
-      toSlug = targetProduct['URL Slug'] || `${targetCatSlug}/${l.toPartNumber.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+      const targetSlug = targetProduct['URL Slug'] || `${targetCatSlug}/${l.toPartNumber.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+      toSlug = normalizeProductSlug(targetSlug, targetCatSlug, l.toPartNumber);
     }
     return { ...l, toSlug };
   }).filter(l => l.toSlug);
@@ -168,8 +236,8 @@ const products = masterData.map(raw => {
     keySpecsRaw:    raw['Key Specifications'] || '',
     specs:          parseKeySpecs(raw['Key Specifications']),
     // SEO
-    metaTitle:       raw['Meta Title (≤60 chars)'] || '',
-    metaDescription: raw['Meta Description (≤160 chars)'] || '',
+    metaTitle:       cleanMetaTitle(raw['Meta Title (≤60 chars)'] || '', partNum),
+    metaDescription: cleanMetaDescription(raw['Meta Description (≤160 chars)'] || '', partNum, parseKeySpecs(raw['Key Specifications'])),
     primaryKeyword:  raw['Primary Keyword'] || kw.primaryKeyword || '',
     lsiKeywords:     raw['LSI Keywords'] || kw.lsiKeywords || '',
     h2Tags:          raw['H2 Tags'] || '',

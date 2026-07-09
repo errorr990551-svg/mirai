@@ -9,6 +9,19 @@ import {
   Truck, Factory, GraduationCap, Hammer
 } from 'lucide-react';
 import { updatePageSEO, updateSchemaScripts } from '../utils/seo';
+import cityPages from '../data/cityPages.json';
+import { categories } from '../data/products';
+
+const getNearbyCities = (currentCity, currentState) => {
+  let siblings = cityPages.filter(c => c.state === currentState && c.city !== currentCity);
+  if (siblings.length < 6) {
+    const others = cityPages.filter(c => c.state !== currentState && c.city !== currentCity);
+    siblings = [...siblings, ...others].slice(0, 7);
+  } else if (siblings.length > 8) {
+    siblings = siblings.slice(0, 7);
+  }
+  return siblings;
+};
 
 const getIndustryIcon = (industryName) => {
   const name = industryName.toLowerCase();
@@ -405,6 +418,7 @@ const CitySEOPage = ({ page }) => {
   // Parse fields
   const internalLinksList = parseInternalLinks(page.internalLinks);
   const industriesList = page.targetIndustries ? page.targetIndustries.split(',').map(s => s.trim()) : [];
+  const nearbyCities = getNearbyCities(page.city, page.state);
 
   return (
     <div className="bg-white min-h-screen text-slate-900 overflow-hidden">
@@ -1071,18 +1085,37 @@ const CitySEOPage = ({ page }) => {
           </div>
 
           {/* Internal links for SEO flow */}
-          {internalLinksList.length > 0 && (
-            <div className="mt-16 pt-8 border-t border-white/10 text-xs text-slate-400">
-              <span className="font-bold block mb-3 uppercase tracking-wider text-slate-300">Quick Resource Links:</span>
-              <div className="flex flex-wrap gap-x-6 gap-y-2">
-                {internalLinksList.map((link, idx) => (
-                  <a key={idx} href={link.url} className="hover:text-white transition-colors underline flex items-center gap-1">
-                    {link.text} <ArrowRight className="h-3 w-3 inline animate-pulse" />
-                  </a>
-                ))}
-              </div>
+          <div className="mt-16 pt-8 border-t border-white/10 text-xs text-slate-400">
+            <span className="font-bold block mb-3 uppercase tracking-wider text-slate-300">Quick Resource Links:</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 mb-4">
+              <Link to="/market-area" className="hover:text-white transition-colors underline flex items-center gap-1">
+                Market Area Hub <ArrowRight className="h-3 w-3 inline animate-pulse" />
+              </Link>
+              {internalLinksList.map((link, idx) => (
+                <a key={idx} href={link.url.replace(/\/$/, '')} className="hover:text-white transition-colors underline flex items-center gap-1">
+                  {link.text} <ArrowRight className="h-3 w-3 inline animate-pulse" />
+                </a>
+              ))}
             </div>
-          )}
+            
+            <span className="font-bold block mb-3 uppercase tracking-wider text-slate-300 mt-6">Sourcing Categories:</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 mb-4">
+              {categories.map((cat) => (
+                <Link key={cat.slug} to={`/products/${cat.slug}`} className="hover:text-white transition-colors underline flex items-center gap-1">
+                  Buy {cat.name} <ArrowRight className="h-3 w-3 inline" />
+                </Link>
+              ))}
+            </div>
+
+            <span className="font-bold block mb-3 uppercase tracking-wider text-slate-300 mt-6">Other Cities We Serve:</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {nearbyCities.map((sibling) => (
+                <Link key={sibling.slug} to={sibling.slug.replace(/\/$/, '')} className="hover:text-white transition-colors underline flex items-center gap-1">
+                  Sourcing in {sibling.city} <ArrowRight className="h-3 w-3 inline" />
+                </Link>
+              ))}
+            </div>
+          </div>
 
           {/* Geo location text block */}
           <div className="mt-8 text-xs text-slate-500 text-center leading-relaxed">

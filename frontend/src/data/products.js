@@ -432,7 +432,7 @@ export const products = [
         "location": "Alternatives table",
         "type": "Variant",
         "priority": "High",
-        "toSlug": "integrated-circuits/uln2003d"
+        "toSlug": "integrated-circuit/uln2003d"
       }
     ],
     "relatedLinks": [],
@@ -467,7 +467,7 @@ export const products = [
       "Temp": "-55°C to +100°C"
     },
     "metaTitle": "4N33M – Phototransistor optocoupler, | Buy India",
-    "metaDescription": "Buy 4N33M from Mirai Technologies Mumbai. Phototransistor optocoupler, 3.55kV. ₹9.50/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy 4N33M from Mirai Technologies Mumbai. Phototransistor optocoupler, 3.55kV. ₹9.50/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "4N33M buy India",
     "lsiKeywords": "4N33M price India, 4N33M datasheet, 4N33M distributor Mumbai, buy 4n33m online",
     "h2Tags": "4N33M Specifications & Datasheet, 4N33M Applications, Buy 4N33M in India, Alternatives to 4N33M, Why Mirai Technologies",
@@ -644,7 +644,7 @@ export const products = [
       "Temp": "0°C to +70°C"
     },
     "metaTitle": "DS1307 – I2C RTC, battery backup, 56- | Buy India",
-    "metaDescription": "Buy DS1307 from Mirai Technologies Mumbai. I2C RTC, battery backup, 56-byte NV. ₹12.50/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy DS1307 from Mirai Technologies Mumbai. I2C RTC, battery backup, 56-byte NV. ₹12.50/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "DS1307 buy India",
     "lsiKeywords": "DS1307 price India, DS1307 datasheet, DS1307 distributor Mumbai, buy ds1307 online",
     "h2Tags": "DS1307 Specifications & Datasheet, DS1307 Applications, Buy DS1307 in India, Alternatives to DS1307, Why Mirai Technologies",
@@ -692,7 +692,7 @@ export const products = [
         "location": "Alternatives table",
         "type": "Variant",
         "priority": "High",
-        "toSlug": "ic-chip/in1307dt"
+        "toSlug": "integrated-circuit/in1307dt"
       }
     ],
     "relatedLinks": [],
@@ -711,7 +711,7 @@ export const products = [
         "location": "Frequently Bought Together",
         "type": "Cross-sell",
         "priority": "Medium",
-        "toSlug": "ic-chip/at24c16"
+        "toSlug": "integrated-circuit/at24c16"
       }
     ]
   },
@@ -901,7 +901,7 @@ export const products = [
       "Temp": "0°C to +70°C"
     },
     "metaTitle": "SN74LS06N – Hex inverter, open-collector | Buy India",
-    "metaDescription": "Buy SN74LS06N from Mirai Technologies Mumbai. Hex inverter, open-collector 30V/40. ₹9/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy SN74LS06N from Mirai Technologies Mumbai. Hex inverter, open-collector 30V/40. ₹9/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "SN74LS06N buy India",
     "lsiKeywords": "SN74LS06N price India, SN74LS06N datasheet, SN74LS06N distributor Mumbai, buy sn74ls06n online",
     "h2Tags": "SN74LS06N Specifications & Datasheet, SN74LS06N Applications, Buy SN74LS06N in India, Alternatives to SN74LS06N, Why Mirai Technologies",
@@ -974,7 +974,7 @@ export const products = [
       "Battery life": "10 years"
     },
     "metaTitle": "DS12C887 – Self-contained RTC, built-in | Buy India",
-    "metaDescription": "Buy DS12C887 from Mirai Technologies Mumbai. Self-contained RTC, built-in crysta. ₹300/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy DS12C887 from Mirai Technologies Mumbai. Self-contained RTC, built-in crysta. ₹300/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "DS12C887 buy India",
     "lsiKeywords": "DS12C887 price India, DS12C887 datasheet, DS12C887 distributor Mumbai, buy ds12c887 online",
     "h2Tags": "DS12C887 Specifications & Datasheet, DS12C887 Applications, Buy DS12C887 in India, Alternatives to DS12C887, Why Mirai Technologies",
@@ -1049,7 +1049,7 @@ export const products = [
       "Noise": "0.35µV p-p"
     },
     "metaTitle": "OP07CP – Precision op-amp, ±75µV offs | Buy India",
-    "metaDescription": "Buy OP07CP from Mirai Technologies Mumbai. Precision op-amp, ±75µV offset, 1.3. ₹24/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy OP07CP from Mirai Technologies Mumbai. Precision op-amp, ±75µV offset, 1.3. ₹24/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "OP07CP buy India",
     "lsiKeywords": "OP07CP price India, OP07CP datasheet, OP07CP distributor Mumbai, buy op07cp online",
     "h2Tags": "OP07CP Specifications & Datasheet, OP07CP Applications, Buy OP07CP in India, Alternatives to OP07CP, Why Mirai Technologies",
@@ -1123,7 +1123,7 @@ export const products = [
       "Temp": "0°C to +70°C"
     },
     "metaTitle": "UA741CP – Classic 741 op-amp, 1MHz GBW | Buy India",
-    "metaDescription": "Buy UA741CP from Mirai Technologies Mumbai. Classic 741 op-amp, 1MHz GBW, ±15V,. ₹3.75/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy UA741CP from Mirai Technologies Mumbai. Classic 741 op-amp, 1MHz GBW, ±15V. ₹3.75/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "UA741CP buy India",
     "lsiKeywords": "UA741CP price India, UA741CP datasheet, UA741CP distributor Mumbai, buy ua741cp online",
     "h2Tags": "UA741CP Specifications & Datasheet, UA741CP Applications, Buy UA741CP in India, Alternatives to UA741CP, Why Mirai Technologies",
@@ -1196,7 +1196,7 @@ export const products = [
       "No-load": "<30mW"
     },
     "metaTitle": "LNK364PN – Off-line switcher, integrate | Buy India",
-    "metaDescription": "Buy LNK364PN from Mirai Technologies Mumbai. Off-line switcher, integrated MOSFE. ₹29/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy LNK364PN from Mirai Technologies Mumbai. Off-line switcher, integrated MOSFE. ₹29/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "LNK364PN buy India",
     "lsiKeywords": "LNK364PN price India, LNK364PN datasheet, LNK364PN distributor Mumbai, buy lnk364pn online",
     "h2Tags": "LNK364PN Specifications & Datasheet, LNK364PN Applications, Buy LNK364PN in India, Alternatives to LNK364PN, Why Mirai Technologies",
@@ -1271,7 +1271,7 @@ export const products = [
       "Temp": "-40°C to +85°C"
     },
     "metaTitle": "MOC3023M – TRIAC driver optocoupler, ra | Buy India",
-    "metaDescription": "Buy MOC3023M from Mirai Technologies Mumbai. TRIAC driver optocoupler, random-ph. ₹8/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy MOC3023M from Mirai Technologies Mumbai. TRIAC driver optocoupler, random-ph. ₹8/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "MOC3023M buy India",
     "lsiKeywords": "MOC3023M price India, MOC3023M datasheet, MOC3023M distributor Mumbai, buy moc3023m online",
     "h2Tags": "MOC3023M Specifications & Datasheet, MOC3023M Applications, Buy MOC3023M in India, Alternatives to MOC3023M, Why Mirai Technologies",
@@ -1353,7 +1353,7 @@ export const products = [
       "Temp": "-40°C to +125°C"
     },
     "metaTitle": "FL7733AMX – PSR LED driver controller, o | Buy India",
-    "metaDescription": "Buy FL7733AMX from Mirai Technologies Mumbai. PSR LED driver controller, offline,. ₹15/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy FL7733AMX from Mirai Technologies Mumbai. PSR LED driver controller, offline. ₹15/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "FL7733AMX buy India",
     "lsiKeywords": "FL7733AMX price India, FL7733AMX datasheet, FL7733AMX distributor Mumbai, buy fl7733amx online",
     "h2Tags": "FL7733AMX Specifications & Datasheet, FL7733AMX Applications, Buy FL7733AMX in India, Alternatives to FL7733AMX, Why Mirai Technologies",
@@ -1428,7 +1428,7 @@ export const products = [
       "Temp": "-40°C to +85°C"
     },
     "metaTitle": "CH340G – USB to UART bridge, virtual  | Buy India",
-    "metaDescription": "Buy CH340G from Mirai Technologies Mumbai. USB to UART bridge, virtual COM por. ₹29/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CH340G from Mirai Technologies Mumbai. USB to UART bridge, virtual COM por. ₹29/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CH340G buy India",
     "lsiKeywords": "CH340G price India, CH340G datasheet, CH340G distributor Mumbai, buy ch340g online",
     "h2Tags": "CH340G Specifications & Datasheet, CH340G Applications, Buy CH340G in India, Alternatives to CH340G, Why Mirai Technologies",
@@ -1502,7 +1502,7 @@ export const products = [
       "Slew": "20V/µs"
     },
     "metaTitle": "AD633JN – Precision analog multiplier, | Buy India",
-    "metaDescription": "Buy AD633JN from Mirai Technologies Mumbai. Precision analog multiplier, ±10V i. ₹325/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy AD633JN from Mirai Technologies Mumbai. Precision analog multiplier, ±10V i. ₹325/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "AD633JN buy India",
     "lsiKeywords": "AD633JN price India, AD633JN datasheet, AD633JN distributor Mumbai, buy ad633jn online",
     "h2Tags": "AD633JN Specifications & Datasheet, AD633JN Applications, Buy AD633JN in India, Alternatives to AD633JN, Why Mirai Technologies",
@@ -1550,7 +1550,7 @@ export const products = [
   {
     "id": "sn74hc541dwr",
     "partNumber": "SN74HC541DWR",
-    "fullSlug": "integrated-circuits/sn74hc541dwr",
+    "fullSlug": "integrated-circuit/sn74hc541dwr",
     "name": "SN74HC541DWR Octal Buffer Line Driver",
     "h1": "SN74HC541DWR Octal Buffer Line Driver – Buy Online India",
     "category": "integrated-circuit",
@@ -1576,7 +1576,7 @@ export const products = [
       "Temp": "-40°C to +85°C"
     },
     "metaTitle": "SN74HC541DWR – Octal 3-state non-inverting  | Buy India",
-    "metaDescription": "Buy SN74HC541DWR from Mirai Technologies Mumbai. Octal 3-state non-inverting buffer,. ₹16/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy SN74HC541DWR from Mirai Technologies Mumbai. Octal 3-state non-inverting buffer. ₹16/pc. Authorized distributor. Fast pan-India delivery.",
     "primaryKeyword": "SN74HC541DWR buy India",
     "lsiKeywords": "SN74HC541DWR price India, SN74HC541DWR datasheet, SN74HC541DWR distributor Mumbai, buy sn74hc541dwr online",
     "h2Tags": "SN74HC541DWR Specifications & Datasheet, SN74HC541DWR Applications, Buy SN74HC541DWR in India, Alternatives to SN74HC541DWR, Why Mirai Technologies",
@@ -1624,7 +1624,7 @@ export const products = [
   {
     "id": "hef4049bt",
     "partNumber": "HEF4049BT",
-    "fullSlug": "integrated-circuits/hef4049bt",
+    "fullSlug": "integrated-circuit/hef4049bt",
     "name": "HEF4049BT Hex Inverting Buffer IC",
     "h1": "HEF4049BT Hex Inverting Buffer IC – Buy Online India",
     "category": "integrated-circuit",
@@ -1649,7 +1649,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "HEF4049BT – Hex inverting CMOS buffer, 3 | Buy India",
-    "metaDescription": "Buy HEF4049BT from Mirai Technologies Mumbai. Hex inverting CMOS buffer, 3V–15V, . ₹18/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy HEF4049BT from Mirai Technologies Mumbai. Hex inverting CMOS buffer, 3V–15V. ₹18/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "HEF4049BT buy India",
     "lsiKeywords": "HEF4049BT price India, HEF4049BT datasheet, HEF4049BT distributor Mumbai, buy hef4049bt online",
     "h2Tags": "HEF4049BT Specifications & Datasheet, HEF4049BT Applications, Buy HEF4049BT in India, Alternatives to HEF4049BT, Why Mirai Technologies",
@@ -1697,7 +1697,7 @@ export const products = [
   {
     "id": "uln2003d",
     "partNumber": "ULN2003D",
-    "fullSlug": "integrated-circuits/uln2003d",
+    "fullSlug": "integrated-circuit/uln2003d",
     "name": "ULN2003D Darlington Array IC",
     "h1": "ULN2003D Darlington Array IC – Buy Online India",
     "category": "integrated-circuit",
@@ -1723,7 +1723,7 @@ export const products = [
       "Temp": "0°C to +70°C"
     },
     "metaTitle": "ULN2003D – 7-ch NPN Darlington DIP-16,  | Buy India",
-    "metaDescription": "Buy ULN2003D from Mirai Technologies Mumbai. 7-ch NPN Darlington DIP-16, TTL-opt. ₹7/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy ULN2003D from Mirai Technologies Mumbai. 7-ch NPN Darlington DIP-16, TTL-opt. ₹7/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "ULN2003D buy India",
     "lsiKeywords": "ULN2003D price India, ULN2003D datasheet, ULN2003D distributor Mumbai, buy uln2003d online",
     "h2Tags": "ULN2003D Specifications & Datasheet, ULN2003D Applications, Buy ULN2003D in India, Alternatives to ULN2003D, Why Mirai Technologies",
@@ -1798,7 +1798,7 @@ export const products = [
   {
     "id": "cd4046be",
     "partNumber": "CD4046BE",
-    "fullSlug": "integrated-circuits/cd4046be",
+    "fullSlug": "integrated-circuit/cd4046be",
     "name": "CD4046BE Phase-Locked Loop IC",
     "h1": "CD4046BE Phase-Locked Loop IC – Buy Online India",
     "category": "integrated-circuit",
@@ -1823,7 +1823,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "CD4046BE – CMOS PLL with VCO and dual p | Buy India",
-    "metaDescription": "Buy CD4046BE from Mirai Technologies Mumbai. CMOS PLL with VCO and dual phase co. ₹16/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CD4046BE from Mirai Technologies Mumbai. CMOS PLL with VCO and dual phase co. ₹16/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CD4046BE buy India",
     "lsiKeywords": "CD4046BE price India, CD4046BE datasheet, CD4046BE distributor Mumbai, buy cd4046be online",
     "h2Tags": "CD4046BE Specifications & Datasheet, CD4046BE Applications, Buy CD4046BE in India, Alternatives to CD4046BE, Why Mirai Technologies",
@@ -1871,7 +1871,7 @@ export const products = [
   {
     "id": "lm2902dt",
     "partNumber": "LM2902DT",
-    "fullSlug": "integrated-circuits/lm2902dt",
+    "fullSlug": "integrated-circuit/lm2902dt",
     "name": "LM2902DT Quad Op-Amp IC",
     "h1": "LM2902DT Quad Op-Amp IC – Buy Online India",
     "category": "integrated-circuit",
@@ -1896,7 +1896,7 @@ export const products = [
       "Temp": "-40°C to +85°C"
     },
     "metaTitle": "LM2902DT – Quad op-amp, 3V–32V, SOIC-14 | Buy India",
-    "metaDescription": "Buy LM2902DT from Mirai Technologies Mumbai. Quad op-amp, 3V–32V, SOIC-14 SMD, L. ₹9/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy LM2902DT from Mirai Technologies Mumbai. Quad op-amp, 3V–32V, SOIC-14 SMD, L. ₹9/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "LM2902DT buy India",
     "lsiKeywords": "LM2902DT price India, LM2902DT datasheet, LM2902DT distributor Mumbai, buy lm2902dt online",
     "h2Tags": "LM2902DT Specifications & Datasheet, LM2902DT Applications, Buy LM2902DT in India, Alternatives to LM2902DT, Why Mirai Technologies",
@@ -1944,7 +1944,7 @@ export const products = [
   {
     "id": "ads1230ipw",
     "partNumber": "ADS1230IPW",
-    "fullSlug": "integrated-circuits/ads1230ipw",
+    "fullSlug": "integrated-circuit/ads1230ipw",
     "name": "ADS1230IPW 20-bit ADC for Bridge Sensors",
     "h1": "ADS1230IPW 20-bit ADC for Bridge Sensors – Buy Online India",
     "category": "integrated-circuit",
@@ -2017,7 +2017,7 @@ export const products = [
   {
     "id": "74hc245d",
     "partNumber": "74HC245D",
-    "fullSlug": "integrated-circuits/74hc245d",
+    "fullSlug": "integrated-circuit/74hc245d",
     "name": "74HC245D Octal Bidirectional Bus Transceiver",
     "h1": "74HC245D Octal Bidirectional Bus Transceiver – Buy Online India",
     "category": "integrated-circuit",
@@ -2042,7 +2042,7 @@ export const products = [
       "Propagation": "8ns at 5V"
     },
     "metaTitle": "74HC245D – 8-bit bidirectional 3-state  | Buy India",
-    "metaDescription": "Buy 74HC245D from Mirai Technologies Mumbai. 8-bit bidirectional 3-state bus tra. ₹10/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy 74HC245D from Mirai Technologies Mumbai. 8-bit bidirectional 3-state bus tra. ₹10/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "74HC245D buy India",
     "lsiKeywords": "74HC245D price India, 74HC245D datasheet, 74HC245D distributor Mumbai, buy 74hc245d online",
     "h2Tags": "74HC245D Specifications & Datasheet, 74HC245D Applications, Buy 74HC245D in India, Alternatives to 74HC245D, Why Mirai Technologies",
@@ -2090,7 +2090,7 @@ export const products = [
   {
     "id": "m57962l",
     "partNumber": "M57962L",
-    "fullSlug": "integrated-circuits/m57962l",
+    "fullSlug": "integrated-circuit/m57962l",
     "name": "M57962L IGBT Gate Driver Hybrid IC",
     "h1": "M57962L IGBT Gate Driver Hybrid IC – Buy Online India",
     "category": "integrated-circuit",
@@ -2115,7 +2115,7 @@ export const products = [
       "Temp": "-20°C to +80°C"
     },
     "metaTitle": "M57962L – Hybrid IGBT gate driver, ±15 | Buy India",
-    "metaDescription": "Buy M57962L from Mirai Technologies Mumbai. Hybrid IGBT gate driver, ±15V suppl. ₹270/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy M57962L from Mirai Technologies Mumbai. Hybrid IGBT gate driver, ±15V suppl. ₹270/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "M57962L buy India",
     "lsiKeywords": "M57962L price India, M57962L datasheet, M57962L distributor Mumbai, buy m57962l online",
     "h2Tags": "M57962L Specifications & Datasheet, M57962L Applications, Buy M57962L in India, Alternatives to M57962L, Why Mirai Technologies",
@@ -2163,7 +2163,7 @@ export const products = [
   {
     "id": "cs5460a",
     "partNumber": "CS5460A",
-    "fullSlug": "integrated-circuits/cs5460a",
+    "fullSlug": "integrated-circuit/cs5460a",
     "name": "CS5460A-BSZ Precision Power Metering IC",
     "h1": "CS5460A-BSZ Precision Power Metering IC – Buy Online India",
     "category": "integrated-circuit",
@@ -2188,7 +2188,7 @@ export const products = [
       "Accuracy": "0.1% typical"
     },
     "metaTitle": "CS5460A – Precision power meter IC, du | Buy India",
-    "metaDescription": "Buy CS5460A from Mirai Technologies Mumbai. Precision power meter IC, dual 24-b. ₹90/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CS5460A from Mirai Technologies Mumbai. Precision power meter IC, dual 24-b. ₹90/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CS5460A buy India",
     "lsiKeywords": "CS5460A price India, CS5460A datasheet, CS5460A distributor Mumbai, buy cs5460a online",
     "h2Tags": "CS5460A Specifications & Datasheet, CS5460A Applications, Buy CS5460A in India, Alternatives to CS5460A, Why Mirai Technologies",
@@ -2236,7 +2236,7 @@ export const products = [
   {
     "id": "si2302",
     "partNumber": "Si2302",
-    "fullSlug": "integrated-circuits/si2302",
+    "fullSlug": "integrated-circuit/si2302",
     "name": "Si2302 N-Channel MOSFET SOT-23",
     "h1": "Si2302 N-Channel MOSFET SOT-23 – Buy Online India",
     "category": "integrated-circuit",
@@ -2261,8 +2261,8 @@ export const products = [
       "Qg": "8nC",
       "Temp": "-55°C to +150°C"
     },
-    "metaTitle": "Si2302 – N-ch MOSFET, 30V, 4A, Rds(on | Buy India",
-    "metaDescription": "Buy Si2302 from Mirai Technologies Mumbai. N-ch MOSFET, 30V, 4A, Rds(on)=8mΩ, . ₹8/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "Si2302 – N-ch MOSFET, 30V, 4A | Buy Online India",
+    "metaDescription": "Buy Si2302 from Mirai Technologies Mumbai. N-ch MOSFET, 30V, 4A, Rds(on)=8mΩ. ₹8/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "Si2302 buy India",
     "lsiKeywords": "Si2302 price India, Si2302 datasheet, Si2302 distributor Mumbai, buy si2302 online",
     "h2Tags": "Si2302 Specifications & Datasheet, Si2302 Applications, Buy Si2302 in India, Alternatives to Si2302, Why Mirai Technologies",
@@ -2335,7 +2335,7 @@ export const products = [
       "Offset": "±5mV max"
     },
     "metaTitle": "LF357N – JFET op-amp, 20MHz GBW, 50V/ | Buy India",
-    "metaDescription": "Buy LF357N from Mirai Technologies Mumbai. JFET op-amp, 20MHz GBW, 50V/µs slew. ₹70/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy LF357N from Mirai Technologies Mumbai. JFET op-amp, 20MHz GBW, 50V/µs slew. ₹70/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "LF357N buy India",
     "lsiKeywords": "LF357N price India, LF357N datasheet, LF357N distributor Mumbai, buy lf357n online",
     "h2Tags": "LF357N Specifications & Datasheet, LF357N Applications, Buy LF357N in India, Alternatives to LF357N, Why Mirai Technologies",
@@ -2408,7 +2408,7 @@ export const products = [
       "Supply": "4.5V–5.5V"
     },
     "metaTitle": "AT28C16B – 16Kbit parallel EEPROM, 2K×8 | Buy India",
-    "metaDescription": "Buy AT28C16B from Mirai Technologies Mumbai. 16Kbit parallel EEPROM, 2K×8, 150ns. ₹175/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy AT28C16B from Mirai Technologies Mumbai. 16Kbit parallel EEPROM, 2K×8, 150ns. ₹175/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "AT28C16B buy India",
     "lsiKeywords": "AT28C16B price India, AT28C16B datasheet, AT28C16B distributor Mumbai, buy at28c16b online",
     "h2Tags": "AT28C16B Specifications & Datasheet, AT28C16B Applications, Buy AT28C16B in India, Alternatives to AT28C16B, Why Mirai Technologies",
@@ -2482,8 +2482,8 @@ export const products = [
       "Pd": "520W",
       "Temp": "-55°C to +175°C"
     },
-    "metaTitle": "IRFP4668 – N-ch MOSFET, 200V, 130A, Rds | Buy India",
-    "metaDescription": "Buy IRFP4668 from Mirai Technologies Mumbai. N-ch MOSFET, 200V, 130A, Rds(on)=3.. ₹195/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "IRFP4668 – N-ch MOSFET, 200V, 130A | Buy Online India",
+    "metaDescription": "Buy IRFP4668 from Mirai Technologies Mumbai. N-ch MOSFET, 200V, 130A, Rds(on)=3.0mΩ. ₹195/pc. Authorized distributor. Fast pan-India delivery.",
     "primaryKeyword": "IRFP4668 buy India",
     "lsiKeywords": "IRFP4668 price India, IRFP4668 datasheet, IRFP4668 distributor Mumbai, buy irfp4668 online",
     "h2Tags": "IRFP4668 Specifications & Datasheet, IRFP4668 Applications, Buy IRFP4668 in India, Alternatives to IRFP4668, Why Mirai Technologies",
@@ -2574,8 +2574,8 @@ export const products = [
       "Pd": "200W",
       "Rth(j-c)": "0.38°C/W"
     },
-    "metaTitle": "IRF4668 – N-ch MOSFET, 200V, 130A, Rds | Buy India",
-    "metaDescription": "Buy IRF4668 from Mirai Technologies Mumbai. N-ch MOSFET, 200V, 130A, Rds(on)=3.. ₹270/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "IRF4668 – N-ch MOSFET, 200V, 130A | Buy Online India",
+    "metaDescription": "Buy IRF4668 from Mirai Technologies Mumbai. N-ch MOSFET, 200V, 130A, Rds(on)=3.2mΩ. ₹270/pc. Authorized distributor. Fast pan-India delivery.",
     "primaryKeyword": "IRF4668 buy India",
     "lsiKeywords": "IRF4668 price India, IRF4668 datasheet, IRF4668 distributor Mumbai, buy irf4668 online",
     "h2Tags": "IRF4668 Specifications & Datasheet, IRF4668 Applications, Buy IRF4668 in India, Alternatives to IRF4668, Why Mirai Technologies",
@@ -2657,8 +2657,8 @@ export const products = [
       "Pd": "280W",
       "Avalanche-rated": "Yes"
     },
-    "metaTitle": "IRFP460 – N-ch MOSFET, 500V, 20A, Rds( | Buy India",
-    "metaDescription": "Buy IRFP460 from Mirai Technologies Mumbai. N-ch MOSFET, 500V, 20A, Rds(on)=0.2. ₹68/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "IRFP460 – N-ch MOSFET, 500V, 20A | Buy Online India",
+    "metaDescription": "Buy IRFP460 from Mirai Technologies Mumbai. N-ch MOSFET, 500V, 20A, Rds(on)=0.27Ω. ₹68/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "IRFP460 buy India",
     "lsiKeywords": "IRFP460 price India, IRFP460 datasheet, IRFP460 distributor Mumbai, buy irfp460 online",
     "h2Tags": "IRFP460 Specifications & Datasheet, IRFP460 Applications, Buy IRFP460 in India, Alternatives to IRFP460, Why Mirai Technologies",
@@ -2740,8 +2740,8 @@ export const products = [
       "Pd": "110W",
       "Temp": "-55°C to +175°C"
     },
-    "metaTitle": "P55NF06 – N-ch MOSFET, 60V, 55A, Rds(o | Buy India",
-    "metaDescription": "Buy P55NF06 from Mirai Technologies Mumbai. N-ch MOSFET, 60V, 55A, Rds(on)=16mΩ. ₹13/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "P55NF06 – N-ch MOSFET, 60V, 55A | Buy Online India",
+    "metaDescription": "Buy P55NF06 from Mirai Technologies Mumbai. N-ch MOSFET, 60V, 55A, Rds(on)=16mΩ. ₹13/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "P55NF06 buy India",
     "lsiKeywords": "P55NF06 price India, P55NF06 datasheet, P55NF06 distributor Mumbai, buy p55nf06 online",
     "h2Tags": "P55NF06 Specifications & Datasheet, P55NF06 Applications, Buy P55NF06 in India, Alternatives to P55NF06, Why Mirai Technologies",
@@ -2814,7 +2814,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "STW4N150 – N-ch MOSFET, 1500V, 4A, ultr | Buy India",
-    "metaDescription": "Buy STW4N150 from Mirai Technologies Mumbai. N-ch MOSFET, 1500V, 4A, ultra-high . ₹75/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy STW4N150 from Mirai Technologies Mumbai. N-ch MOSFET, 1500V, 4A, ultra-high . ₹75/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "STW4N150 buy India",
     "lsiKeywords": "STW4N150 price India, STW4N150 datasheet, STW4N150 distributor Mumbai, buy stw4n150 online",
     "h2Tags": "STW4N150 Specifications & Datasheet, STW4N150 Applications, Buy STW4N150 in India, Alternatives to STW4N150, Why Mirai Technologies",
@@ -2886,7 +2886,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "DOPF20N65 – N-ch MOSFET, 650V, 20A, low  | Buy India",
-    "metaDescription": "Buy DOPF20N65 from Mirai Technologies Mumbai. N-ch MOSFET, 650V, 20A, low gate ch. ₹35/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy DOPF20N65 from Mirai Technologies Mumbai. N-ch MOSFET, 650V, 20A, low gate ch. ₹35/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "DOPF20N65 buy India",
     "lsiKeywords": "DOPF20N65 price India, DOPF20N65 datasheet, DOPF20N65 distributor Mumbai, buy dopf20n65 online",
     "h2Tags": "DOPF20N65 Specifications & Datasheet, DOPF20N65 Applications, Buy DOPF20N65 in India, Alternatives to DOPF20N65, Why Mirai Technologies",
@@ -2959,7 +2959,7 @@ export const products = [
       "Temp": "0°C to +125°C"
     },
     "metaTitle": "L7824CV – +24V fixed linear regulator, | Buy India",
-    "metaDescription": "Buy L7824CV from Mirai Technologies Mumbai. +24V fixed linear regulator, 1A, TO. ₹7/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy L7824CV from Mirai Technologies Mumbai. +24V fixed linear regulator, 1A, TO. ₹7/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "L7824CV buy India",
     "lsiKeywords": "L7824CV price India, L7824CV datasheet, L7824CV distributor Mumbai, buy l7824cv online",
     "h2Tags": "L7824CV Specifications & Datasheet, L7824CV Applications, Buy L7824CV in India, Alternatives to L7824CV, Why Mirai Technologies",
@@ -3031,7 +3031,7 @@ export const products = [
       "Temp": "-40°C to +125°C"
     },
     "metaTitle": "16TTS12 – SCR thyristor, 1200V, 16A, T | Buy India",
-    "metaDescription": "Buy 16TTS12 from Mirai Technologies Mumbai. SCR thyristor, 1200V, 16A, TO-220. ₹25/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy 16TTS12 from Mirai Technologies Mumbai. SCR thyristor, 1200V, 16A, TO-220. ₹25/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "16TTS12 buy India",
     "lsiKeywords": "16TTS12 price India, 16TTS12 datasheet, 16TTS12 distributor Mumbai, buy 16tts12 online",
     "h2Tags": "16TTS12 Specifications & Datasheet, 16TTS12 Applications, Buy 16TTS12 in India, Alternatives to 16TTS12, Why Mirai Technologies",
@@ -3102,7 +3102,7 @@ export const products = [
       "Temp": "-40°C to +125°C"
     },
     "metaTitle": "40TPS12 – High-current SCR, 1200V, 40A | Buy India",
-    "metaDescription": "Buy 40TPS12 from Mirai Technologies Mumbai. High-current SCR, 1200V, 40A, TO-24. ₹240/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy 40TPS12 from Mirai Technologies Mumbai. High-current SCR, 1200V, 40A, TO-24. ₹240/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "40TPS12 buy India",
     "lsiKeywords": "40TPS12 price India, 40TPS12 datasheet, 40TPS12 distributor Mumbai, buy 40tps12 online",
     "h2Tags": "40TPS12 Specifications & Datasheet, 40TPS12 Applications, Buy 40TPS12 in India, Alternatives to 40TPS12, Why Mirai Technologies",
@@ -3173,8 +3173,8 @@ export const products = [
       "Rds(on)": "8mΩ",
       "Temp": "-55°C to +175°C"
     },
-    "metaTitle": "DOP90NF06 – N-ch MOSFET, 60V, 90A, Rds(o | Buy India",
-    "metaDescription": "Buy DOP90NF06 from Mirai Technologies Mumbai. N-ch MOSFET, 60V, 90A, Rds(on)=8mΩ,. ₹15/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "DOP90NF06 – N-ch MOSFET, 60V, 90A | Buy Online India",
+    "metaDescription": "Buy DOP90NF06 from Mirai Technologies Mumbai. N-ch MOSFET, 60V, 90A, Rds(on)=8mΩ. ₹15/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "DOP90NF06 buy India",
     "lsiKeywords": "DOP90NF06 price India, DOP90NF06 datasheet, DOP90NF06 distributor Mumbai, buy dop90nf06 online",
     "h2Tags": "DOP90NF06 Specifications & Datasheet, DOP90NF06 Applications, Buy DOP90NF06 in India, Alternatives to DOP90NF06, Why Mirai Technologies",
@@ -3246,7 +3246,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "UTC4N80L – N-ch MOSFET, 800V, 4A, isola | Buy India",
-    "metaDescription": "Buy UTC4N80L from Mirai Technologies Mumbai. N-ch MOSFET, 800V, 4A, isolated TO-. ₹15/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy UTC4N80L from Mirai Technologies Mumbai. N-ch MOSFET, 800V, 4A, isolated TO-. ₹15/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "UTC4N80L buy India",
     "lsiKeywords": "UTC4N80L price India, UTC4N80L datasheet, UTC4N80L distributor Mumbai, buy utc4n80l online",
     "h2Tags": "UTC4N80L Specifications & Datasheet, UTC4N80L Applications, Buy UTC4N80L in India, Alternatives to UTC4N80L, Why Mirai Technologies",
@@ -3318,7 +3318,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "K1500 – N-ch MOSFET, 900V, 8A, TO-3P | Buy India",
-    "metaDescription": "Buy K1500 from Mirai Technologies Mumbai. N-ch MOSFET, 900V, 8A, TO-3P throug. ₹100/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy K1500 from Mirai Technologies Mumbai. N-ch MOSFET, 900V, 8A, TO-3P throug. ₹100/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "K1500 buy India",
     "lsiKeywords": "K1500 price India, K1500 datasheet, K1500 distributor Mumbai, buy k1500 online",
     "h2Tags": "K1500 Specifications & Datasheet, K1500 Applications, Buy K1500 in India, Alternatives to K1500, Why Mirai Technologies",
@@ -3390,7 +3390,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "GT40J121 – N-ch IGBT, 600V, 50A, TO-3P | Buy India",
-    "metaDescription": "Buy GT40J121 from Mirai Technologies Mumbai. N-ch IGBT, 600V, 50A, TO-3P. ₹110/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy GT40J121 from Mirai Technologies Mumbai. N-ch IGBT, 600V, 50A, TO-3P. ₹110/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "GT40J121 buy India",
     "lsiKeywords": "GT40J121 price India, GT40J121 datasheet, GT40J121 distributor Mumbai, buy gt40j121 online",
     "h2Tags": "GT40J121 Specifications & Datasheet, GT40J121 Applications, Buy GT40J121 in India, Alternatives to GT40J121, Why Mirai Technologies",
@@ -3462,7 +3462,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "A7847 – PNP power transistor, 140V,  | Buy India",
-    "metaDescription": "Buy A7847 from Mirai Technologies Mumbai. PNP power transistor, 140V, 12A, 5-. ₹70/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy A7847 from Mirai Technologies Mumbai. PNP power transistor, 140V, 12A, 5-. ₹70/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "A7847 buy India",
     "lsiKeywords": "A7847 price India, A7847 datasheet, A7847 distributor Mumbai, buy a7847 online",
     "h2Tags": "A7847 Specifications & Datasheet, A7847 Applications, Buy A7847 in India, Alternatives to A7847, Why Mirai Technologies",
@@ -3534,8 +3534,8 @@ export const products = [
       "CoolMOS": "Low capacitance",
       "Temp": "-55°C to +150°C"
     },
-    "metaTitle": "17N80C3 – N-ch CoolMOS, 800V, 17A, Rds | Buy India",
-    "metaDescription": "Buy 17N80C3 from Mirai Technologies Mumbai. N-ch CoolMOS, 800V, 17A, Rds(on)=0.. ₹95/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "17N80C3 – N-ch CoolMOS, 800V, 17A | Buy Online India",
+    "metaDescription": "Buy 17N80C3 from Mirai Technologies Mumbai. N-ch CoolMOS, 800V, 17A, Rds(on)=0.29Ω. ₹95/pc. Authorized distributor. Fast pan-India delivery.",
     "primaryKeyword": "17N80C3 buy India",
     "lsiKeywords": "17N80C3 price India, 17N80C3 datasheet, 17N80C3 distributor Mumbai, buy 17n80c3 online",
     "h2Tags": "17N80C3 Specifications & Datasheet, 17N80C3 Applications, Buy 17N80C3 in India, Alternatives to 17N80C3, Why Mirai Technologies",
@@ -3608,7 +3608,7 @@ export const products = [
       "Operating AC": "320V RMS max"
     },
     "metaTitle": "20D511K – MOV varistor, 510V clamping, | Buy India",
-    "metaDescription": "Buy 20D511K from Mirai Technologies Mumbai. MOV varistor, 510V clamping, 20mm d. ₹4/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy 20D511K from Mirai Technologies Mumbai. MOV varistor, 510V clamping, 20mm d. ₹4/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "20D511K buy India",
     "lsiKeywords": "20D511K price India, 20D511K datasheet, 20D511K distributor Mumbai, buy 20d511k online",
     "h2Tags": "20D511K Specifications & Datasheet, 20D511K Applications, Buy 20D511K in India, Alternatives to 20D511K, Why Mirai Technologies",
@@ -3689,8 +3689,8 @@ export const products = [
       "Vgs": "±20V",
       "Pd": "45W"
     },
-    "metaTitle": "IRF9Z24N – P-ch MOSFET, -55V, -11A, Rds | Buy India",
-    "metaDescription": "Buy IRF9Z24N from Mirai Technologies Mumbai. P-ch MOSFET, -55V, -11A, Rds(on)=0.. ₹12/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "IRF9Z24N – P-ch MOSFET, -55V, -11A | Buy Online India",
+    "metaDescription": "Buy IRF9Z24N from Mirai Technologies Mumbai. P-ch MOSFET, -55V, -11A, Rds(on)=0.175Ω. ₹12/pc. Authorized distributor. Fast pan-India delivery.",
     "primaryKeyword": "IRF9Z24N buy India",
     "lsiKeywords": "IRF9Z24N price India, IRF9Z24N datasheet, IRF9Z24N distributor Mumbai, buy irf9z24n online",
     "h2Tags": "IRF9Z24N Specifications & Datasheet, IRF9Z24N Applications, Buy IRF9Z24N in India, Alternatives to IRF9Z24N, Why Mirai Technologies",
@@ -3772,7 +3772,7 @@ export const products = [
       "Pd": "45W"
     },
     "metaTitle": "IRFZ24N – N-ch logic-level MOSFET, 55V | Buy India",
-    "metaDescription": "Buy IRFZ24N from Mirai Technologies Mumbai. N-ch logic-level MOSFET, 55V, 17A, . ₹12/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy IRFZ24N from Mirai Technologies Mumbai. N-ch logic-level MOSFET, 55V, 17A. ₹12/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "IRFZ24N buy India",
     "lsiKeywords": "IRFZ24N price India, IRFZ24N datasheet, IRFZ24N distributor Mumbai, buy irfz24n online",
     "h2Tags": "IRFZ24N Specifications & Datasheet, IRFZ24N Applications, Buy IRFZ24N in India, Alternatives to IRFZ24N, Why Mirai Technologies",
@@ -3854,7 +3854,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "CD4051BE – 8-ch analog MUX/DEMUX, 3-ch  | Buy India",
-    "metaDescription": "Buy CD4051BE from Mirai Technologies Mumbai. 8-ch analog MUX/DEMUX, 3-ch binary . ₹6/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CD4051BE from Mirai Technologies Mumbai. 8-ch analog MUX/DEMUX, 3-ch binary . ₹6/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CD4051BE buy India",
     "lsiKeywords": "CD4051BE price India, CD4051BE datasheet, CD4051BE distributor Mumbai, buy cd4051be online",
     "h2Tags": "CD4051BE Specifications & Datasheet, CD4051BE Applications, Buy CD4051BE in India, Alternatives to CD4051BE, Why Mirai Technologies",
@@ -3927,7 +3927,7 @@ export const products = [
       "Temp": "-40°C to +125°C"
     },
     "metaTitle": "BT139 – TRIAC, 16A, 600V, sensitive  | Buy India",
-    "metaDescription": "Buy BT139 from Mirai Technologies Mumbai. TRIAC, 16A, 600V, sensitive gate, T. ₹7/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy BT139 from Mirai Technologies Mumbai. TRIAC, 16A, 600V, sensitive gate, T. ₹7/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "BT139 buy India",
     "lsiKeywords": "BT139 price India, BT139 datasheet, BT139 distributor Mumbai, buy bt139 online",
     "h2Tags": "BT139 Specifications & Datasheet, BT139 Applications, Buy BT139 in India, Alternatives to BT139, Why Mirai Technologies",
@@ -4008,8 +4008,8 @@ export const products = [
       "Qg": "120nC",
       "Pd": "170W"
     },
-    "metaTitle": "IRFB4227 – N-ch MOSFET, 200V, 76A, Rds( | Buy India",
-    "metaDescription": "Buy IRFB4227 from Mirai Technologies Mumbai. N-ch MOSFET, 200V, 76A, Rds(on)=20m. ₹75/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaTitle": "IRFB4227 – N-ch MOSFET, 200V, 76A | Buy Online India",
+    "metaDescription": "Buy IRFB4227 from Mirai Technologies Mumbai. N-ch MOSFET, 200V, 76A, Rds(on)=20mΩ. ₹75/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "IRFB4227 buy India",
     "lsiKeywords": "IRFB4227 price India, IRFB4227 datasheet, IRFB4227 distributor Mumbai, buy irfb4227 online",
     "h2Tags": "IRFB4227 Specifications & Datasheet, IRFB4227 Applications, Buy IRFB4227 in India, Alternatives to IRFB4227, Why Mirai Technologies",
@@ -4081,7 +4081,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "FGL60N100 – N-ch IGBT, 1000V, 60A, TO-26 | Buy India",
-    "metaDescription": "Buy FGL60N100 from Mirai Technologies Mumbai. N-ch IGBT, 1000V, 60A, TO-264. ₹350/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy FGL60N100 from Mirai Technologies Mumbai. N-ch IGBT, 1000V, 60A, TO-264. ₹350/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "FGL60N100 buy India",
     "lsiKeywords": "FGL60N100 price India, FGL60N100 datasheet, FGL60N100 distributor Mumbai, buy fgl60n100 online",
     "h2Tags": "FGL60N100 Specifications & Datasheet, FGL60N100 Applications, Buy FGL60N100 in India, Alternatives to FGL60N100, Why Mirai Technologies",
@@ -4153,7 +4153,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "75N60 – N-ch IGBT, 600V, 75A, TO-247 | Buy India",
-    "metaDescription": "Buy 75N60 from Mirai Technologies Mumbai. N-ch IGBT, 600V, 75A, TO-247. ₹440/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy 75N60 from Mirai Technologies Mumbai. N-ch IGBT, 600V, 75A, TO-247. ₹440/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "75N60 buy India",
     "lsiKeywords": "75N60 price India, 75N60 datasheet, 75N60 distributor Mumbai, buy 75n60 online",
     "h2Tags": "75N60 Specifications & Datasheet, 75N60 Applications, Buy 75N60 in India, Alternatives to 75N60, Why Mirai Technologies",
@@ -4227,7 +4227,7 @@ export const products = [
       "Temp": "-40°C to +105°C"
     },
     "metaTitle": "NTC10D11 – 10Ω NTC thermistor, 11mm dis | Buy India",
-    "metaDescription": "Buy NTC10D11 from Mirai Technologies Mumbai. 10Ω NTC thermistor, 11mm disc, inru. ₹1/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy NTC10D11 from Mirai Technologies Mumbai. 10Ω NTC thermistor, 11mm disc, inru. ₹1/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "NTC10D11 buy India",
     "lsiKeywords": "NTC10D11 price India, NTC10D11 datasheet, NTC10D11 distributor Mumbai, buy ntc10d11 online",
     "h2Tags": "NTC10D11 Specifications & Datasheet, NTC10D11 Applications, Buy NTC10D11 in India, Alternatives to NTC10D11, Why Mirai Technologies",
@@ -4311,7 +4311,7 @@ export const products = [
       "Temp": "-65°C to +150°C"
     },
     "metaTitle": "MJE2955T – PNP power transistor, -60V,  | Buy India",
-    "metaDescription": "Buy MJE2955T from Mirai Technologies Mumbai. PNP power transistor, -60V, -10A, 7. ₹9/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy MJE2955T from Mirai Technologies Mumbai. PNP power transistor, -60V, -10A, 7. ₹9/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "MJE2955T buy India",
     "lsiKeywords": "MJE2955T price India, MJE2955T datasheet, MJE2955T distributor Mumbai, buy mje2955t online",
     "h2Tags": "MJE2955T Specifications & Datasheet, MJE2955T Applications, Buy MJE2955T in India, Alternatives to MJE2955T, Why Mirai Technologies",
@@ -4384,7 +4384,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "HEF4081BP – Quad 2-input CMOS AND gate,  | Buy India",
-    "metaDescription": "Buy HEF4081BP from Mirai Technologies Mumbai. Quad 2-input CMOS AND gate, 3V–15V,. ₹16/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy HEF4081BP from Mirai Technologies Mumbai. Quad 2-input CMOS AND gate, 3V–15V. ₹16/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "HEF4081BP buy India",
     "lsiKeywords": "HEF4081BP price India, HEF4081BP datasheet, HEF4081BP distributor Mumbai, buy hef4081bp online",
     "h2Tags": "HEF4081BP Specifications & Datasheet, HEF4081BP Applications, Buy HEF4081BP in India, Alternatives to HEF4081BP, Why Mirai Technologies",
@@ -4455,7 +4455,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "F4N65 – N-ch MOSFET, 650V, 4A, low g | Buy India",
-    "metaDescription": "Buy F4N65 from Mirai Technologies Mumbai. N-ch MOSFET, 650V, 4A, low gate cha. ₹7.50/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy F4N65 from Mirai Technologies Mumbai. N-ch MOSFET, 650V, 4A, low gate cha. ₹7.50/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "F4N65 buy India",
     "lsiKeywords": "F4N65 price India, F4N65 datasheet, F4N65 distributor Mumbai, buy f4n65 online",
     "h2Tags": "F4N65 Specifications & Datasheet, F4N65 Applications, Buy F4N65 in India, Alternatives to F4N65, Why Mirai Technologies",
@@ -4528,7 +4528,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "CD4001BE – Quad 2-input CMOS NOR gate,  | Buy India",
-    "metaDescription": "Buy CD4001BE from Mirai Technologies Mumbai. Quad 2-input CMOS NOR gate, 3V–18V,. ₹7/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CD4001BE from Mirai Technologies Mumbai. Quad 2-input CMOS NOR gate, 3V–18V. ₹7/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CD4001BE buy India",
     "lsiKeywords": "CD4001BE price India, CD4001BE datasheet, CD4001BE distributor Mumbai, buy cd4001be online",
     "h2Tags": "CD4001BE Specifications & Datasheet, CD4001BE Applications, Buy CD4001BE in India, Alternatives to CD4001BE, Why Mirai Technologies",
@@ -4601,7 +4601,7 @@ export const products = [
       "Temp": "0°C to +70°C"
     },
     "metaTitle": "ULN2804A – 8-ch NPN Darlington, 5V CMOS | Buy India",
-    "metaDescription": "Buy ULN2804A from Mirai Technologies Mumbai. 8-ch NPN Darlington, 5V CMOS optimi. ₹16/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy ULN2804A from Mirai Technologies Mumbai. 8-ch NPN Darlington, 5V CMOS optimi. ₹16/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "ULN2804A buy India",
     "lsiKeywords": "ULN2804A price India, ULN2804A datasheet, ULN2804A distributor Mumbai, buy uln2804a online",
     "h2Tags": "ULN2804A Specifications & Datasheet, ULN2804A Applications, Buy ULN2804A in India, Alternatives to ULN2804A, Why Mirai Technologies",
@@ -4650,7 +4650,7 @@ export const products = [
         "location": "See Also",
         "type": "Related",
         "priority": "Medium",
-        "toSlug": "integrated-circuits/uln2003d"
+        "toSlug": "integrated-circuit/uln2003d"
       }
     ],
     "fbtLinks": []
@@ -4682,7 +4682,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "A2031 – PNP power transistor, 60V, 7 | Buy India",
-    "metaDescription": "Buy A2031 from Mirai Technologies Mumbai. PNP power transistor, 60V, 7A, meta. ₹50/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy A2031 from Mirai Technologies Mumbai. PNP power transistor, 60V, 7A, meta. ₹50/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "A2031 buy India",
     "lsiKeywords": "A2031 price India, A2031 datasheet, A2031 distributor Mumbai, buy a2031 online",
     "h2Tags": "A2031 Specifications & Datasheet, A2031 Applications, Buy A2031 in India, Alternatives to A2031, Why Mirai Technologies",
@@ -4756,7 +4756,7 @@ export const products = [
       "Temp": "-55°C to +110°C"
     },
     "metaTitle": "EL817C – SMD optocoupler PC817 equiva | Buy India",
-    "metaDescription": "Buy EL817C from Mirai Technologies Mumbai. SMD optocoupler PC817 equivalent, 5. ₹2/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy EL817C from Mirai Technologies Mumbai. SMD optocoupler PC817 equivalent, 5. ₹2/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "EL817C buy India",
     "lsiKeywords": "EL817C price India, EL817C datasheet, EL817C distributor Mumbai, buy el817c online",
     "h2Tags": "EL817C Specifications & Datasheet, EL817C Applications, Buy EL817C in India, Alternatives to EL817C, Why Mirai Technologies",
@@ -4839,7 +4839,7 @@ export const products = [
       "Temp": "-40°C to +125°C"
     },
     "metaTitle": "LM2596R5 – Fixed 5V 3A buck switching r | Buy India",
-    "metaDescription": "Buy LM2596R5 from Mirai Technologies Mumbai. Fixed 5V 3A buck switching regulato. ₹30/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy LM2596R5 from Mirai Technologies Mumbai. Fixed 5V 3A buck switching regulato. ₹30/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "LM2596R5 buy India",
     "lsiKeywords": "LM2596R5 price India, LM2596R5 datasheet, LM2596R5 distributor Mumbai, buy lm2596r5 online",
     "h2Tags": "LM2596R5 Specifications & Datasheet, LM2596R5 Applications, Buy LM2596R5 in India, Alternatives to LM2596R5, Why Mirai Technologies",
@@ -4921,7 +4921,7 @@ export const products = [
       "Efficiency": ">80%"
     },
     "metaTitle": "LM2576ADJ – Adjustable 3A step-down buck | Buy India",
-    "metaDescription": "Buy LM2576ADJ from Mirai Technologies Mumbai. Adjustable 3A step-down buck regula. ₹25/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy LM2576ADJ from Mirai Technologies Mumbai. Adjustable 3A step-down buck regula. ₹25/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "LM2576ADJ buy India",
     "lsiKeywords": "LM2576ADJ price India, LM2576ADJ datasheet, LM2576ADJ distributor Mumbai, buy lm2576adj online",
     "h2Tags": "LM2576ADJ Specifications & Datasheet, LM2576ADJ Applications, Buy LM2576ADJ in India, Alternatives to LM2576ADJ, Why Mirai Technologies",
@@ -5003,7 +5003,7 @@ export const products = [
       "Dropout": "~1V"
     },
     "metaTitle": "LM2596R5v2 – Fixed 5V 3A buck converter,  | Buy India",
-    "metaDescription": "Buy LM2596R5v2 from Mirai Technologies Mumbai. Fixed 5V 3A buck converter, 150kHz,. ₹12/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy LM2596R5v2 from Mirai Technologies Mumbai. Fixed 5V 3A buck converter, 150kHz. ₹12/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "LM2596R5v2 buy India",
     "lsiKeywords": "LM2596R5v2 price India, LM2596R5v2 datasheet, LM2596R5v2 distributor Mumbai, buy lm2596r5v2 online",
     "h2Tags": "LM2596R5v2 Specifications & Datasheet, LM2596R5v2 Applications, Buy LM2596R5v2 in India, Alternatives to LM2596R5v2, Why Mirai Technologies",
@@ -5130,7 +5130,7 @@ export const products = [
         "location": "See Also",
         "type": "Variant",
         "priority": "Medium",
-        "toSlug": "ic-chip/atmega16apu"
+        "toSlug": "integrated-circuit/atmega16apu"
       }
     ],
     "fbtLinks": []
@@ -5166,7 +5166,7 @@ export const products = [
       "Supply": "4.0V–5.5V"
     },
     "metaTitle": "AT89S52 – 8051-compatible, 8KB ISP Fla | Buy India",
-    "metaDescription": "Buy AT89S52 from Mirai Technologies Mumbai. 8051-compatible, 8KB ISP Flash, 256. ₹125/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy AT89S52 from Mirai Technologies Mumbai. 8051-compatible, 8KB ISP Flash, 256. ₹125/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "AT89S52 buy India",
     "lsiKeywords": "AT89S52 price India, AT89S52 datasheet, AT89S52 distributor Mumbai, buy at89s52 online",
     "h2Tags": "AT89S52 Specifications & Datasheet, AT89S52 Applications, Buy AT89S52 in India, Alternatives to AT89S52, Why Mirai Technologies",
@@ -5446,10 +5446,10 @@ export const products = [
   {
     "id": "in1307dt",
     "partNumber": "IN1307DT",
-    "fullSlug": "ic-chip/in1307dt",
+    "fullSlug": "integrated-circuit/in1307dt",
     "name": "IN1307DT RTC IC DS1307 Compatible",
     "h1": "IN1307DT RTC IC DS1307 Compatible – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "IK SEMI / HLF",
     "package": "DIP-8",
@@ -5529,10 +5529,10 @@ export const products = [
   {
     "id": "pcf85163t",
     "partNumber": "PCF85163T",
-    "fullSlug": "ic-chip/pcf85163t",
+    "fullSlug": "integrated-circuit/pcf85163t",
     "name": "PCF85163T Precision RTC with Integrated Crystal",
     "h1": "PCF85163T Precision RTC with Integrated Crystal – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "NXP Semiconductors",
     "package": "SOIC-20",
@@ -5554,7 +5554,7 @@ export const products = [
       "Temp": "-40°C to +85°C"
     },
     "metaTitle": "PCF85163T – Ultra-precise RTC, built-in  | Buy India",
-    "metaDescription": "Buy PCF85163T from Mirai Technologies Mumbai. Ultra-precise RTC, built-in crystal. ₹55/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy PCF85163T from Mirai Technologies Mumbai. Ultra-precise RTC, built-in crystal. ₹55/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "PCF85163T buy India",
     "lsiKeywords": "PCF85163T price India, PCF85163T datasheet, PCF85163T distributor Mumbai, buy pcf85163t online",
     "h2Tags": "PCF85163T Specifications & Datasheet, PCF85163T Applications, Buy PCF85163T in India, Alternatives to PCF85163T, Why Mirai Technologies",
@@ -5602,10 +5602,10 @@ export const products = [
   {
     "id": "tbd62083apg",
     "partNumber": "TBD62083APG",
-    "fullSlug": "ic-chip/tbd62083apg",
+    "fullSlug": "integrated-circuit/tbd62083apg",
     "name": "TBD62083APG 7-Ch Darlington Driver Toshiba",
     "h1": "TBD62083APG 7-Ch Darlington Driver Toshiba – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "Toshiba",
     "package": "DIP-18",
@@ -5675,10 +5675,10 @@ export const products = [
   {
     "id": "cd4011be",
     "partNumber": "CD4011BE",
-    "fullSlug": "ic-chip/cd4011be",
+    "fullSlug": "integrated-circuit/cd4011be",
     "name": "CD4011BE Quad NAND Gate IC",
     "h1": "CD4011BE Quad NAND Gate IC – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "Texas Instruments / STMicro",
     "package": "DIP-14",
@@ -5701,7 +5701,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "CD4011BE – Quad 2-input CMOS NAND gate, | Buy India",
-    "metaDescription": "Buy CD4011BE from Mirai Technologies Mumbai. Quad 2-input CMOS NAND gate, 3V–18V. ₹10/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CD4011BE from Mirai Technologies Mumbai. Quad 2-input CMOS NAND gate, 3V–18V. ₹10/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CD4011BE buy India",
     "lsiKeywords": "CD4011BE price India, CD4011BE datasheet, CD4011BE distributor Mumbai, buy cd4011be online",
     "h2Tags": "CD4011BE Specifications & Datasheet, CD4011BE Applications, Buy CD4011BE in India, Alternatives to CD4011BE, Why Mirai Technologies",
@@ -5750,7 +5750,7 @@ export const products = [
         "location": "Related Products",
         "type": "Related",
         "priority": "Medium",
-        "toSlug": "ic-chip/cd4060bl"
+        "toSlug": "integrated-circuit/cd4060bl"
       }
     ],
     "fbtLinks": []
@@ -5758,10 +5758,10 @@ export const products = [
   {
     "id": "cd4060bl",
     "partNumber": "CD4060BL",
-    "fullSlug": "ic-chip/cd4060bl",
+    "fullSlug": "integrated-circuit/cd4060bl",
     "name": "CD4060BL 14-Stage Counter with Oscillator",
     "h1": "CD4060BL 14-Stage Counter with Oscillator – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "HLF / TI",
     "package": "DIP-16",
@@ -5784,7 +5784,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "CD4060BL – 14-stage binary ripple count | Buy India",
-    "metaDescription": "Buy CD4060BL from Mirai Technologies Mumbai. 14-stage binary ripple counter with. ₹6/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CD4060BL from Mirai Technologies Mumbai. 14-stage binary ripple counter with. ₹6/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CD4060BL buy India",
     "lsiKeywords": "CD4060BL price India, CD4060BL datasheet, CD4060BL distributor Mumbai, buy cd4060bl online",
     "h2Tags": "CD4060BL Specifications & Datasheet, CD4060BL Applications, Buy CD4060BL in India, Alternatives to CD4060BL, Why Mirai Technologies",
@@ -5832,10 +5832,10 @@ export const products = [
   {
     "id": "sn74hct00n",
     "partNumber": "SN74HCT00N",
-    "fullSlug": "ic-chip/sn74hct00n",
+    "fullSlug": "integrated-circuit/sn74hct00n",
     "name": "SN74HCT00N Quad NAND Gate TTL-compatible",
     "h1": "SN74HCT00N Quad NAND Gate TTL-compatible – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "Texas Instruments",
     "package": "DIP-14",
@@ -5906,10 +5906,10 @@ export const products = [
   {
     "id": "cd4047be",
     "partNumber": "CD4047BE",
-    "fullSlug": "ic-chip/cd4047be",
+    "fullSlug": "integrated-circuit/cd4047be",
     "name": "CD4047BE CMOS Monostable/Astable Multivibrator",
     "h1": "CD4047BE CMOS Monostable/Astable Multivibrator – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "Texas Instruments",
     "package": "DIP-14",
@@ -5932,7 +5932,7 @@ export const products = [
       "Monostable": "t = 2.48×R×C"
     },
     "metaTitle": "CD4047BE – CMOS monostable/astable mult | Buy India",
-    "metaDescription": "Buy CD4047BE from Mirai Technologies Mumbai. CMOS monostable/astable multivibrat. ₹15/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy CD4047BE from Mirai Technologies Mumbai. CMOS monostable/astable multivibrat. ₹15/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "CD4047BE buy India",
     "lsiKeywords": "CD4047BE price India, CD4047BE datasheet, CD4047BE distributor Mumbai, buy cd4047be online",
     "h2Tags": "CD4047BE Specifications & Datasheet, CD4047BE Applications, Buy CD4047BE in India, Alternatives to CD4047BE, Why Mirai Technologies",
@@ -5981,7 +5981,7 @@ export const products = [
         "location": "Related Products",
         "type": "Related",
         "priority": "Medium",
-        "toSlug": "ic-chip/cd4011be"
+        "toSlug": "integrated-circuit/cd4011be"
       }
     ],
     "fbtLinks": []
@@ -5989,10 +5989,10 @@ export const products = [
   {
     "id": "at24c16",
     "partNumber": "AT24C16",
-    "fullSlug": "ic-chip/at24c16",
+    "fullSlug": "integrated-circuit/at24c16",
     "name": "AT24C16 HLF I2C EEPROM 16Kbit",
     "h1": "AT24C16 HLF I2C EEPROM 16Kbit – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "HLF / Atmel",
     "package": "DIP-8",
@@ -6015,7 +6015,7 @@ export const products = [
       "Page write": "16 bytes"
     },
     "metaTitle": "AT24C16 – 16Kbit I2C EEPROM, 2K×8, 400 | Buy India",
-    "metaDescription": "Buy AT24C16 from Mirai Technologies Mumbai. 16Kbit I2C EEPROM, 2K×8, 400kHz, 1M. ₹9/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy AT24C16 from Mirai Technologies Mumbai. 16Kbit I2C EEPROM, 2K×8, 400kHz, 1M. ₹9/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "AT24C16 buy India",
     "lsiKeywords": "AT24C16 price India, AT24C16 datasheet, AT24C16 distributor Mumbai, buy at24c16 online",
     "h2Tags": "AT24C16 Specifications & Datasheet, AT24C16 Applications, Buy AT24C16 in India, Alternatives to AT24C16, Why Mirai Technologies",
@@ -6063,10 +6063,10 @@ export const products = [
   {
     "id": "atmega16apu",
     "partNumber": "ATMEGA16A-PU",
-    "fullSlug": "ic-chip/atmega16apu",
+    "fullSlug": "integrated-circuit/atmega16apu",
     "name": "ATMEGA16A-PU AVR MCU DIP-40",
     "h1": "ATMEGA16A-PU AVR MCU DIP-40 – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "Microchip Technology",
     "package": "DIP-40",
@@ -6148,10 +6148,10 @@ export const products = [
   {
     "id": "byq28e200",
     "partNumber": "BYQ28E200",
-    "fullSlug": "ic-chip/byq28e200",
+    "fullSlug": "integrated-circuit/byq28e200",
     "name": "BYQ28E-200 Dual Ultrafast Rectifier Diode",
     "h1": "BYQ28E-200 Dual Ultrafast Rectifier Diode – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "IC Chip",
     "brand": "WeEn Semiconductors",
     "package": "TO-220AB",
@@ -6173,7 +6173,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "BYQ28E200 – Dual ultrafast rectifier, 20 | Buy India",
-    "metaDescription": "Buy BYQ28E200 from Mirai Technologies Mumbai. Dual ultrafast rectifier, 200V, 10A. ₹12/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy BYQ28E200 from Mirai Technologies Mumbai. Dual ultrafast rectifier, 200V, 10A. ₹12/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "BYQ28E200 buy India",
     "lsiKeywords": "BYQ28E200 price India, BYQ28E200 datasheet, BYQ28E200 distributor Mumbai, buy byq28e200 online",
     "h2Tags": "BYQ28E200 Specifications & Datasheet, BYQ28E200 Applications, Buy BYQ28E200 in India, Alternatives to BYQ28E200, Why Mirai Technologies",
@@ -6221,10 +6221,10 @@ export const products = [
   {
     "id": "nsip83086cd",
     "partNumber": "NSIP83086CD",
-    "fullSlug": "ic/nsip83086cd",
+    "fullSlug": "integrated-circuit/nsip83086cd",
     "name": "NSIP83086CD LED Driver IC",
     "h1": "NSIP83086CD LED Driver IC – Buy Online India",
-    "category": "ic-chip",
+    "category": "integrated-circuit",
     "categoryLabel": "Ic",
     "brand": "onsemi",
     "package": "DIP-8",
@@ -6387,7 +6387,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "HCF4075BEY – Triple 3-input CMOS OR gate, | Buy India",
-    "metaDescription": "Buy HCF4075BEY from Mirai Technologies Mumbai. Triple 3-input CMOS OR gate, 3V–15V. ₹—/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy HCF4075BEY from Mirai Technologies Mumbai. Triple 3-input CMOS OR gate, 3V–15V. ₹—/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "HCF4075BEY buy India",
     "lsiKeywords": "HCF4075BEY price India, HCF4075BEY datasheet, HCF4075BEY distributor Mumbai, buy hcf4075bey online",
     "h2Tags": "HCF4075BEY Specifications & Datasheet, HCF4075BEY Applications, Buy HCF4075BEY in India, Alternatives to HCF4075BEY, Why Mirai Technologies",
@@ -6459,7 +6459,7 @@ export const products = [
       "Temp": "-55°C to +125°C"
     },
     "metaTitle": "HCF4097BE – Differential 8-channel analo | Buy India",
-    "metaDescription": "Buy HCF4097BE from Mirai Technologies Mumbai. Differential 8-channel analog switc. ₹—/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy HCF4097BE from Mirai Technologies Mumbai. Differential 8-channel analog switc. ₹—/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "HCF4097BE buy India",
     "lsiKeywords": "HCF4097BE price India, HCF4097BE datasheet, HCF4097BE distributor Mumbai, buy hcf4097be online",
     "h2Tags": "HCF4097BE Specifications & Datasheet, HCF4097BE Applications, Buy HCF4097BE in India, Alternatives to HCF4097BE, Why Mirai Technologies",
@@ -6507,7 +6507,7 @@ export const products = [
   {
     "id": "mb6s",
     "partNumber": "MB6S",
-    "fullSlug": "integrated-circuits/mb6s",
+    "fullSlug": "integrated-circuit/mb6s",
     "name": "MB6S Bridge Rectifier 600V 0.5A",
     "h1": "MB6S Bridge Rectifier 600V 0.5A – Buy Online India",
     "category": "integrated-circuit",
@@ -6531,7 +6531,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "MB6S – SMD bridge rectifier, 600V,  | Buy India",
-    "metaDescription": "Buy MB6S from Mirai Technologies Mumbai. SMD bridge rectifier, 600V, 0.5A, S. ₹1/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy MB6S from Mirai Technologies Mumbai. SMD bridge rectifier, 600V, 0.5A, S. ₹1/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "MB6S buy India",
     "lsiKeywords": "MB6S price India, MB6S datasheet, MB6S distributor Mumbai, buy mb6s online",
     "h2Tags": "MB6S Specifications & Datasheet, MB6S Applications, Buy MB6S in India, Alternatives to MB6S, Why Mirai Technologies",
@@ -6603,7 +6603,7 @@ export const products = [
       "Temp": "-55°C to +150°C"
     },
     "metaTitle": "DOPF2N65C – N-ch MOSFET, 650V, 2A, low g | Buy India",
-    "metaDescription": "Buy DOPF2N65C from Mirai Technologies Mumbai. N-ch MOSFET, 650V, 2A, low gate cha. ₹8/pc. Authorized distributor. Fast pan-India delivery.",
+    "metaDescription": "Buy DOPF2N65C from Mirai Technologies Mumbai. N-ch MOSFET, 650V, 2A, low gate cha. ₹8/pc. Authorized distributor. Fast pan-India delivery. Pan-India delivery.",
     "primaryKeyword": "DOPF2N65C buy India",
     "lsiKeywords": "DOPF2N65C price India, DOPF2N65C datasheet, DOPF2N65C distributor Mumbai, buy dopf2n65c online",
     "h2Tags": "DOPF2N65C Specifications & Datasheet, DOPF2N65C Applications, Buy DOPF2N65C in India, Alternatives to DOPF2N65C, Why Mirai Technologies",

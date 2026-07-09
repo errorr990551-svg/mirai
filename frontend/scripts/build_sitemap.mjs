@@ -18,8 +18,15 @@ xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
 // Helper to add URL to xml
 function addUrl(loc, priority = '0.5', changefreq = 'weekly') {
+  let cleanLoc = loc.trim();
+  if (!cleanLoc.startsWith('/')) {
+    cleanLoc = '/' + cleanLoc;
+  }
+  if (cleanLoc.length > 1 && cleanLoc.endsWith('/')) {
+    cleanLoc = cleanLoc.slice(0, -1);
+  }
   xml += `  <url>\n`;
-  xml += `    <loc>${BASE_URL}${loc}</loc>\n`;
+  xml += `    <loc>${BASE_URL}${cleanLoc}</loc>\n`;
   xml += `    <lastmod>${TODAY}</lastmod>\n`;
   xml += `    <changefreq>${changefreq}</changefreq>\n`;
   xml += `    <priority>${priority}</priority>\n`;
@@ -35,7 +42,7 @@ addUrl('/products', '0.8', 'daily');
 addUrl('/blog', '0.8', 'daily');
 
 // Add category pages
-categories.forEach(category => {
+categories.filter(category => products.some(p => p.category === category.slug)).forEach(category => {
   addUrl(`/products/${category.slug}`, '0.7', 'weekly');
 });
 

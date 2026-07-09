@@ -334,7 +334,7 @@ const ProductsPage = () => {
     } else {
       updateMeta(
         'Electronic Components Catalog – Mirai Technologies Mumbai',
-        'Shop 83+ genuine electronic components – ICs, MOSFETs, transistors, microcontrollers, optocouplers. Authorized distributor since 1999. Pan-India delivery. GST invoice.',
+        `Shop ${products.length}+ genuine electronic components – ICs, MOSFETs, transistors, microcontrollers, optocouplers. Authorized distributor since 1999. Pan-India delivery. GST invoice.`,
         'electronic components catalog, buy ICs online, power MOSFETs India, microcontrollers Mumbai, active components, passive components, electronic components store',
         'Mirai Technologies',
         'Mirai Technologies'
@@ -457,7 +457,7 @@ const ProductsPage = () => {
                 Electronic Components Catalog
               </h1>
               <p className="text-sm text-slate-300 mt-2 relative z-10">
-                83+ genuine electronic components — ICs, MOSFETs, transistors, microcontrollers and more.
+                {products.length}+ genuine electronic components — ICs, MOSFETs, transistors, microcontrollers and more.
               </p>
             </div>
           )}

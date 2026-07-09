@@ -41,14 +41,11 @@ export function updatePageSEO(title, description, canonical, robots, ogTitle, og
   }
   metaOgDesc.content = ogDescription || description || '';
 
-  // Keywords
+  // Remove keywords tag if it exists
   let metaKeywords = document.querySelector('meta[name="keywords"]');
-  if (!metaKeywords) {
-    metaKeywords = document.createElement('meta');
-    metaKeywords.name = 'keywords';
-    document.head.appendChild(metaKeywords);
+  if (metaKeywords) {
+    metaKeywords.remove();
   }
-  metaKeywords.content = keywords || 'electronic components, IC distributor, MOSFETs, transistors, microcontrollers, optocouplers, active components, passive components, buy electronic components online, India, Mirai Technologies';
 
   // Author
   let metaAuthor = document.querySelector('meta[name="author"]');

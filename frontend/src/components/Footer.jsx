@@ -99,8 +99,37 @@ const Footer = () => {
  
          </div>
  
-         {/* Bottom Bar */}
-         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs gap-4 text-slate-600">
+          {/* We Deliver Across India (Top 20 Cities) */}
+          <div className="pt-8 border-t border-white/5 mb-8">
+            <h3 className="text-white font-bold text-sm mb-4 uppercase tracking-wider">We Deliver Across India</h3>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-slate-500">
+              <Link to="/electronic-component-distributor-in-mumbai" className="hover:text-white transition-colors">Mumbai</Link>
+              <Link to="/electronic-component-distributor-in-delhi" className="hover:text-white transition-colors">Delhi</Link>
+              <Link to="/electronic-component-distributor-in-bengaluru" className="hover:text-white transition-colors">Bengaluru</Link>
+              <Link to="/electronic-component-distributor-in-hyderabad" className="hover:text-white transition-colors">Hyderabad</Link>
+              <Link to="/electronic-component-distributor-in-chennai" className="hover:text-white transition-colors">Chennai</Link>
+              <Link to="/electronic-component-distributor-in-pune" className="hover:text-white transition-colors">Pune</Link>
+              <Link to="/electronic-component-distributor-in-ahmedabad" className="hover:text-white transition-colors">Ahmedabad</Link>
+              <Link to="/electronic-component-distributor-in-kolkata" className="hover:text-white transition-colors">Kolkata</Link>
+              <Link to="/electronic-component-distributor-in-surat" className="hover:text-white transition-colors">Surat</Link>
+              <Link to="/electronic-component-distributor-in-jaipur" className="hover:text-white transition-colors">Jaipur</Link>
+              <Link to="/electronic-component-distributor-in-noida" className="hover:text-white transition-colors">Noida</Link>
+              <Link to="/electronic-component-distributor-in-faridabad" className="hover:text-white transition-colors">Faridabad</Link>
+              <Link to="/electronic-component-distributor-in-coimbatore" className="hover:text-white transition-colors">Coimbatore</Link>
+              <Link to="/electronic-component-distributor-in-indore" className="hover:text-white transition-colors">Indore</Link>
+              <Link to="/electronic-component-distributor-in-nagpur" className="hover:text-white transition-colors">Nagpur</Link>
+              <Link to="/electronic-component-distributor-in-lucknow" className="hover:text-white transition-colors">Lucknow</Link>
+              <Link to="/electronic-component-distributor-in-vadodara" className="hover:text-white transition-colors">Vadodara</Link>
+              <Link to="/electronic-component-distributor-in-chandigarh" className="hover:text-white transition-colors">Chandigarh</Link>
+              <Link to="/electronic-component-distributor-in-kochi" className="hover:text-white transition-colors">Kochi</Link>
+              <Link to="/electronic-component-distributor-in-visakhapatnam" className="hover:text-white transition-colors">Visakhapatnam</Link>
+              <span className="text-slate-600">|</span>
+              <Link to="/market-area" className="text-mirai-primary hover:text-white font-bold transition-colors">View all cities &rarr;</Link>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs gap-4 text-slate-600">
            <p>&copy; 2026 Mirai Technologies. All rights reserved.</p>
            <p className="text-right">
              <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">
