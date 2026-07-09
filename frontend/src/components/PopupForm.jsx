@@ -62,13 +62,13 @@ const PopupForm = () => {
       return;
     }
 
-    // Trigger popup on page load/reload (disabled to prevent automatic opening on load)
-    // const timer = setTimeout(() => {
-    //   setIsOpen(true);
-    //   window.miraiPopupShown = true; // Mark as shown
-    // }, 1500);
+    // Trigger popup on page load/reload
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+      window.miraiPopupShown = true; // Mark as shown
+    }, 1500);
     
-    // return () => clearTimeout(timer);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   const handleClose = () => {
@@ -160,17 +160,17 @@ const PopupForm = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="p-6 sm:p-8 max-h-[90vh] overflow-y-auto custom-scrollbar rounded-3xl">
-              <div className="mb-6">
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
+            <div className="p-5 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar rounded-3xl">
+              <div className="mb-4">
+                <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-1">
                   Fill this form and get a quote in 30 minutes — guaranteed
                 </h2>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">Name</label>
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-600 block">Name</label>
                     <input 
                       type="text" 
                       name="name"
@@ -179,11 +179,11 @@ const PopupForm = () => {
                       placeholder="Your Name" 
                       required 
                       disabled={isSubmitting}
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">Phone No</label>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-600 block">Phone No</label>
                     <input 
                       type="tel" 
                       name="phone"
@@ -192,14 +192,14 @@ const PopupForm = () => {
                       placeholder="+91 XXXXX XXXXX" 
                       required 
                       disabled={isSubmitting}
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">Email</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-600 block">Email</label>
                     <input 
                       type="email" 
                       name="email"
@@ -208,11 +208,11 @@ const PopupForm = () => {
                       placeholder="you@company.com" 
                       required 
                       disabled={isSubmitting}
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-bold text-slate-700 block">Company</label>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-600 block">Company</label>
                     <input 
                       type="text" 
                       name="company"
@@ -221,13 +221,13 @@ const PopupForm = () => {
                       placeholder="Company Name" 
                       required 
                       disabled={isSubmitting}
-                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
+                      className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                     />
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-sm font-bold text-slate-700 block">Location</label>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-600 block">Location</label>
                   <input 
                     type="text" 
                     name="location"
@@ -235,21 +235,21 @@ const PopupForm = () => {
                     onChange={handleChange}
                     placeholder="e.g., Mumbai, India" 
                     disabled={isSubmitting}
-                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
+                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                   />
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-sm font-bold text-slate-700 block">Message</label>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-600 block">Message</label>
                   <textarea 
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="How can we help you?" 
-                    rows="4"
+                    rows="3"
                     required
                     disabled={isSubmitting}
-                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
+                    className="w-full bg-[#f8fafc] border border-slate-200 text-slate-900 rounded-2xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-mirai-primary/50 focus:border-mirai-primary transition-all placeholder-slate-400 resize-none text-sm disabled:opacity-75 disabled:cursor-not-allowed" 
                   ></textarea>
                 </div>
 
@@ -266,14 +266,14 @@ const PopupForm = () => {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-4 ${
+                  className={`w-full bg-mirai-primary hover:bg-opacity-90 text-white font-bold text-base px-6 py-2.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 mt-2 ${
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                   }`}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'} <Send className="w-4 h-4" />
                 </button>
 
-                <p className="text-xs text-slate-400 text-center mt-4 leading-relaxed">
+                <p className="text-[11px] text-slate-400 text-center mt-2.5 leading-relaxed">
                   By submitting, you agree our team will contact you regarding your inquiry. We never share your data.
                 </p>
               </form>
