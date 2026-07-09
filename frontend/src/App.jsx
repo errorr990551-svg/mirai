@@ -15,6 +15,8 @@ import AboutUs from './components/AboutUs';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import PopupForm from './components/PopupForm';
+import ContactUnlockModal from './components/ContactUnlockModal';
+import { ContactProvider } from './context/ContactContext';
 import ScrollToTop from './components/ScrollToTop';
 import ProductsPage from './components/ProductsPage';
 import ProductDetailPage from './components/ProductDetailPage';
@@ -73,40 +75,43 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
-        <PopupForm />
-        <Navbar />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/certificate" element={<Certifications />} />
-          {/* Products catalog – optional :categorySlug for filtered views */}
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/products/:categorySlug" element={<ProductsPage />} />
-          {/* Product detail – wildcard supports multi-segment slugs like /product/integrated-circuit/lm358ld08t */}
-          <Route path="/product/*" element={<ProductDetailPage />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/market-area" element={<MarketArea />} />
-          <Route path="/sitemap" element={<SitemapRedirect />} />
-          <Route path="/sitemap.xml" element={<SitemapRedirect />} />
-          {cityPages.map((page) => (
-            <Route key={page.slug} path={page.slug} element={<CitySEOPage page={page} />} />
-          ))}
-          <Route path="*" element={
-            <div className="pt-32 pb-20 text-center min-h-[60vh] flex items-center justify-center">
-              <h2 className="text-3xl font-bold text-slate-400">Page under construction</h2>
-            </div>
-          } />
-        </Routes>
-        
-        <Footer />
-      </div>
-    </Router>
+    <ContactProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
+          <PopupForm />
+          <ContactUnlockModal />
+          <Navbar />
+          
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/certificate" element={<Certifications />} />
+            {/* Products catalog – optional :categorySlug for filtered views */}
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:categorySlug" element={<ProductsPage />} />
+            {/* Product detail – wildcard supports multi-segment slugs like /product/integrated-circuit/lm358ld08t */}
+            <Route path="/product/*" element={<ProductDetailPage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/market-area" element={<MarketArea />} />
+            <Route path="/sitemap" element={<SitemapRedirect />} />
+            <Route path="/sitemap.xml" element={<SitemapRedirect />} />
+            {cityPages.map((page) => (
+              <Route key={page.slug} path={page.slug} element={<CitySEOPage page={page} />} />
+            ))}
+            <Route path="*" element={
+              <div className="pt-32 pb-20 text-center min-h-[60vh] flex items-center justify-center">
+                <h2 className="text-3xl font-bold text-slate-400">Page under construction</h2>
+              </div>
+            } />
+          </Routes>
+          
+          <Footer />
+        </div>
+      </Router>
+    </ContactProvider>
   );
 }
 

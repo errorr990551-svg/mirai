@@ -5,8 +5,10 @@ import {
   Send
 } from 'lucide-react';
 import { updateMeta } from '../utils/seo';
+import { useContact } from '../context/ContactContext';
 
 const Contact = () => {
+  const { isUnlocked, openModal } = useContact();
   useEffect(() => {
     updateMeta(
       'Contact Us | Get a Quote | Mirai Technologies Mumbai',
@@ -141,28 +143,41 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white/10 p-3 rounded-xl shrink-0">
-                      <Phone className="w-6 h-6 text-mirai-primary" />
+                  {!isUnlocked ? (
+                    <div className="flex flex-col gap-3 py-2">
+                      <button 
+                        onClick={openModal}
+                        className="w-full text-center px-5 py-3.5 rounded-2xl text-sm font-bold border border-mirai-primary/30 hover:border-mirai-primary bg-mirai-primary/10 hover:bg-mirai-primary/20 text-white transition-all duration-300 shadow-lg shadow-mirai-primary/5 hover:scale-[1.02]"
+                      >
+                        Show Contact Details
+                      </button>
                     </div>
-                    <div>
-                      <div className="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1">Phone / WhatsApp</div>
-                      <div className="font-medium text-lg">+91 93213 98188</div>
-                      <div className="font-medium text-lg">+91 98201 22744</div>
-                      <div className="font-medium text-lg">+91 91368 10360</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white/10 p-3 rounded-xl shrink-0">
-                      <Mail className="w-6 h-6 text-mirai-primary" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1">Email</div>
-                      <a href="mailto:sales@miraitechnologies.net" className="font-medium text-lg hover:text-mirai-primary transition-colors block">sales@miraitechnologies.net</a>
-                      <a href="mailto:nehas@miraitechnologies.net" className="font-medium text-lg hover:text-mirai-primary transition-colors block">nehas@miraitechnologies.net</a>
-                    </div>
-                  </div>
+                  ) : (
+                    <>
+                      <div className="flex items-start gap-4">
+                        <div className="bg-white/10 p-3 rounded-xl shrink-0">
+                          <Phone className="w-6 h-6 text-mirai-primary" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1">Phone / WhatsApp</div>
+                          <div className="font-medium text-lg">+91 93213 98188</div>
+                          <div className="font-medium text-lg">+91 98201 22744</div>
+                          <div className="font-medium text-lg">+91 91368 10360</div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <div className="bg-white/10 p-3 rounded-xl shrink-0">
+                          <Mail className="w-6 h-6 text-mirai-primary" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1">Email</div>
+                          <a href="mailto:sales@miraitechnologies.net" className="font-medium text-lg hover:text-mirai-primary transition-colors block">sales@miraitechnologies.net</a>
+                          <a href="mailto:nehas@miraitechnologies.net" className="font-medium text-lg hover:text-mirai-primary transition-colors block">nehas@miraitechnologies.net</a>
+                        </div>
+                      </div>
+                    </>
+                  )}
 
                   <div className="flex items-start gap-4">
                     <div className="bg-white/10 p-3 rounded-xl shrink-0">

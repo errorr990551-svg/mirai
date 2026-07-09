@@ -1,8 +1,10 @@
 import React from 'react';
 import { Zap, Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useContact } from '../context/ContactContext';
 
 const Footer = () => {
+  const { isUnlocked, openModal } = useContact();
   return (
     <footer className="bg-[#030712] pt-24 pb-8 text-slate-400 relative overflow-hidden">
       {/* Huge background text */}
@@ -75,8 +77,21 @@ const Footer = () => {
                  <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
                </h3>
                <ul className="space-y-4 text-sm">
-                 <li><span className="block text-slate-600 text-xs mb-1">Sales</span> <a href="tel:+919321398188" className="hover:text-white transition-colors text-slate-300">+91 93213 98188</a></li>
-                 <li><span className="block text-slate-600 text-xs mb-1">Email</span> <a href="mailto:sales@miraitechnologies.net" className="hover:text-white transition-colors text-slate-300">sales@miraitechnologies.net</a></li>
+                 {isUnlocked ? (
+                   <>
+                     <li><span className="block text-slate-600 text-xs mb-1">Sales</span> <a href="tel:+919321398188" className="hover:text-white transition-colors text-slate-300">+91 93213 98188</a></li>
+                     <li><span className="block text-slate-600 text-xs mb-1">Email</span> <a href="mailto:sales@miraitechnologies.net" className="hover:text-white transition-colors text-slate-300">sales@miraitechnologies.net</a></li>
+                   </>
+                 ) : (
+                   <li className="pt-1 pb-1">
+                     <button 
+                       onClick={openModal}
+                       className="w-full text-center px-4 py-2.5 rounded-xl text-xs font-bold border border-mirai-primary/30 hover:border-mirai-primary bg-mirai-primary/10 hover:bg-mirai-primary/20 text-white transition-all duration-300 shadow-lg shadow-mirai-primary/5 hover:scale-[1.02]"
+                     >
+                       Show Contact Details
+                     </button>
+                   </li>
+                 )}
                  <li><span className="block text-slate-600 text-xs mb-1">Location / Address</span> <span className="text-slate-300 block leading-relaxed">401, Aditya Residency, Chunabhatti Lane,<br/>Lamington Road, Mumbai 400 007</span></li>
                </ul>
              </div>
