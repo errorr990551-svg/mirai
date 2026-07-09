@@ -162,7 +162,7 @@ const PopupForm = () => {
 
             <div className="p-5 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar rounded-3xl">
               <div className="mb-4">
-                <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-1">
+                <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-1 pr-10">
                   Fill this form and get a quote in 30 minutes — guaranteed
                 </h2>
               </div>
