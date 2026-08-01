@@ -12,14 +12,14 @@ export const submitContactForm = async (req, res) => {
       });
     }
 
-    // Fire and forget email sending in background
-    sendMail({
+    // Await email sending so Cloudflare Worker does not freeze before HTTP fetch completes
+    await sendMail({
       to: "sales@miraitechnologies.net",
       cc: [
         "akshat99055@gmail.com",
         "errorr990551@gmail.com",
       ],
-      subject: "New Contact Us Enquiry",
+      subject: "New Contact Us Enquiry - MIRAI",
       html: `
         <h2>New Contact Enquiry</h2>
         <p><b>Name:</b> ${name}</p>
@@ -29,11 +29,8 @@ export const submitContactForm = async (req, res) => {
         <p><b>Company:</b> ${company}</p>
         <p><b>Message:</b><br/>${message}</p>
       `,
-    }).catch(err => {
-      console.error("Critical: Background Contact Email failed:", err);
     });
 
-    // Respond immediately to the user
     return res.status(200).json({ 
       success: true, 
       message: "Message sent! Our team will get back to you shortly." 

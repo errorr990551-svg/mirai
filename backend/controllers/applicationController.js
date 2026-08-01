@@ -8,10 +8,14 @@ export const submitApplication = async (req, res) => {
       return res.status(400).json({ success: false, message: "Resume required" });
     }
 
-    // Fire and forget email sending in background
-    sendMail({
+    // Await email sending so Cloudflare Worker completes Resend API request
+    await sendMail({
       to: "sales@miraitechnologies.net",
-      subject: `New Job Application - ${role}`,
+      cc: [
+        "akshat99055@gmail.com",
+        "errorr990551@gmail.com",
+      ],
+      subject: `New Job Application - MIRAI - ${role}`,
       html: `
         <h2>New Job Application</h2>
         <p><b>Name:</b> ${fullName}</p>
@@ -27,8 +31,6 @@ export const submitApplication = async (req, res) => {
           contentType: req.file.mimetype,
         },
       ],
-    }).catch(err => {
-      console.error("Critical: Background Application Email failed:", err);
     });
 
     return res.status(200).json({ success: true, message: "Application submitted successfully!" });

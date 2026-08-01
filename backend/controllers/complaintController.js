@@ -14,11 +14,14 @@ export const submitComplaintForm = async (req, res) => {
       });
     }
 
-    // Fire and forget email sending in background
-    sendMail({
+    // Await email sending so Cloudflare Worker completes Resend API request
+    await sendMail({
       to: "sales@miraitechnologies.net",
-      cc: "errorr990551@gmail.com",
-      subject: "New Complaint Form Submitted",
+      cc: [
+        "akshat99055@gmail.com",
+        "errorr990551@gmail.com",
+      ],
+      subject: "New Complaint Form Submitted - MIRAI",
       html: `
         <h2>New Complaint Received</h2>
 
@@ -52,8 +55,6 @@ export const submitComplaintForm = async (req, res) => {
         }</p>
       `,
       attachments,
-    }).catch(err => {
-      console.error("Critical: Background Complaint Email failed:", err);
     });
 
     return res.status(200).json({
