@@ -42,7 +42,7 @@ const Contact = () => {
     setStatusMessage('');
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://mirai-i53w.onrender.com/api'}/contact`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://mirai.errorr990551.workers.dev/api'}/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

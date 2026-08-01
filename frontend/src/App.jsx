@@ -64,7 +64,7 @@ function Home() {
 function App() {
   useEffect(() => {
     // Wake up Render backend on app mount
-    const apiUrl = import.meta.env.VITE_API_URL || 'https://mirai-i53w.onrender.com/api';
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://mirai.errorr990551.workers.dev/api';
     const healthUrl = apiUrl.endsWith('/api') 
       ? apiUrl.replace(/\/api$/, '/health') 
       : `${apiUrl}/health`;
