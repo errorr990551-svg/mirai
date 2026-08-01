@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import http from "node:http";
 import { httpServerHandler } from "cloudflare:node";
 import contactRoutes from "./routes/contactRoutes.js";
 import complaintRoutes from "./routes/complaintRoutes.js";
@@ -28,4 +29,6 @@ app.use("/api", contactRoutes);
 app.use("/api", complaintRoutes);
 app.use("/api", applicationRoutes);
 
-export default httpServerHandler(app);
+const server = http.createServer(app);
+
+export default httpServerHandler(server);
