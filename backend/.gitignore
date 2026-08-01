@@ -27,3 +27,5 @@ yarn-error.log*
 src/tailwind-output.css
 
 .env
+.dev.vars
+.wrangler

@@ -1,14 +1,22 @@
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { httpServerHandler } from "cloudflare:node";
+import contactRoutes from "./routes/contactRoutes.js";
+import complaintRoutes from "./routes/complaintRoutes.js";
+import applicationRoutes from "./routes/applicationRoutes.js";
+
+dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-}));
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use(express.json());
 
@@ -16,12 +24,8 @@ app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
 
-app.use("/api", require("./routes/contactRoutes"));
-app.use("/api", require("./routes/complaintRoutes"));
-app.use("/api", require("./routes/applicationRoutes"));
+app.use("/api", contactRoutes);
+app.use("/api", complaintRoutes);
+app.use("/api", applicationRoutes);
 
-const PORT = process.env.PORT || 4000;
-
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+export default httpServerHandler(app);

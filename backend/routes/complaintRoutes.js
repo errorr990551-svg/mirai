@@ -1,8 +1,9 @@
-const express = require("express");
+import express from "express";
+import upload from "../middlewares/upload.js";
+import { submitComplaintForm } from "../controllers/complaintController.js";
+
 const router = express.Router();
-const upload = require("../middlewares/upload");
-const { submitComplaintForm } = require("../controllers/complaintController");
 
-router.post("/complaint", upload.single("image"), submitComplaintForm);
+router.post("/complaint", upload.single("attachment"), submitComplaintForm);
 
-module.exports = router;
+export default router;

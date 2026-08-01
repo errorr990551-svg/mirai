@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "mirai-backend",
+  "main": "server.js",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
