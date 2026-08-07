@@ -7,6 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const filePath = path.join(__dirname, '../Mirai_Technologies_100_City_SEO_Pack.xlsx');
+if (!fs.existsSync(filePath)) {
+  console.log(`⚠️ Warning: Mirai_Technologies_100_City_SEO_Pack.xlsx not found at ${filePath}`);
+  console.log("Skipping city pages build (using existing src/data/cityPages.json).");
+  process.exit(0);
+}
 const workbook = xlsx.readFile(filePath);
 
 // Read City Pages Content

@@ -13,11 +13,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
 // ── 1. Load source data ────────────────────────────────────────────────────
+const excelPath = path.join(ROOT, 'Mirai_Technologies_SEO_Brief_v3_COMPLETE.xlsx');
+if (!fs.existsSync(excelPath)) {
+  console.log(`⚠️ Warning: Mirai_Technologies_SEO_Brief_v3_COMPLETE.xlsx not found at ${excelPath}`);
+  console.log("Skipping products build (using existing src/data/products.js).");
+  process.exit(0);
+}
+
 const masterData = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'extracted_products.json'), 'utf8')
 );
 
-const wb = XLSX.readFile(path.join(ROOT, 'Mirai_Technologies_SEO_Brief_v3_COMPLETE.xlsx'));
+const wb = XLSX.readFile(excelPath);
 const pricesSheet   = XLSX.utils.sheet_to_json(wb.Sheets['💰 PRICES & STOCK']);
 const keywordsSheet = XLSX.utils.sheet_to_json(wb.Sheets['🔑 KEYWORDS']);
 const imagesSheet   = XLSX.utils.sheet_to_json(wb.Sheets['🖼️ IMAGE BRIEF']);
