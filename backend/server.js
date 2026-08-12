@@ -6,6 +6,7 @@ import contactRoutes from "./routes/contactRoutes.js";
 import complaintRoutes from "./routes/complaintRoutes.js";
 import applicationRoutes from "./routes/applicationRoutes.js";
 
+// Server initialization for Node.js and Cloudflare Workers
 dotenv.config();
 
 const app = express();
