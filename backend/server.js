@@ -47,5 +47,14 @@ if (!cloudflareHandler) {
   });
 }
 
-export default cloudflareHandler || app;
+export default cloudflareHandler
+  ? {
+      async fetch(request, env, ctx) {
+        if (env) {
+          Object.assign(process.env, env);
+        }
+        return cloudflareHandler.fetch(request, env, ctx);
+      },
+    }
+  : app;
 
