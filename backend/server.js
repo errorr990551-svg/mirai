@@ -48,15 +48,25 @@ if (!cloudflareHandler) {
   });
 }
 
+// Express middleware to ensure env vars are attached to process.env on every HTTP request
+app.use((req, res, next) => {
+  if (globalThis.env && typeof globalThis.env === "object") {
+    for (const key of Object.keys(globalThis.env)) {
+      try { process.env[key] = globalThis.env[key]; } catch (e) {}
+      try { globalThis[key] = globalThis.env[key]; } catch (e) {}
+    }
+  }
+  next();
+});
+
 export default cloudflareHandler
   ? {
       async fetch(request, env, ctx) {
-        if (env) {
-          Object.assign(process.env, env);
+        if (env && typeof env === "object") {
           globalThis.env = env;
-          if (env.RESEND_API_KEY) {
-            process.env.RESEND_API_KEY = env.RESEND_API_KEY;
-            globalThis.RESEND_API_KEY = env.RESEND_API_KEY;
+          for (const key of Object.keys(env)) {
+            try { process.env[key] = env[key]; } catch (e) {}
+            try { globalThis[key] = env[key]; } catch (e) {}
           }
         }
         if (typeof cloudflareHandler === "function") {
