@@ -65,7 +65,7 @@ export const submitComplaintForm = async (req, res) => {
     console.error("Complaint Form processing Error:", error);
     res.status(500).json({
       success: false,
-      message: "Something went wrong. Please try again.",
+      message: error.message || "Something went wrong. Please try again.",
     });
   }
 };

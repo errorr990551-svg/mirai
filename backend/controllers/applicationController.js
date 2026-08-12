@@ -37,6 +37,6 @@ export const submitApplication = async (req, res) => {
 
   } catch (err) {
     console.error("Application processing error:", err);
-    res.status(500).json({ success: false, message: "Something went wrong. Please try again." });
+    res.status(500).json({ success: false, message: err.message || "Something went wrong. Please try again." });
   }
 };

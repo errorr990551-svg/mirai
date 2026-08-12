@@ -40,7 +40,7 @@ export const submitContactForm = async (req, res) => {
     console.error("Contact form processing error:", err);
     return res.status(500).json({ 
       success: false, 
-      message: "Something went wrong. Please try again later." 
+      message: err.message || "Something went wrong. Please try again later." 
     });
   }
 };
