@@ -97,13 +97,15 @@ export function updateSchemaScripts(schemas) {
 }
 
 export function injectOrganizationSchema() {
-  const schema = {
+  const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Mirai Technologies",
+    "legalName": "Mirai Technologies",
     "url": "https://miraitechnologies.net",
     "logo": "https://miraitechnologies.net/images/mirai-technologies-logo.webp",
-    "description": "Authorized distributor of ICs, MOSFETs, transistors, optocouplers & microcontrollers. Mumbai, India. Est. 1999.",
+    "description": "Independent B2B stockist and distributor of ICs, MOSFETs, IGBTs, transistors, optocouplers & microcontrollers in Mumbai, India. Est. 1999.",
+    "foundingDate": "1999",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "B-1101, Kinjal Heights Wing B, Wadia Street, Near Tardeo Bus Terminal",
@@ -114,67 +116,101 @@ export function injectOrganizationSchema() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+917942964662",
+      "telephone": "+91-93213-98188",
       "contactType": "sales",
-      "areaServed": "IN"
+      "areaServed": "IN",
+      "availableLanguage": ["en", "hi", "mr"]
     },
-    "sameAs": ["https://www.indiamart.com/mirai-technologies/"]
+    "sameAs": [
+      "https://www.indiamart.com/mirai-technologies/"
+    ]
   };
-  updateSchemaScripts([schema]);
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mirai Technologies - Mumbai Headquarters",
+    "image": "https://miraitechnologies.net/images/mirai-technologies-logo.webp",
+    "telephone": "+91-93213-98188",
+    "email": "sales@miraitechnologies.net",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "B-1101, Kinjal Heights Wing B, Wadia Street, Near Tardeo Bus Terminal",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400034",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.9712,
+      "longitude": 72.8152
+    },
+    "url": "https://miraitechnologies.net",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "18:30"
+      }
+    ]
+  };
+
+  updateSchemaScripts([orgSchema, localBusinessSchema]);
 }
 
 export function injectProductSchema(product, categorySlug) {
   const productSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": `${product.partNumber} ${product.name}`,
+    "name": product.partNumber ? `${product.partNumber} ${product.name || ''}` : product.name,
     "image": [
       product.heroImage?.filename
         ? `https://miraitechnologies.net/images/${product.heroImage.filename}`
         : "https://miraitechnologies.net/images/default.webp"
     ],
-    "description": product.shortDescription,
+    "description": product.shortDescription || product.description,
     "sku": product.partNumber,
     "mpn": product.partNumber,
     "brand": {
       "@type": "Brand",
-      "name": product.brand
+      "name": product.brand || "Mirai Stock"
     },
     "offers": {
       "@type": "Offer",
-      "url": `https://miraitechnologies.net/product/${product.fullSlug}`,
+      "url": `https://miraitechnologies.net/product/${product.fullSlug || product.slug}`,
       "priceCurrency": "INR",
       "price": product.price || 0,
-      "priceValidUntil": "2027-03-31",
+      "priceValidUntil": "2027-12-31",
       "itemCondition": "https://schema.org/NewCondition",
-      "availability": product.stockStatus === 'In Stock' ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      "availability": product.stockStatus === 'Out of Stock' ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
       "seller": {
         "@type": "Organization",
         "name": "Mirai Technologies",
         "url": "https://miraitechnologies.net"
       }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "reviewCount": "11"
     }
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": (product.faqs || []).map(faq => ({
-      "@type": "Question",
-      "name": faq.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.a
-      }
-    }))
-  };
+  const schemas = [productSchema];
 
-  const breadcrumbSchema = {
+  if (product.faqs && product.faqs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": product.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    });
+  }
+
+  schemas.push({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -182,36 +218,41 @@ export function injectProductSchema(product, categorySlug) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://miraitechnologies.net"
+        "item": "https://miraitechnologies.net/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": product.categoryLabel || categorySlug,
-        "item": `https://miraitechnologies.net/products/${categorySlug}`
+        "name": "Products",
+        "item": "https://miraitechnologies.net/products"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": product.partNumber,
-        "item": `https://miraitechnologies.net/product/${product.fullSlug}`
+        "name": product.categoryLabel || categorySlug || "Catalog",
+        "item": `https://miraitechnologies.net/products/${categorySlug || 'catalog'}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": product.partNumber || product.name
       }
     ]
-  };
+  });
 
-  updateSchemaScripts([productSchema, faqSchema, breadcrumbSchema]);
+  updateSchemaScripts(schemas);
 }
 
-export function injectCategorySchema(category, categoryProducts) {
+export function injectCategorySchema(category, categoryProducts = []) {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": category.name,
     "description": category.description,
-    "itemListElement": categoryProducts.map((p, idx) => ({
+    "itemListElement": categoryProducts.slice(0, 30).map((p, idx) => ({
       "@type": "ListItem",
       "position": idx + 1,
-      "url": `https://miraitechnologies.net/product/${p.fullSlug}`
+      "url": `https://miraitechnologies.net/product/${p.fullSlug || p.slug}`
     }))
   };
 
@@ -223,16 +264,74 @@ export function injectCategorySchema(category, categoryProducts) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://miraitechnologies.net"
+        "item": "https://miraitechnologies.net/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": category.name,
-        "item": `https://miraitechnologies.net/products/${category.slug}`
+        "name": "Products",
+        "item": "https://miraitechnologies.net/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": category.name
       }
     ]
   };
 
   updateSchemaScripts([itemListSchema, breadcrumbSchema]);
 }
+
+export function injectApplicationSchema(application) {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": application.title,
+    "description": application.metaDescription,
+    "author": {
+      "@type": "Person",
+      "name": application.author || "Senior Applications Engineer",
+      "jobTitle": "Field Applications Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Mirai Technologies"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mirai Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://miraitechnologies.net/images/mirai-technologies-logo.webp"
+      }
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://miraitechnologies.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Applications",
+        "item": "https://miraitechnologies.net/applications"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": application.title
+      }
+    ]
+  };
+
+  updateSchemaScripts([articleSchema, breadcrumbSchema]);
+}
+

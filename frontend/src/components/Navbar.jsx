@@ -38,6 +38,7 @@ const Navbar = () => {
       ]
     },
     { name: 'Products', path: '/products' },
+    { name: 'Applications', path: '/applications' },
     { name: 'Blog', path: '/blog' },
     { name: 'Market Area', path: '/market-area' },
     { name: 'Contact', path: '/contact' },

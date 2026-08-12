@@ -31,10 +31,11 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-slate-500">
-              India's trusted electronic components distributor since 1999. ISO 9001:2015 certified. Supplying ICs, MOSFETs, IGBTs, MCUs & 2000+ component types from 40+ global brands.
+              Independent B2B stockist and distributor of active and passive electronic components in Mumbai since 1999. ISO 9001:2015 certified. Supplying ICs, MOSFETs, IGBTs, MCUs &amp; 2000+ component types for OEMs and EMS manufacturers across India.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs font-semibold bg-white/5 border border-white/10 px-3 py-1.5 rounded text-slate-300">ISO 9001:2015</span>
+              <span className="text-xs font-semibold bg-white/5 border border-white/10 px-3 py-1.5 rounded text-slate-300">GSTIN Aware</span>
               <span className="text-xs font-semibold bg-white/5 border border-white/10 px-3 py-1.5 rounded text-slate-300">DUNS Registered</span>
             </div>
           </div>
@@ -50,37 +51,39 @@ const Footer = () => {
               <ul className="space-y-4 text-sm">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
-                <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                <li><Link to="/market-area" className="hover:text-white transition-colors">Market Area</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors">Products Catalog</Link></li>
+                <li><Link to="/applications" className="hover:text-white transition-colors">Applications &amp; BOMs</Link></li>
+                <li><Link to="/blog" className="hover:text-white transition-colors">Technical Articles</Link></li>
+                <li><Link to="/market-area" className="hover:text-white transition-colors">Delivery Hubs</Link></li>
               </ul>
             </div>
 
-            {/* Products */}
+            {/* Categories */}
             <div>
               <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
-                Products
+                Categories
                 <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
               </h3>
-            <ul className="space-y-4 text-sm">
+              <ul className="space-y-4 text-sm">
                 <li><Link to="/products/integrated-circuit" className="hover:text-white transition-colors">Integrated Circuits</Link></li>
-                <li><Link to="/products/mosfet-transistor" className="hover:text-white transition-colors">MOSFET Transistors</Link></li>
-                <li><Link to="/products/transistor" className="hover:text-white transition-colors">Transistors & Optocouplers</Link></li>
-                <li><Link to="/products/microcontroller" className="hover:text-white transition-colors">Microcontrollers</Link></li>
+                <li><Link to="/products/mosfet-transistor" className="hover:text-white transition-colors">Power MOSFETs</Link></li>
+                <li><Link to="/products/igbts" className="hover:text-white transition-colors">IGBTs &amp; Thyristors</Link></li>
+                <li><Link to="/products/microcontrollers" className="hover:text-white transition-colors">Microcontrollers</Link></li>
+                <li><Link to="/products/diodes-rectifiers" className="hover:text-white transition-colors">Diodes &amp; Rectifiers</Link></li>
               </ul>
             </div>
  
              {/* Contact */}
              <div>
                <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
-                 Contact
+                 Contact &amp; HQ
                  <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
                </h3>
                <ul className="space-y-4 text-sm">
                  {isUnlocked ? (
                    <>
-                     <li><span className="block text-slate-600 text-xs mb-1">Sales</span> <a href="tel:+919321398188" className="hover:text-white transition-colors text-slate-300">+91 93213 98188</a></li>
-                     <li><span className="block text-slate-600 text-xs mb-1">Email</span> <a href="mailto:sales@miraitechnologies.net" className="hover:text-white transition-colors text-slate-300">sales@miraitechnologies.net</a></li>
+                     <li><span className="block text-slate-600 text-xs mb-1">Sales Hotline</span> <a href="tel:+919321398188" className="hover:text-white transition-colors text-slate-300">+91 93213 98188</a></li>
+                     <li><span className="block text-slate-600 text-xs mb-1">RFQ Email</span> <a href="mailto:sales@miraitechnologies.net" className="hover:text-white transition-colors text-slate-300">sales@miraitechnologies.net</a></li>
                    </>
                  ) : (
                    <li className="pt-1 pb-1">
@@ -92,50 +95,39 @@ const Footer = () => {
                      </button>
                    </li>
                  )}
-                 <li><span className="block text-slate-600 text-xs mb-1">Location / Address</span> <span className="text-slate-300 block leading-relaxed">401, Aditya Residency, Chunabhatti Lane,<br/>Lamington Road, Mumbai 400 007</span></li>
+                 <li>
+                   <span className="block text-slate-600 text-xs mb-1">Registered Address</span>
+                   <span className="text-slate-300 block leading-relaxed text-xs">
+                     B-1101, Kinjal Heights Wing B, Wadia Street,<br/>
+                     Near Tardeo Bus Terminal, Mumbai, Maharashtra 400034
+                   </span>
+                 </li>
                </ul>
              </div>
            </div>
- 
+
          </div>
- 
-          {/* We Deliver Across India (Top 20 Cities) */}
+
+          {/* We Deliver Across India (Primary City Hubs & Matrix) */}
           <div className="pt-8 border-t border-white/5 mb-8">
-            <h3 className="text-white font-bold text-sm mb-4 uppercase tracking-wider">We Deliver Across India</h3>
+            <h3 className="text-white font-bold text-sm mb-4 uppercase tracking-wider">Industrial Delivery Hubs &amp; Specialised Regional Supply</h3>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-slate-500">
-              <Link to="/electronic-component-distributor-in-mumbai" className="hover:text-white transition-colors">Mumbai</Link>
-              <Link to="/electronic-component-distributor-in-delhi" className="hover:text-white transition-colors">Delhi</Link>
-              <Link to="/electronic-component-distributor-in-bengaluru" className="hover:text-white transition-colors">Bengaluru</Link>
-              <Link to="/electronic-component-distributor-in-hyderabad" className="hover:text-white transition-colors">Hyderabad</Link>
-              <Link to="/electronic-component-distributor-in-chennai" className="hover:text-white transition-colors">Chennai</Link>
-              <Link to="/electronic-component-distributor-in-pune" className="hover:text-white transition-colors">Pune</Link>
-              <Link to="/electronic-component-distributor-in-ahmedabad" className="hover:text-white transition-colors">Ahmedabad</Link>
-              <Link to="/electronic-component-distributor-in-kolkata" className="hover:text-white transition-colors">Kolkata</Link>
-              <Link to="/electronic-component-distributor-in-surat" className="hover:text-white transition-colors">Surat</Link>
-              <Link to="/electronic-component-distributor-in-jaipur" className="hover:text-white transition-colors">Jaipur</Link>
-              <Link to="/electronic-component-distributor-in-noida" className="hover:text-white transition-colors">Noida</Link>
-              <Link to="/electronic-component-distributor-in-faridabad" className="hover:text-white transition-colors">Faridabad</Link>
-              <Link to="/electronic-component-distributor-in-coimbatore" className="hover:text-white transition-colors">Coimbatore</Link>
-              <Link to="/electronic-component-distributor-in-indore" className="hover:text-white transition-colors">Indore</Link>
-              <Link to="/electronic-component-distributor-in-nagpur" className="hover:text-white transition-colors">Nagpur</Link>
-              <Link to="/electronic-component-distributor-in-lucknow" className="hover:text-white transition-colors">Lucknow</Link>
-              <Link to="/electronic-component-distributor-in-vadodara" className="hover:text-white transition-colors">Vadodara</Link>
-              <Link to="/electronic-component-distributor-in-chandigarh" className="hover:text-white transition-colors">Chandigarh</Link>
-              <Link to="/electronic-component-distributor-in-kochi" className="hover:text-white transition-colors">Kochi</Link>
-              <Link to="/electronic-component-distributor-in-visakhapatnam" className="hover:text-white transition-colors">Visakhapatnam</Link>
+              <Link to="/electronic-components-supplier-mumbai" className="hover:text-white transition-colors">Mumbai HQ</Link>
+              <Link to="/electronic-components-supplier-pune" className="hover:text-white transition-colors">Pune</Link>
+              <Link to="/electronic-components-supplier-bengaluru" className="hover:text-white transition-colors">Bengaluru</Link>
+              <Link to="/electronic-components-supplier-chennai" className="hover:text-white transition-colors">Chennai</Link>
+              <Link to="/electronic-components-supplier-delhi-ncr" className="hover:text-white transition-colors">Delhi NCR</Link>
+              <Link to="/electronic-components-supplier-ahmedabad" className="hover:text-white transition-colors">Ahmedabad</Link>
+              <Link to="/electronic-components-supplier-hyderabad" className="hover:text-white transition-colors">Hyderabad</Link>
+              <Link to="/electronic-components-supplier-coimbatore" className="hover:text-white transition-colors">Coimbatore</Link>
               <span className="text-slate-600">|</span>
-              <Link to="/market-area" className="text-mirai-primary hover:text-white font-bold transition-colors">View all cities &rarr;</Link>
+              <Link to="/market-area" className="text-mirai-primary hover:text-white font-bold transition-colors">View all 25 industrial hubs &rarr;</Link>
             </div>
           </div>
 
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs gap-4 text-slate-600">
-           <p>&copy; 2026 Mirai Technologies. All rights reserved.</p>
-           <p className="text-right">
-             <a href="https://errorr.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">
-               Designed and Promoted By Errorr.in - Best Digital Marketing Company in India.
-             </a>
-           </p>
+           <p>&copy; 2026 Mirai Technologies. All rights reserved. Registered Address: B-1101, Kinjal Heights Wing B, Wadia Street, Near Tardeo Bus Terminal, Mumbai 400034.</p>
          </div>
 
       </div>

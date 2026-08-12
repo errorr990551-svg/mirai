@@ -6663,4 +6663,18 @@ export const getProductsByPriority = (catSlug) =>
     return (order[a.priority] ?? 1) - (order[b.priority] ?? 1);
   });
 
-export const getCategoryById = (id) => categories.find(c => c.id === id || c.slug === id);
+
+export const categoryAliasMap = {
+  "igbts": "mosfet-transistor",
+  "microcontrollers": "microcontroller",
+  "diodes-rectifiers": "transistor",
+  "transistors": "transistor",
+  "optocouplers": "transistor",
+  "passive-components": "electronic-components"
+};
+
+export const getCategoryById = (id) => {
+  const targetId = categoryAliasMap[id] || id;
+  return categories.find(c => c.id === targetId || c.slug === targetId || c.id === id || c.slug === id);
+};
+

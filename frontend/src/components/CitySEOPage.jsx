@@ -480,7 +480,7 @@ const CitySEOPage = ({ page }) => {
               <div>
                 <h2 className="text-2xl font-heading font-black text-slate-900 mb-6 flex items-center gap-3">
                   <span className="w-1.5 h-6 bg-mirai-primary rounded-full" />
-                  {page.h2s[0] || `Why Procurement Engineers in ${page.city} Trust Mirai Technologies`}
+                  {page.h2s?.[0] || `Why Procurement Engineers in ${page.city} Trust Mirai Technologies`}
                 </h2>
                  <div className="space-y-4">
                   {formatIntroText(page.introduction)}
@@ -517,7 +517,7 @@ const CitySEOPage = ({ page }) => {
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-900 mb-4">
-              {page.h2s[1] || `Semiconductor Products Available for Delivery to ${page.city}`}
+              {page.h2s?.[1] || `Semiconductor Products Available for Delivery to ${page.city}`}
             </h2>
             <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full" />
             <p className="mt-4 text-slate-500 text-sm sm:text-base font-semibold">
@@ -678,7 +678,7 @@ const CitySEOPage = ({ page }) => {
           
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-900 mb-4">
-              {page.h2s[2] || `Industries We Serve in ${page.city}`}
+              {page.h2s?.[2] || `Industries We Serve in ${page.city}`}
             </h2>
             <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full" />
           </div>
@@ -848,7 +848,7 @@ const CitySEOPage = ({ page }) => {
               </div>
               
               <h2 className="text-xl sm:text-2xl font-heading font-black text-slate-900 mb-6">
-                {page.h2s[3] || "Why Sourcing from an Authorised Distributor Matters"}
+                {page.h2s?.[3] || "Why Sourcing from an Independent B2B Stockist Matters"}
               </h2>
               
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base mb-6">
@@ -912,7 +912,7 @@ const CitySEOPage = ({ page }) => {
             
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-900 mb-4">
-                {page.h2s[5] || `Frequently Asked Questions — Component Supply in ${page.city}`}
+                {page.h2s?.[5] || `Frequently Asked Questions — Component Supply in ${page.city}`}
               </h2>
               <div className="w-16 h-1 bg-mirai-primary mx-auto rounded-full" />
             </div>
@@ -973,7 +973,7 @@ const CitySEOPage = ({ page }) => {
             {/* RFQ Text */}
             <div className="lg:col-span-5 space-y-6">
               <h2 className="text-3xl sm:text-4xl font-heading font-black tracking-tight leading-tight">
-                {page.h2s[4] || `Get a Quote for Components Delivered to ${page.city}`}
+                {page.h2s?.[4] || `Get a Quote for Components Delivered to ${page.city}`}
               </h2>
               
               <div className="text-slate-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">

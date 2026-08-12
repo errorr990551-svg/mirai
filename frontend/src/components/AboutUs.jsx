@@ -12,8 +12,8 @@ const AboutUs = () => {
 
   useEffect(() => {
     updateMeta(
-      'About Mirai Technologies | Authorized Semiconductor Distributor',
-      'Learn about Mirai Technologies, established in 1999. We are a leading authorized distributor and stockist of active and passive electronic components in Mumbai, India. We serve OEMs and EMS providers with factory traceable parts.',
+      'About Mirai Technologies | B2B Electronic Components Distributor',
+      'Learn about Mirai Technologies, established in 1999. Independent B2B stockist and distributor of active and passive electronic components in Mumbai, India. We serve OEMs and EMS providers with factory traceable parts.',
       'about mirai technologies, semiconductor distributor india, electronic component supplier mumbai, active components stockist, passive components distributor',
       'Mirai Technologies',
       'Mirai Technologies'
@@ -79,16 +79,16 @@ const AboutUs = () => {
                 variants={itemVariants}
                 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-8 leading-[1.1]"
               >
-                <span className="block text-slate-900">India's Most Trusted</span>
+                <span className="block text-slate-900">Independent B2B Stockist</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent mt-2">Electronic Components</span>
-                <span className="block text-slate-900 mt-2">Partner</span>
+                <span className="block text-slate-900 mt-2">Distributor Since 1999</span>
               </motion.h1>
               
               <motion.p 
                 variants={itemVariants}
                 className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
               >
-                Established in 1999 in Mumbai, Mirai Technologies has built 25+ years of expertise as a leading distributor of electronic components — serving OEMs, EMS companies, and industrial clients across India and globally.
+                Established in 1999 in Mumbai, Mirai Technologies brings over two decades of technical expertise as an independent stockist and distributor of active and passive components — serving OEMs, EMS companies, and industrial electronics manufacturers across India.
               </motion.p>
             </motion.div>
             

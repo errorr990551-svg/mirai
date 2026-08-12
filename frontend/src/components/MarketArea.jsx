@@ -8,12 +8,12 @@ import { updatePageSEO } from '../utils/seo';
 const MarketArea = () => {
   useEffect(() => {
     updatePageSEO(
-      'Market Area | India Cities We Serve | Mirai Technologies',
-      'Mirai Technologies authorized semiconductor distributor serves clients across all states and major cities in India. View our cities directory for genuine electronic components delivery.',
+      'Industrial Delivery Hubs & Regional Supply | Mirai Technologies',
+      'Mirai Technologies independent B2B stockist delivers electronic components to 25 primary industrial hubs and manufacturing clusters across India.',
       'https://miraitechnologies.net/market-area',
       'index, follow',
-      'Market Area | India Cities We Serve | Mirai Technologies',
-      'Mirai Technologies authorized semiconductor distributor serves clients across all states and major cities in India.',
+      'Industrial Delivery Hubs & Regional Supply | Mirai Technologies',
+      'Mirai Technologies independent B2B stockist delivers electronic components to 25 primary industrial hubs and manufacturing clusters across India.',
       'market area, cities we serve, electronics distributor india, semiconductor delivery cities, Mirai Technologies market area',
       'Mirai Technologies',
       'Mirai Technologies'
@@ -100,18 +100,39 @@ const MarketArea = () => {
 
               {/* Cities Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {citiesByState[state].map(page => (
-                  <Link 
-                    key={page.slug} 
-                    to={page.slug}
-                    className="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-100 hover:border-mirai-primary hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
-                  >
-                    <span className="text-sm font-semibold text-slate-600 group-hover:text-mirai-primary transition-colors">
-                      {page.city}
-                    </span>
-                    <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-mirai-primary group-hover:translate-x-0.5 transition-all duration-300" />
-                  </Link>
-                ))}
+                {citiesByState[state].map(page => {
+                  let label = page.city;
+                  if (page.isHQ) {
+                    label = `${page.city} (HQ)`;
+                  } else if (page.slug.includes('mosfets')) {
+                    label = `${page.city} - MOSFETs`;
+                  } else if (page.slug.includes('igbts')) {
+                    label = `${page.city} - IGBTs`;
+                  } else if (page.slug.includes('integrated-circuits')) {
+                    label = `${page.city} - ICs`;
+                  } else if (page.slug.includes('microcontrollers')) {
+                    label = `${page.city} - MCUs`;
+                  } else if (page.slug.includes('optocouplers')) {
+                    label = `${page.city} - Optocouplers`;
+                  } else if (page.slug.includes('regulators')) {
+                    label = `${page.city} - Regulators`;
+                  } else if (page.slug.includes('diodes')) {
+                    label = `${page.city} - Diodes`;
+                  }
+
+                  return (
+                    <Link 
+                      key={page.slug} 
+                      to={page.slug}
+                      className="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-100 hover:border-mirai-primary hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                    >
+                      <span className="text-sm font-semibold text-slate-700 group-hover:text-mirai-primary transition-colors">
+                        {label}
+                      </span>
+                      <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-mirai-primary group-hover:translate-x-0.5 transition-all duration-300 shrink-0" />
+                    </Link>
+                  );
+                })}
               </div>
             </motion.div>
           ))}

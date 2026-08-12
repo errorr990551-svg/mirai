@@ -28,6 +28,10 @@ import cityPages from './data/cityPages.json';
 
 
 
+import ApplicationsListPage from './components/ApplicationsListPage';
+import ApplicationPage from './components/ApplicationPage';
+import RedirectHandler from './components/RedirectHandler';
+
 function SitemapRedirect() {
   useEffect(() => {
     window.location.replace('/sitemap.xml');
@@ -39,7 +43,7 @@ function Home() {
   useEffect(() => {
     updateMeta(
       'Buy Electronic Components Online India | Mirai Technologies',
-      'Mirai Technologies – authorized distributor and stockist of active and passive electronic components in Mumbai since 1999. Genuine ICs, MOSFETs, transistors, microcontrollers, and optocouplers with pan-India delivery and GST invoice.',
+      'Mirai Technologies – independent stockist and distributor of active and passive electronic components in Mumbai since 1999. Genuine ICs, MOSFETs, transistors, microcontrollers, and optocouplers with pan-India delivery and GST invoice.',
       'electronic components, active electronic components, passive electronic components, semiconductor distributor, IC distributor, MOSFET supplier, transistor distributor, microcontroller dealer, optocoupler stockist, buy electronic components online, India, Mirai Technologies',
       'Mirai Technologies',
       'Mirai Technologies'
@@ -78,6 +82,7 @@ function App() {
     <ContactProvider>
       <Router>
         <ScrollToTop />
+        <RedirectHandler />
         <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
           <PopupForm />
           <ContactUnlockModal />
@@ -93,6 +98,8 @@ function App() {
             {/* Product detail – wildcard supports multi-segment slugs like /product/integrated-circuit/lm358ld08t */}
             <Route path="/product/*" element={<ProductDetailPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/applications" element={<ApplicationsListPage />} />
+            <Route path="/applications/:slug" element={<ApplicationPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/market-area" element={<MarketArea />} />
