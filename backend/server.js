@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import http from "node:http";
-import { httpServerHandler } from "cloudflare:node";
 import contactRoutes from "./routes/contactRoutes.js";
 import complaintRoutes from "./routes/complaintRoutes.js";
 import applicationRoutes from "./routes/applicationRoutes.js";
@@ -29,6 +28,24 @@ app.use("/api", contactRoutes);
 app.use("/api", complaintRoutes);
 app.use("/api", applicationRoutes);
 
+const PORT = process.env.PORT || 5000;
 const server = http.createServer(app);
 
-export default httpServerHandler(server);
+let cloudflareHandler = null;
+try {
+  const cloudflareNode = await import("cloudflare:node");
+  if (cloudflareNode?.httpServerHandler) {
+    cloudflareHandler = cloudflareNode.httpServerHandler(server);
+  }
+} catch (err) {
+  // Standard Node.js environment - cloudflare:node is not available
+}
+
+if (!cloudflareHandler) {
+  app.listen(PORT, () => {
+    console.log(`Backend server running locally on http://localhost:${PORT}`);
+  });
+}
+
+export default cloudflareHandler || app;
+

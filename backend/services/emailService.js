@@ -2,8 +2,13 @@ import { Resend } from "resend";
 
 export const sendMail = async ({ to, cc, subject, html, attachments = [] }) => {
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    const data = await resend.emails.send({
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      throw new Error("RESEND_API_KEY is not defined in process.env");
+    }
+
+    const resend = new Resend(apiKey);
+    const response = await resend.emails.send({
       from: "MIRAI <no-reply@inquiry.errorr.in>",
       to: Array.isArray(to) ? to : [to],
       cc: cc
@@ -19,10 +24,16 @@ export const sendMail = async ({ to, cc, subject, html, attachments = [] }) => {
       })),
     });
 
-    console.log("Resend response:", data);
-    return data;
+    if (response?.error) {
+      console.error("RESEND API ERROR RESPONSE:", response.error);
+      throw new Error(response.error.message || "Failed to send email via Resend API");
+    }
+
+    console.log("Resend response:", response.data || response);
+    return response.data || response;
   } catch (error) {
     console.error("RESEND ERROR:", error);
     throw error;
   }
 };
+
