@@ -53,7 +53,13 @@ export default cloudflareHandler
         if (env) {
           Object.assign(process.env, env);
         }
-        return cloudflareHandler.fetch(request, env, ctx);
+        if (typeof cloudflareHandler === "function") {
+          return cloudflareHandler(request, env, ctx);
+        }
+        if (typeof cloudflareHandler?.fetch === "function") {
+          return cloudflareHandler.fetch(request, env, ctx);
+        }
+        return cloudflareHandler(request, env, ctx);
       },
     }
   : app;
