@@ -10,7 +10,11 @@ export const sendMail = async ({ to, cc, subject, html, attachments = [], req, a
       globalThis.RESEND_API_KEY;
 
     if (!key) {
-      throw new Error("RESEND_API_KEY is not defined in process.env or Worker environment variables");
+      const keys = [];
+      if (process.env) keys.push(...Object.keys(process.env));
+      if (globalThis.env) keys.push(...Object.keys(globalThis.env));
+      if (req?.env) keys.push(...Object.keys(req.env));
+      throw new Error(`RESEND_API_KEY is not defined in process.env or Worker environment variables. (Found keys: [${[...new Set(keys)].join(', ')}])`);
     }
 
     const resend = new Resend(key);
