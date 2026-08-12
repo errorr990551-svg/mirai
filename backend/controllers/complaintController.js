@@ -16,6 +16,7 @@ export const submitComplaintForm = async (req, res) => {
 
     // Await email sending so Cloudflare Worker completes Resend API request
     await sendMail({
+      req,
       to: "sales@miraitechnologies.net",
       cc: [
         "akshat99055@gmail.com",

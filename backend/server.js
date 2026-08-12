@@ -52,6 +52,11 @@ export default cloudflareHandler
       async fetch(request, env, ctx) {
         if (env) {
           Object.assign(process.env, env);
+          globalThis.env = env;
+          if (env.RESEND_API_KEY) {
+            process.env.RESEND_API_KEY = env.RESEND_API_KEY;
+            globalThis.RESEND_API_KEY = env.RESEND_API_KEY;
+          }
         }
         if (typeof cloudflareHandler === "function") {
           return cloudflareHandler(request, env, ctx);

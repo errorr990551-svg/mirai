@@ -1,9 +1,15 @@
 import { Resend } from "resend";
 
-export const sendMail = async ({ to, cc, subject, html, attachments = [] }) => {
+export const sendMail = async ({ to, cc, subject, html, attachments = [], req, apiKey }) => {
   try {
-    const apiKey = process.env.RESEND_API_KEY || globalThis.RESEND_API_KEY || globalThis.env?.RESEND_API_KEY;
-    if (!apiKey) {
+    const key = 
+      apiKey || 
+      req?.env?.RESEND_API_KEY || 
+      process.env.RESEND_API_KEY || 
+      globalThis.env?.RESEND_API_KEY || 
+      globalThis.RESEND_API_KEY;
+
+    if (!key) {
       throw new Error("RESEND_API_KEY is not defined in process.env or Worker environment variables");
     }
 

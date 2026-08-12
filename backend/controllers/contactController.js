@@ -14,6 +14,7 @@ export const submitContactForm = async (req, res) => {
 
     // Await email sending so Cloudflare Worker does not freeze before HTTP fetch completes
     await sendMail({
+      req,
       to: "sales@miraitechnologies.net",
       cc: [
         "akshat99055@gmail.com",
