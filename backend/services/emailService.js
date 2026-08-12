@@ -13,7 +13,7 @@ export const sendMail = async ({ to, cc, subject, html, attachments = [], req, a
       throw new Error("RESEND_API_KEY is not defined in process.env or Worker environment variables");
     }
 
-    const resend = new Resend(apiKey);
+    const resend = new Resend(key);
     const response = await resend.emails.send({
       from: "MIRAI <no-reply@inquiry.errorr.in>",
       to: Array.isArray(to) ? to : [to],
