@@ -375,7 +375,7 @@ const contactBody = `
   <p>Sourcing components for an upcoming production run? Submit your RFQ, BOM, or part number list today. Our engineering and sales team will respond with competitive pricing, availability, and traceability within 24 hours.</p>
   
   <h2>Contact Information</h2>
-  <p><strong>Phone / WhatsApp:</strong> +91 93213 98188 / +91 98201 22744 / +91 91368 10360</p>
+  <p><strong>Phone:</strong> +91 93213 98188 / +91 98201 22744 / +91 91368 10360</p>
   <p><strong>Email Address:</strong> sales@miraitechnologies.net / nehas@miraitechnologies.net</p>
   
   <h2>Corporate & Shipping Addresses</h2>
@@ -537,7 +537,6 @@ products.forEach(product => {
     <p><strong>Minimum Order Quantity (MOQ):</strong> ${product.moq} pcs</p>
     <p><strong>Stock Position:</strong> ${product.stockStatus}</p>
     <p><strong>GST Compliance:</strong> ${product.gstRate}</p>
-    <p><a href="${product.whatsappUrl}" target="_blank" style="display: inline-block; background-color: #25d366; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px;">Enquire via WhatsApp</a></p>
     
     ${product.datasheetUrl ? `<h2>Datasheet Link</h2><p><a href="${product.datasheetUrl}" target="_blank">Download official ${product.partNumber} Datasheet (PDF)</a></p>` : ''}
     

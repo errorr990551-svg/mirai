@@ -159,7 +159,7 @@ const Contact = () => {
                           <Phone className="w-6 h-6 text-mirai-primary" />
                         </div>
                         <div>
-                          <div className="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1">Phone / WhatsApp</div>
+                          <div className="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1">Phone</div>
                           <div className="font-medium text-lg">+91 93213 98188</div>
                           <div className="font-medium text-lg">+91 98201 22744</div>
                           <div className="font-medium text-lg">+91 91368 10360</div>

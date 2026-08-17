@@ -325,7 +325,7 @@ export const products = [
       },
       {
         "q": "Can I buy LM358L-D08-T in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM358L-D08-T. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM358L-D08-T. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -407,7 +407,7 @@ export const products = [
       },
       {
         "q": "Can I buy ULN2003L-D16-T in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ULN2003L-D16-T. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ULN2003L-D16-T. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -490,7 +490,7 @@ export const products = [
       },
       {
         "q": "Can I buy 4N33M in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 4N33M. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 4N33M. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -575,7 +575,7 @@ export const products = [
       },
       {
         "q": "Can I buy STM8S003F3P6TR in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on STM8S003F3P6TR. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on STM8S003F3P6TR. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -667,7 +667,7 @@ export const products = [
       },
       {
         "q": "Can I buy DS1307 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DS1307. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DS1307. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -768,7 +768,7 @@ export const products = [
       },
       {
         "q": "Can I buy LM339L-D14-T in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM339L-D14-T. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM339L-D14-T. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -851,7 +851,7 @@ export const products = [
       },
       {
         "q": "Can I buy ICL8038CCPD in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ICL8038CCPD. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ICL8038CCPD. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -924,7 +924,7 @@ export const products = [
       },
       {
         "q": "Can I buy SN74LS06N in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on SN74LS06N. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on SN74LS06N. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -997,7 +997,7 @@ export const products = [
       },
       {
         "q": "Can I buy DS12C887 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DS12C887. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DS12C887. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1072,7 +1072,7 @@ export const products = [
       },
       {
         "q": "Can I buy OP07CP in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on OP07CP. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on OP07CP. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1146,7 +1146,7 @@ export const products = [
       },
       {
         "q": "Can I buy UA741CP in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on UA741CP. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on UA741CP. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1219,7 +1219,7 @@ export const products = [
       },
       {
         "q": "Can I buy LNK364PN in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LNK364PN. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LNK364PN. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1294,7 +1294,7 @@ export const products = [
       },
       {
         "q": "Can I buy MOC3023M in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MOC3023M. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MOC3023M. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1376,7 +1376,7 @@ export const products = [
       },
       {
         "q": "Can I buy FL7733AMX in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on FL7733AMX. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on FL7733AMX. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1451,7 +1451,7 @@ export const products = [
       },
       {
         "q": "Can I buy CH340G in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CH340G. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CH340G. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1525,7 +1525,7 @@ export const products = [
       },
       {
         "q": "Can I buy AD633JN in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AD633JN. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AD633JN. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1599,7 +1599,7 @@ export const products = [
       },
       {
         "q": "Can I buy SN74HC541DWR in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on SN74HC541DWR. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on SN74HC541DWR. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1672,7 +1672,7 @@ export const products = [
       },
       {
         "q": "Can I buy HEF4049BT in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HEF4049BT. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HEF4049BT. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1746,7 +1746,7 @@ export const products = [
       },
       {
         "q": "Can I buy ULN2003D in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ULN2003D. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ULN2003D. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1846,7 +1846,7 @@ export const products = [
       },
       {
         "q": "Can I buy CD4046BE in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4046BE. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4046BE. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1919,7 +1919,7 @@ export const products = [
       },
       {
         "q": "Can I buy LM2902DT in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2902DT. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2902DT. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -1992,7 +1992,7 @@ export const products = [
       },
       {
         "q": "Can I buy ADS1230IPW in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ADS1230IPW. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ADS1230IPW. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2065,7 +2065,7 @@ export const products = [
       },
       {
         "q": "Can I buy 74HC245D in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 74HC245D. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 74HC245D. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2138,7 +2138,7 @@ export const products = [
       },
       {
         "q": "Can I buy M57962L in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on M57962L. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on M57962L. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2211,7 +2211,7 @@ export const products = [
       },
       {
         "q": "Can I buy CS5460A in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CS5460A. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CS5460A. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2285,7 +2285,7 @@ export const products = [
       },
       {
         "q": "Can I buy Si2302 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on Si2302. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on Si2302. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2358,7 +2358,7 @@ export const products = [
       },
       {
         "q": "Can I buy LF357N in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LF357N. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LF357N. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2431,7 +2431,7 @@ export const products = [
       },
       {
         "q": "Can I buy AT28C16B in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT28C16B. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT28C16B. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2506,7 +2506,7 @@ export const products = [
       },
       {
         "q": "Can I buy IRFP4668 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFP4668. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFP4668. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2598,7 +2598,7 @@ export const products = [
       },
       {
         "q": "Can I buy IRF4668 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRF4668. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRF4668. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2681,7 +2681,7 @@ export const products = [
       },
       {
         "q": "Can I buy IRFP460 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFP460. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFP460. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2764,7 +2764,7 @@ export const products = [
       },
       {
         "q": "Can I buy P55NF06 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on P55NF06. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on P55NF06. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2837,7 +2837,7 @@ export const products = [
       },
       {
         "q": "Can I buy STW4N150 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on STW4N150. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on STW4N150. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2909,7 +2909,7 @@ export const products = [
       },
       {
         "q": "Can I buy DOPF20N65 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DOPF20N65. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DOPF20N65. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -2982,7 +2982,7 @@ export const products = [
       },
       {
         "q": "Can I buy L7824CV in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on L7824CV. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on L7824CV. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3054,7 +3054,7 @@ export const products = [
       },
       {
         "q": "Can I buy 16TTS12 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 16TTS12. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 16TTS12. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3125,7 +3125,7 @@ export const products = [
       },
       {
         "q": "Can I buy 40TPS12 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 40TPS12. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 40TPS12. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3197,7 +3197,7 @@ export const products = [
       },
       {
         "q": "Can I buy DOP90NF06 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DOP90NF06. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DOP90NF06. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3269,7 +3269,7 @@ export const products = [
       },
       {
         "q": "Can I buy UTC4N80L in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on UTC4N80L. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on UTC4N80L. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3341,7 +3341,7 @@ export const products = [
       },
       {
         "q": "Can I buy K1500 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on K1500. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on K1500. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3413,7 +3413,7 @@ export const products = [
       },
       {
         "q": "Can I buy GT40J121 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on GT40J121. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on GT40J121. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3485,7 +3485,7 @@ export const products = [
       },
       {
         "q": "Can I buy A7847 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on A7847. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on A7847. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3558,7 +3558,7 @@ export const products = [
       },
       {
         "q": "Can I buy 17N80C3 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 17N80C3. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 17N80C3. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3631,7 +3631,7 @@ export const products = [
       },
       {
         "q": "Can I buy 20D511K in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 20D511K. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 20D511K. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3713,7 +3713,7 @@ export const products = [
       },
       {
         "q": "Can I buy IRF9Z24N in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRF9Z24N. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRF9Z24N. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3795,7 +3795,7 @@ export const products = [
       },
       {
         "q": "Can I buy IRFZ24N in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFZ24N. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFZ24N. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3877,7 +3877,7 @@ export const products = [
       },
       {
         "q": "Can I buy CD4051BE in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4051BE. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4051BE. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -3950,7 +3950,7 @@ export const products = [
       },
       {
         "q": "Can I buy BT139 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on BT139. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on BT139. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4032,7 +4032,7 @@ export const products = [
       },
       {
         "q": "Can I buy IRFB4227 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFB4227. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IRFB4227. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4104,7 +4104,7 @@ export const products = [
       },
       {
         "q": "Can I buy FGL60N100 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on FGL60N100. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on FGL60N100. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4176,7 +4176,7 @@ export const products = [
       },
       {
         "q": "Can I buy 75N60 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 75N60. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on 75N60. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4250,7 +4250,7 @@ export const products = [
       },
       {
         "q": "Can I buy NTC10D11 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on NTC10D11. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on NTC10D11. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4334,7 +4334,7 @@ export const products = [
       },
       {
         "q": "Can I buy MJE2955T in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MJE2955T. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MJE2955T. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4407,7 +4407,7 @@ export const products = [
       },
       {
         "q": "Can I buy HEF4081BP in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HEF4081BP. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HEF4081BP. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4478,7 +4478,7 @@ export const products = [
       },
       {
         "q": "Can I buy F4N65 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on F4N65. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on F4N65. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4551,7 +4551,7 @@ export const products = [
       },
       {
         "q": "Can I buy CD4001BE in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4001BE. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4001BE. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4624,7 +4624,7 @@ export const products = [
       },
       {
         "q": "Can I buy ULN2804A in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ULN2804A. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ULN2804A. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4705,7 +4705,7 @@ export const products = [
       },
       {
         "q": "Can I buy A2031 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on A2031. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on A2031. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4779,7 +4779,7 @@ export const products = [
       },
       {
         "q": "Can I buy EL817C in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on EL817C. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on EL817C. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4862,7 +4862,7 @@ export const products = [
       },
       {
         "q": "Can I buy LM2596R5 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2596R5. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2596R5. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -4944,7 +4944,7 @@ export const products = [
       },
       {
         "q": "Can I buy LM2576ADJ in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2576ADJ. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2576ADJ. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5026,7 +5026,7 @@ export const products = [
       },
       {
         "q": "Can I buy LM2596R5v2 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2596R5v2. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on LM2596R5v2. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5104,7 +5104,7 @@ export const products = [
       },
       {
         "q": "Can I buy ATMEGA32A-AU in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ATMEGA32A-AU. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ATMEGA32A-AU. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5189,7 +5189,7 @@ export const products = [
       },
       {
         "q": "Can I buy AT89S52 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT89S52. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT89S52. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5273,7 +5273,7 @@ export const products = [
       },
       {
         "q": "Can I buy MG82F6D17AE20 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MG82F6D17AE20. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MG82F6D17AE20. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5348,7 +5348,7 @@ export const products = [
       },
       {
         "q": "Can I buy STM8S003K3T6 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on STM8S003K3T6. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on STM8S003K3T6. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5421,7 +5421,7 @@ export const products = [
       },
       {
         "q": "Can I buy AT89S5224PU in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT89S5224PU. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT89S5224PU. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5495,7 +5495,7 @@ export const products = [
       },
       {
         "q": "Can I buy IN1307DT in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IN1307DT. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on IN1307DT. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5577,7 +5577,7 @@ export const products = [
       },
       {
         "q": "Can I buy PCF85163T in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on PCF85163T. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on PCF85163T. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5650,7 +5650,7 @@ export const products = [
       },
       {
         "q": "Can I buy TBD62083APG in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on TBD62083APG. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on TBD62083APG. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5724,7 +5724,7 @@ export const products = [
       },
       {
         "q": "Can I buy CD4011BE in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4011BE. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4011BE. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5807,7 +5807,7 @@ export const products = [
       },
       {
         "q": "Can I buy CD4060BL in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4060BL. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4060BL. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5881,7 +5881,7 @@ export const products = [
       },
       {
         "q": "Can I buy SN74HCT00N in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on SN74HCT00N. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on SN74HCT00N. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -5955,7 +5955,7 @@ export const products = [
       },
       {
         "q": "Can I buy CD4047BE in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4047BE. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD4047BE. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6038,7 +6038,7 @@ export const products = [
       },
       {
         "q": "Can I buy AT24C16 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT24C16. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on AT24C16. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6114,7 +6114,7 @@ export const products = [
       },
       {
         "q": "Can I buy ATMEGA16A-PU in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ATMEGA16A-PU. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on ATMEGA16A-PU. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6196,7 +6196,7 @@ export const products = [
       },
       {
         "q": "Can I buy BYQ28E200 in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on BYQ28E200. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on BYQ28E200. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6266,7 +6266,7 @@ export const products = [
       },
       {
         "q": "Can I buy NSIP83086CD in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on NSIP83086CD. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on NSIP83086CD. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6338,7 +6338,7 @@ export const products = [
       },
       {
         "q": "Can I buy CD74HC4514E in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD74HC4514E. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on CD74HC4514E. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6410,7 +6410,7 @@ export const products = [
       },
       {
         "q": "Can I buy HCF4075BEY in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HCF4075BEY. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HCF4075BEY. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6482,7 +6482,7 @@ export const products = [
       },
       {
         "q": "Can I buy HCF4097BE in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HCF4097BE. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on HCF4097BE. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6554,7 +6554,7 @@ export const products = [
       },
       {
         "q": "Can I buy MB6S in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MB6S. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on MB6S. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
@@ -6626,7 +6626,7 @@ export const products = [
       },
       {
         "q": "Can I buy DOPF2N65C in bulk from Mirai Technologies?",
-        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DOPF2N65C. Contact via WhatsApp +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
+        "a": "Yes, Mirai Technologies offers bulk/OEM pricing on DOPF2N65C. Contact us at +917942964662 or fill our enquiry form. GST invoice provided. Same-day dispatch on in-stock orders."
       }
     ],
     "heroImage": {
