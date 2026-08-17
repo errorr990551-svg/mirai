@@ -5,7 +5,7 @@ export const sendMail = async ({ to, cc, subject, html, attachments = [], req, a
     const key = 
       apiKey || 
       req?.env?.RESEND_API_KEY || 
-      process.env.RESEND_API_KEY || 
+      process.env?.RESEND_API_KEY || 
       globalThis.env?.RESEND_API_KEY || 
       globalThis.RESEND_API_KEY;
 

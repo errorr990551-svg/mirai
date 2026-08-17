@@ -21,6 +21,19 @@ app.use(
 
 app.use(express.json());
 
+// Express middleware to ensure env vars are attached to process.env and req.env on every HTTP request
+app.use((req, res, next) => {
+  const currentEnv = globalThis.env || {};
+  req.env = currentEnv;
+  if (currentEnv && typeof currentEnv === "object") {
+    for (const key of Object.keys(currentEnv)) {
+      try { process.env[key] = currentEnv[key]; } catch (e) {}
+      try { globalThis[key] = currentEnv[key]; } catch (e) {}
+    }
+  }
+  next();
+});
+
 app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
@@ -47,17 +60,6 @@ if (!cloudflareHandler) {
     console.log(`Backend server running locally on http://localhost:${PORT}`);
   });
 }
-
-// Express middleware to ensure env vars are attached to process.env on every HTTP request
-app.use((req, res, next) => {
-  if (globalThis.env && typeof globalThis.env === "object") {
-    for (const key of Object.keys(globalThis.env)) {
-      try { process.env[key] = globalThis.env[key]; } catch (e) {}
-      try { globalThis[key] = globalThis.env[key]; } catch (e) {}
-    }
-  }
-  next();
-});
 
 export default cloudflareHandler
   ? {
