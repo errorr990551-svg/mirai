@@ -72,10 +72,11 @@ function mdToHtml(md) {
 const ORG_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://miraitechnologies.net/#organization",
   "name": "Mirai Technologies",
-  "url": "https://miraitechnologies.net",
+  "url": "https://miraitechnologies.net/",
   "logo": "https://miraitechnologies.net/images/mirai-technologies-logo.webp",
-  "description": "Authorized distributor of ICs, MOSFETs, transistors, optocouplers & microcontrollers. Mumbai, India. Est. 1999.",
+  "description": "Independent B2B stockist and distributor of ICs, MOSFETs, IGBTs, transistors, optocouplers & microcontrollers in Mumbai, India. Est. 1999.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "B-1101, Kinjal Heights Wing B, Wadia Street, Near Tardeo Bus Terminal",
@@ -86,9 +87,11 @@ const ORG_SCHEMA = {
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+917942964662",
+    "telephone": "+91-93213-98188",
     "contactType": "sales",
-    "areaServed": "IN"
+    "email": "sales@miraitechnologies.net",
+    "areaServed": "IN",
+    "availableLanguage": ["en", "hi", "mr"]
   },
   "sameAs": ["https://www.indiamart.com/mirai-technologies/"]
 };

@@ -100,12 +100,11 @@ export function injectOrganizationSchema() {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://miraitechnologies.net/#organization",
     "name": "Mirai Technologies",
-    "legalName": "Mirai Technologies",
-    "url": "https://miraitechnologies.net",
+    "url": "https://miraitechnologies.net/",
     "logo": "https://miraitechnologies.net/images/mirai-technologies-logo.webp",
     "description": "Independent B2B stockist and distributor of ICs, MOSFETs, IGBTs, transistors, optocouplers & microcontrollers in Mumbai, India. Est. 1999.",
-    "foundingDate": "1999",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "B-1101, Kinjal Heights Wing B, Wadia Street, Near Tardeo Bus Terminal",
@@ -118,6 +117,7 @@ export function injectOrganizationSchema() {
       "@type": "ContactPoint",
       "telephone": "+91-93213-98188",
       "contactType": "sales",
+      "email": "sales@miraitechnologies.net",
       "areaServed": "IN",
       "availableLanguage": ["en", "hi", "mr"]
     },
@@ -146,7 +146,7 @@ export function injectOrganizationSchema() {
       "latitude": 18.9712,
       "longitude": 72.8152
     },
-    "url": "https://miraitechnologies.net",
+    "url": "https://miraitechnologies.net/",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
