@@ -58,18 +58,22 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Categories */}
+            {/* Categories & Distributor Pages */}
             <div>
               <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
-                Categories
+                Distributor Hubs
                 <span className="absolute bottom-[-4px] left-0 w-8 h-0.5 bg-mirai-primary"></span>
               </h3>
-              <ul className="space-y-4 text-sm">
-                <li><Link to="/products/integrated-circuit" className="hover:text-white transition-colors">Integrated Circuits</Link></li>
-                <li><Link to="/products/mosfet-transistor" className="hover:text-white transition-colors">Power MOSFETs</Link></li>
-                <li><Link to="/products/igbts" className="hover:text-white transition-colors">IGBTs &amp; Thyristors</Link></li>
-                <li><Link to="/products/microcontrollers" className="hover:text-white transition-colors">Microcontrollers</Link></li>
-                <li><Link to="/products/diodes-rectifiers" className="hover:text-white transition-colors">Diodes &amp; Rectifiers</Link></li>
+              <ul className="space-y-3 text-xs">
+                <li><Link to="/authorized-distributor-brands" className="hover:text-white font-bold text-mirai-primary transition-colors">Authorized Brands</Link></li>
+                <li><Link to="/mosfet-distributor" className="hover:text-white transition-colors">Power MOSFET Distributor</Link></li>
+                <li><Link to="/transistor-distributor" className="hover:text-white transition-colors">Transistor Distributor</Link></li>
+                <li><Link to="/igbt-distributor" className="hover:text-white transition-colors">IGBT Distributor</Link></li>
+                <li><Link to="/ic-distributor" className="hover:text-white transition-colors">IC Distributor</Link></li>
+                <li><Link to="/microcontroller-distributor" className="hover:text-white transition-colors">Microcontroller Distributor</Link></li>
+                <li><Link to="/voltage-regulator-distributor" className="hover:text-white transition-colors">Voltage Regulator ICs</Link></li>
+                <li><Link to="/diode-rectifier-distributor" className="hover:text-white transition-colors">Diodes &amp; Rectifiers</Link></li>
+                <li><Link to="/optocoupler-distributor" className="hover:text-white transition-colors">Optocouplers</Link></li>
               </ul>
             </div>
  

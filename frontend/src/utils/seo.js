@@ -23,7 +23,17 @@ export function updatePageSEO(title, description, canonical, robots, ogTitle, og
     linkCanonical.rel = 'canonical';
     document.head.appendChild(linkCanonical);
   }
-  linkCanonical.href = canonical || (`https://miraitechnologies.net` + window.location.pathname);
+  const rawPath = window.location.pathname;
+  const cleanPath = (rawPath.length > 1 && rawPath.endsWith('/')) ? rawPath.slice(0, -1) : rawPath;
+  let defaultCanonical = `https://miraitechnologies.net` + cleanPath;
+  if (canonical) {
+    let cleanCanonical = canonical.trim();
+    if (cleanCanonical.length > 25 && cleanCanonical.endsWith('/')) {
+      cleanCanonical = cleanCanonical.slice(0, -1);
+    }
+    defaultCanonical = cleanCanonical;
+  }
+  linkCanonical.href = defaultCanonical;
 
   let metaOgTitle = document.querySelector('meta[property="og:title"]');
   if (!metaOgTitle) {
@@ -335,3 +345,19 @@ export function injectApplicationSchema(application) {
   updateSchemaScripts([articleSchema, breadcrumbSchema]);
 }
 
+export function injectFAQSchema(faqs = []) {
+  if (!faqs || faqs.length === 0) return;
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q || faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a || faq.answer
+      }
+    }))
+  };
+  updateSchemaScripts([faqSchema]);
+}

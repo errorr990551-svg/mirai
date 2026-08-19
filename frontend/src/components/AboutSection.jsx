@@ -90,17 +90,88 @@ const AboutSection = () => {
             </div>
             
             {/* CTA Button */}
-            <Link 
-              to="/about" 
-              className="inline-flex items-center gap-2 bg-mirai-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all hover:shadow-lg hover:-translate-y-0.5 group shadow-md shadow-blue-500/20"
-            >
-              About Company <span className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link 
+                to="/about" 
+                className="inline-flex items-center gap-2 bg-mirai-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all hover:shadow-lg hover:-translate-y-0.5 group shadow-md shadow-blue-500/20"
+              >
+                About Company <span className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+              </Link>
+              <Link 
+                to="/authorized-distributor-brands" 
+                className="inline-flex items-center gap-2 bg-slate-900 text-white font-semibold px-6 py-4 rounded-xl hover:bg-slate-800 transition-all shadow-md"
+              >
+                View Authorized Brands &rarr;
+              </Link>
+            </div>
           </motion.div>
           
         </div>
+
+        {/* What We Distribute - 8 Category Grid */}
+        <div className="mt-24 pt-16 border-t border-slate-100">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-mirai-primary font-bold text-xs tracking-widest uppercase mb-2">Core Semiconductor Offerings</p>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">What We Distribute</h3>
+            <p className="text-slate-600 text-sm mt-2">
+              Browse our authorized distribution lines with 100% factory traceability, low MOQs, and direct GST billing.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            <Link to="/mosfet-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">Power MOSFETs</div>
+              <p className="text-xs text-slate-500 mt-1">Infineon, ST, ON Semi, IR, Vishay</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+
+            <Link to="/transistor-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">Transistors (BJT)</div>
+              <p className="text-xs text-slate-500 mt-1">NPN, PNP, Darlington Pairs</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+
+            <Link to="/igbt-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">IGBT Modules &amp; Discrete</div>
+              <p className="text-xs text-slate-500 mt-1">Solar Inverters &amp; EV Traction</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+
+            <Link to="/ic-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">Integrated Circuits (ICs)</div>
+              <p className="text-xs text-slate-500 mt-1">279+ Stocked Part Numbers</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+
+            <Link to="/microcontroller-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">Microcontrollers (MCUs)</div>
+              <p className="text-xs text-slate-500 mt-1">Microchip, ST, NXP, TI Lines</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+
+            <Link to="/voltage-regulator-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">Voltage Regulators</div>
+              <p className="text-xs text-slate-500 mt-1">Linear LDO &amp; Switching ICs</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+
+            <Link to="/diode-rectifier-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">Diodes &amp; Rectifiers</div>
+              <p className="text-xs text-slate-500 mt-1">Schottky, TVS &amp; Bridge Modules</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+
+            <Link to="/optocoupler-distributor" className="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:border-mirai-primary hover:shadow-md transition-all group">
+              <div className="font-extrabold text-slate-900 text-base group-hover:text-mirai-primary">Optocouplers</div>
+              <p className="text-xs text-slate-500 mt-1">High-Voltage Signal Isolation</p>
+              <span className="text-[11px] text-mirai-primary font-bold mt-3 inline-flex items-center gap-1">Distributor Brief &rarr;</span>
+            </Link>
+          </div>
+        </div>
+
       </div>
     </section>
+
   );
 };
 

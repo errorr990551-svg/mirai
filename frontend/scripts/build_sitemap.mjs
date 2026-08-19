@@ -33,13 +33,30 @@ function addUrl(loc, priority = '0.5', changefreq = 'weekly') {
   xml += `  </url>\n`;
 }
 
-// Add static pages
+import { applicationsData } from '../src/data/applicationsData.js';
+
+// Add static & pillar pages
 addUrl('/', '1.0', 'daily');
 addUrl('/about', '0.8', 'monthly');
 addUrl('/certificate', '0.8', 'monthly');
 addUrl('/contact', '0.8', 'monthly');
 addUrl('/products', '0.8', 'daily');
 addUrl('/blog', '0.8', 'daily');
+addUrl('/applications', '0.8', 'weekly');
+addUrl('/authorized-distributor-brands', '0.9', 'weekly');
+addUrl('/mosfet-distributor', '0.9', 'weekly');
+addUrl('/transistor-distributor', '0.8', 'weekly');
+addUrl('/microcontroller-distributor', '0.8', 'weekly');
+addUrl('/voltage-regulator-distributor', '0.8', 'weekly');
+addUrl('/diode-rectifier-distributor', '0.8', 'weekly');
+addUrl('/optocoupler-distributor', '0.8', 'weekly');
+addUrl('/igbt-distributor', '0.9', 'weekly');
+addUrl('/ic-distributor', '0.9', 'weekly');
+
+// Add application guides
+applicationsData.forEach(app => {
+  addUrl(`/applications/${app.slug}`, '0.8', 'weekly');
+});
 
 // Add category pages
 categories.filter(category => products.some(p => p.category === category.slug)).forEach(category => {

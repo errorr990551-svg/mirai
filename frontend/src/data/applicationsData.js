@@ -184,5 +184,96 @@ export const applicationsData = [
       { partNumber: 'BT136', category: 'TRIAC', specs: '600V 4A Sensitive Gate TO-220', application: 'Mains Changeover & Battery Charger Control', slug: 'igbts' },
       { partNumber: 'LM7805', category: 'Voltage Regulator', specs: '5V 1.5A TO-220', application: 'Microcontroller 5V Supply Rail', slug: 'integrated-circuit' }
     ]
+  },
+  {
+    slug: 'mosfet-igbt-for-ev',
+    title: 'MOSFETs & IGBTs for EV Design | Distributor for EV Manufacturers',
+    metaTitle: 'MOSFETs & IGBTs for EV Design | Distributor for EV Manufacturers — Mirai Technologies',
+    metaDescription: 'Power MOSFET & IGBT distributor for EV motor drives, chargers & battery management systems. Genuine stock from Infineon, ON Semi & more. RFQ-based pricing.',
+    primaryKeyword: 'MOSFET IGBT distributor for EV manufacturers',
+    secondaryKeywords: 'power electronics components for EV design, ev charger mosfet india, ev traction inverter igbt',
+    author: 'Senior Applications Specialist, E-Mobility',
+    heroContent: 'Technical component sourcing guide for electric vehicle traction inverters, on-board chargers (OBC), battery management systems (BMS), and DC-DC converters.',
+    sections: [
+      {
+        heading: 'Why Component Sourcing Matters for EV Programs',
+        content: 'Electric vehicle powertrains and charging subsystems operate under harsh thermal stress, continuous high-current pulses, and strict automotive safety standards. Sourcing authentic, fully traceable power MOSFETs and IGBTs directly from authorized distribution channels eliminates the risk of premature semiconductor failure, counterfeit devices, and costly assembly line downtime.'
+      },
+      {
+        heading: 'Key Power Semiconductors for Electric Vehicles',
+        content: 'EV traction inverters require high-voltage, high-current power devices (such as 650V to 1200V IGBT modules and SiC MOSFETs) operating at high switching efficiency. Battery Management Systems (BMS) utilize low Rds(on) power MOSFETs for cell balancing and solid-state disconnect switching. Fast optical isolation gate drivers protect low-voltage control ICs from high-voltage battery transients.'
+      },
+      {
+        heading: 'Brands Stocked for Automotive & EV Engineering',
+        content: 'Mirai Technologies stocks genuine power semiconductors from top manufacturers including STMicroelectronics, Infineon Technologies, ON Semiconductor (onsemi), Vishay, and International Rectifier. Full factory Certificate of Conformance (CoC), date code traceability, and GST invoicing accompany all shipments.'
+      }
+    ],
+    bom: [
+      { partNumber: 'IRFP4668', category: 'Power MOSFET', specs: '200V 130A N-Ch TO-247', application: 'High-Current Battery Disconnect & BMS Switch', slug: 'mosfet-transistor' },
+      { partNumber: 'FGL60N100', category: 'Discrete IGBT', specs: '1000V 60A NPT TO-247', application: 'EV Traction Inverter & Main Drive Stage', slug: 'igbts' },
+      { partNumber: 'STP55NF06', category: 'Power MOSFET', specs: '60V 50A TO-220', application: 'Low-Voltage Auxiliary DC-DC Switch', slug: 'mosfet-transistor' },
+      { partNumber: 'PC817', category: 'Optocoupler', specs: 'Phototransistor DIP-4', application: 'Galvanic Signal Isolation for BMS Logic', slug: 'optocouplers' }
+    ]
+  },
+  {
+    slug: 'components-for-renewable-energy',
+    title: 'Electronic Components for Renewable Energy & Solar Inverters',
+    metaTitle: 'Electronic Components for Renewable Energy & Solar Inverters — Mirai Technologies',
+    metaDescription: 'MOSFET, IGBT & IC distributor for solar inverter and renewable energy manufacturers in India. Genuine stock, low MOQ, GST invoice.',
+    primaryKeyword: 'electronic components for renewable energy projects',
+    secondaryKeywords: 'solar inverter MOSFET IGBT supplier India, MPPT components, grid tie inverter power semiconductors',
+    author: 'Senior Solar Systems Engineer',
+    heroContent: 'Comprehensive sourcing guide for photovoltaic (PV) solar inverters, wind energy converters, and energy storage systems (ESS). High-voltage MOSFETs, IGBTs, voltage regulators, and ICs.',
+    sections: [
+      {
+        heading: 'Component Reliability in Solar & Renewable Systems',
+        content: 'Solar string inverters and energy storage converters operate outdoors continuously under high ambient temperatures and solar radiation. High efficiency (>98%) is required to maximize solar energy yield. Utilizing low-loss power MOSFETs and robust IGBT modules in MPPT boost converters and grid-synchronous inverter stages guarantees multi-year operational reliability.'
+      },
+      {
+        heading: 'Essential Power Devices for Solar Inverter Topologies',
+        content: 'MPPT boost stages require 650V to 1500V N-channel MOSFETs capable of handling high DC input voltages from PV strings. The main DC-AC inversion bridge relies on 600V/1200V IGBTs for efficient sine-wave synthesis. Auxiliary power supplies and control units utilize linear/switching voltage regulators (LM7805, LM317) and precision quad comparators (LM339).'
+      },
+      {
+        heading: 'Sourcing & BOM Optimization for Renewable Energy Manufacturers',
+        content: 'Mirai Technologies delivers low-MOQ flexibility, scheduled buffer stock, and fast dispatch across India for solar inverter OEM and EMS manufacturers. All parts ship with manufacturer lot traceability and GST documentation.'
+      }
+    ],
+    bom: [
+      { partNumber: 'STW4N150', category: 'Power MOSFET', specs: '1500V 4A N-Ch TO-247', application: 'High-Voltage Auxiliary SMPS Switch', slug: 'mosfet-transistor' },
+      { partNumber: 'IRFP460', category: 'Power MOSFET', specs: '500V 20A N-Ch TO-247', application: 'MPPT Boost Stage Power Switch', slug: 'mosfet-transistor' },
+      { partNumber: 'FGL60N100', category: 'Discrete IGBT', specs: '1000V 60A TO-247', application: 'Grid-Tie Full Bridge Inverter Stage', slug: 'igbts' },
+      { partNumber: 'LM339', category: 'Comparator IC', specs: 'Quad Voltage Comparator DIP-14', application: 'Grid Voltage Monitoring & Protection', slug: 'integrated-circuit' }
+    ]
+  },
+  {
+    slug: 'industrial-automation-components',
+    title: 'Electronic Components for Industrial Automation & Control',
+    metaTitle: 'Electronic Components for Industrial Automation — Mirai Technologies',
+    metaDescription: 'Distributor of microcontrollers, ICs, optocouplers & MOSFETs for industrial automation and PLC manufacturers in India.',
+    primaryKeyword: 'industrial automation components distributor India',
+    secondaryKeywords: 'PLC components supplier India, sensor components, industrial control ICs, optocouplers for automation',
+    author: 'Industrial Control Systems Engineer',
+    heroContent: 'BOM component guide for industrial programmable logic controllers (PLCs), variable frequency drives (VFDs), robotics, and industrial sensor interface boards.',
+    sections: [
+      {
+        heading: 'Uptime and Traceability in Industrial Automation',
+        content: 'Factory automation systems require 24/7 uptime in electrically noisy environments with motor inductive kickbacks and transient spikes. Using genuine semiconductors with robust noise immunity reduces unplanned downtime and maintenance costs for OEM machinery builders.'
+      },
+      {
+        heading: 'Core Components for PLCs, Drives & Sensors',
+        content: 'Industrial control boards feature microcontrollers (Microchip PIC/AVR), 7-channel Darlington array drivers (ULN2003) for driving relays and solenoids, optical isolators (PC817, MOC3021) for field input protection, and power MOSFETs for actuator control.'
+      },
+      {
+        heading: 'Authorized Sourcing & Rapid BOM Delivery',
+        content: 'Mirai Technologies maintains extensive inventory in Mumbai with same-day quotation, direct GST invoicing, and express pan-India shipping for industrial automation original equipment manufacturers.'
+      }
+    ],
+    bom: [
+      { partNumber: 'ULN2003', category: 'Driver IC', specs: '7-Ch Darlington Array DIP-16', application: 'PLC Relay & Solenoid Actuator Driver', slug: 'integrated-circuit' },
+      { partNumber: 'PC817', category: 'Optocoupler', specs: 'Phototransistor DIP-4', application: 'Industrial Digital Input Signal Isolation', slug: 'optocouplers' },
+      { partNumber: 'TIP122', category: 'Transistor', specs: '100V 5A NPN Darlington TO-220', application: 'Heavy Duty DC Load Switch', slug: 'transistors' },
+      { partNumber: 'LM358', category: 'Op-Amp IC', specs: 'Dual Operational Amplifier DIP-8', application: 'Analog Sensor Signal Conditioning', slug: 'integrated-circuit' }
+    ]
   }
 ];
+

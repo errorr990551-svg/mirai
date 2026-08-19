@@ -403,6 +403,48 @@ prerenderPage('/certificate', {
 }, certBody, [ORG_SCHEMA]);
 console.log('✅ Prerendered: /certificate');
 
+// 4b. Authorized Distributor Brands Page
+const brandsBody = `
+  <h1>Our Authorized Distributor Brands</h1>
+  <p>Mirai Technologies is an authorized stockist and B2B distributor supplying 100% genuine components from top global semiconductor manufacturers.</p>
+  <h2>Franchised Manufacturer Lines</h2>
+  <ul>
+    <li><strong>STMicroelectronics:</strong> Power MOSFETs, IGBTs, STM32 Microcontrollers & Diodes</li>
+    <li><strong>Infineon Technologies:</strong> Discrete IGBTs, SiC MOSFETs, Automotive ICs & Gate Drivers</li>
+    <li><strong>ON Semiconductor (onsemi):</strong> Power MOSFETs, MOC Optocouplers, Logic ICs</li>
+    <li><strong>NXP Semiconductors:</strong> Industrial Microcontrollers, Automotive Processors & Logic</li>
+    <li><strong>Vishay Intertechnology:</strong> Diodes, Rectifiers, TVS Protection, Optocouplers</li>
+    <li><strong>Rohm Semiconductor:</strong> SiC MOSFETs, Power Transistors, LDO Regulators</li>
+    <li><strong>International Rectifier (IR):</strong> Legend IRF Power MOSFETs & Gate Driver ICs</li>
+    <li><strong>UTC (Unisonic Technologies):</strong> Op-Amps, Linear Voltage Regulators, BJTs</li>
+    <li><strong>Texas Instruments (TI):</strong> LM358 Op-Amps, LM339 Comparators, NE555 Timers</li>
+    <li><strong>Microchip Technology:</strong> PIC & AVR Microcontrollers, EEPROMs</li>
+  </ul>
+`;
+prerenderPage('/authorized-distributor-brands', {
+  title: 'Authorized Distributor Brands | STMicroelectronics, Infineon, TI & More — Mirai Technologies',
+  description: 'Mirai Technologies is an authorized distributor for STMicroelectronics, Infineon, NXP, ON Semiconductor, Vishay, Rohm, IR, UTC, Texas Instruments & Microchip.'
+}, brandsBody, [ORG_SCHEMA]);
+console.log('✅ Prerendered: /authorized-distributor-brands');
+
+// 4c. Category Distributor Pillar Pages
+const distributorPages = [
+  { slug: 'mosfet-distributor', title: 'Power MOSFET Distributor in India | Authorized Stockist — Mirai Technologies', desc: 'Authorized Power MOSFET distributor for OEMs & EMS companies across India. Genuine stock from Infineon, ON Semi, STMicroelectronics, Vishay & IR.' },
+  { slug: 'transistor-distributor', title: 'Transistor Distributor in India | BJT & Power Transistors — Mirai Technologies', desc: 'Bulk transistor distributor for OEM and EMS buyers in India. Genuine BJT & power transistors, GST invoice, low MOQ.' },
+  { slug: 'microcontroller-distributor', title: 'Microcontroller Distributor in India | Authorized MCU Supplier — Mirai Technologies', desc: 'Authorized microcontroller distributor for OEM & EMS design teams. Genuine MCUs, low MOQ, same-day quotation, GST invoicing.' },
+  { slug: 'voltage-regulator-distributor', title: 'Voltage Regulator IC Distributor in India — Mirai Technologies', desc: 'Authorized voltage regulator distributor for OEMs. Genuine linear & switching regulator ICs, low MOQ, GST invoice, pan-India delivery.' },
+  { slug: 'diode-rectifier-distributor', title: 'Diode & Rectifier Distributor in India | Genuine Stock — Mirai Technologies', desc: 'Authorized diode & rectifier distributor for OEM and EMS buyers. Genuine parts, GST invoice, low MOQ, pan-India delivery.' },
+  { slug: 'optocoupler-distributor', title: 'Optocoupler Distributor in India | Authorized Stockist — Mirai Technologies', desc: 'Authorized optocoupler distributor for OEM & EMS design teams. Genuine parts, low MOQ, GST invoice, same-day quotation.' },
+  { slug: 'igbt-distributor', title: 'IGBT Distributor India | Modules & Discrete IGBTs — Mirai Technologies', desc: 'Authorized IGBT distributor for EV, solar inverter & industrial motor drive applications. Genuine stock, low MOQ, GST invoice.' },
+  { slug: 'ic-distributor', title: 'IC Distributor India | Integrated Circuits — Op-Amps, Comparators, RTCs — Mirai Technologies', desc: 'Authorized IC distributor stocking 279+ integrated circuits — op-amps, voltage comparators, real-time clocks, waveform generators & more.' }
+];
+
+distributorPages.forEach(p => {
+  prerenderPage(`/${p.slug}`, { title: p.title, description: p.desc }, `<h1>${p.title}</h1><p>${p.desc}</p>`, [ORG_SCHEMA]);
+});
+console.log(`✅ Prerendered: ${distributorPages.length} category distributor pillar pages`);
+
+
 // 5. Products Catalog Page
 const productsBody = `
   <h1>Electronic Components Catalog</h1>

@@ -7,7 +7,7 @@ import {
   Cpu, FileText, BookOpen
 } from 'lucide-react';
 import { getPostBySlug, getRelatedPosts } from '../data/blog';
-import { updateMeta } from '../utils/seo';
+import { updateMeta, injectFAQSchema } from '../utils/seo';
 
 // Cleanup helper to strip prefix markers like "H2: " or "**" from TOC items and headings
 const cleanHeadingText = (text) => {
@@ -428,8 +428,13 @@ const BlogPostPage = () => {
         'Mirai Technologies',
         'Mirai Technologies'
       );
+
+      const allFaqs = (post.faqs && post.faqs.length > 0) ? post.faqs : faqs;
+      if (allFaqs && allFaqs.length > 0) {
+        injectFAQSchema(allFaqs);
+      }
     }
-  }, [post]);
+  }, [post, faqs]);
 
   if (!post) {
     return (

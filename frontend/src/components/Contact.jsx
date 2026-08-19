@@ -11,9 +11,9 @@ const Contact = () => {
   const { isUnlocked, openModal } = useContact();
   useEffect(() => {
     updateMeta(
-      'Contact Us | Get a Quote | Mirai Technologies Mumbai',
-      'Get in touch with Mirai Technologies, authorized semiconductor distributor in Mumbai. Call +91 93213 98188 or request a quote online for genuine electronic components with pan-India shipping.',
-      'contact mirai technologies, request a quote electronics, component distributor mumbai, bulk component sourcing, semiconductor dealer contact',
+      'Request a Quote | Mirai Technologies Electronic Components',
+      'Send your BOM for a same-day quotation. Authorized distributor of MOSFETs, ICs, microcontrollers & more. GST invoicing, pan-India delivery.',
+      'request a quote, BOM quote, semiconductor distributor Mumbai, buy electronic components India, Mirai Technologies',
       'Mirai Technologies',
       'Mirai Technologies'
     );

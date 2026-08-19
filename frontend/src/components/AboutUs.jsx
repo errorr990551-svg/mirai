@@ -12,9 +12,9 @@ const AboutUs = () => {
 
   useEffect(() => {
     updateMeta(
-      'About Mirai Technologies | B2B Electronic Components Distributor',
-      'Learn about Mirai Technologies, established in 1999. Independent B2B stockist and distributor of active and passive electronic components in Mumbai, India. We serve OEMs and EMS providers with factory traceable parts.',
-      'about mirai technologies, semiconductor distributor india, electronic component supplier mumbai, active components stockist, passive components distributor',
+      'About Mirai Technologies | 25+ Years, Authorized Distributor, Mumbai & Hong Kong',
+      'Mirai Technologies: authorized stockist and distributor of active & passive electronic components since 1999. 30+ team, 100+ global channels, Mumbai & Hong Kong bases.',
+      'authorized distributor, electronic component supplier since 1999 Mumbai, import stockist electronic components India, STMicroelectronics, Infineon, TI, Microchip',
       'Mirai Technologies',
       'Mirai Technologies'
     );

@@ -30,6 +30,8 @@ import cityPages from './data/cityPages.json';
 
 import ApplicationsListPage from './components/ApplicationsListPage';
 import ApplicationPage from './components/ApplicationPage';
+import CategoryDistributorPage from './components/CategoryDistributorPage';
+import AuthorizedBrandsPage from './components/AuthorizedBrandsPage';
 import RedirectHandler from './components/RedirectHandler';
 
 function SitemapRedirect() {
@@ -42,9 +44,9 @@ function SitemapRedirect() {
 function Home() {
   useEffect(() => {
     updateMeta(
-      'Buy Electronic Components Online India | Mirai Technologies',
-      'Mirai Technologies – independent stockist and distributor of active and passive electronic components in Mumbai since 1999. Genuine ICs, MOSFETs, transistors, microcontrollers, and optocouplers with pan-India delivery and GST invoice.',
-      'electronic components, active electronic components, passive electronic components, semiconductor distributor, IC distributor, MOSFET supplier, transistor distributor, microcontroller dealer, optocoupler stockist, buy electronic components online, India, Mirai Technologies',
+      'Mirai Technologies | Authorized Electronic Component Distributor India Since 1999',
+      'Authorized distributor of MOSFETs, IGBTs, ICs, microcontrollers & passive components in India. 100+ manufacturer channels, low MOQ, GST invoicing. Request a quote.',
+      'electronic component distributor India, active and passive components distributor Mumbai, BOM sourcing distributor India, MOSFET distributor, IC distributor',
       'Mirai Technologies',
       'Mirai Technologies'
     );
@@ -92,6 +94,18 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/certificate" element={<Certifications />} />
+            
+            {/* Dedicated Pillar & Distributor Routes */}
+            <Route path="/authorized-distributor-brands" element={<AuthorizedBrandsPage />} />
+            <Route path="/mosfet-distributor" element={<CategoryDistributorPage pageSlug="mosfet-distributor" />} />
+            <Route path="/transistor-distributor" element={<CategoryDistributorPage pageSlug="transistor-distributor" />} />
+            <Route path="/microcontroller-distributor" element={<CategoryDistributorPage pageSlug="microcontroller-distributor" />} />
+            <Route path="/voltage-regulator-distributor" element={<CategoryDistributorPage pageSlug="voltage-regulator-distributor" />} />
+            <Route path="/diode-rectifier-distributor" element={<CategoryDistributorPage pageSlug="diode-rectifier-distributor" />} />
+            <Route path="/optocoupler-distributor" element={<CategoryDistributorPage pageSlug="optocoupler-distributor" />} />
+            <Route path="/igbt-distributor" element={<CategoryDistributorPage pageSlug="igbt-distributor" />} />
+            <Route path="/ic-distributor" element={<CategoryDistributorPage pageSlug="ic-distributor" />} />
+
             {/* Products catalog – optional :categorySlug for filtered views */}
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:categorySlug" element={<ProductsPage />} />
