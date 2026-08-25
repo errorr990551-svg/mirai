@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   SlidersHorizontal, X, ChevronDown, ChevronUp,
   Cpu, Zap, Radio, Activity, Layers, Settings, Thermometer,
-  Search
+  Search, Box, Grid, Disc
 } from 'lucide-react';
-import { products, categories, getCategoryById } from '../data/products';
+import { products, categories, getCategoryById, getProductsByCategory } from '../data/products';
 import { updateMeta, injectCategorySchema } from '../utils/seo';
 
 const categoryIcons = {
@@ -17,6 +17,12 @@ const categoryIcons = {
   'ic-chip':               Layers,
   'electronic-components': Settings,
   'voltage-regulator':     Thermometer,
+  'smd-ceramic-capacitor': Box,
+  'through-hole-resistor': SlidersHorizontal,
+  'smd-resistor':          Grid,
+  'resistor':              Grid,
+  'capacitor':             Box,
+  'passive-components':    Layers,
 };
 
 const SORT_OPTIONS = [
@@ -195,13 +201,12 @@ function ProductCard({ product, idx }) {
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25, delay: Math.min(idx * 0.04, 0.4) }}
+      transition={{ duration: 0.2, delay: Math.min(idx * 0.02, 0.3) }}
       className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden flex flex-col group hover:shadow-md hover:border-mirai-primary/30 transition-all duration-200"
     >
-      {/* Image / Icon area — square */}
+      {/* Image / Icon area */}
       <Link to={`/product/${product.fullSlug}`} className="block relative">
         <div className="aspect-square bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center relative overflow-hidden">
-          {/* Hover tint */}
           <div className="absolute inset-0 bg-mirai-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
           
           {product.heroImage?.filename ? (
@@ -212,17 +217,17 @@ function ProductCard({ product, idx }) {
               className="w-full h-full object-contain p-4 transition-transform duration-500 ease-out group-hover:scale-105 relative z-10"
             />
           ) : (
-            <Cpu className="w-10 h-10 text-slate-200 group-hover:text-mirai-primary/30 transition-colors duration-200" />
+            <Cpu className="w-10 h-10 text-slate-300 group-hover:text-mirai-primary/40 transition-colors duration-200" />
           )}
 
-          {/* Package badge — bottom left */}
+          {/* Package badge */}
           {product.package && (
             <span className="absolute bottom-2 left-2 bg-slate-900/75 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-0.5 rounded font-mono z-20">
               {product.package}
             </span>
           )}
 
-          {/* Popular badge — top right */}
+          {/* Priority badge */}
           {product.priority === 'High' && (
             <span className="absolute top-2 right-2 bg-amber-400 text-white text-[8px] font-black px-1.5 py-0.5 rounded-full tracking-wide z-20">
               ★ Popular
@@ -290,6 +295,9 @@ const ProductsPage = () => {
   const [isSortOpen, setIsSortOpen] = useState(false);
   const sortRef = React.useRef(null);
 
+  const ITEMS_PER_PAGE = 36;
+  const [currentPage, setCurrentPage] = useState(1);
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (sortRef.current && !sortRef.current.contains(event.target)) {
@@ -303,21 +311,26 @@ const ProductsPage = () => {
   const categoryData = categorySlug ? getCategoryById(categorySlug) : null;
   const CategoryIcon = categoryIcons[categorySlug] || Cpu;
 
-  // Products for this category — MUST be declared before useEffect that uses it
+  // Products pool for category
   const poolProducts = useMemo(() => {
     if (categorySlug) {
-      return products.filter(p => p.category === categorySlug);
+      return getProductsByCategory(categorySlug);
     }
     return products;
   }, [categorySlug]);
 
-  // Auto-scroll to top when category changes or query changes
+  // Auto-scroll & filter resets
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setActiveFilters({ brand: [], package: [], stock: [] });
     setSearchQuery(queryParam);
     setSortBy('priority');
+    setCurrentPage(1);
   }, [categorySlug, queryParam]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, activeFilters, sortBy]);
 
   // Update page meta + schema
   useEffect(() => {
@@ -334,8 +347,8 @@ const ProductsPage = () => {
     } else {
       updateMeta(
         'Electronic Components Catalog – Mirai Technologies Mumbai',
-        `Shop ${products.length}+ genuine electronic components – ICs, MOSFETs, transistors, microcontrollers, optocouplers. Authorized distributor since 1999. Pan-India delivery. GST invoice.`,
-        'electronic components catalog, buy ICs online, power MOSFETs India, microcontrollers Mumbai, active components, passive components, electronic components store',
+        `Shop ${products.length}+ genuine electronic components – ICs, MOSFETs, resistors, capacitors, microcontrollers. Authorized distributor since 1999. Pan-India delivery. GST invoice.`,
+        'electronic components catalog, buy ICs online, power MOSFETs India, SMD resistors, MLCC capacitors, microcontrollers Mumbai, electronic components store',
         'Mirai Technologies',
         'Mirai Technologies'
       );
@@ -346,34 +359,37 @@ const ProductsPage = () => {
   const filteredProducts = useMemo(() => {
     let result = poolProducts;
 
-    // Search
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(p =>
         p.name.toLowerCase().includes(q) ||
         p.partNumber.toLowerCase().includes(q) ||
         p.applications?.toLowerCase().includes(q) ||
-        p.brand?.toLowerCase().includes(q)
+        p.brand?.toLowerCase().includes(q) ||
+        p.categoryLabel?.toLowerCase().includes(q)
       );
     }
 
-    // Brand filter
     if (activeFilters.brand?.length > 0) {
       result = result.filter(p => activeFilters.brand.includes(p.brand));
     }
 
-    // Package filter
     if (activeFilters.package?.length > 0) {
       result = result.filter(p => activeFilters.package.includes(p.package));
     }
 
-    // Stock filter
     if (activeFilters.stock?.length > 0) {
       result = result.filter(p => activeFilters.stock.includes(p.stockStatus));
     }
 
     return sortProducts(result, sortBy);
   }, [poolProducts, searchQuery, activeFilters, sortBy]);
+
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE) || 1;
+  const paginatedProducts = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredProducts, currentPage]);
 
   const hasFilters = Object.values(activeFilters).some(v => v.length > 0) || searchQuery.trim();
 
@@ -383,8 +399,6 @@ const ProductsPage = () => {
 
         {/* ── Page Header ─────────────────────────────────────────────────── */}
         <div className="mb-10">
-
-          {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-xs text-slate-400 mb-5">
             <Link to="/" className="hover:text-mirai-primary transition-colors">Home</Link>
             <span className="text-slate-300">/</span>
@@ -401,7 +415,6 @@ const ProductsPage = () => {
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-mirai-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-              {/* Header row: icon + title + count */}
               <div className="flex items-start justify-between gap-4 mb-5 relative z-10">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-mirai-primary/20 border border-mirai-primary/30 flex items-center justify-center shrink-0">
@@ -421,14 +434,12 @@ const ProductsPage = () => {
                 </span>
               </div>
 
-              {/* Description (Complete, not truncated) */}
               {categoryData.description && (
                 <p className="text-sm text-slate-300 leading-relaxed mb-6 max-w-4xl border-l-2 border-mirai-primary/40 pl-4 relative z-10">
                   {categoryData.description}
                 </p>
               )}
 
-              {/* Quick Links */}
               {categoryData.navigationLinks?.length > 0 && (
                 <div className="relative z-10 mb-6">
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2.5">
@@ -447,8 +458,6 @@ const ProductsPage = () => {
                   </div>
                 </div>
               )}
-
-
             </div>
           ) : (
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
@@ -457,7 +466,7 @@ const ProductsPage = () => {
                 Electronic Components Catalog
               </h1>
               <p className="text-sm text-slate-300 mt-2 relative z-10">
-                {products.length}+ genuine electronic components — ICs, MOSFETs, transistors, microcontrollers and more.
+                {products.length}+ genuine electronic components — ICs, MOSFETs, resistors, capacitors, microcontrollers and more.
               </p>
             </div>
           )}
@@ -465,23 +474,23 @@ const ProductsPage = () => {
 
         {/* ── Category Grid (if showing all products) ──────────────────────── */}
         {!categorySlug && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 mb-10">
-            {categories.filter(cat => products.filter(p => p.category === cat.id).length > 0).map(cat => {
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-3 mb-10">
+            {categories.filter(cat => getProductsByCategory(cat.id).length > 0).map(cat => {
               const Icon = categoryIcons[cat.id] || Cpu;
-              const count = products.filter(p => p.category === cat.id).length;
+              const count = getProductsByCategory(cat.id).length;
               return (
                 <Link
                   key={cat.id}
                   to={`/products/${cat.slug}`}
-                  className="group bg-white border border-slate-200/80 rounded-2xl p-4 text-center hover:border-mirai-primary/30 hover:shadow-md transition-all duration-300 flex flex-col items-center gap-2"
+                  className="group bg-white border border-slate-200/80 rounded-2xl p-3.5 text-center hover:border-mirai-primary/30 hover:shadow-md transition-all duration-300 flex flex-col items-center gap-2"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-slate-50 group-hover:bg-mirai-primary/10 border border-slate-100 group-hover:border-mirai-primary/20 flex items-center justify-center transition-all">
-                    <Icon className="w-5 h-5 text-slate-400 group-hover:text-mirai-primary transition-colors" />
+                  <div className="w-9 h-9 rounded-xl bg-slate-50 group-hover:bg-mirai-primary/10 border border-slate-100 group-hover:border-mirai-primary/20 flex items-center justify-center transition-all">
+                    <Icon className="w-4 h-4 text-slate-400 group-hover:text-mirai-primary transition-colors" />
                   </div>
                   <span className="text-[10px] font-bold text-slate-600 group-hover:text-mirai-primary transition-colors text-center leading-tight">
                     {cat.name}
                   </span>
-                  <span className="text-[9px] text-slate-400">{count} parts</span>
+                  <span className="text-[9px] text-slate-400 font-semibold">{count} parts</span>
                 </Link>
               );
             })}
@@ -494,7 +503,7 @@ const ProductsPage = () => {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
-              placeholder="Search by part number, name, application..."
+              placeholder="Search by part number, name, value, package..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl bg-white focus:outline-none focus:border-mirai-primary/40 focus:ring-2 focus:ring-mirai-primary/10 transition-all"
@@ -506,7 +515,6 @@ const ProductsPage = () => {
             )}
           </div>
 
-          {/* Sort */}
           <div className="flex items-center gap-2">
             <div className="relative" ref={sortRef}>
               <button
@@ -550,7 +558,6 @@ const ProductsPage = () => {
               </AnimatePresence>
             </div>
 
-            {/* Mobile filter toggle */}
             <button
               onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
               className="lg:hidden flex items-center gap-1.5 text-xs font-bold text-slate-600 border border-slate-200 rounded-xl bg-white px-3 py-2.5 hover:border-mirai-primary/30 transition-all"
@@ -586,7 +593,6 @@ const ProductsPage = () => {
         {/* ── Layout: Sidebar + Grid ───────────────────────────────────────── */}
         <div className="flex gap-6">
 
-          {/* Sidebar Filters (desktop) */}
           <aside className="hidden lg:block w-60 shrink-0">
             <FilterPanel
               filtered={filteredProducts}
@@ -596,7 +602,6 @@ const ProductsPage = () => {
             />
           </aside>
 
-          {/* Mobile filter drawer */}
           <AnimatePresence>
             {mobileFiltersOpen && (
               <motion.div
@@ -639,15 +644,73 @@ const ProductsPage = () => {
                 </button>
               </div>
             ) : (
-              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
-                {filteredProducts.map((product, idx) => (
-                  <ProductCard key={product.id} product={product} idx={idx} />
-                ))}
-              </div>
+              <>
+                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                  {paginatedProducts.map((product, idx) => (
+                    <ProductCard key={product.id} product={product} idx={idx} />
+                  ))}
+                </div>
+
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                  <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm">
+                    <p className="text-xs text-slate-500 font-semibold">
+                      Showing <span className="font-bold text-slate-900">{(currentPage - 1) * ITEMS_PER_PAGE + 1}</span>–
+                      <span className="font-bold text-slate-900">{Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length)}</span> of{' '}
+                      <span className="font-bold text-slate-900">{filteredProducts.length}</span> products
+                    </p>
+
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        onClick={() => { setCurrentPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 300, behavior: 'smooth' }); }}
+                        disabled={currentPage === 1}
+                        className="px-3 py-1.5 text-xs font-bold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                      >
+                        ← Prev
+                      </button>
+
+                      <div className="flex items-center gap-1 px-2">
+                        {Array.from({ length: totalPages }, (_, i) => i + 1)
+                          .filter(p => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 2)
+                          .reduce((acc, p, i, arr) => {
+                            if (i > 0 && p - arr[i - 1] > 1) acc.push('...');
+                            acc.push(p);
+                            return acc;
+                          }, [])
+                          .map((p, idx) => (
+                            typeof p === 'number' ? (
+                              <button
+                                key={p}
+                                onClick={() => { setCurrentPage(p); window.scrollTo({ top: 300, behavior: 'smooth' }); }}
+                                className={`w-8 h-8 rounded-lg text-xs font-bold transition-all ${
+                                  currentPage === p
+                                    ? 'bg-mirai-primary text-white shadow-sm'
+                                    : 'bg-white text-slate-600 hover:bg-slate-100'
+                                }`}
+                              >
+                                {p}
+                              </button>
+                            ) : (
+                              <span key={`ellipsis-${idx}`} className="px-1 text-xs text-slate-400 font-bold">...</span>
+                            )
+                          ))
+                        }
+                      </div>
+
+                      <button
+                        onClick={() => { setCurrentPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 300, behavior: 'smooth' }); }}
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1.5 text-xs font-bold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                      >
+                        Next →
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>
-
 
       </div>
     </div>

@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { categories, products } from '../src/data/products.js';
+import { categories, products, getProductsByCategory } from '../src/data/products.js';
 import { blogPosts } from '../src/data/blog.js';
+import { applicationsData } from '../src/data/applicationsData.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -10,7 +11,6 @@ const ROOT = path.resolve(__dirname, '..');
 const BASE_URL = 'https://miraitechnologies.net';
 const TODAY = new Date().toISOString().split('T')[0];
 const cityPages = JSON.parse(fs.readFileSync(path.join(ROOT, 'src', 'data', 'cityPages.json'), 'utf8'));
-
 
 // 1. Generate sitemap.xml content
 let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -32,8 +32,6 @@ function addUrl(loc, priority = '0.5', changefreq = 'weekly') {
   xml += `    <priority>${priority}</priority>\n`;
   xml += `  </url>\n`;
 }
-
-import { applicationsData } from '../src/data/applicationsData.js';
 
 // Add static & pillar pages
 addUrl('/', '1.0', 'daily');
@@ -58,8 +56,9 @@ applicationsData.forEach(app => {
   addUrl(`/applications/${app.slug}`, '0.8', 'weekly');
 });
 
-// Add category pages
-categories.filter(category => products.some(p => p.category === category.slug)).forEach(category => {
+// Add category pages (using getProductsByCategory to capture grouped categories)
+const activeCategories = categories.filter(cat => getProductsByCategory(cat.slug).length > 0);
+activeCategories.forEach(category => {
   addUrl(`/products/${category.slug}`, '0.7', 'weekly');
 });
 
@@ -84,8 +83,16 @@ cityPages.forEach(page => {
 xml += `</urlset>\n`;
 
 // Write to public/sitemap.xml
-fs.writeFileSync(path.join(ROOT, 'public', 'sitemap.xml'), xml, 'utf8');
-console.log(`✅ Generated public/sitemap.xml with ${categories.length} categories, ${products.length} products, ${blogPosts.length} blog posts, and ${cityPages.length} city pages.`);
+const publicSitemapPath = path.join(ROOT, 'public', 'sitemap.xml');
+fs.writeFileSync(publicSitemapPath, xml, 'utf8');
+
+// Copy to dist/sitemap.xml if dist directory exists
+const distDir = path.join(ROOT, 'dist');
+if (fs.existsSync(distDir)) {
+  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), xml, 'utf8');
+}
+
+console.log(`✅ Generated sitemap.xml with ${activeCategories.length} categories, ${products.length} products, ${blogPosts.length} blog posts, and ${cityPages.length} city pages.`);
 
 // 2. Generate robots.txt content
 const robotsTxt = `User-agent: *
@@ -94,6 +101,9 @@ Allow: /
 Sitemap: ${BASE_URL}/sitemap.xml
 `;
 
-// Write to public/robots.txt
 fs.writeFileSync(path.join(ROOT, 'public', 'robots.txt'), robotsTxt, 'utf8');
-console.log(`✅ Generated public/robots.txt`);
+if (fs.existsSync(distDir)) {
+  fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt, 'utf8');
+}
+
+console.log(`✅ Generated robots.txt`);

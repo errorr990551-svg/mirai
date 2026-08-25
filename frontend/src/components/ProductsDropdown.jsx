@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cpu, Zap, Radio, Layers, Activity, Thermometer, ArrowRight, Settings, MessageSquare } from 'lucide-react';
-import { categories, products } from '../data/products';
+import { Cpu, Zap, Radio, Layers, Activity, Thermometer, ArrowRight, Settings, MessageSquare, Box, SlidersHorizontal } from 'lucide-react';
+import { categories, products, getProductsByCategory } from '../data/products';
 
 const categoryIcons = {
   'integrated-circuit':    Cpu,
@@ -12,6 +12,12 @@ const categoryIcons = {
   'ic-chip':               Layers,
   'electronic-components': Settings,
   'voltage-regulator':     Thermometer,
+  'smd-ceramic-capacitor': Box,
+  'through-hole-resistor': SlidersHorizontal,
+  'smd-resistor':          Settings,
+  'resistor':              Settings,
+  'capacitor':             Box,
+  'passive-components':    Layers,
 };
 
 const ProductsDropdown = ({ closeMenu }) => {
@@ -19,7 +25,7 @@ const ProductsDropdown = ({ closeMenu }) => {
 
   const activeCat = categories.find(c => c.id === activeCategory) || categories[0];
   const Icon = categoryIcons[activeCat?.id] || Cpu;
-  const count = products.filter(p => p.category === activeCat?.id).length;
+  const count = getProductsByCategory(activeCat?.id).length;
 
   const getPartLink = (partName) => {
     const matched = products.find(p => 
@@ -52,7 +58,7 @@ const ProductsDropdown = ({ closeMenu }) => {
         {categories.map(cat => {
           const CatIcon = categoryIcons[cat.id] || Cpu;
           const isActive = cat.id === activeCategory;
-          const catCount = products.filter(p => p.category === cat.id).length;
+          const catCount = getProductsByCategory(cat.id).length;
           return (
             <Link
               key={cat.id}
