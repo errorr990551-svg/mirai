@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cpu, Zap, Radio, Layers, Activity, Thermometer, ArrowRight, Settings, MessageSquare, Box, SlidersHorizontal } from 'lucide-react';
+import { Cpu, Zap, Radio, Layers, Activity, Thermometer, ArrowRight, Settings, MessageSquare, Box, SlidersHorizontal, Disc } from 'lucide-react';
 import { categories, products, getProductsByCategory } from '../data/products';
 
 const categoryIcons = {
@@ -18,6 +18,16 @@ const categoryIcons = {
   'resistor':              Settings,
   'capacitor':             Box,
   'passive-components':    Layers,
+  'smd-power-inductor':    Disc,
+  'inductor':              Disc,
+  'electrolytic-capacitor':Box,
+  'tantalum-capacitor':    Box,
+  'zener-diode':           Zap,
+  'rectifier-schottky-diode': Zap,
+  'tvs-diode':             Zap,
+  'diode':                 Zap,
+  'led':                   Activity,
+  'crystal-oscillator':    Radio,
 };
 
 const ProductsDropdown = ({ closeMenu }) => {
@@ -44,51 +54,54 @@ const ProductsDropdown = ({ closeMenu }) => {
       animate={{ opacity: 1, y: 0, x: '-50%' }}
       exit={{ opacity: 0, y: 8, x: '-50%' }}
       transition={{ duration: 0.15 }}
-      className="absolute left-1/2 top-full mt-3 w-[740px] bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden z-50 flex"
+      className="absolute left-1/2 top-full mt-3 w-[760px] h-[480px] max-h-[80vh] bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden z-50 flex"
     >
       {/* Top accent */}
-      <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-mirai-primary to-mirai-accent" />
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-mirai-primary to-mirai-accent z-10" />
 
       {/* LEFT: Category list */}
-      <div className="w-[240px] shrink-0 bg-slate-50 border-r border-slate-100 py-5 px-3 flex flex-col">
-        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest px-2 mb-2">
+      <div className="w-[260px] shrink-0 bg-slate-50 border-r border-slate-100 p-3 flex flex-col h-full overflow-hidden">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest px-2 pt-2 pb-2 shrink-0">
           Categories
         </p>
 
-        {categories.map(cat => {
-          const CatIcon = categoryIcons[cat.id] || Cpu;
-          const isActive = cat.id === activeCategory;
-          const catCount = getProductsByCategory(cat.id).length;
-          return (
-            <Link
-              key={cat.id}
-              to={`/products/${cat.slug}`}
-              onClick={closeMenu}
-              onMouseEnter={() => setActiveCategory(cat.id)}
-              className={`flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-150 ${
-                isActive
-                  ? 'bg-mirai-primary text-white shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-              }`}
-            >
-              <div className="flex items-center gap-2.5">
-                <CatIcon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                <span className="text-[13px] font-semibold leading-tight">{cat.name}</span>
-              </div>
-              <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
-                isActive ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-500'
-              }`}>
-                {catCount}
-              </span>
-            </Link>
-          );
-        })}
+        {/* Scrollable list of categories */}
+        <div className="flex-1 overflow-y-auto space-y-1 pr-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
+          {categories.map(cat => {
+            const CatIcon = categoryIcons[cat.id] || Cpu;
+            const isActive = cat.id === activeCategory;
+            const catCount = getProductsByCategory(cat.id).length;
+            return (
+              <Link
+                key={cat.id}
+                to={`/products/${cat.slug}`}
+                onClick={closeMenu}
+                onMouseEnter={() => setActiveCategory(cat.id)}
+                className={`flex items-center justify-between gap-2 px-3 py-2 rounded-xl cursor-pointer transition-all duration-150 ${
+                  isActive
+                    ? 'bg-mirai-primary text-white shadow-sm font-semibold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium'
+                }`}
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <CatIcon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                  <span className="text-[12px] leading-tight truncate">{cat.name}</span>
+                </div>
+                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full shrink-0 ${
+                  isActive ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-500'
+                }`}>
+                  {catCount}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
 
-        <div className="mt-auto pt-4 border-t border-slate-200 px-1">
+        <div className="pt-3 border-t border-slate-200 shrink-0 mt-1">
           <Link
             to="/products"
             onClick={closeMenu}
-            className="flex items-center justify-between text-xs font-bold text-slate-500 hover:text-mirai-primary transition-colors px-2 py-2 rounded-lg hover:bg-slate-100"
+            className="flex items-center justify-between text-xs font-bold text-slate-600 hover:text-mirai-primary transition-colors px-2 py-1.5 rounded-lg hover:bg-slate-100"
           >
             <span>View All Catalog</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -97,13 +110,13 @@ const ProductsDropdown = ({ closeMenu }) => {
       </div>
 
       {/* RIGHT: Category details */}
-      <div className="flex-1 p-6 flex flex-col gap-5 bg-white">
+      <div className="flex-1 p-6 flex flex-col justify-between bg-white h-full overflow-y-auto">
         {/* Header */}
         <div>
           <Link
             to={`/products/${activeCat?.slug}`}
             onClick={closeMenu}
-            className="flex items-center gap-2 mb-1 group/header cursor-pointer text-slate-800 hover:text-mirai-primary transition-colors"
+            className="flex items-center gap-2 mb-2 group/header cursor-pointer text-slate-800 hover:text-mirai-primary transition-colors"
           >
             <div className="w-8 h-8 bg-mirai-primary/10 rounded-lg flex items-center justify-center group-hover/header:bg-mirai-primary/25 transition-colors">
               <Icon className="w-4 h-4 text-mirai-primary" />
@@ -112,7 +125,7 @@ const ProductsDropdown = ({ closeMenu }) => {
             <span className="ml-1 text-xs text-slate-400 font-medium">{count} parts</span>
           </Link>
           <p className="text-xs text-slate-500 leading-relaxed pl-10">
-            {activeCat?.description?.slice(0, 130)}…{' '}
+            {activeCat?.description?.slice(0, 140)}…{' '}
             <Link
               to={`/products/${activeCat?.slug}`}
               onClick={closeMenu}
@@ -126,20 +139,20 @@ const ProductsDropdown = ({ closeMenu }) => {
 
         {/* Featured parts */}
         {activeCat?.featuredProducts?.length > 0 && (
-          <div>
+          <div className="my-3">
             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">
               Featured Parts
             </p>
-            <div className="flex flex-col gap-1.5 mt-1">
-              {activeCat.featuredProducts.slice(0, 5).map(part => (
+            <div className="flex flex-col gap-1.5">
+              {activeCat.featuredProducts.slice(0, 4).map(part => (
                 <Link
                   key={part}
                   to={getPartLink(part)}
                   onClick={closeMenu}
-                  className="bg-slate-50 hover:bg-mirai-primary text-slate-700 hover:text-white text-[13px] font-bold px-3.5 py-2.5 rounded-xl font-mono transition-all cursor-pointer flex items-center justify-between group border border-slate-100/80 hover:border-mirai-primary shadow-sm hover:shadow-md"
+                  className="bg-slate-50 hover:bg-mirai-primary text-slate-700 hover:text-white text-[12px] font-bold px-3 py-2 rounded-xl font-mono transition-all cursor-pointer flex items-center justify-between group border border-slate-100/80 hover:border-mirai-primary shadow-sm hover:shadow-md"
                 >
                   <span>{part}</span>
-                  <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors transform group-hover:translate-x-1 duration-150" />
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-white transition-colors transform group-hover:translate-x-1 duration-150" />
                 </Link>
               ))}
             </div>
@@ -147,7 +160,7 @@ const ProductsDropdown = ({ closeMenu }) => {
         )}
 
         {/* CTA row */}
-        <div className="flex items-center gap-3 mt-auto pt-4 border-t border-slate-100">
+        <div className="flex items-center gap-3 pt-3 border-t border-slate-100 mt-auto">
           <Link
             to={`/products/${activeCat?.slug}`}
             onClick={closeMenu}

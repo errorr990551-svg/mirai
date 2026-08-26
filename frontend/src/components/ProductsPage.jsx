@@ -23,6 +23,16 @@ const categoryIcons = {
   'resistor':              Grid,
   'capacitor':             Box,
   'passive-components':    Layers,
+  'smd-power-inductor':    Disc,
+  'inductor':              Disc,
+  'electrolytic-capacitor':Box,
+  'tantalum-capacitor':    Box,
+  'zener-diode':           Zap,
+  'rectifier-schottky-diode': Zap,
+  'tvs-diode':             Zap,
+  'diode':                 Zap,
+  'led':                   Activity,
+  'crystal-oscillator':    Radio,
 };
 
 const SORT_OPTIONS = [

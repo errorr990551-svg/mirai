@@ -493,6 +493,99 @@ if (fs.existsSync(batch1Path)) {
   });
 }
 
+// Helper for generic batch product mapping
+function mapGenericProduct(r, defaultPrefix, categoryId, categoryGroup, defaultMoq = '50') {
+  const fullSlug = cleanUrlSlug(r['URL Slug'], defaultPrefix, r.SKU);
+  const productId = fullSlug.split('/').pop();
+  
+  const specKeys = ['Package', 'Package Size', 'Package Type', 'Inductance', 'Capacitance', 'Voltage Rating', 'Current Rating', 'Dielectric', 'Resistance', 'Tolerance', 'Power Rating', 'Max Voltage', 'Zener Voltage', 'Power Dissipation', 'Standoff Voltage', 'Color', 'Forward Voltage', 'Rated Current', 'Wavelength', 'Frequency', 'Load Capacitance'];
+  const specs = {};
+  specKeys.forEach(k => {
+    if (r[k]) specs[k] = String(r[k]).trim();
+  });
+
+  const keySpecsLines = Object.entries(specs).map(([k, v]) => `• ${k}: ${v}`).join('\n');
+
+  return {
+    id: productId,
+    partNumber: r.SKU,
+    fullSlug: fullSlug,
+    name: r['Product Name'],
+    h1: `${r['Product Name']} – Buy Online India`,
+    category: categoryId,
+    categoryLabel: r['Sub-Category'] || r.Category || categoryId,
+    categoryGroup: categoryGroup,
+    brand: r.Brand || 'Mirai Technologies',
+    package: r.Package || '',
+    packageSize: r['Package Size'] || r['Package Type'] || '',
+    applications: r['Key Applications'] || '',
+    datasheetUrl: '',
+    priority: 'Medium',
+    shortDescription: r['Short Description'] || '',
+    longDescription: r['Long Description (SEO/GEO)'] || r['Short Description'] || '',
+    keySpecsRaw: keySpecsLines,
+    specs: specs,
+    metaTitle: r['Meta Title (SEO)'] || `${r['Product Name']} | Mirai Technologies`,
+    metaDescription: r['Meta Description (SEO)'] || `Buy ${r['Product Name']} from Mirai Technologies Mumbai. Low MOQ, GST invoice, pan-India delivery.`,
+    primaryKeyword: `buy ${r.SKU} India`,
+    lsiKeywords: `${r.SKU} price, ${r['Product Name']} distributor Mumbai, buy ${r.SKU} online`,
+    h2Tags: `${r['Product Name']} Specifications, Applications, Buy in India, Why Mirai Technologies`,
+    price: null,
+    priceDisplay: null,
+    moq: defaultMoq,
+    stockStatus: 'In Stock',
+    whatsappUrl: `https://wa.me/917942964662?text=Hi%2C%20I%20want%20to%20buy%20${encodeURIComponent(r['Product Name'])}`,
+    whatsappMsg: `Hi, I want to buy ${r['Product Name']}. Please share best price and availability.`,
+    bulkNote: 'Contact for bulk / OEM rates',
+    gstRate: '18% GST applicable',
+    faqs: parseAEOFAQ(r['FAQ Block (AEO Schema)']),
+    heroImage: { filename: '', alt: '', title: `Buy ${r.SKU} Online India` },
+    pinoutImage: { filename: '', alt: '', title: `${r.SKU} Specifications` },
+    appCircuitImage: { filename: '', alt: '', title: `${r.SKU} Application` },
+    alternativesLinks: [],
+    relatedLinks: [],
+    fbtLinks: [],
+  };
+}
+
+// ── 5.1 Load Batch 3 Excel Products (Inductors, Electrolytic & Tantalum Capacitors) ──────
+const batch3Path = path.join(ROOT, 'mirai_content_batch3_inductors_capacitors.xlsx');
+let batch3Products = [];
+
+if (fs.existsSync(batch3Path)) {
+  const wb3 = XLSX.readFile(batch3Path);
+  const indRows  = XLSX.utils.sheet_to_json(wb3.Sheets['SMD Inductors']);
+  const elecRows = XLSX.utils.sheet_to_json(wb3.Sheets['Electrolytic Capacitors']);
+  const tantRows = XLSX.utils.sheet_to_json(wb3.Sheets['Tantalum Capacitors']);
+
+  const inductors = indRows.map(r => mapGenericProduct(r, 'inductor', 'smd-power-inductor', 'Passive Components', '50'));
+  const elecCaps  = elecRows.map(r => mapGenericProduct(r, 'capacitor', 'electrolytic-capacitor', 'Passive Components', '10'));
+  const tantCaps  = tantRows.map(r => mapGenericProduct(r, 'capacitor', 'tantalum-capacitor', 'Passive Components', '50'));
+
+  batch3Products = [...inductors, ...elecCaps, ...tantCaps];
+}
+
+// ── 5.2 Load Batch 4 Excel Products (Diodes, LEDs & Crystals) ───────────────────
+const batch4Path = path.join(ROOT, 'mirai_content_batch4_diodes_leds_crystals.xlsx');
+let batch4Products = [];
+
+if (fs.existsSync(batch4Path)) {
+  const wb4 = XLSX.readFile(batch4Path);
+  const zenerRows  = XLSX.utils.sheet_to_json(wb4.Sheets['Zener Diodes']);
+  const rectRows   = XLSX.utils.sheet_to_json(wb4.Sheets['Rectifier-Schottky-Bridge']);
+  const tvsRows    = XLSX.utils.sheet_to_json(wb4.Sheets['TVS Diodes']);
+  const ledRows    = XLSX.utils.sheet_to_json(wb4.Sheets['LEDs']);
+  const xtalRows   = XLSX.utils.sheet_to_json(wb4.Sheets['Crystals & Oscillators']);
+
+  const zeners   = zenerRows.map(r => mapGenericProduct(r, 'diode', 'zener-diode', 'Semiconductors', '50'));
+  const rects    = rectRows.map(r => mapGenericProduct(r, 'diode', 'rectifier-schottky-diode', 'Semiconductors', '50'));
+  const tvss     = tvsRows.map(r => mapGenericProduct(r, 'diode', 'tvs-diode', 'Semiconductors', '50'));
+  const leds     = ledRows.map(r => mapGenericProduct(r, 'led', 'led', 'Optoelectronics', '100'));
+  const crystals = xtalRows.map(r => mapGenericProduct(r, 'crystal', 'crystal-oscillator', 'Frequency Control', '20'));
+
+  batch4Products = [...zeners, ...rects, ...tvss, ...leds, ...crystals];
+}
+
 // ── 6. Merge All Products ────────────────────────────────────────────────────
 
 const products = [
@@ -500,6 +593,8 @@ const products = [
   ...smdCapacitors,
   ...thtResistors,
   ...smdResistors,
+  ...batch3Products,
+  ...batch4Products,
 ];
 
 // ── 7. Build Categories Array ────────────────────────────────────────────────
@@ -713,6 +808,176 @@ const passiveCategories = [
     sortOptions: 'Popularity, Name A-Z',
     priority: 'High',
     navigationLinks: []
+  },
+  {
+    id: 'smd-power-inductor',
+    name: 'SMD Power Inductors',
+    slug: 'smd-power-inductor',
+    metaTitle: 'SMD Power Inductors Distributor India | 0402-1812 — Mirai Technologies',
+    metaDescription: 'Buy SMD power inductors in 0402, 0603, 0805, 1206, 1210, 1812 packages. High current ratings, shielded & unshielded. Low MOQ, GST invoice, fast pan-India delivery.',
+    h1: 'SMD Power Inductors – Buy Online India',
+    h2Tags: 'SMD Inductor Specifications, Package Sizes, Inductance & Current Ratings, Buy in India',
+    primaryKeyword: 'SMD power inductor distributor India',
+    lsiKeywords: '0402 chip inductor, SMD power choke price Mumbai, 10uH SMD inductor reel, power inductor stockist',
+    description: 'Mirai Technologies stocks 390+ SMD power inductor SKUs across EIA package sizes (0402 to 1812). Shielded ferrite core construction for low EMI in DC-DC converters, switching regulators, and RF power filtering circuits.',
+    featuredProducts: [],
+    filters: 'Package, Inductance, Rated Current',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'inductor',
+    name: 'Inductors (SMD & Power Chokes)',
+    slug: 'inductor',
+    metaTitle: 'Inductors Distributor India | SMD Power Inductors & Chokes — Mirai Technologies',
+    metaDescription: 'Authorized stockist of SMD power inductors and RF chip inductors in India. 390+ inductor SKUs in stock. Low MOQ, GST billing, pan-India delivery.',
+    h1: 'Inductors Catalog – SMD & Power Chokes',
+    h2Tags: 'Inductor Types, Package Sizes, Power Filtering, Bulk Pricing',
+    primaryKeyword: 'inductors distributor India',
+    lsiKeywords: 'buy inductors online India, power choke reel, chip inductor bulk, electronic components inductor',
+    description: 'Complete catalog of over 390 inductor SKUs including SMD chip inductors (0402-1812) for DC-DC converters, power supplies, and noise suppression.',
+    featuredProducts: [],
+    filters: 'Package, Inductance, Rated Current',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'electrolytic-capacitor',
+    name: 'Radial Electrolytic Capacitors',
+    slug: 'electrolytic-capacitor',
+    metaTitle: 'Radial Electrolytic Capacitors Distributor India — Mirai Technologies',
+    metaDescription: 'Buy radial aluminium electrolytic capacitors from 1uF to 10,000uF, rated 6.3V to 100V. In-stock at Mirai Technologies Mumbai with GST billing.',
+    h1: 'Radial Aluminium Electrolytic Capacitors',
+    h2Tags: 'Electrolytic Capacitor Specifications, Voltage Ratings, Capacitance Range, Applications',
+    primaryKeyword: 'radial electrolytic capacitor buy India',
+    lsiKeywords: 'aluminium electrolytic capacitor 50V, radial lead capacitor Mumbai, bulk decoupling capacitor',
+    description: 'High reliability radial aluminium electrolytic capacitors for power supply filtering, bulk decoupling, and audio coupling applications across through-hole circuit designs.',
+    featuredProducts: [],
+    filters: 'Capacitance, Voltage Rating, Package',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'tantalum-capacitor',
+    name: 'SMD Tantalum Capacitors',
+    slug: 'tantalum-capacitor',
+    metaTitle: 'SMD Tantalum Capacitors Distributor India | Case A-D — Mirai Technologies',
+    metaDescription: 'Buy SMD tantalum capacitors in EIA Case A, B, C, D packages (0.1uF to 220uF, 4V to 50V). Low ESR, high stability, GST invoice, pan-India delivery.',
+    h1: 'SMD Tantalum Capacitors (Case A-D)',
+    h2Tags: 'Tantalum Capacitor Specifications, EIA Case Sizes, Voltage & Capacitance Ratings',
+    primaryKeyword: 'SMD tantalum capacitor distributor India',
+    lsiKeywords: 'case A tantalum cap, case B 10uH tantalum, low ESR tantalum capacitor India, surface mount tantalum',
+    description: 'Precision SMD tantalum capacitors in EIA case sizes A, B, C, and D for space-constrained, high-reliability decoupling, power filtering, and timing circuits.',
+    featuredProducts: [],
+    filters: 'Package, Capacitance, Voltage Rating',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'zener-diode',
+    name: 'Zener Diodes',
+    slug: 'zener-diode',
+    metaTitle: 'Zener Diodes Distributor India | SOD-123, DO-35, SOT-23 — Mirai Technologies',
+    metaDescription: 'Buy Zener diodes in SOD-123, DO-35, SOT-23 packages from 2.4V to 75V ratings. Genuine stock, low MOQ, GST billing, pan-India delivery.',
+    h1: 'Zener Diodes – Voltage Reference & Protection',
+    h2Tags: 'Zener Diode Specifications, Package Types, Voltage Ratings, Applications',
+    primaryKeyword: 'zener diode distributor India',
+    lsiKeywords: '5.1V zener diode, 12V zener diode SOD-123, zener diode price Mumbai, voltage regulator diode',
+    description: 'Comprehensive stock of Zener diodes across standard surface mount (SOD-123, SOT-23) and axial through-hole (DO-35, DO-41) packages for voltage regulation, overvoltage protection, and voltage clamping.',
+    featuredProducts: [],
+    filters: 'Package, Zener Voltage, Power Dissipation',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'rectifier-schottky-diode',
+    name: 'Rectifier & Schottky Diodes',
+    slug: 'rectifier-schottky-diode',
+    metaTitle: 'Rectifier & Schottky Diodes Distributor India — Mirai Technologies',
+    metaDescription: 'Buy general purpose rectifier diodes, fast recovery, and Schottky barrier diodes in SMA, SMB, SMC, DO-41 packages. GST billing & fast dispatch.',
+    h1: 'Rectifier & Schottky Barrier Diodes',
+    h2Tags: 'Rectifier Diode Specifications, Schottky vs Silicon, Current & Voltage Ratings',
+    primaryKeyword: 'rectifier schottky diode distributor India',
+    lsiKeywords: '1A 50V rectifier diode, Schottky diode SMA, bridge rectifier module, power diode India',
+    description: 'High efficiency Schottky diodes and silicon rectifier diodes rated from 20V to 1000V and 0.5A to 10A for AC-DC rectification, reverse polarity protection, and freewheeling diode applications.',
+    featuredProducts: [],
+    filters: 'Package, Voltage Rating, Current Rating',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'tvs-diode',
+    name: 'TVS Diodes (Transient Voltage Suppressors)',
+    slug: 'tvs-diode',
+    metaTitle: 'TVS Diodes Distributor India | ESD & Surge Protection — Mirai Technologies',
+    metaDescription: 'Buy unidirectional & bidirectional TVS diodes in SMAJ, SMBJ, SMCJ, DO-15, DO-214 packages. ESD & surge protection components in stock.',
+    h1: 'TVS Diodes – ESD & Transient Surge Protection',
+    h2Tags: 'TVS Diode Specifications, Standoff Voltage, Uni/Bidirectional, Surge Protection',
+    primaryKeyword: 'TVS diode distributor India',
+    lsiKeywords: '5V TVS diode, SMAJ5.0A surge protector, ESD protection diode India, transient voltage suppressor',
+    description: 'Transient Voltage Suppressor (TVS) diodes in SMA, SMB, SMC, and axial packages designed to clamp ESD spikes, switching transients, and voltage surges in sensitive electronic systems.',
+    featuredProducts: [],
+    filters: 'Package, Standoff Voltage',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'diode',
+    name: 'Diodes & Rectifiers',
+    slug: 'diode',
+    metaTitle: 'Diodes & Rectifiers Distributor India | Zener, TVS, Schottky — Mirai Technologies',
+    metaDescription: 'Authorized stockist of Zener, Schottky, TVS, and general-purpose rectifier diodes in India. 480+ diode SKUs in stock with GST billing.',
+    h1: 'Diodes & Rectifiers Catalog',
+    h2Tags: 'Diode Categories, Zener vs TVS vs Schottky, Package Types, Bulk Supply',
+    primaryKeyword: 'diodes distributor India',
+    lsiKeywords: 'buy diodes online India, Schottky diode bulk, Zener diode stockist, TVS diode surge protection',
+    description: 'Complete catalog of 485+ diode SKUs including Zener diodes, fast-switching Schottky barrier rectifiers, TVS surge protection diodes, and bridge rectifiers.',
+    featuredProducts: [],
+    filters: 'Sub-Category, Package, Spec',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'led',
+    name: 'LEDs & Optoelectronics',
+    slug: 'led',
+    metaTitle: 'LEDs & Optoelectronics Distributor India | 3mm, 5mm, SMD — Mirai Technologies',
+    metaDescription: 'Buy standard and high-brightness LEDs in 3mm, 5mm THT and 0603, 0805, 1206 SMD packages across Red, Green, Blue, Yellow, White colors. GST invoice.',
+    h1: 'LEDs & Optoelectronic Components',
+    h2Tags: 'LED Specifications, Color & Wavelength, Forward Voltage, Package Sizes',
+    primaryKeyword: 'LED distributor India',
+    lsiKeywords: '3mm red LED, 0805 green SMD LED, white high brightness LED India, optoelectronic indicator',
+    description: 'Single-color, bi-color, and RGB LEDs in standard 3mm/5mm through-hole and 0603-1206 surface-mount packages for status indication, backlighting, and illumination.',
+    featuredProducts: [],
+    filters: 'Package, Color, Forward Voltage',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'crystal-oscillator',
+    name: 'Crystals & Crystal Oscillators',
+    slug: 'crystal-oscillator',
+    metaTitle: 'Quartz Crystals & Oscillators Distributor India — Mirai Technologies',
+    metaDescription: 'Buy 32.768kHz, 8MHz, 12MHz, 16MHz, 24MHz, 25MHz quartz crystals in HC-49S, SMD 3225, 5032 packages. In-stock at Mirai Technologies Mumbai.',
+    h1: 'Quartz Crystals & Crystal Oscillators',
+    h2Tags: 'Crystal Resonator Specifications, Frequency Range, Package Types, RTC & MCU Clocks',
+    primaryKeyword: 'quartz crystal distributor India',
+    lsiKeywords: '32.768kHz RTC crystal, 16MHz HC-49S crystal oscillator, SMD 3225 quartz crystal India',
+    description: 'High stability quartz crystal resonators and crystal clock oscillators for MCU timing, real-time clock (RTC) circuits, and wireless communication baud-rate generation.',
+    featuredProducts: [],
+    filters: 'Package, Frequency, Load Capacitance',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
   }
 ];
 
@@ -745,10 +1010,22 @@ export const getProductsByCategory = (catSlug) => {
     return products.filter(p => p.category === 'resistor' || p.category === 'smd-resistor' || p.category === 'through-hole-resistor');
   }
   if (catSlug === 'capacitor') {
-    return products.filter(p => p.category === 'capacitor' || p.category === 'smd-ceramic-capacitor');
+    return products.filter(p => p.category === 'capacitor' || p.category === 'smd-ceramic-capacitor' || p.category === 'electrolytic-capacitor' || p.category === 'tantalum-capacitor');
+  }
+  if (catSlug === 'inductor') {
+    return products.filter(p => p.category === 'inductor' || p.category === 'smd-power-inductor');
+  }
+  if (catSlug === 'diode') {
+    return products.filter(p => p.category === 'diode' || p.category === 'zener-diode' || p.category === 'rectifier-schottky-diode' || p.category === 'tvs-diode');
+  }
+  if (catSlug === 'led') {
+    return products.filter(p => p.category === 'led' || p.category === 'optoelectronics');
+  }
+  if (catSlug === 'crystal-oscillator') {
+    return products.filter(p => p.category === 'crystal-oscillator' || p.category === 'frequency-control');
   }
   if (catSlug === 'passive-components') {
-    return products.filter(p => p.categoryGroup === 'Passive Components' || p.category === 'resistor' || p.category === 'capacitor' || p.category === 'smd-ceramic-capacitor' || p.category === 'smd-resistor' || p.category === 'through-hole-resistor');
+    return products.filter(p => p.categoryGroup === 'Passive Components' || p.category === 'resistor' || p.category === 'capacitor' || p.category === 'smd-ceramic-capacitor' || p.category === 'smd-resistor' || p.category === 'through-hole-resistor' || p.category === 'smd-power-inductor' || p.category === 'inductor' || p.category === 'electrolytic-capacitor' || p.category === 'tantalum-capacitor');
   }
   return products.filter(p => p.category === catSlug);
 };
@@ -762,6 +1039,7 @@ export const getProductsByPriority = (catSlug) =>
 export const getCategoryById = (id) =>
   categories.find(c => c.id === id || c.slug === id);
 `;
+
 
 fs.writeFileSync(path.join(ROOT, 'src', 'data', 'products.js'), output, 'utf8');
 
