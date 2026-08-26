@@ -498,7 +498,7 @@ function mapGenericProduct(r, defaultPrefix, categoryId, categoryGroup, defaultM
   const fullSlug = cleanUrlSlug(r['URL Slug'], defaultPrefix, r.SKU);
   const productId = fullSlug.split('/').pop();
   
-  const specKeys = ['Package', 'Package Size', 'Package Type', 'Inductance', 'Capacitance', 'Voltage Rating', 'Current Rating', 'Dielectric', 'Resistance', 'Tolerance', 'Power Rating', 'Max Voltage', 'Zener Voltage', 'Power Dissipation', 'Standoff Voltage', 'Color', 'Forward Voltage', 'Rated Current', 'Wavelength', 'Frequency', 'Load Capacitance'];
+  const specKeys = ['Package', 'Package Size', 'Package Type', 'Inductance', 'Capacitance', 'Voltage Rating', 'Current Rating', 'Dielectric', 'Resistance', 'Tolerance', 'Power Rating', 'Max Voltage', 'Zener Voltage', 'Power Dissipation', 'Standoff Voltage', 'Color', 'Forward Voltage', 'Rated Current', 'Wavelength', 'Frequency', 'Load Capacitance', 'Pitch', 'Rows', 'Pin Count', 'Gender', 'Mount Type', 'Side', 'Orientation', 'Contact Orientation', 'Connector Type', 'Footprint', 'Actuator Height', 'Switch Type', 'Configuration', 'Coil Voltage', 'Contact Rating'];
   const specs = {};
   specKeys.forEach(k => {
     if (r[k]) specs[k] = String(r[k]).trim();
@@ -586,6 +586,31 @@ if (fs.existsSync(batch4Path)) {
   batch4Products = [...zeners, ...rects, ...tvss, ...leds, ...crystals];
 }
 
+// ── 5.3 Load Batch 5 Excel Products (Connectors, Switches & Relays) ───────────
+const batch5Path = path.join(ROOT, 'mirai_content_batch5_connectors_switches_relays.xlsx');
+let batch5Products = [];
+
+if (fs.existsSync(batch5Path)) {
+  const wb5 = XLSX.readFile(batch5Path);
+  const pinHeaderRows  = XLSX.utils.sheet_to_json(wb5.Sheets['Pin Headers'] || []);
+  const jstRows       = XLSX.utils.sheet_to_json(wb5.Sheets['JST-Wire Connectors'] || []);
+  const termBlockRows = XLSX.utils.sheet_to_json(wb5.Sheets['Terminal Blocks'] || []);
+  const ffcRows       = XLSX.utils.sheet_to_json(wb5.Sheets['FFC-FPC Connectors'] || []);
+  const usbRows       = XLSX.utils.sheet_to_json(wb5.Sheets['USB-Power Connectors'] || []);
+  const switchRows    = XLSX.utils.sheet_to_json(wb5.Sheets['Switches'] || []);
+  const relayRows     = XLSX.utils.sheet_to_json(wb5.Sheets['Relays'] || []);
+
+  const pinHeaders  = pinHeaderRows.map(r => mapGenericProduct(r, 'connector', 'pin-header', 'Connectors', '50'));
+  const jstConns    = jstRows.map(r => mapGenericProduct(r, 'connector', 'jst-wire-connector', 'Connectors', '50'));
+  const termBlocks  = termBlockRows.map(r => mapGenericProduct(r, 'connector', 'terminal-block', 'Connectors', '20'));
+  const ffcConns    = ffcRows.map(r => mapGenericProduct(r, 'connector', 'ffc-fpc-connector', 'Connectors', '50'));
+  const usbConns    = usbRows.map(r => mapGenericProduct(r, 'connector', 'usb-power-connector', 'Connectors', '20'));
+  const switches    = switchRows.map(r => mapGenericProduct(r, 'switch', 'switch', 'Electromechanical', '20'));
+  const relays      = relayRows.map(r => mapGenericProduct(r, 'relay', 'relay', 'Electromechanical', '10'));
+
+  batch5Products = [...pinHeaders, ...jstConns, ...termBlocks, ...ffcConns, ...usbConns, ...switches, ...relays];
+}
+
 // ── 6. Merge All Products ────────────────────────────────────────────────────
 
 const products = [
@@ -595,6 +620,7 @@ const products = [
   ...smdResistors,
   ...batch3Products,
   ...batch4Products,
+  ...batch5Products,
 ];
 
 // ── 7. Build Categories Array ────────────────────────────────────────────────
@@ -978,6 +1004,159 @@ const passiveCategories = [
     sortOptions: 'Popularity, Name A-Z',
     priority: 'High',
     navigationLinks: []
+  },
+  {
+    id: 'pin-header',
+    name: 'Pin Headers & Male Connectors',
+    slug: 'pin-header',
+    metaTitle: 'Pin Headers Distributor India | 2.54mm, 2.0mm Pitch Male Headers — Mirai',
+    metaDescription: 'Buy 2.54mm, 2.0mm 1-row and 2-row pin headers (male plugs, straight & right-angle). Low MOQ, GST billing, pan-India delivery.',
+    h1: 'Pin Headers & Male Board Connectors',
+    h2Tags: 'Pin Header Specifications, Pitch & Pin Counts, Straight vs Right-Angle, Applications',
+    primaryKeyword: 'pin header distributor India',
+    lsiKeywords: '2.54mm male header, Berg strip connector, 40 pin breakaway header India, PCB pin header',
+    description: 'Male pin headers in 2.54mm, 2.0mm, and 1.27mm pitch configurations (single row & double row, straight and right-angle THT/SMD) for board-to-board interconnects, sensor modules, and development boards.',
+    featuredProducts: [],
+    filters: 'Pitch, Rows, Pin Count, Gender, Mount Type',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'jst-wire-connector',
+    name: 'JST & Wire-to-Board Connectors',
+    slug: 'jst-wire-connector',
+    metaTitle: 'JST Wire-to-Board Connectors Distributor India | XH, PH, XH2.54 — Mirai',
+    metaDescription: 'Buy JST XH, PH, XH2.54 wire-to-board connectors (male/female plugs, crimp housings & PCB wafers). Genuine stock, low MOQ, GST invoice.',
+    h1: 'JST & Wire-to-Board Connectors',
+    h2Tags: 'JST Connector Specifications, Series (XH/PH/VH), Wire Side vs PCB Side, Applications',
+    primaryKeyword: 'JST wire connector distributor India',
+    lsiKeywords: 'JST XH 2.5mm connector, JST PH 2.0mm cable connector, wire to board connector India',
+    description: 'High reliability JST-XH, JST-PH, and wire-to-board connectors including pre-crimped wire assemblies, male PCB wafers, female housings, and crimp terminals for power & signal routing.',
+    featuredProducts: [],
+    filters: 'Pitch, Pin Count, Side',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'terminal-block',
+    name: 'Terminal Blocks & Screw Terminals',
+    slug: 'terminal-block',
+    metaTitle: 'Screw Terminal Blocks Distributor India | PCB Mount 2.54mm - 5.08mm — Mirai',
+    metaDescription: 'Buy PCB screw terminal blocks in 2.54mm, 3.5mm, 3.81mm, 5.0mm, 5.08mm pitch. 2-pin to 12-pin straight & right angle. GST billing.',
+    h1: 'PCB Terminal Blocks & Wire Connectors',
+    h2Tags: 'Terminal Block Specifications, Pitch Sizes, Screw vs Spring Clamp, High Current Ratings',
+    primaryKeyword: 'terminal block distributor India',
+    lsiKeywords: 'PCB screw terminal 5.08mm, 2 pin terminal block price Mumbai, pluggable terminal connector India',
+    description: 'Industrial PCB screw terminal blocks and pluggable terminal connectors in 2.54mm to 5.08mm pitch ratings for high-current power input, relay outputs, and industrial automation control wiring.',
+    featuredProducts: [],
+    filters: 'Pitch, Pin Count, Orientation',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'ffc-fpc-connector',
+    name: 'FFC / FPC Flexible Ribbon Connectors',
+    slug: 'ffc-fpc-connector',
+    metaTitle: 'FFC / FPC Connectors Distributor India | 0.5mm & 1.0mm Pitch — Mirai',
+    metaDescription: 'Buy 0.5mm and 1.0mm pitch FFC/FPC flexible flat cable connectors (Top/Bottom/Flip-Lock). High density display & camera flex connectors.',
+    h1: 'FFC & FPC Connectors (Flexible Flat Cable)',
+    h2Tags: 'FFC FPC Connector Specifications, Pitch (0.5mm/1.0mm), Contact Orientation, ZIF/NON-ZIF',
+    primaryKeyword: 'FFC FPC connector distributor India',
+    lsiKeywords: '0.5mm FPC connector flip lock, 30 pin ribbon cable connector, LCD flex connector India',
+    description: 'Zero Insertion Force (ZIF) and Non-ZIF flexible flat cable (FFC) and flexible printed circuit (FPC) connectors in 0.5mm and 1.0mm pitch for LCD displays, camera modules, and compact electronic assemblies.',
+    featuredProducts: [],
+    filters: 'Pitch, Pin Count, Contact Orientation',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'usb-power-connector',
+    name: 'USB & DC Power Connectors',
+    slug: 'usb-power-connector',
+    metaTitle: 'USB & DC Power Jack Connectors Distributor India | USB-C, USB-A, DC Jack — Mirai',
+    metaDescription: 'Buy USB-C, USB-A, Micro-USB ports & 2.1mm DC power jacks (THT & SMD PCB mount). Genuine stock, low MOQ, GST billing.',
+    h1: 'USB Ports & DC Power Jack Connectors',
+    h2Tags: 'USB Connector Specifications, Type-C / Type-A / Micro, DC Power Jacks, Power Ratings',
+    primaryKeyword: 'USB power connector distributor India',
+    lsiKeywords: 'USB Type C female socket PCB, 2.1mm DC barrel jack, USB A THT connector price Mumbai',
+    description: 'Standard USB-C female sockets, USB-A receptacle connectors, Micro-USB ports, and barrel DC power jack sockets for PCB power input, charging circuits, and peripheral interfacing.',
+    featuredProducts: [],
+    filters: 'Connector Type, Mount Type',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'connectors',
+    name: 'Connectors & Interconnects',
+    slug: 'connectors',
+    metaTitle: 'Connectors & Interconnects Distributor India | Pin Headers, JST, Terminals — Mirai',
+    metaDescription: 'Authorized stockist of pin headers, JST connectors, screw terminal blocks, FFC/FPC connectors, USB-C ports & DC jacks in India.',
+    h1: 'Connectors & Interconnect Systems Catalog',
+    h2Tags: 'Connector Types, Wire-to-Board, Board-to-Board, High Current Terminals, Bulk Pricing',
+    primaryKeyword: 'connectors distributor India',
+    lsiKeywords: 'buy connectors online India, pin header bulk, JST connector reel, PCB terminal block stockist',
+    description: 'Complete catalog of over 340 connector SKUs including pin headers, JST wire-to-board connectors, PCB screw terminal blocks, FFC/FPC flex ribbon sockets, and USB/DC power connectors.',
+    featuredProducts: [],
+    filters: 'Sub-Category, Pitch, Pin Count, Mount Type',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'switch',
+    name: 'Switches (Tactile, Slide, Toggle, Rocker)',
+    slug: 'switch',
+    metaTitle: 'Switches Distributor India | Tactile Push Buttons, Slide, DIP, Rocker — Mirai',
+    metaDescription: 'Buy tactile push button switches (3x6, 6x6, 12x12), slide switches, DIP switches, and rocker switches for PCB mounting. GST billing.',
+    h1: 'Switches – Tactile, Slide, Toggle, DIP & Rocker',
+    h2Tags: 'Switch Specifications, Tactile Push Button Sizes, Slide & DIP Switch Types, Applications',
+    primaryKeyword: 'switches distributor India',
+    lsiKeywords: '6x6 tactile switch 4.3mm, DIP switch 4 position, slide switch PCB mount India, push button switch',
+    description: 'High durability SMD and THT tactile push buttons (3x3mm to 12x12mm), slide switches, DIP configuration switches, limit switches, and rocker switches for UI panels and control systems.',
+    featuredProducts: [],
+    filters: 'Switch Type, Footprint, Actuator Height',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'relay',
+    name: 'Relays (Electromechanical & Reed)',
+    slug: 'relay',
+    metaTitle: 'Relays Distributor India | 3V-24V Coil SPDT/DPDT Electromechanical & Reed — Mirai',
+    metaDescription: 'Buy 3V, 5V, 12V, 24V coil relays (5A/10A contact rating, SPDT/DPDT) & SIP/DIP reed relays for industrial control & automation. GST invoice.',
+    h1: 'Relays – Electromechanical & Reed Relays',
+    h2Tags: 'Relay Specifications, Coil Voltage Ratings, Contact Form (SPDT/DPDT), Contact Amperage',
+    primaryKeyword: 'relays distributor India',
+    lsiKeywords: '5V relay SPDT 10A, 12V DC PCB relay price Mumbai, reed relay SIP 5V, industrial control relay',
+    description: 'Precision electromechanical relays and ultra-fast reed relays with 3V, 5V, 12V, and 24V DC coils and up to 10A contact ratings for industrial automation, smart switching, and signal switching circuits.',
+    featuredProducts: [],
+    filters: 'Configuration, Coil Voltage, Contact Rating, Mount Type',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
+  },
+  {
+    id: 'electromechanical',
+    name: 'Electromechanical Components',
+    slug: 'electromechanical',
+    metaTitle: 'Electromechanical Components Distributor India | Switches & Relays — Mirai',
+    metaDescription: 'Authorized stockist of tactile push buttons, DIP switches, slide switches, and 3V-24V power relays in India. 185+ SKUs in stock.',
+    h1: 'Electromechanical Components Catalog',
+    h2Tags: 'Switches & Relays, Industrial Power Control, Tactile Feedback, Bulk Supply',
+    primaryKeyword: 'electromechanical components distributor India',
+    lsiKeywords: 'buy switches and relays online India, tactile button bulk, 5V coil relay stock, PCB switch supplier',
+    description: 'Complete catalog of 185+ electromechanical component SKUs including tactile push buttons, DIP switches, slide switches, toggle switches, and electromechanical/reed power relays.',
+    featuredProducts: [],
+    filters: 'Sub-Category, Spec',
+    sortOptions: 'Popularity, Name A-Z',
+    priority: 'High',
+    navigationLinks: []
   }
 ];
 
@@ -1027,6 +1206,12 @@ export const getProductsByCategory = (catSlug) => {
   if (catSlug === 'passive-components') {
     return products.filter(p => p.categoryGroup === 'Passive Components' || p.category === 'resistor' || p.category === 'capacitor' || p.category === 'smd-ceramic-capacitor' || p.category === 'smd-resistor' || p.category === 'through-hole-resistor' || p.category === 'smd-power-inductor' || p.category === 'inductor' || p.category === 'electrolytic-capacitor' || p.category === 'tantalum-capacitor');
   }
+  if (catSlug === 'connectors' || catSlug === 'connector') {
+    return products.filter(p => p.categoryGroup === 'Connectors' || p.category === 'pin-header' || p.category === 'jst-wire-connector' || p.category === 'terminal-block' || p.category === 'ffc-fpc-connector' || p.category === 'usb-power-connector' || p.category === 'connectors');
+  }
+  if (catSlug === 'electromechanical') {
+    return products.filter(p => p.categoryGroup === 'Electromechanical' || p.category === 'switch' || p.category === 'relay');
+  }
   return products.filter(p => p.category === catSlug);
 };
 
@@ -1044,6 +1229,6 @@ export const getCategoryById = (id) =>
 fs.writeFileSync(path.join(ROOT, 'src', 'data', 'products.js'), output, 'utf8');
 
 console.log(`✅  Generated src/data/products.js`);
-console.log(`    Total Products: ${products.length} (Master: ${masterProducts.length}, Capacitors: ${smdCapacitors.length}, THT Resistors: ${thtResistors.length}, SMD Resistors: ${smdResistors.length})`);
+console.log(`    Total Products: ${products.length} (Master: ${masterProducts.length}, Batch 5: ${batch5Products.length}, Capacitors: ${smdCapacitors.length}, THT Resistors: ${thtResistors.length}, SMD Resistors: ${smdResistors.length})`);
 console.log(`    Total Categories: ${categories.length}`);
 console.log(`    Category Slugs: ${categories.map(c => c.slug).join(', ')}`);

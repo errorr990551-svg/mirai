@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cpu, Zap, Radio, Layers, Activity, Thermometer, ArrowRight, Settings, MessageSquare, Box, SlidersHorizontal, Disc } from 'lucide-react';
+import { Cpu, Zap, Radio, Layers, Activity, Thermometer, ArrowRight, Settings, MessageSquare, Box, SlidersHorizontal, Disc, Plug, ToggleLeft, Repeat, Cable, Grid, Power } from 'lucide-react';
 import { categories, products, getProductsByCategory } from '../data/products';
 
 const categoryIcons = {
@@ -28,6 +28,15 @@ const categoryIcons = {
   'diode':                 Zap,
   'led':                   Activity,
   'crystal-oscillator':    Radio,
+  'pin-header':            Grid,
+  'jst-wire-connector':    Cable,
+  'terminal-block':        Layers,
+  'ffc-fpc-connector':     SlidersHorizontal,
+  'usb-power-connector':   Plug,
+  'connectors':            Plug,
+  'switch':                ToggleLeft,
+  'relay':                 Repeat,
+  'electromechanical':     Power,
 };
 
 const ProductsDropdown = ({ closeMenu }) => {
