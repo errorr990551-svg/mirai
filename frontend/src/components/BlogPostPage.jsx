@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ChevronRight, Calendar, Clock, ArrowLeft, 
+  ChevronRight, Clock, ArrowLeft, 
   ChevronUp, ChevronDown, CheckCircle2, 
   Cpu, FileText, BookOpen
 } from 'lucide-react';
@@ -75,7 +75,7 @@ const parseFaqsFromMarkdown = (body) => {
         faqs.push(currentFaq);
       }
       
-      let qText = '';
+      let qText;
       if (isH3Question) {
         qText = trimmed.replace('### ', '');
       } else if (isBoldNumberedQuestion) {
@@ -367,7 +367,7 @@ const MarkdownRenderer = ({ markdown }) => {
       if (inOrderedList) flushLists(parsedElements, index);
       inList = true;
       lines.forEach(line => {
-        const text = line.replace(/^[\*\-]\s+/, '').trim();
+        const text = line.replace(/^[-*]\s+/, '').trim();
         listItems.push(parseInlineContent(text));
       });
       return;
@@ -404,18 +404,19 @@ const BlogPostPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
 
-  const post = getPostBySlug(slug);
+  const cleanSlug = slug ? slug.replace(/\/+$/, '') : '';
+  const post = getPostBySlug(cleanSlug);
   
   // Extract and clean layout elements
-  const headings = post ? extractHeadings(post.body) : [];
-  const parsedFaqs = post ? parseFaqsFromMarkdown(post.body) : [];
-  const cleanBody = post ? getCleanBody(post.body) : '';
-  const displayFaqs = parsedFaqs.length > 0 ? parsedFaqs : (post ? post.faqs : []);
+  const headings = useMemo(() => post ? extractHeadings(post.body) : [], [post]);
+  const parsedFaqs = useMemo(() => post ? parseFaqsFromMarkdown(post.body) : [], [post]);
+  const cleanBody = useMemo(() => post ? getCleanBody(post.body) : '', [post]);
+  const displayFaqs = useMemo(() => (parsedFaqs.length > 0 ? parsedFaqs : (post ? post.faqs : [])), [parsedFaqs, post]);
 
   // Auto-scroll to top on load
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [slug]);
+  }, [cleanSlug]);
 
   // Update SEO meta and schemas
   useEffect(() => {
@@ -429,12 +430,12 @@ const BlogPostPage = () => {
         'Mirai Technologies'
       );
 
-      const allFaqs = (post.faqs && post.faqs.length > 0) ? post.faqs : faqs;
+      const allFaqs = (displayFaqs && displayFaqs.length > 0) ? displayFaqs : (post.faqs || []);
       if (allFaqs && allFaqs.length > 0) {
         injectFAQSchema(allFaqs);
       }
     }
-  }, [post, faqs]);
+  }, [post, displayFaqs]);
 
   if (!post) {
     return (

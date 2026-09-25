@@ -7,6 +7,10 @@ const activeCitySlugs = new Set(cityPages.map(page => page.slug.toLowerCase()));
 export const redirectsMap = {
   "/contact.php": "/contact",
   "/index.php": "/",
+  "/rfq": "/contact",
+  "/bom-upload": "/contact",
+  "/quote": "/contact",
+  "/request-a-quote": "/contact",
   "/electronic-component-distributor-in-bangalore": "/electronic-component-distributor-in-bengaluru",
   "/electronic-components-supplier-bengaluru": "/electronic-component-distributor-in-bengaluru",
   "/electronic-components-supplier-pune": "/electronic-component-distributor-in-pune",

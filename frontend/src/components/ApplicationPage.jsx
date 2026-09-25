@@ -9,7 +9,8 @@ import { applicationsData } from '../data/applicationsData';
 
 const ApplicationPage = () => {
   const { slug } = useParams();
-  const application = applicationsData.find(app => app.slug === slug);
+  const cleanSlug = slug ? slug.replace(/\/+$/, '') : '';
+  const application = applicationsData.find(app => app.slug === cleanSlug);
 
   // RFQ Form State
   const [formData, setFormData] = useState({

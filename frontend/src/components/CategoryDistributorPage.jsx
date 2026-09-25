@@ -8,8 +8,8 @@ import { updatePageSEO, injectFAQSchema } from '../utils/seo';
 import { categoryDistributorData } from '../data/categoryDistributorData';
 
 const CategoryDistributorPage = ({ pageSlug }) => {
-  const { slug } = useParams();
-  const targetSlug = pageSlug || slug;
+  const rawTargetSlug = pageSlug || slug || '';
+  const targetSlug = rawTargetSlug.replace(/\/+$/, '');
   const data = categoryDistributorData[targetSlug];
 
   // RFQ Form State

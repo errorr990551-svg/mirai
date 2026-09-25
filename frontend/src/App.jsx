@@ -112,6 +112,9 @@ function App() {
             {/* Product detail – wildcard supports multi-segment slugs like /product/integrated-circuit/lm358ld08t */}
             <Route path="/product/*" element={<ProductDetailPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/rfq" element={<Contact />} />
+            <Route path="/bom-upload" element={<Contact />} />
+            <Route path="/quote" element={<Contact />} />
             <Route path="/applications" element={<ApplicationsListPage />} />
             <Route path="/applications/:slug" element={<ApplicationPage />} />
             <Route path="/blog" element={<BlogPage />} />

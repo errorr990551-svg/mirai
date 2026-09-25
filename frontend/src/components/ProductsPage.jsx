@@ -295,6 +295,7 @@ function ProductCard({ product, idx }) {
 // ── Main Component ────────────────────────────────────────────────────────────
 const ProductsPage = () => {
   const { categorySlug } = useParams();
+  const cleanCategorySlug = categorySlug ? categorySlug.replace(/\/+$/, '') : '';
   const [searchParams] = useSearchParams();
   const queryParam = searchParams.get('q') || '';
 
@@ -318,16 +319,16 @@ const ProductsPage = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const categoryData = categorySlug ? getCategoryById(categorySlug) : null;
-  const CategoryIcon = categoryIcons[categorySlug] || Cpu;
+  const categoryData = cleanCategorySlug ? getCategoryById(cleanCategorySlug) : null;
+  const CategoryIcon = categoryIcons[cleanCategorySlug] || Cpu;
 
   // Products pool for category
   const poolProducts = useMemo(() => {
-    if (categorySlug) {
-      return getProductsByCategory(categorySlug);
+    if (cleanCategorySlug) {
+      return getProductsByCategory(cleanCategorySlug);
     }
     return products;
-  }, [categorySlug]);
+  }, [cleanCategorySlug]);
 
   // Auto-scroll & filter resets
   useEffect(() => {
@@ -336,7 +337,7 @@ const ProductsPage = () => {
     setSearchQuery(queryParam);
     setSortBy('priority');
     setCurrentPage(1);
-  }, [categorySlug, queryParam]);
+  }, [cleanCategorySlug, queryParam]);
 
   useEffect(() => {
     setCurrentPage(1);

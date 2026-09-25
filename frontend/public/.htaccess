@@ -11,6 +11,9 @@
   RewriteRule ^products/integrated-circuits/?$ /products/integrated-circuit [R=301,L,NC]
   RewriteRule ^product/(ic-chip|integrated-circuits|ic)/(.*)$ /product/integrated-circuit/$2 [R=301,L,NC]
 
+  # 3. Aliases for RFQ and BOM upload
+  RewriteRule ^(rfq|bom-upload|quote|request-a-quote)/?$ /contact [R=301,L,NC]
+
   # 3. Strip trailing slashes (except for physical directories)
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} (.+)/$

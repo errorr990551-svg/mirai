@@ -136,16 +136,17 @@ const ProductDetailPage = () => {
   const [activeTab, setActiveTab] = useState('description');
 
   // The wildcard route gives us params['*'] = 'integrated-circuit/lm358ld08t'
-  const slug = params['*'] || '';
-  const productId = slug.split('/').pop();
+  const rawSlug = params['*'] || '';
+  const cleanSlug = rawSlug.replace(/\/+$/, '');
+  const productId = cleanSlug.split('/').pop();
 
   // Try slug first, fallback to id
-  const product = getProductBySlug(slug) || getProductBySlug(productId);
+  const product = getProductBySlug(cleanSlug) || getProductBySlug(productId);
 
   // Auto-scroll to top on load
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [slug]);
+  }, [cleanSlug]);
 
   // Update SEO meta and schemas
   useEffect(() => {

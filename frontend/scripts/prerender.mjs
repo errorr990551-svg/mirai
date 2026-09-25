@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { categories, products } from '../src/data/products.js';
 import { blogPosts } from '../src/data/blog.js';
+import { applicationsData } from '../src/data/applicationsData.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -443,6 +444,39 @@ distributorPages.forEach(p => {
   prerenderPage(`/${p.slug}`, { title: p.title, description: p.desc }, `<h1>${p.title}</h1><p>${p.desc}</p>`, [ORG_SCHEMA]);
 });
 console.log(`✅ Prerendered: ${distributorPages.length} category distributor pillar pages`);
+
+// 4d. Applications List & Detail Pages
+const applicationsBody = `
+  <h1>Component Application Guides & BOM Specifications</h1>
+  <p>In-depth circuit topology walkthroughs, failure mode analyses, and recommended component BOMs written for design and procurement engineers.</p>
+  <ul>
+    ${applicationsData.map(app => `<li><a href="/applications/${app.slug}"><strong>${app.title}</strong></a> - ${app.metaDescription}</li>`).join('\n')}
+  </ul>
+`;
+prerenderPage('/applications', {
+  title: 'B2B Engineering Application Guides & BOM Specifications | Mirai Tech',
+  description: 'Technical application guides for solar inverters, welding machines, SMPS repair, EV chargers, motor drives & UPS systems. Component BOM specifications and direct RFQ sourcing.'
+}, applicationsBody, [ORG_SCHEMA]);
+console.log('✅ Prerendered: /applications');
+
+applicationsData.forEach(app => {
+  const appSectionsHtml = (app.sections || []).map(s => `<h2>${s.heading}</h2><p>${s.content}</p>`).join('\n');
+  const appBomHtml = (app.bom || []).map(b => `<li><strong>${b.partNumber}</strong> (${b.category}): ${b.specs} - ${b.application}</li>`).join('\n');
+  const appBody = `
+    <h1>${app.title}</h1>
+    <p>${app.heroContent || app.metaDescription}</p>
+    ${appSectionsHtml}
+    <h2>Recommended Component BOM</h2>
+    <ul>
+      ${appBomHtml}
+    </ul>
+  `;
+  prerenderPage(`/applications/${app.slug}`, {
+    title: app.metaTitle || app.title,
+    description: app.metaDescription
+  }, appBody, [ORG_SCHEMA]);
+});
+console.log(`✅ Prerendered: ${applicationsData.length} application guide pages`);
 
 
 // 5. Products Catalog Page
