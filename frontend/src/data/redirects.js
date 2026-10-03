@@ -20,7 +20,21 @@ export const redirectsMap = {
   "/electronic-component-distributor-in-gurgaon": "/electronic-component-distributor-in-delhi-ncr",
   "/electronic-component-distributor-in-faridabad": "/electronic-component-distributor-in-delhi-ncr",
   "/electronic-component-distributor-in-ghaziabad": "/electronic-component-distributor-in-delhi-ncr",
-  "/products/integrated-circuits": "/products/integrated-circuit"
+  "/products/integrated-circuits": "/products/integrated-circuit",
+  "/power-mosfets-supplier-chennai": "/electronic-component-distributor-in-chennai",
+  "/integrated-circuits-supplier-chennai": "/electronic-component-distributor-in-chennai",
+  "/power-mosfets-supplier-coimbatore": "/electronic-component-distributor-in-coimbatore",
+  "/power-mosfets-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
+  "/igbts-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
+  "/integrated-circuits-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
+  "/microcontrollers-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
+  "/transistors-optocouplers-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
+  "/voltage-regulators-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
+  "/diodes-rectifiers-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
+  "/power-mosfets-supplier-pune": "/electronic-component-distributor-in-pune",
+  "/igbts-supplier-pune": "/electronic-component-distributor-in-pune",
+  "/electronic-component-distributor-in-aurangabad": "/electronic-component-distributor-in-chhatrapati-sambhajinagar",
+  "/aurangabad": "/electronic-component-distributor-in-chhatrapati-sambhajinagar",
 };
 
 // Default fallback redirect for unknown city pages

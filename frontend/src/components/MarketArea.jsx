@@ -100,39 +100,18 @@ const MarketArea = () => {
 
               {/* Cities Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {citiesByState[state].map(page => {
-                  let label = page.city;
-                  if (page.isHQ) {
-                    label = `${page.city} (HQ)`;
-                  } else if (page.slug.includes('mosfets')) {
-                    label = `${page.city} - MOSFETs`;
-                  } else if (page.slug.includes('igbts')) {
-                    label = `${page.city} - IGBTs`;
-                  } else if (page.slug.includes('integrated-circuits')) {
-                    label = `${page.city} - ICs`;
-                  } else if (page.slug.includes('microcontrollers')) {
-                    label = `${page.city} - MCUs`;
-                  } else if (page.slug.includes('optocouplers')) {
-                    label = `${page.city} - Optocouplers`;
-                  } else if (page.slug.includes('regulators')) {
-                    label = `${page.city} - Regulators`;
-                  } else if (page.slug.includes('diodes')) {
-                    label = `${page.city} - Diodes`;
-                  }
-
-                  return (
-                    <Link 
-                      key={page.slug} 
-                      to={page.slug}
-                      className="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-100 hover:border-mirai-primary hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
-                    >
-                      <span className="text-sm font-semibold text-slate-700 group-hover:text-mirai-primary transition-colors">
-                        {label}
-                      </span>
-                      <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-mirai-primary group-hover:translate-x-0.5 transition-all duration-300 shrink-0" />
-                    </Link>
-                  );
-                })}
+                {citiesByState[state].map(page => (
+                  <Link 
+                    key={page.slug} 
+                    to={page.slug}
+                    className="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-100 hover:border-mirai-primary hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                  >
+                    <span className="text-sm font-semibold text-slate-700 group-hover:text-mirai-primary transition-colors">
+                      {page.city}
+                    </span>
+                    <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-mirai-primary group-hover:translate-x-0.5 transition-all duration-300 shrink-0" />
+                  </Link>
+                ))}
               </div>
             </motion.div>
           ))}

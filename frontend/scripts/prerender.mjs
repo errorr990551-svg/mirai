@@ -1378,6 +1378,158 @@ cityPages.forEach(page => {
   let cityBody = '';
 
   if (page.hasDetailedBlueprint) {
+    const whoWeAreHtml = page.whoWeAre ? `
+      <section style="margin-top: 32px;">
+        <h2>${page.whoWeAre.h2}</h2>
+        ${(page.whoWeAre.content || []).map(p => `<p style="margin-top: 12px; line-height: 1.7; color: #475569;">${p}</p>`).join('')}
+      </section>
+      <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+    ` : '';
+
+    const trustBadgesHtml = (page.trustBadges || []).length > 0 ? `
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
+        ${page.trustBadges.map(b => `<span style="background-color: #f1f5f9; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #1e293b;">✓ ${b}</span>`).join('')}
+      </div>
+    ` : '';
+
+    const whatWeSupplyHtml = page.whatWeSupply ? `
+      <section style="margin-top: 32px;">
+        <h2>${page.whatWeSupply.h2}</h2>
+        <div style="margin-top: 20px;">
+          ${page.whatWeSupply.categories?.active ? `
+            <div style="margin-top: 16px;">
+              <h3>${page.whatWeSupply.categories.active.title}</h3>
+              <ul style="margin-top: 8px; line-height: 1.8;">
+                ${page.whatWeSupply.categories.active.items.map(it => `<li>${it}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+          ${page.whatWeSupply.categories?.passives ? `
+            <div style="margin-top: 16px;">
+              <h3>${page.whatWeSupply.categories.passives.title}</h3>
+              <ul style="margin-top: 8px; line-height: 1.8;">
+                ${page.whatWeSupply.categories.passives.items.map(it => `<li>${it}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+          ${page.whatWeSupply.categories?.diodes ? `
+            <div style="margin-top: 16px;">
+              <h3>${page.whatWeSupply.categories.diodes.title}</h3>
+              <ul style="margin-top: 8px; line-height: 1.8;">
+                ${page.whatWeSupply.categories.diodes.items.map(it => `<li>${it}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+          ${page.whatWeSupply.categories?.connectors ? `
+            <div style="margin-top: 16px;">
+              <h3>${page.whatWeSupply.categories.connectors.title}</h3>
+              <ul style="margin-top: 8px; line-height: 1.8;">
+                ${page.whatWeSupply.categories.connectors.items.map(it => `<li>${it}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+        </div>
+      </section>
+      <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+    ` : '';
+
+    const industriesBuyHtml = page.industriesBuy ? `
+      <section style="margin-top: 32px;">
+        <h2>${page.industriesBuy.h2}</h2>
+        ${(page.industriesBuy.items || []).map(ind => `
+          <div style="margin-top: 16px;">
+            <h3>${ind.title || ind.h3}</h3>
+            <p style="margin-top: 6px; line-height: 1.7; color: #475569;">${ind.desc || ind.content}</p>
+          </div>
+        `).join('')}
+      </section>
+      <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+    ` : '';
+
+    const mosfetDistributorHtml = page.mosfetDistributor ? `
+      <section style="margin-top: 32px;">
+        <h2>${page.mosfetDistributor.h2}</h2>
+        <p style="margin-top: 10px; color: #334155;">${page.mosfetDistributor.intro || ''}</p>
+        
+        ${(page.mosfetDistributor.applications || []).length > 0 ? `
+          <div style="margin-top: 20px;">
+            <h3>Common Applications:</h3>
+            <ul>
+              ${page.mosfetDistributor.applications.map(app => {
+                if (typeof app === 'string') {
+                  const colonIdx = app.indexOf(':');
+                  if (colonIdx !== -1) {
+                    return `<li><strong>${app.slice(0, colonIdx).trim()}:</strong> ${app.slice(colonIdx + 1).trim()}</li>`;
+                  }
+                  return `<li>${app.trim()}</li>`;
+                }
+                return `<li><strong>${app.title || app.h3}:</strong> ${app.desc || app.content}</li>`;
+              }).join('')}
+            </ul>
+          </div>
+        ` : ''}
+
+        ${(page.mosfetDistributor.popularParts || []).length > 0 ? `
+          <div style="margin-top: 24px;">
+            <h3>High-Demand Power MOSFETs:</h3>
+            <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; border-color: #cbd5e1; margin-top: 12px; text-align: left;">
+              <thead>
+                <tr style="background-color: #f1f5f9; color: #0f172a;">
+                  <th>Part Number</th>
+                  <th>Manufacturer</th>
+                  <th>Type</th>
+                  <th>Ratings</th>
+                  <th>Package</th>
+                  <th>Applications</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${page.mosfetDistributor.popularParts.map(part => `
+                  <tr>
+                    <td><strong>${part.partNumber}</strong></td>
+                    <td>${part.manufacturer}</td>
+                    <td>${part.polarity}</td>
+                    <td>${part.vDs} | ${part.rDsOn}</td>
+                    <td>${part.package}</td>
+                    <td>${part.application}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        ` : ''}
+
+        ${page.mosfetDistributor.howToPick ? `
+          <div style="margin-top: 24px;">
+            <h3>${page.mosfetDistributor.howToPick.title || 'How to Pick a MOSFET'}</h3>
+            <ol style="margin-top: 10px; line-height: 1.8;">
+              ${(page.mosfetDistributor.howToPick.tips || []).map(tip => `<li>${tip}</li>`).join('')}
+            </ol>
+          </div>
+        ` : ''}
+      </section>
+      <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+    ` : '';
+
+    const mosfetCalculatorHtml = page.mosfetCalculator ? `
+      <section style="margin-top: 32px; background-color: #f8fafc; padding: 24px; border-radius: 8px; border: 1px solid #e2e8f0;">
+        <h2>${page.mosfetCalculator.h2}</h2>
+        <p style="margin-top: 8px; color: #475569;">${page.mosfetCalculator.purpose}</p>
+        <div style="margin-top: 16px; font-family: monospace; font-size: 14px; background: #fff; padding: 12px; border-radius: 4px; border: 1px solid #cbd5e1;">
+          <p><strong>Formulas:</strong></p>
+          <p>Conduction loss: P_cond = (I_RMS)^2 × R_DS(on)</p>
+          <p>Junction temperature: T_J = T_A + (P_cond × θ_JA)</p>
+        </div>
+        ${page.mosfetCalculator.workedExample ? `
+          <div style="margin-top: 16px;">
+            <p><strong>Worked Example (${page.mosfetCalculator.workedExample.part}):</strong> ${page.mosfetCalculator.workedExample.note || ''}</p>
+          </div>
+        ` : ''}
+        <p style="margin-top: 16px; font-size: 12px; color: #64748b; font-style: italic;">${page.mosfetCalculator.disclaimer || ''}</p>
+      </section>
+      <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+    ` : '';
+
     const productSectionsHtml = (page.productSections || []).map(sec => `
       <section style="margin-top: 32px;">
         <h2>${sec.h2}</h2>
@@ -1467,6 +1619,16 @@ cityPages.forEach(page => {
       </section>
     ` : '';
 
+    const contactInfoHtml = page.contactInfo ? `
+      <section style="margin-top: 32px; background-color: #f8fafc; padding: 20px; border-radius: 8px;">
+        <h2>Contact & Dispatch Details</h2>
+        <p><strong>Phone / WhatsApp:</strong> ${page.contactInfo.phones?.join(' | ') || '+91 93213 98188'}</p>
+        <p><strong>Office / Shipping:</strong> ${page.contactInfo.office || ''}</p>
+        <p><strong>Registered Address:</strong> ${page.contactInfo.registered || ''}</p>
+      </section>
+      <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+    ` : '';
+
     const faqsHtml = (page.faqs || []).length > 0 ? `
       <section style="margin-top: 32px;">
         <h2>${page.city} FAQs</h2>
@@ -1493,6 +1655,7 @@ cityPages.forEach(page => {
       <section>
         <h1>${page.h1}</h1>
         <p style="font-size: 18px; line-height: 1.6; color: #334155; margin-top: 12px;">${page.heroSub}</p>
+        ${trustBadgesHtml}
         <p style="margin-top: 20px;">
           <a href="/contact" style="display: inline-block; padding: 10px 20px; background-color: #2563eb; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Get a Quote</a>
           <a href="/products" style="display: inline-block; padding: 10px 20px; border: 1px solid #2563eb; color: #2563eb; text-decoration: none; border-radius: 6px; font-weight: bold;">Browse Products</a>
@@ -1500,6 +1663,8 @@ cityPages.forEach(page => {
       </section>
 
       <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+
+      ${whoWeAreHtml}
 
       ${page.whyTrust ? `
         <section>
@@ -1510,13 +1675,17 @@ cityPages.forEach(page => {
       ` : ''}
 
       ${landscapeHtml}
+      ${whatWeSupplyHtml}
+      ${industriesBuyHtml}
+      ${mosfetDistributorHtml}
+      ${mosfetCalculatorHtml}
       ${productSectionsHtml}
       ${specSnapshotHtml}
       ${qualityComplianceHtml}
       ${sourcingGuideHtml}
       ${howToOrderHtml}
       ${serviceAreasHtml}
-      <hr style="margin: 32px 0; border: 0; border-top: 1px solid #e2e8f0;" />
+      ${contactInfoHtml}
       ${faqsHtml}
       ${internalLinksHtml}
     `;

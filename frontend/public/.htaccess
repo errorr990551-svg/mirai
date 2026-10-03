@@ -29,6 +29,13 @@
   # 5. Redirect /sitemap to /sitemap.xml
   RewriteRule ^sitemap$ /sitemap.xml [R=301,L]
 
+  # 5b. Redirect legacy duplicate city-product URLs and old city names
+  RewriteRule ^(power-mosfets-supplier-chennai|integrated-circuits-supplier-chennai)/?$ /electronic-component-distributor-in-chennai [R=301,L,NC]
+  RewriteRule ^power-mosfets-supplier-coimbatore/?$ /electronic-component-distributor-in-coimbatore [R=301,L,NC]
+  RewriteRule ^(power-mosfets-supplier-mumbai|igbts-supplier-mumbai|integrated-circuits-supplier-mumbai|microcontrollers-supplier-mumbai|transistors-optocouplers-supplier-mumbai|voltage-regulators-supplier-mumbai|diodes-rectifiers-supplier-mumbai)/?$ /electronic-component-distributor-in-mumbai [R=301,L,NC]
+  RewriteRule ^(power-mosfets-supplier-pune|igbts-supplier-pune)/?$ /electronic-component-distributor-in-pune [R=301,L,NC]
+  RewriteRule ^(electronic-component-distributor-in-aurangabad|aurangabad)/?$ /electronic-component-distributor-in-chhatrapati-sambhajinagar [R=301,L,NC]
+
   # 6. SPA Routing fallback
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
