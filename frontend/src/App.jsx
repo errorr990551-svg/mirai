@@ -34,6 +34,10 @@ import CategoryDistributorPage from './components/CategoryDistributorPage';
 import AuthorizedBrandsPage from './components/AuthorizedBrandsPage';
 import RedirectHandler from './components/RedirectHandler';
 
+import HomeProductSections from './components/HomeProductSections';
+import HomeQualityAndDelivery from './components/HomeQualityAndDelivery';
+import HomeContactSection from './components/HomeContactSection';
+
 function SitemapRedirect() {
   useEffect(() => {
     window.location.replace('/sitemap.xml');
@@ -44,9 +48,9 @@ function SitemapRedirect() {
 function Home() {
   useEffect(() => {
     updateMeta(
-      'Mirai Technologies | Authorized Electronic Component Distributor India Since 1999',
-      'Authorized distributor of MOSFETs, IGBTs, ICs, microcontrollers & passive components in India. 100+ manufacturer channels, low MOQ, GST invoicing. Request a quote.',
-      'electronic component distributor India, active and passive components distributor Mumbai, BOM sourcing distributor India, MOSFET distributor, IC distributor',
+      'Electronic Components Distributor in Mumbai, India | Mirai Technologies',
+      'Authorized electronic components distributor in Mumbai since 1999. Genuine ICs, MOSFETs, microcontrollers, capacitors, resistors and connectors with CoC, GST invoice and pan-India delivery.',
+      'electronic components distributor India, semiconductor distributor Mumbai, buy electronic components India',
       'Mirai Technologies',
       'Mirai Technologies'
     );
@@ -57,12 +61,11 @@ function Home() {
     <>
       <HeroSection />
       <AboutSection />
-      <FeaturesSection />
-      <PartnersSection />
-      <StatsSection />
+      <HomeProductSections />
       <IndustriesSection />
-      <CTASection />
+      <HomeQualityAndDelivery />
       <FAQSection />
+      <HomeContactSection />
     </>
   );
 }

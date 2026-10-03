@@ -12,6 +12,8 @@ import { updatePageSEO, updateSchemaScripts } from '../utils/seo';
 import cityPages from '../data/cityPages.json';
 import { categories } from '../data/products';
 
+import DetailedCityBlueprint from './DetailedCityBlueprint';
+
 const getNearbyCities = (currentCity, currentState) => {
   let siblings = cityPages.filter(c => c.state === currentState && c.city !== currentCity);
   if (siblings.length < 6) {
@@ -415,10 +417,22 @@ const CitySEOPage = ({ page }) => {
     );
   }
 
-  // Parse fields
-  const internalLinksList = parseInternalLinks(page.internalLinks);
-  const industriesList = page.targetIndustries ? page.targetIndustries.split(',').map(s => s.trim()) : [];
-  const nearbyCities = getNearbyCities(page.city, page.state);
+  // If this city has the detailed blueprint content, render the dedicated layout
+  if (page.hasDetailedBlueprint) {
+    return (
+      <DetailedCityBlueprint 
+        page={page} 
+        handleFormSubmit={handleFormSubmit}
+        formData={formData}
+        handleInputChange={handleInputChange}
+        isSubmitting={isSubmitting}
+        submitStatus={submitStatus}
+        statusMessage={statusMessage}
+        openFaq={openFaq}
+        setOpenFaq={setOpenFaq}
+      />
+    );
+  }
 
   return (
     <div className="bg-white min-h-screen text-slate-900 overflow-hidden">

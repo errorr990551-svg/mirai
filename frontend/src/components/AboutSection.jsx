@@ -47,44 +47,64 @@ const AboutSection = () => {
             className="lg:col-span-6"
           >
             <p className="text-mirai-primary font-bold text-sm tracking-widest uppercase mb-4">
-              WHY MIRAI TECH LEADS
+              WHO WE ARE
             </p>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight font-heading">
-              Empowering the Indian Electronics Industry
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-6 leading-tight font-heading">
+              A Mumbai Component Distributor Built on 25+ Years of Trust
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed mb-8">
-              While many are simple traders, Mirai Technologies operates as a tech-driven supply partner. We combine deep global sourcing expertise with strict quality assurance to deliver authentic components that power advanced automotive, defense, and industrial electronics.
-            </p>
+            <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
+              <p>
+                We started in Mumbai in 1999 with one rule: if a part leaves our shelf, it must be genuine and traceable. Today we are an authorized distributor and stockist of active and passive electronic components. Automotive, industrial, consumer electronics and telecom manufacturers across India rely on us.
+              </p>
+              <p>
+                The component market has plenty of shortages and grey-market counterfeits. We handle that by sourcing directly from manufacturers or authorized franchise lines, carrying buffer stock under rolling forecasts, and helping your engineers with cross-references when a part goes end-of-life or out of stock.
+              </p>
+            </div>
             
-            {/* Value Points */}
-            <div className="space-y-6 mb-10">
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center text-mirai-primary flex-shrink-0 mt-1">
-                  <Check className="w-3.5 h-3.5" />
+            {/* SECTION 3: WHY SOURCING TEAMS CHOOSE US */}
+            <div className="pt-6 border-t border-slate-100">
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-6 font-heading">
+                Why Procurement Teams Choose Mirai Technologies
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
+                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 rounded-full bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center text-mirai-primary mb-3">
+                    <Check className="w-4 h-4" />
+                  </div>
+                  <h4 className="text-base font-bold text-slate-900 mb-2">100% Genuine, Traceable Components</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Every part comes directly from the manufacturer or an authorized franchise line, with a full Certificate of Conformance (CoC). No grey market and no relabelled stock.
+                  </p>
                 </div>
-                <div>
-                  <h4 className="text-base font-bold text-slate-900 mb-1">Complete Component Traceability</h4>
-                  <p className="text-slate-500 text-sm">Every shipment is delivered with original Manufacturer COCs, lab test reports, and full batch traceability.</p>
+
+                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 rounded-full bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center text-mirai-primary mb-3">
+                    <Check className="w-4 h-4" />
+                  </div>
+                  <h4 className="text-base font-bold text-slate-900 mb-2">A Portfolio That Covers Your Whole BOM</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Power MOSFETs, IGBTs, microcontrollers, optocouplers, ICs and thousands of passive components. You can buy most of your BOM from one supplier.
+                  </p>
                 </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center text-mirai-primary flex-shrink-0 mt-1">
-                  <Check className="w-3.5 h-3.5" />
+
+                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 rounded-full bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center text-mirai-primary mb-3">
+                    <Check className="w-4 h-4" />
+                  </div>
+                  <h4 className="text-base font-bold text-slate-900 mb-2">Low MOQ, Fair for Small and Large Buyers</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Prototype run or production batch, we help you buy what you need. That keeps your inventory lean and your working capital free.
+                  </p>
                 </div>
-                <div>
-                  <h4 className="text-base font-bold text-slate-900 mb-1">Broad Semiconductor Access</h4>
-                  <p className="text-slate-500 text-sm">Specialized sourcing for ICs, MOSFETs, IGBTs, MCUs, and passives from 40+ premier global manufacturers.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center text-mirai-primary flex-shrink-0 mt-1">
-                  <Check className="w-3.5 h-3.5" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-slate-900 mb-1">Precision Supply Chain</h4>
-                  <p className="text-slate-500 text-sm">Flexible logistics, buffer stocking, and rapid quoting to support high-mix, low-volume EMS and OEM production.</p>
+
+                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                  <div className="w-8 h-8 rounded-full bg-mirai-primary/10 border border-mirai-primary/20 flex items-center justify-center text-mirai-primary mb-3">
+                    <Check className="w-4 h-4" />
+                  </div>
+                  <h4 className="text-base font-bold text-slate-900 mb-2">Complete GST Invoicing</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Every B2B order comes with a proper GST invoice, so you can claim Input Tax Credit without any trouble.
+                  </p>
                 </div>
               </div>
             </div>
@@ -95,7 +115,7 @@ const AboutSection = () => {
                 to="/about" 
                 className="inline-flex items-center gap-2 bg-mirai-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all hover:shadow-lg hover:-translate-y-0.5 group shadow-md shadow-blue-500/20"
               >
-                About Company <span className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+                About Mirai <span className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
               </Link>
               <Link 
                 to="/authorized-distributor-brands" 

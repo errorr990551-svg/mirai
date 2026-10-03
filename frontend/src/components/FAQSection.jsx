@@ -5,28 +5,32 @@ import { ChevronDown } from 'lucide-react';
 const FAQSection = () => {
   const faqs = [
     {
-      q: "What is the minimum order quantity (MOQ)?",
-      a: "Mirai Technologies works with clients of all sizes. MOQ varies by component and manufacturer. Contact us with your specific requirements and we'll find the best solution for your project, whether it's a single prototype quantity or a large production run."
+      q: "Are your components genuine?",
+      a: "Yes. We source directly from manufacturers or authorized franchise lines, and genuine parts ship with a Certificate of Conformance."
     },
     {
-      q: "Do you supply components pan-India?",
-      a: "Yes, Mirai Technologies, based in Mumbai, supplies electronic components across India and internationally. We serve clients in Delhi, Bangalore, Pune, Chennai, Hyderabad, and all major manufacturing hubs across India."
+      q: "Do you supply small quantities?",
+      a: "Yes. We offer flexible MOQs, so prototype buyers and production teams are both welcome."
     },
     {
-      q: "Are all components genuine and authentic?",
-      a: "Absolutely. We source exclusively from authorized manufacturers and franchised distributors. Every shipment undergoes anti-counterfeit visual inspection, packaging verification, and lot traceability checks. COC available on every order."
+      q: "Will I get a GST invoice?",
+      a: "Yes. Every B2B order comes with a complete GST invoice for Input Tax Credit."
     },
     {
-      q: "Can you source obsolete or discontinued components?",
-      a: "Yes — this is one of our specialties. Our global supplier network allows us to locate end-of-life and hard-to-find components that standard distributors cannot supply. Contact us with your part number for sourcing assistance."
+      q: "Which brands do you carry?",
+      a: "ICs from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices, and MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay."
     },
     {
-      q: "Which brands / manufacturers does Mirai supply?",
-      a: "We are authorized partners for 40+ global brands including Infineon, Texas Instruments, STMicroelectronics, Microchip, Analog Devices, onsemi, Toshiba, Nexperia, Yageo, TDK, Rohm, Renesas, Samsung, and many more."
+      q: "Can you help if my part is obsolete or out of stock?",
+      a: "Yes. Our team supports expert cross-referencing to find a suitable alternative."
     },
     {
-      q: "Do you offer after-sales support?",
-      a: "Yes. Our dedicated team handles returns, replacements, and quality disputes within 48 hours. We stand behind every order we fulfill and are committed to resolving any issues quickly and professionally."
+      q: "Do you deliver outside Mumbai?",
+      a: "Yes. We deliver across India to all major industrial cities."
+    },
+    {
+      q: "How fast will I get a quote?",
+      a: "Within 24 hours of receiving your BOM or part list."
     }
   ];
 
@@ -37,13 +41,13 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-24 bg-white relative border-t border-slate-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-slate-900 inline-block relative pb-4">
-            FAQs
+          <h2 className="text-3xl sm:text-4xl font-heading font-black text-slate-900 inline-block relative pb-4">
+            Frequently Asked Questions
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-mirai-primary rounded-full" />
           </h2>
         </div>

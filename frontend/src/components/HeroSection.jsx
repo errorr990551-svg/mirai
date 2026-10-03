@@ -72,18 +72,23 @@ const HeroSection = () => {
             
             <motion.h1 
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-[3.75rem] font-extrabold tracking-tight mb-4 lg:mb-6 leading-[1.15] text-white"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4 lg:mb-6 leading-[1.2] text-white font-heading"
             >
-              <span className="block">India's Trusted</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Electronic Components</span>
-              <span className="block mt-2">Distributor</span>
+              Electronic Components Distributor in India: Genuine ICs, MOSFETs &amp; Passives Since 1999
             </motion.h1>
+
+            <motion.p 
+              variants={itemVariants}
+              className="text-lg sm:text-xl text-blue-200 font-semibold mb-4 max-w-3xl leading-relaxed"
+            >
+              Authentic, factory-traceable semiconductors and passive components for OEMs, EMS companies, R&amp;D labs and defence units. Supplied from Mumbai to the whole of India.
+            </motion.p>
             
             <motion.p 
               variants={itemVariants}
-              className="text-base sm:text-lg text-slate-300 mb-6 lg:mb-8 max-w-lg leading-relaxed font-light"
+              className="text-base sm:text-lg text-slate-300 mb-6 lg:mb-8 max-w-3xl leading-relaxed font-light"
             >
-              Mirai Technologies supplies ICs, MOSFETs, IGBTs, Transistors, MCUs, Capacitors & 2000+ component types from 40+ global brands. Mumbai-based. Serving OEMs, EMS & industries worldwide since 1999.
+              Mirai Technologies has helped Indian manufacturers keep their production lines running for over 25 years. Send us your BOM or part number list. Our team replies with pricing, availability and traceability within 24 hours.
             </motion.p>
             
             <motion.div 
@@ -92,7 +97,7 @@ const HeroSection = () => {
             >
               <button 
                 onClick={() => window.dispatchEvent(new CustomEvent('open-rfq'))}
-                className="bg-mirai-primary text-white font-bold px-8 py-3.5 rounded-lg shadow-md shadow-blue-500/20 hover:shadow-lg hover:bg-opacity-95 transition-all hover:-translate-y-1 animate-pulse"
+                className="bg-mirai-primary text-white font-bold px-8 py-3.5 rounded-lg shadow-md shadow-blue-500/20 hover:shadow-lg hover:bg-opacity-95 transition-all hover:-translate-y-1 cursor-pointer"
               >
                 Request a Quote
               </button>
@@ -100,7 +105,7 @@ const HeroSection = () => {
                 to="/products"
                 className="bg-transparent border border-white text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-white/10 transition-all group flex items-center justify-center"
               >
-                View Products <span className="inline-block transition-transform group-hover:translate-x-1 ml-1">&rarr;</span>
+                Browse Products <span className="inline-block transition-transform group-hover:translate-x-1 ml-1">&rarr;</span>
               </Link>
             </motion.div>
           </motion.div>

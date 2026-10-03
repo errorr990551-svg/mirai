@@ -3,19 +3,37 @@ import { motion } from 'framer-motion';
 import { Smartphone, Plug, Car, Sun, Factory, Plane, Radio, Zap, BatteryCharging, Bot, Activity, Signal } from 'lucide-react';
 
 const IndustriesSection = () => {
-  const industries = [
-    { icon: <Smartphone className="text-pink-500" />, name: "Consumer Electronics", image: "/consumer electronics.webp" },
-    { icon: <Plug className="text-slate-500" />, name: "EMS / PCB Assembly", image: "/emspcb.webp" },
-    { icon: <Car className="text-red-500" />, name: "EV & Automotive", image: "/automotive.webp" },
-    { icon: <Sun className="text-amber-500" />, name: "Solar & Renewable", image: "/solar.webp" },
-    { icon: <Factory className="text-orange-500" />, name: "Industrial Automation", image: "/industrialautomation.webp" },
-    { icon: <Plane className="text-blue-500" />, name: "Defence & Aerospace", image: "/defense.webp" },
-    { icon: <Radio className="text-sky-500" />, name: "IoT & Embedded", image: "/iot.webp" },
-    { icon: <Zap className="text-blue-600" />, name: "Power Electronics", image: "/power.webp" },
-    { icon: <BatteryCharging className="text-emerald-500" />, name: "UPS & Stabilizers", image: "/ups.webp" },
-    { icon: <Bot className="text-blue-500" />, name: "Drones & Robotics", image: "/drone.webp" },
-    { icon: <Activity className="text-rose-500" />, name: "Medical Equipment", image: "/medical.webp" },
-    { icon: <Signal className="text-sky-500" />, name: "Telecommunications", image: "/telecommunication.webp" }
+  const industriesList = [
+    {
+      title: "Automotive electronics",
+      desc: "Wide-temperature SMD resistors, MOSFETs, TVS protection",
+      image: "/automotive.webp",
+      icon: <Car className="text-red-500" />
+    },
+    {
+      title: "Industrial automation",
+      desc: "Microcontrollers, relays, terminal blocks, optocouplers",
+      image: "/industrialautomation.webp",
+      icon: <Factory className="text-orange-500" />
+    },
+    {
+      title: "Consumer electronics",
+      desc: "USB connectors, LEDs, voltage regulators, MLCCs",
+      image: "/consumer electronics.webp",
+      icon: <Smartphone className="text-pink-500" />
+    },
+    {
+      title: "Telecom",
+      desc: "RF-grade capacitors, crystals and oscillators, ICs",
+      image: "/telecommunication.webp",
+      icon: <Signal className="text-sky-500" />
+    },
+    {
+      title: "Power electronics",
+      desc: "MOSFETs, IGBTs, inductors, rectifiers",
+      image: "/power.webp",
+      icon: <Zap className="text-amber-500" />
+    }
   ];
 
   return (
@@ -23,45 +41,52 @@ const IndustriesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="mb-16">
-          <p className="text-mirai-primary font-semibold text-sm tracking-widest uppercase mb-4">Industries We Serve</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900">
-            Powering <span className="text-mirai-primary">Every Sector</span> of <br />
-            Electronics
+        <div className="mb-12 text-left">
+          <p className="text-mirai-primary font-bold text-xs uppercase tracking-widest mb-2">Target Sectors</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 mb-4">
+            Components for the Industries That Build India
           </h2>
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl">
+            We supply OEMs, EMS companies, R&amp;D labs and defence units, across:
+          </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {industries.map((ind, idx) => (
+        {/* Grid of 5 key sectors */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {industriesList.map((ind, idx) => (
             <motion.div 
               key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="group flex flex-col h-full rounded-2xl border border-slate-100 overflow-hidden bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              className="group flex flex-col h-full rounded-2xl border border-slate-200/80 overflow-hidden bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
             >
               {/* Card Image */}
-              <div className="relative h-36 sm:h-48 overflow-hidden bg-slate-100">
+              <div className="relative h-44 overflow-hidden bg-slate-100">
                 <img 
                   src={ind.image} 
-                  alt={ind.name} 
+                  alt={`${ind.title} components - Mirai Technologies`} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                  <div className="p-2 rounded-lg bg-white/90 shadow backdrop-blur-sm">
+                    {React.cloneElement(ind.icon, { className: 'w-4 h-4' })}
+                  </div>
+                </div>
               </div>
 
-              {/* Card Content - Icon on Side, Title on Bottom */}
-              <div className="p-3 sm:p-4 flex items-center gap-2.5 bg-white border-t border-slate-100/50 flex-grow">
-                <div className="flex-shrink-0 p-1.5 rounded-lg bg-slate-50 transition-all duration-300 group-hover:bg-slate-100">
-                  {React.cloneElement(ind.icon, { 
-                    className: `${ind.icon.props.className || ''} w-5 h-5 transition-transform group-hover:scale-110 duration-300` 
-                  })}
+              {/* Card Content */}
+              <div className="p-5 bg-white flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="font-heading font-bold text-base text-slate-900 mb-2 leading-snug">
+                    {ind.title}
+                  </h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {ind.desc}
+                  </p>
                 </div>
-                <h3 className="font-bold text-xs sm:text-sm text-slate-800 group-hover:text-mirai-primary transition-colors duration-300 leading-snug">
-                  {ind.name}
-                </h3>
               </div>
             </motion.div>
           ))}
