@@ -24,12 +24,12 @@ export function updatePageSEO(title, description, canonical, robots, ogTitle, og
     document.head.appendChild(linkCanonical);
   }
   const rawPath = window.location.pathname;
-  const cleanPath = (rawPath.length > 1 && rawPath.endsWith('/')) ? rawPath.slice(0, -1) : rawPath;
-  let defaultCanonical = `https://miraitechnologies.net` + cleanPath;
+  const cleanPath = (rawPath.length > 1 && rawPath.endsWith('/')) ? rawPath.replace(/\/+$/, '') : rawPath;
+  let defaultCanonical = `https://miraitechnologies.net` + (cleanPath === '/' ? '/' : cleanPath);
   if (canonical) {
     let cleanCanonical = canonical.trim();
-    if (cleanCanonical.length > 25 && cleanCanonical.endsWith('/')) {
-      cleanCanonical = cleanCanonical.slice(0, -1);
+    if (cleanCanonical !== 'https://miraitechnologies.net/' && cleanCanonical.endsWith('/')) {
+      cleanCanonical = cleanCanonical.replace(/\/+$/, '');
     }
     defaultCanonical = cleanCanonical;
   }

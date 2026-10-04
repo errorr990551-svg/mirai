@@ -1,3 +1,11 @@
+# Disable directory listing for security
+Options -Indexes
+
+# Turn off mod_dir automatic trailing slash redirect for directories
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -10,33 +18,45 @@
   # 2. Redirect duplicate categories and consolidating IC slugs
   RewriteRule ^products/integrated-circuits/?$ /products/integrated-circuit [R=301,L,NC]
   RewriteRule ^product/(ic-chip|integrated-circuits|ic)/(.*)$ /product/integrated-circuit/$2 [R=301,L,NC]
+  RewriteRule ^power-mosfet-distributor/?$ /mosfet-distributor [R=301,L,NC]
 
   # 3. Aliases for RFQ and BOM upload
   RewriteRule ^(rfq|bom-upload|quote|request-a-quote)/?$ /contact [R=301,L,NC]
 
-  # 3. Strip trailing slashes (except for physical directories)
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} (.+)/$
+  # 4. Strip trailing slashes from ALL URLs (except the root homepage '/')
+  RewriteCond %{REQUEST_URI} ^/(.+)/+$
   RewriteRule ^ %1 [R=301,L]
 
-  # 4. Redirect legacy .php pages
+  # 5. Redirect legacy .php pages
   RewriteRule ^index\.php$ / [R=301,L,NC]
   RewriteRule ^about\.php$ /about [R=301,L,NC]
   RewriteRule ^products\.php$ /products [R=301,L,NC]
   RewriteRule ^contact\.php$ /contact [R=301,L,NC]
   RewriteRule ^brands\.php$ /about [R=301,L,NC]
 
-  # 5. Redirect /sitemap to /sitemap.xml
+  # 6. Redirect /sitemap to /sitemap.xml
   RewriteRule ^sitemap$ /sitemap.xml [R=301,L]
 
-  # 5b. Redirect legacy duplicate city-product URLs and old city names
+  # 7. Redirect legacy duplicate city-product URLs and old city names
+  RewriteRule ^electronic-components-supplier-(.*)$ /electronic-component-distributor-in-$1 [R=301,L,NC]
   RewriteRule ^(power-mosfets-supplier-chennai|integrated-circuits-supplier-chennai)/?$ /electronic-component-distributor-in-chennai [R=301,L,NC]
   RewriteRule ^power-mosfets-supplier-coimbatore/?$ /electronic-component-distributor-in-coimbatore [R=301,L,NC]
   RewriteRule ^(power-mosfets-supplier-mumbai|igbts-supplier-mumbai|integrated-circuits-supplier-mumbai|microcontrollers-supplier-mumbai|transistors-optocouplers-supplier-mumbai|voltage-regulators-supplier-mumbai|diodes-rectifiers-supplier-mumbai)/?$ /electronic-component-distributor-in-mumbai [R=301,L,NC]
   RewriteRule ^(power-mosfets-supplier-pune|igbts-supplier-pune)/?$ /electronic-component-distributor-in-pune [R=301,L,NC]
+  RewriteRule ^(power-mosfets-supplier-ahmedabad|igbts-supplier-ahmedabad)/?$ /electronic-component-distributor-in-ahmedabad [R=301,L,NC]
+  RewriteRule ^(power-mosfets-supplier-delhi-ncr|diodes-rectifiers-supplier-delhi-ncr|electronic-components-supplier-delhi-ncr|electronic-component-distributor-in-delhi-ncr|electronic-component-distributor-in-gurgaon|electronic-component-distributor-in-ghaziabad)/?$ /electronic-component-distributor-in-delhi [R=301,L,NC]
+  RewriteRule ^(integrated-circuits-supplier-bengaluru|microcontrollers-supplier-bengaluru|electronic-component-distributor-in-bangalore)/?$ /electronic-component-distributor-in-bengaluru [R=301,L,NC]
+  RewriteRule ^integrated-circuits-supplier-hyderabad/?$ /electronic-component-distributor-in-hyderabad [R=301,L,NC]
   RewriteRule ^(electronic-component-distributor-in-aurangabad|aurangabad)/?$ /electronic-component-distributor-in-chhatrapati-sambhajinagar [R=301,L,NC]
 
-  # 6. SPA Routing fallback
+  # 8. Serve prerendered static .html files if they exist (both flat /slug.html and nested /slug/index.html)
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  # 9. SPA Routing fallback
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

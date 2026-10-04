@@ -312,14 +312,24 @@ function getNearbyCities(currentCity, currentState) {
 
 // Main prerender helper
 function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
-  // Normalize route to directory path
-  let cleanRoute = route.replace(/^\//, '').replace(/\/$/, '');
-  let outputDir = DIST;
+  // Normalize route to clean path without leading or trailing slashes
+  let cleanRoute = route.replace(/^\//, '').replace(/\/+$/, '');
   let targetFile = path.join(DIST, 'index.html'); // Fallback for root homepage
+  let flatFile = null;
 
   if (cleanRoute !== '') {
-    outputDir = path.join(DIST, cleanRoute);
-    fs.mkdirSync(outputDir, { recursive: true });
+    // 1. Flat file for Apache direct serving without trailing slash: dist/<cleanRoute>.html
+    flatFile = path.join(DIST, `${cleanRoute}.html`);
+    const flatDir = path.dirname(flatFile);
+    if (!fs.existsSync(flatDir)) {
+      fs.mkdirSync(flatDir, { recursive: true });
+    }
+
+    // 2. Nested directory file: dist/<cleanRoute>/index.html
+    const outputDir = path.join(DIST, cleanRoute);
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
     targetFile = path.join(outputDir, 'index.html');
   }
 
@@ -340,8 +350,8 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
   html = html.replace(/<meta\s+name="keywords"\s+content="[^"]*"\s*\/?>/i, '');
 
   // Replace Canonical Link (standardizing non-www and non-trailing slash)
-  const canonicalUrl = (seoDetails.canonical || `https://miraitechnologies.net/${cleanRoute}`).replace(/\/$/, '');
-  const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" />`;
+  const canonicalUrl = (seoDetails.canonical || `https://miraitechnologies.net/${cleanRoute}`).replace(/\/+$/, '');
+  const canonicalTag = `<link rel="canonical" href="${cleanRoute === '' ? 'https://miraitechnologies.net/' : canonicalUrl}" />`;
   if (html.match(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i)) {
     html = html.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i, canonicalTag);
   } else {
@@ -398,9 +408,15 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
     }
   }
 
-  // Inject Schemas in Head
+  // Inject Schemas in Head (sanitize any trailing slash from schema URLs)
   if (finalSchemas && finalSchemas.length > 0) {
-    const schemaTags = finalSchemas.map(schema =>
+    const cleanFinalSchemas = JSON.parse(JSON.stringify(finalSchemas, (key, value) => {
+      if (typeof value === 'string' && value.startsWith('https://miraitechnologies.net/') && value !== 'https://miraitechnologies.net/' && value.endsWith('/')) {
+        return value.replace(/\/+$/, '');
+      }
+      return value;
+    }));
+    const schemaTags = cleanFinalSchemas.map(schema =>
       `  <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`
     ).join('\n');
     html = html.replace(/<\/head>/i, `${schemaTags}\n</head>`);
@@ -460,6 +476,9 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
   html = html.replace(/<div\s+id="root">[\s\S]*?(?=\s*<script\b|<\/body>)/i, `<div id="root">${fullBodyHtml}</div>`);
 
   fs.writeFileSync(targetFile, html, 'utf8');
+  if (flatFile) {
+    fs.writeFileSync(flatFile, html, 'utf8');
+  }
 }
 
 console.log('🏁 Starting Static Site Prerendering for SEO...');

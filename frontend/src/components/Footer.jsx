@@ -116,14 +116,14 @@ const Footer = () => {
           <div className="pt-8 border-t border-white/5 mb-8">
             <h3 className="text-white font-bold text-sm mb-4 uppercase tracking-wider">Industrial Delivery Hubs &amp; Specialised Regional Supply</h3>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-slate-500">
-              <Link to="/electronic-components-supplier-mumbai" className="hover:text-white transition-colors">Mumbai HQ</Link>
-              <Link to="/electronic-components-supplier-pune" className="hover:text-white transition-colors">Pune</Link>
-              <Link to="/electronic-components-supplier-bengaluru" className="hover:text-white transition-colors">Bengaluru</Link>
-              <Link to="/electronic-components-supplier-chennai" className="hover:text-white transition-colors">Chennai</Link>
-              <Link to="/electronic-components-supplier-delhi-ncr" className="hover:text-white transition-colors">Delhi NCR</Link>
-              <Link to="/electronic-components-supplier-ahmedabad" className="hover:text-white transition-colors">Ahmedabad</Link>
-              <Link to="/electronic-components-supplier-hyderabad" className="hover:text-white transition-colors">Hyderabad</Link>
-              <Link to="/electronic-components-supplier-coimbatore" className="hover:text-white transition-colors">Coimbatore</Link>
+              <Link to="/electronic-component-distributor-in-mumbai" className="hover:text-white transition-colors">Mumbai HQ</Link>
+              <Link to="/electronic-component-distributor-in-pune" className="hover:text-white transition-colors">Pune</Link>
+              <Link to="/electronic-component-distributor-in-bengaluru" className="hover:text-white transition-colors">Bengaluru</Link>
+              <Link to="/electronic-component-distributor-in-chennai" className="hover:text-white transition-colors">Chennai</Link>
+              <Link to="/electronic-component-distributor-in-delhi" className="hover:text-white transition-colors">Delhi NCR</Link>
+              <Link to="/electronic-component-distributor-in-ahmedabad" className="hover:text-white transition-colors">Ahmedabad</Link>
+              <Link to="/electronic-component-distributor-in-hyderabad" className="hover:text-white transition-colors">Hyderabad</Link>
+              <Link to="/electronic-component-distributor-in-coimbatore" className="hover:text-white transition-colors">Coimbatore</Link>
               <span className="text-slate-600">|</span>
               <Link to="/market-area" className="text-mirai-primary hover:text-white font-bold transition-colors">View all 25 industrial hubs &rarr;</Link>
             </div>

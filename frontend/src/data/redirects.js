@@ -11,15 +11,19 @@ export const redirectsMap = {
   "/bom-upload": "/contact",
   "/quote": "/contact",
   "/request-a-quote": "/contact",
+  "/power-mosfet-distributor": "/mosfet-distributor",
   "/electronic-component-distributor-in-bangalore": "/electronic-component-distributor-in-bengaluru",
   "/electronic-components-supplier-bengaluru": "/electronic-component-distributor-in-bengaluru",
   "/electronic-components-supplier-pune": "/electronic-component-distributor-in-pune",
   "/electronic-components-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
-  "/electronic-components-supplier-delhi-ncr": "/electronic-component-distributor-in-delhi-ncr",
-  "/electronic-component-distributor-in-noida": "/electronic-component-distributor-in-delhi-ncr",
-  "/electronic-component-distributor-in-gurgaon": "/electronic-component-distributor-in-delhi-ncr",
-  "/electronic-component-distributor-in-faridabad": "/electronic-component-distributor-in-delhi-ncr",
-  "/electronic-component-distributor-in-ghaziabad": "/electronic-component-distributor-in-delhi-ncr",
+  "/electronic-components-supplier-chennai": "/electronic-component-distributor-in-chennai",
+  "/electronic-components-supplier-coimbatore": "/electronic-component-distributor-in-coimbatore",
+  "/electronic-components-supplier-ahmedabad": "/electronic-component-distributor-in-ahmedabad",
+  "/electronic-components-supplier-hyderabad": "/electronic-component-distributor-in-hyderabad",
+  "/electronic-components-supplier-delhi-ncr": "/electronic-component-distributor-in-delhi",
+  "/electronic-component-distributor-in-delhi-ncr": "/electronic-component-distributor-in-delhi",
+  "/electronic-component-distributor-in-gurgaon": "/electronic-component-distributor-in-delhi",
+  "/electronic-component-distributor-in-ghaziabad": "/electronic-component-distributor-in-delhi",
   "/products/integrated-circuits": "/products/integrated-circuit",
   "/power-mosfets-supplier-chennai": "/electronic-component-distributor-in-chennai",
   "/integrated-circuits-supplier-chennai": "/electronic-component-distributor-in-chennai",
@@ -33,6 +37,13 @@ export const redirectsMap = {
   "/diodes-rectifiers-supplier-mumbai": "/electronic-component-distributor-in-mumbai",
   "/power-mosfets-supplier-pune": "/electronic-component-distributor-in-pune",
   "/igbts-supplier-pune": "/electronic-component-distributor-in-pune",
+  "/power-mosfets-supplier-ahmedabad": "/electronic-component-distributor-in-ahmedabad",
+  "/igbts-supplier-ahmedabad": "/electronic-component-distributor-in-ahmedabad",
+  "/power-mosfets-supplier-delhi-ncr": "/electronic-component-distributor-in-delhi",
+  "/diodes-rectifiers-supplier-delhi-ncr": "/electronic-component-distributor-in-delhi",
+  "/integrated-circuits-supplier-bengaluru": "/electronic-component-distributor-in-bengaluru",
+  "/microcontrollers-supplier-bengaluru": "/electronic-component-distributor-in-bengaluru",
+  "/integrated-circuits-supplier-hyderabad": "/electronic-component-distributor-in-hyderabad",
   "/electronic-component-distributor-in-aurangabad": "/electronic-component-distributor-in-chhatrapati-sambhajinagar",
   "/aurangabad": "/electronic-component-distributor-in-chhatrapati-sambhajinagar",
 };
@@ -41,7 +52,9 @@ export const redirectsMap = {
 export const defaultCityFallback = "/market-area";
 
 export function getRedirectTarget(pathname) {
-  const cleanPath = pathname.toLowerCase().replace(/\/$/, "");
+  if (!pathname) return null;
+  const cleanPath = pathname.toLowerCase().replace(/\/+$/, "");
+  if (cleanPath === "") return null;
   
   // 1. If explicit redirect mapping exists (and differs from current path), redirect to mapped target
   if (redirectsMap[cleanPath] && redirectsMap[cleanPath] !== cleanPath) {
