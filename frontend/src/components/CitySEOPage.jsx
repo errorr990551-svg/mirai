@@ -434,6 +434,13 @@ const CitySEOPage = ({ page }) => {
     );
   }
 
+  // Parse fields for standard layout
+  const internalLinksList = parseInternalLinks(page.internalLinks);
+  const industriesList = page.targetIndustries 
+    ? page.targetIndustries.split(',').map(s => s.trim()).filter(Boolean) 
+    : ['Automotive Electronics', 'Industrial Automation', 'Power Electronics', 'Consumer Electronics'];
+  const nearbyCities = getNearbyCities(page.city, page.state);
+
   return (
     <div className="bg-white min-h-screen text-slate-900 overflow-hidden">
       

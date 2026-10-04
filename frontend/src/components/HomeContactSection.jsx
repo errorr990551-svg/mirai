@@ -1,7 +1,10 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Building, ArrowRight } from 'lucide-react';
+import { useContact } from '../context/ContactContext';
 
 const HomeContactSection = () => {
+  const { isUnlocked, openModal } = useContact();
+
   return (
     <section className="py-20 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -23,11 +26,22 @@ const HomeContactSection = () => {
                 <Phone className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-heading font-bold text-white mb-3">Phone / WhatsApp</h3>
-              <div className="space-y-2 text-sm text-slate-300">
-                <p><a href="tel:+919321398188" className="hover:text-blue-400 transition-colors">+91 93213 98188</a></p>
-                <p><a href="tel:+919820122744" className="hover:text-blue-400 transition-colors">+91 98201 22744</a></p>
-                <p><a href="tel:+919136810360" className="hover:text-blue-400 transition-colors">+91 91368 10360</a></p>
-              </div>
+              {isUnlocked ? (
+                <div className="space-y-2 text-sm text-slate-300">
+                  <p><a href="tel:+919321398188" className="hover:text-blue-400 transition-colors">+91 93213 98188</a></p>
+                  <p><a href="tel:+919820122744" className="hover:text-blue-400 transition-colors">+91 98201 22744</a></p>
+                  <p><a href="tel:+919136810360" className="hover:text-blue-400 transition-colors">+91 91368 10360</a></p>
+                </div>
+              ) : (
+                <div className="pt-2 pb-1">
+                  <button 
+                    onClick={openModal}
+                    className="w-full text-center px-4 py-3 rounded-xl text-xs font-bold border border-mirai-primary/30 hover:border-mirai-primary bg-mirai-primary/10 hover:bg-mirai-primary/20 text-white transition-all duration-300 shadow-lg shadow-mirai-primary/5 hover:scale-[1.02] cursor-pointer"
+                  >
+                    Show Contact Details
+                  </button>
+                </div>
+              )}
             </div>
             <div className="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
               Direct line to BOM sourcing engineers

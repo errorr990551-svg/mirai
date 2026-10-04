@@ -7,8 +7,10 @@ import {
   Cpu, Layers, Sparkles, Check, Phone, Mail
 } from 'lucide-react';
 import { updateMeta, updateSchemaScripts } from '../utils/seo';
+import { useContact } from '../context/ContactContext';
 
 const AboutUs = () => {
+  const { isUnlocked, openModal } = useContact();
   const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
@@ -615,12 +617,25 @@ const AboutUs = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-              <h3 className="font-heading font-bold text-lg text-white mb-3">Phone / WhatsApp</h3>
-              <div className="space-y-2 text-sm text-slate-300">
-                <p><a href="tel:+919321398188" className="hover:text-blue-400">+91 93213 98188</a></p>
-                <p><a href="tel:+919820122744" className="hover:text-blue-400">+91 98201 22744</a></p>
-                <p><a href="tel:+919136810360" className="hover:text-blue-400">+91 91368 10360</a></p>
+            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between">
+              <div>
+                <h3 className="font-heading font-bold text-lg text-white mb-3">Phone / WhatsApp</h3>
+                {isUnlocked ? (
+                  <div className="space-y-2 text-sm text-slate-300">
+                    <p><a href="tel:+919321398188" className="hover:text-blue-400">+91 93213 98188</a></p>
+                    <p><a href="tel:+919820122744" className="hover:text-blue-400">+91 98201 22744</a></p>
+                    <p><a href="tel:+919136810360" className="hover:text-blue-400">+91 91368 10360</a></p>
+                  </div>
+                ) : (
+                  <div className="pt-2 pb-1">
+                    <button 
+                      onClick={openModal}
+                      className="w-full text-center px-4 py-3 rounded-xl text-xs font-bold border border-mirai-primary/30 hover:border-mirai-primary bg-mirai-primary/10 hover:bg-mirai-primary/20 text-white transition-all duration-300 shadow-lg shadow-mirai-primary/5 hover:scale-[1.02] cursor-pointer"
+                    >
+                      Show Contact Details
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
 

@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { categories } from '../data/products';
 import MosfetCalculator from './MosfetCalculator';
+import { useContact } from '../context/ContactContext';
 
 const DetailedCityBlueprint = ({
   page,
@@ -19,6 +20,7 @@ const DetailedCityBlueprint = ({
   openFaq = 0,
   setOpenFaq = () => {}
 }) => {
+  const { isUnlocked, openModal } = useContact();
   if (!page) return null;
 
   const scrollToForm = () => {
@@ -674,11 +676,22 @@ const DetailedCityBlueprint = ({
                 Sourcing &amp; Procurement Desk
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-600">
-                <div className="p-4 bg-slate-50 rounded-2xl">
-                  <div className="flex items-center gap-2 text-slate-900 font-bold mb-1">
-                    <Phone className="w-4 h-4 text-mirai-primary" /> Phone / WhatsApp
+                <div className="p-4 bg-slate-50 rounded-2xl flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 text-slate-900 font-bold mb-2">
+                      <Phone className="w-4 h-4 text-mirai-primary" /> Phone / WhatsApp
+                    </div>
+                    {isUnlocked ? (
+                      <p className="font-mono text-xs text-slate-700">{page.contactInfo.phones?.join(' | ') || "+91 93213 98188"}</p>
+                    ) : (
+                      <button 
+                        onClick={openModal}
+                        className="w-full text-center px-3 py-2 rounded-xl text-xs font-bold border border-mirai-primary/30 hover:border-mirai-primary bg-mirai-primary/10 hover:bg-mirai-primary/20 text-mirai-primary transition-all duration-300 shadow-sm cursor-pointer"
+                      >
+                        Show Contact Details
+                      </button>
+                    )}
                   </div>
-                  <p className="font-mono text-xs text-slate-700">{page.contactInfo.phones?.join(' | ') || "+91 93213 98188"}</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl">
                   <div className="flex items-center gap-2 text-slate-900 font-bold mb-1">

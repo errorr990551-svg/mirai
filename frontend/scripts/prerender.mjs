@@ -422,50 +422,71 @@ function prerenderPage(route, seoDetails, bodyHtml, schemas = []) {
     html = html.replace(/<\/head>/i, `${schemaTags}\n</head>`);
   }
 
+  const loaderHtml = `
+    <div class="app-loading-screen" id="app-loading-screen">
+      <div class="loading-container">
+        <div class="loading-logo-container">
+          <div class="loading-logo-icon">
+            <svg class="zap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <span class="loading-logo-text">Mirai Tech</span>
+        </div>
+        <div class="loading-bar-wrapper">
+          <div class="loading-bar-progress"></div>
+        </div>
+        <span class="loading-subtitle">Authorized Distributor Since 1999</span>
+      </div>
+    </div>
+  `;
+
   // Inject Pre-rendered Body content inside <div id="root"></div>
+  // SEO crawlers index #prerender-content (class="sr-only"), while human visitors see the branded loader until React mounts
   const fullBodyHtml = `
-    <div id="prerender-content">
-      <header style="padding: 16px 24px; background-color: #030712; color: #fff; border-bottom: 1px solid #1e293b;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-          <a href="/" style="font-weight: 800; font-size: 20px; color: #38bdf8; text-decoration: none;">Mirai Technologies</a>
-          <nav style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <a href="/" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Home</a>
-            <a href="/about" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">About</a>
-            <a href="/products" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Products</a>
-            <a href="/blog" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Blog</a>
-            <a href="/market-area" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Market Area</a>
-            <a href="/contact" style="color: #cbd5e1; text-decoration: none; font-size: 14px;">Contact</a>
+    ${loaderHtml}
+    <div id="prerender-content" class="sr-only">
+      <header>
+        <div>
+          <a href="/">Mirai Technologies</a>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/products">Products</a>
+            <a href="/blog">Blog</a>
+            <a href="/market-area">Market Area</a>
+            <a href="/contact">Contact</a>
           </nav>
         </div>
       </header>
-      <main style="max-width: 1200px; margin: 40px auto; padding: 0 24px; color: #0f172a; line-height: 1.7;">
+      <main>
         ${bodyHtml}
       </main>
-      <footer style="padding: 40px 24px; background-color: #030712; color: #94a3b8; text-align: center; font-size: 14px; border-top: 1px solid #1e293b;">
-        <div style="max-width: 1200px; margin: 0 auto; margin-bottom: 24px;">
-          <p style="font-weight: bold; color: #f8fafc; margin-bottom: 12px; font-size: 16px;">We Deliver Across India</p>
-          <p style="line-height: 2;">
-            <a href="/electronic-component-distributor-in-mumbai" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Mumbai</a> |
-            <a href="/electronic-component-distributor-in-delhi" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Delhi</a> |
-            <a href="/electronic-component-distributor-in-bengaluru" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Bengaluru</a> |
-            <a href="/electronic-component-distributor-in-hyderabad" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Hyderabad</a> |
-            <a href="/electronic-component-distributor-in-chennai" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Chennai</a> |
-            <a href="/electronic-component-distributor-in-pune" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Pune</a> |
-            <a href="/electronic-component-distributor-in-ahmedabad" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Ahmedabad</a> |
-            <a href="/electronic-component-distributor-in-kolkata" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Kolkata</a> |
-            <a href="/electronic-component-distributor-in-surat" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Surat</a> |
-            <a href="/electronic-component-distributor-in-jaipur" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Jaipur</a> |
-            <a href="/electronic-component-distributor-in-noida" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Noida</a> |
-            <a href="/electronic-component-distributor-in-faridabad" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Faridabad</a> |
-            <a href="/electronic-component-distributor-in-coimbatore" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Coimbatore</a> |
-            <a href="/electronic-component-distributor-in-indore" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Indore</a> |
-            <a href="/electronic-component-distributor-in-nagpur" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Nagpur</a> |
-            <a href="/electronic-component-distributor-in-lucknow" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Lucknow</a> |
-            <a href="/electronic-component-distributor-in-vadodara" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Vadodara</a> |
-            <a href="/electronic-component-distributor-in-chandigarh" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Chandigarh</a> |
-            <a href="/electronic-component-distributor-in-kochi" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Kochi</a> |
-            <a href="/electronic-component-distributor-in-visakhapatnam" style="color: #94a3b8; text-decoration: none; margin: 0 5px;">Visakhapatnam</a> |
-            <a href="/market-area" style="color: #38bdf8; font-weight: bold; text-decoration: none; margin-left: 10px;">View all cities &rarr;</a>
+      <footer>
+        <div>
+          <p>We Deliver Across India</p>
+          <p>
+            <a href="/electronic-component-distributor-in-mumbai">Mumbai</a> |
+            <a href="/electronic-component-distributor-in-delhi">Delhi</a> |
+            <a href="/electronic-component-distributor-in-bengaluru">Bengaluru</a> |
+            <a href="/electronic-component-distributor-in-hyderabad">Hyderabad</a> |
+            <a href="/electronic-component-distributor-in-chennai">Chennai</a> |
+            <a href="/electronic-component-distributor-in-pune">Pune</a> |
+            <a href="/electronic-component-distributor-in-ahmedabad">Ahmedabad</a> |
+            <a href="/electronic-component-distributor-in-kolkata">Kolkata</a> |
+            <a href="/electronic-component-distributor-in-surat">Surat</a> |
+            <a href="/electronic-component-distributor-in-jaipur">Jaipur</a> |
+            <a href="/electronic-component-distributor-in-noida">Noida</a> |
+            <a href="/electronic-component-distributor-in-faridabad">Faridabad</a> |
+            <a href="/electronic-component-distributor-in-coimbatore">Coimbatore</a> |
+            <a href="/electronic-component-distributor-in-indore">Indore</a> |
+            <a href="/electronic-component-distributor-in-nagpur">Nagpur</a> |
+            <a href="/electronic-component-distributor-in-lucknow">Lucknow</a> |
+            <a href="/electronic-component-distributor-in-vadodara">Vadodara</a> |
+            <a href="/electronic-component-distributor-in-chandigarh">Chandigarh</a> |
+            <a href="/electronic-component-distributor-in-kochi">Kochi</a> |
+            <a href="/electronic-component-distributor-in-visakhapatnam">Visakhapatnam</a> |
+            <a href="/market-area">View all cities &rarr;</a>
           </p>
         </div>
         <p>&copy; 2026 Mirai Technologies. All rights reserved. 401, Aditya Residency, Chunabhatti Lane, Lamington Road, Mumbai 400 007.</p>
