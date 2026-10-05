@@ -17,6 +17,7 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
 xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
 // Helper to add URL to xml
+const seenUrls = new Set();
 function addUrl(loc, priority = '0.5', changefreq = 'weekly') {
   let cleanLoc = loc.trim();
   if (!cleanLoc.startsWith('/')) {
@@ -25,8 +26,14 @@ function addUrl(loc, priority = '0.5', changefreq = 'weekly') {
   if (cleanLoc.length > 1 && cleanLoc.endsWith('/')) {
     cleanLoc = cleanLoc.slice(0, -1);
   }
+  const fullUrl = `${BASE_URL}${cleanLoc === '/' ? '/' : cleanLoc}`;
+  if (seenUrls.has(fullUrl)) {
+    return;
+  }
+  seenUrls.add(fullUrl);
+
   xml += `  <url>\n`;
-  xml += `    <loc>${BASE_URL}${cleanLoc}</loc>\n`;
+  xml += `    <loc>${fullUrl}</loc>\n`;
   xml += `    <lastmod>${TODAY}</lastmod>\n`;
   xml += `    <changefreq>${changefreq}</changefreq>\n`;
   xml += `    <priority>${priority}</priority>\n`;
@@ -92,12 +99,16 @@ if (fs.existsSync(distDir)) {
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), xml, 'utf8');
 }
 
-console.log(`✅ Generated sitemap.xml with ${activeCategories.length} categories, ${products.length} products, ${blogPosts.length} blog posts, and ${cityPages.length} city pages.`);
+console.log(`✅ Generated sitemap.xml with ${seenUrls.size} unique URLs.`);
 
 // 2. Generate robots.txt content
 const robotsTxt = `User-agent: *
 Allow: /
 
+# Host preference (Strictly HTTPS, Non-WWW)
+Host: ${BASE_URL}
+
+# XML Sitemap
 Sitemap: ${BASE_URL}/sitemap.xml
 `;
 

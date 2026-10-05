@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Host preference (Strictly HTTPS, Non-WWW)
+Host: https://miraitechnologies.net
+
+# XML Sitemap
 Sitemap: https://miraitechnologies.net/sitemap.xml

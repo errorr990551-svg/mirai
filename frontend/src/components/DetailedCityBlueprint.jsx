@@ -423,10 +423,10 @@ const DetailedCityBlueprint = ({
                       {page.mosfetDistributor.popularParts.map((part, pIdx) => (
                         <tr key={pIdx} className="hover:bg-slate-50/80 transition-colors">
                           <td className="p-4 font-bold text-slate-900 font-mono text-xs">{part.partNumber}</td>
-                          <td className="p-4 text-slate-600 text-xs">{part.manufacturer}</td>
-                          <td className="p-4 text-xs font-semibold text-slate-700">{part.polarity}</td>
+                          <td className="p-4 text-slate-600 text-xs">{part.manufacturer || part.brand}</td>
+                          <td className="p-4 text-xs font-semibold text-slate-700">{part.polarity || part.channel}</td>
                           <td className="p-4 text-xs font-mono text-slate-700 bg-slate-50/50">
-                            {part.vDs} | {part.rDsOn} {part.iD ? `| ${part.iD}` : ''}
+                            {part.vDs || part.vds} | {part.rDsOn || part.rdsOn} {(part.iD || part.id) ? `| ${part.iD || part.id}` : ''}
                           </td>
                           <td className="p-4 text-xs text-slate-600">{part.package}</td>
                           <td className="p-4 text-xs text-slate-600">{part.application}</td>

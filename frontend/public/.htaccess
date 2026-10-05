@@ -48,6 +48,15 @@ Options -Indexes
   RewriteRule ^(integrated-circuits-supplier-bengaluru|microcontrollers-supplier-bengaluru|electronic-component-distributor-in-bangalore)/?$ /electronic-component-distributor-in-bengaluru [R=301,L,NC]
   RewriteRule ^integrated-circuits-supplier-hyderabad/?$ /electronic-component-distributor-in-hyderabad [R=301,L,NC]
   RewriteRule ^(electronic-component-distributor-in-aurangabad|aurangabad)/?$ /electronic-component-distributor-in-chhatrapati-sambhajinagar [R=301,L,NC]
+  RewriteRule ^(electronic-component-distributor-in-hubli-dharwad|electronic-component-distributor-in-hubli)/?$ /electronic-component-distributor-in-hubballi-dharwad [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-mysore/?$ /electronic-component-distributor-in-mysuru [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-belgaum/?$ /electronic-component-distributor-in-belagavi [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-mangalore/?$ /electronic-component-distributor-in-mangaluru [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-tumkur/?$ /electronic-component-distributor-in-tumakuru [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-davangere/?$ /electronic-component-distributor-in-davanagere [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-bellary/?$ /electronic-component-distributor-in-ballari [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-shimoga/?$ /electronic-component-distributor-in-shivamogga [R=301,L,NC]
+  RewriteRule ^electronic-component-distributor-in-gulbarga/?$ /electronic-component-distributor-in-kalaburagi [R=301,L,NC]
 
   # 8. Serve prerendered static .html files if they exist (both flat /slug.html and nested /slug/index.html)
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f

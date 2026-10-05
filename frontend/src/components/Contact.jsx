@@ -185,7 +185,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-xs font-bold tracking-wider text-slate-400 uppercase mb-1">Website</div>
-                      <a href="https://www.miraitechnologies.net" target="_blank" rel="noopener noreferrer" className="font-medium text-lg hover:text-mirai-primary transition-colors">www.miraitechnologies.net</a>
+                      <a href="https://miraitechnologies.net" target="_blank" rel="noopener noreferrer" className="font-medium text-lg hover:text-mirai-primary transition-colors">miraitechnologies.net</a>
                     </div>
                   </div>
                   

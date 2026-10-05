@@ -4,16 +4,11 @@ import { Calculator, AlertTriangle, CheckCircle, Flame, ArrowRight, RotateCcw } 
 const MosfetCalculator = ({ calculatorData, scrollToForm }) => {
   if (!calculatorData) return null;
 
-  const defaultValues = calculatorData.workedExample ? {
-    iRms: calculatorData.workedExample.iRms || 10,
-    rDsOn: calculatorData.workedExample.rDsOn || 17.5,
-    tA: calculatorData.workedExample.tA || 40,
-    thetaJa: calculatorData.workedExample.thetaJa || 62
-  } : {
-    iRms: 10,
-    rDsOn: 17.5,
-    tA: 40,
-    thetaJa: 62
+  const defaultValues = {
+    iRms: (calculatorData.workedExample && typeof calculatorData.workedExample === 'object' && calculatorData.workedExample.iRms) ?? calculatorData.defaultIrms ?? 10,
+    rDsOn: (calculatorData.workedExample && typeof calculatorData.workedExample === 'object' && calculatorData.workedExample.rDsOn) ?? calculatorData.defaultRdsOn ?? 17.5,
+    tA: (calculatorData.workedExample && typeof calculatorData.workedExample === 'object' && calculatorData.workedExample.tA) ?? calculatorData.defaultTa ?? 40,
+    thetaJa: (calculatorData.workedExample && typeof calculatorData.workedExample === 'object' && calculatorData.workedExample.thetaJa) ?? calculatorData.defaultThetaJa ?? 62
   };
 
   const [iRms, setIRms] = useState(defaultValues.iRms);
@@ -249,10 +244,10 @@ const MosfetCalculator = ({ calculatorData, scrollToForm }) => {
             {calculatorData.workedExample && (
               <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-5 text-xs text-slate-300">
                 <span className="font-bold text-blue-400 uppercase tracking-wider block mb-1">
-                  Example Case ({calculatorData.workedExample.part || "Standard MOSFET"}):
+                  Example Case ({typeof calculatorData.workedExample === 'object' ? (calculatorData.workedExample.part || calculatorData.defaultPart || "Standard MOSFET") : (calculatorData.defaultPart || "Standard MOSFET")}):
                 </span>
                 <p className="leading-relaxed text-slate-300">
-                  {calculatorData.workedExample.note || "Calculated using typical datasheet values at ambient operating temperature."}
+                  {typeof calculatorData.workedExample === 'object' ? (calculatorData.workedExample.note || "Calculated using typical datasheet values at ambient operating temperature.") : calculatorData.workedExample}
                 </p>
               </div>
             )}
