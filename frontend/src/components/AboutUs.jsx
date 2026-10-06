@@ -224,17 +224,17 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-5 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100">
+            <div className="lg:col-span-5 relative flex flex-col items-center justify-center">
+              <div className="w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 flex items-center justify-center">
                 <img 
-                  src="/WhatsApp Image 2026-10-06 at 7.20.46 AM.jpeg" 
+                  src="/mirai-office-nameplate-centered.webp" 
                   alt="Mirai Technologies authorized distributor office nameplate at Lamington Road, Mumbai" 
-                  className="w-full h-[420px] object-cover object-center"
+                  className="w-full aspect-[4/3] max-h-[380px] sm:max-h-[400px] object-cover object-center"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-slate-900 text-white p-6 rounded-2xl shadow-xl border border-slate-800">
-                <div className="text-3xl font-black text-mirai-primary">Est. 1999</div>
-                <div className="text-xs text-slate-400 mt-1">Lamington Road, Mumbai</div>
+              <div className="absolute -bottom-5 left-5 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-xl border border-slate-800">
+                <div className="text-2xl sm:text-3xl font-black text-mirai-primary">Est. 1999</div>
+                <div className="text-xs text-slate-400 mt-0.5">Lamington Road, Mumbai</div>
               </div>
             </div>
           </div>
@@ -662,13 +662,26 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-              <h3 className="font-heading font-bold text-lg text-white mb-3">Email Sourcing Desk</h3>
-              <p className="text-sm text-slate-300">
-                <a href="mailto:sales@miraitechnologies.net" className="text-blue-400 hover:underline">
-                  sales@miraitechnologies.net
-                </a>
-              </p>
+            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between">
+              <div>
+                <h3 className="font-heading font-bold text-lg text-white mb-3">Email Sourcing Desk</h3>
+                {isUnlocked ? (
+                  <p className="text-sm text-slate-300">
+                    <a href="mailto:sales@miraitechnologies.net" className="text-blue-400 hover:underline">
+                      sales@miraitechnologies.net
+                    </a>
+                  </p>
+                ) : (
+                  <div className="pt-2 pb-1">
+                    <button 
+                      onClick={openModal}
+                      className="w-full text-center px-4 py-3 rounded-xl text-xs font-bold border border-mirai-primary/30 hover:border-mirai-primary bg-mirai-primary/10 hover:bg-mirai-primary/20 text-white transition-all duration-300 shadow-lg shadow-mirai-primary/5 hover:scale-[1.02] cursor-pointer"
+                    >
+                      Show Contact Details
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl">

@@ -55,11 +55,22 @@ const HomeContactSection = () => {
                 <Mail className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-heading font-bold text-white mb-3">Email Sourcing Desk</h3>
-              <p className="text-sm text-slate-300 mb-4">
-                <a href="mailto:sales@miraitechnologies.net" className="text-blue-400 hover:underline font-semibold">
-                  sales@miraitechnologies.net
-                </a>
-              </p>
+              {isUnlocked ? (
+                <p className="text-sm text-slate-300 mb-4">
+                  <a href="mailto:sales@miraitechnologies.net" className="text-blue-400 hover:underline font-semibold">
+                    sales@miraitechnologies.net
+                  </a>
+                </p>
+              ) : (
+                <div className="pt-2 pb-1 mb-4">
+                  <button 
+                    onClick={openModal}
+                    className="w-full text-center px-4 py-3 rounded-xl text-xs font-bold border border-mirai-primary/30 hover:border-mirai-primary bg-mirai-primary/10 hover:bg-mirai-primary/20 text-white transition-all duration-300 shadow-lg shadow-mirai-primary/5 hover:scale-[1.02] cursor-pointer"
+                  >
+                    Show Contact Details
+                  </button>
+                </div>
+              )}
               <p className="text-xs text-slate-400 leading-relaxed mb-6">
                 Send your Excel BOM, manufacturer part numbers, or target quantities for same-day quotation.
               </p>

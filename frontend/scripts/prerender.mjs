@@ -1769,8 +1769,10 @@ cityPages.forEach(page => {
       <h2>Supported Product Portfolio</h2>
       <p>${page.productCategories}</p>
       
+      ${(page.whyAuthorizedDistributor || page.whyAuthorisedDistributor) ? `
       <h2>Authorized Distribution & Regulatory Benefits</h2>
-      <p>${page.whyAuthorisedDistributor}</p>
+      <p>${page.whyAuthorizedDistributor || page.whyAuthorisedDistributor}</p>
+      ` : ''}
       
       <h2>Procurement Support Desk</h2>
       <p>${page.technicalSupport}</p>
@@ -1838,3 +1840,42 @@ prerenderPage('/market-area', {
 console.log('✅ Prerendered: /market-area');
 
 console.log('🎉 Prerendering complete! All static pages written to dist/');
+
+// --- Audit Check A3: Validate that no prerendered page contains 'undefined' in text ---
+console.log('🔍 Running QA validation on prerendered output for accidental "undefined" strings...');
+const badPatterns = [
+  'undefined |',
+  '| undefined',
+  'Worked Example (undefined)',
+  '<p>undefined</p>',
+  '>undefined<'
+];
+const foundErrors = [];
+
+function validateHtmlFiles(dir) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      validateHtmlFiles(fullPath);
+    } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      const htmlContent = fs.readFileSync(fullPath, 'utf8');
+      for (const pattern of badPatterns) {
+        if (htmlContent.includes(pattern)) {
+          foundErrors.push({ file: path.relative(DIST, fullPath), pattern });
+        }
+      }
+    }
+  }
+}
+
+validateHtmlFiles(DIST);
+
+if (foundErrors.length > 0) {
+  console.error(`\n❌ BUILD FAILURE: Found ${foundErrors.length} occurrences of "undefined" in prerendered HTML:`);
+  foundErrors.forEach(err => console.error(`  - ${err.file}: matched "${err.pattern}"`));
+  process.exit(1);
+} else {
+  console.log('✅ QA Audit PASSED: Zero "undefined" occurrences found in generated HTML files.');
+}
+

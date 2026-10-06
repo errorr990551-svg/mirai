@@ -100,6 +100,13 @@ const Footer = () => {
                    </li>
                  )}
                  <li>
+                   <span className="block text-slate-600 text-xs mb-1">Office / Trade Counter</span>
+                   <span className="text-slate-300 block leading-relaxed text-xs">
+                     401, Aditya Residency, Chunabhatti Lane,<br/>
+                     Lamington Road, Mumbai 400 007
+                   </span>
+                 </li>
+                 <li>
                    <span className="block text-slate-600 text-xs mb-1">Registered Address</span>
                    <span className="text-slate-300 block leading-relaxed text-xs">
                      B-1101, Kinjal Heights Wing B, Wadia Street,<br/>

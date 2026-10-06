@@ -3,8 +3,8 @@
     "city": "Mumbai",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-mumbai",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Mumbai | Mirai Technologies",
-    "metaDescription": "Authorized electronic components distributor in Mumbai since 1999. Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays with CoC, GST invoice and low MOQ. Lamington Road.",
+    "metaTitle": "Mumbai Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Authorized electronic components & MOSFET distributor in Mumbai since 1999. Genuine ICs, passives & relays with CoC, GST invoice and low MOQ. Lamington Road.",
     "primaryKeyword": "electronic components distributor in Mumbai",
     "secondaryKeywords": "electronic components dealer in Mumbai, MOSFET distributor in Mumbai, buy electronic components Mumbai, semiconductor distributor Mumbai, electronic components Lamington Road, electronic components wholesale Mumbai, MOSFET dealer Mumbai, power MOSFET supplier Mumbai, IC distributor Mumbai, capacitor and resistor supplier Mumbai, electronic components Andheri MIDC, electronic components with GST invoice, IRFZ44N Mumbai, IRF540N Mumbai, STP55NF06 Mumbai",
     "h1": "Electronic Components and MOSFET Distributor in Mumbai: Genuine Parts from Lamington Road",
@@ -266,6 +266,10 @@
       {
         "q": "What if my part is out of stock or obsolete?",
         "a": "Send the part number and application. Our team suggests cross-referenced alternatives."
+      },
+      {
+        "q": "Can I collect parts in Mumbai?",
+        "a": "Yes. You can collect confirmed orders directly from our trade counter at 401, Aditya Residency, Chunabhatti Lane, Lamington Road, Mumbai 400 007, or choose courier dispatch across Mumbai and Navi Mumbai."
       }
     ],
     "contactInfo": {
@@ -289,6 +293,22 @@
       {
         "text": "Pune",
         "url": "/electronic-component-distributor-in-pune"
+      },
+      {
+        "text": "Kolhapur",
+        "url": "/electronic-component-distributor-in-kolhapur"
+      },
+      {
+        "text": "Ahmednagar",
+        "url": "/electronic-component-distributor-in-ahmednagar"
+      },
+      {
+        "text": "Chhatrapati Sambhajinagar",
+        "url": "/electronic-component-distributor-in-chhatrapati-sambhajinagar"
+      },
+      {
+        "text": "Vasai-Virar",
+        "url": "/electronic-component-distributor-in-vasai-virar"
       },
       {
         "text": "Market Area Hub",
@@ -430,7 +450,7 @@
     "city": "Pune",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-pune",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Pune | Mirai Technologies",
+    "metaTitle": "Pune Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Pune's auto, EV and electronics makers. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Pune",
     "secondaryKeywords": "electronic components dealer in Pune, MOSFET distributor in Pune, buy electronic components Pune, semiconductor distributor Pune, MOSFET dealer Pune, power MOSFET supplier Pune, MOSFET for BLDC motor controller, EV electronic components Pune, electronic components Bhosari MIDC, electronic components Chakan, electronic components Pimpri-Chinchwad, electronic components Ranjangaon, electronic components with GST invoice, IRF3205 Pune, IRFB4110 Pune, IRF3710 Pune",
@@ -518,7 +538,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -554,7 +574,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -574,107 +594,93 @@
         {
           "partNumber": "IRF3205",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 8 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Low-voltage motor drives and battery systems",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 8 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "8 mΩ max at 10 V",
-          "rdsOn": "8 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Low-voltage motor drives and battery systems"
+          "rDsOn": "8 mΩ max at 10 V"
         },
         {
           "partNumber": "IRFB4110",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 4.5 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Higher-voltage BLDC and e-mobility controllers",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 4.5 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "4.5 mΩ max at 10 V",
-          "rdsOn": "4.5 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Higher-voltage BLDC and e-mobility controllers"
+          "rDsOn": "4.5 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF3710",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 23 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "General motor control and DC-DC stages",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 23 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "23 mΩ max at 10 V",
-          "rdsOn": "23 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "General motor control and DC-DC stages"
+          "rDsOn": "23 mΩ max at 10 V"
         },
         {
           "partNumber": "STP75NF75",
           "manufacturer": "STMicroelectronics",
-          "brand": "STMicroelectronics",
           "polarity": "N-channel",
+          "ratings": "75 V | 11 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "48V to 60V motor and battery systems",
+          "brand": "STMicroelectronics",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "75 V | 11 mΩ max at 10 V",
           "vDs": "75 V",
-          "vds": "75 V",
-          "rDsOn": "11 mΩ max at 10 V",
-          "rdsOn": "11 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "48V to 60V motor and battery systems"
+          "rDsOn": "11 mΩ max at 10 V"
         },
         {
           "partNumber": "IRLZ44N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel logic level",
+          "ratings": "55 V | 22 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Microcontroller-driven switching at 5 V gate drive",
+          "brand": "Infineon",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "55 V | 22 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "22 mΩ max at 10 V",
-          "rdsOn": "22 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Microcontroller-driven switching at 5 V gate drive"
+          "rDsOn": "22 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF9540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-100 V | 117 mΩ max at -10 V",
+          "package": "TO-220",
+          "application": "High-side switching and reverse-polarity protection",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-100 V | 117 mΩ max at -10 V",
           "vDs": "-100 V",
-          "vds": "-100 V",
-          "rDsOn": "117 mΩ max at -10 V",
-          "rdsOn": "117 mΩ max at -10 V",
-          "package": "TO-220",
-          "application": "High-side switching and reverse-polarity protection"
+          "rDsOn": "117 mΩ max at -10 V"
         },
         {
           "partNumber": "SI2302",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel logic level",
+          "ratings": "20 V | 85 mΩ max at 4.5 V",
+          "package": "SOT-23",
+          "application": "3.3 V and 5 V embedded boards",
+          "brand": "Vishay",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "20 V | 85 mΩ max at 4.5 V",
           "vDs": "20 V",
-          "vds": "20 V",
-          "rDsOn": "85 mΩ max at 4.5 V",
-          "rdsOn": "85 mΩ max at 4.5 V",
-          "package": "SOT-23",
-          "application": "3.3 V and 5 V embedded boards"
+          "rDsOn": "85 mΩ max at 4.5 V"
         }
       ],
       "howToPick": {
@@ -698,7 +704,7 @@
       "defaultThetaJa": 62,
       "workedExample": {
         "part": "IRFB4110",
-        "note": "IRFB4110 in a BLDC motor controller. R_DS(on) 4.5 mΩ, T_A 40°C, θ_JA 62°C/W (TO-220, free air). At 10 A: P_cond = 10 x 10 x 0.0045 = 0.45 W. Temp rise = 27.9°C. T_J = 67.9°C (Safe). At 20 A: P_cond = 1.8 W. Temp rise = 111.6°C. T_J = 151.6°C (Warning). Heat grows with the square of the current, so a heatsink is essential."
+        "note": "Worked Example (IRFB4110): IRFB4110 in a BLDC motor controller. R_DS(on) 4.5 mΩ, T_A 40°C, θ_JA 62°C/W (TO-220, free air). At 10 A: P_cond = 10 x 10 x 0.0045 = 0.45 W. Temp rise = 27.9°C. T_J = 67.9°C (Safe). At 20 A: P_cond = 1.8 W. Temp rise = 111.6°C. T_J = 151.6°C (Warning). Heat grows with the square of the current, so a heatsink is essential."
       },
       "disclaimer": "Disclaimer: this is a quick estimate. Real designs also include switching loss, duty cycle, PCB cooling and the rise of R_DS(on) with temperature. Check the datasheet. R_DS(on) is quoted at 25°C and rises considerably when the junction is hot."
     },
@@ -909,13 +915,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Pune",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Thane",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-thane",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Thane | Mirai Technologies",
+    "metaTitle": "Thane Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Thane's Wagle Estate and Thane–Belapur industrial units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Thane",
     "secondaryKeywords": "electronic components dealer in Thane, MOSFET distributor in Thane, buy electronic components Thane, semiconductor distributor Thane, MOSFET dealer Thane, power MOSFET supplier Thane, SMPS MOSFET Thane, electronic components Wagle Estate, electronic components Thane Belapur, electronic components with GST invoice, IRF840 Thane, IRF740 Thane, IRFP460 Thane",
@@ -1003,7 +1084,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -1039,7 +1120,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -1059,107 +1140,93 @@
         {
           "partNumber": "IRF840",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "500 V | 0.85 Ω max at 10 V",
+          "package": "TO-220",
+          "application": "SMPS power stages and high-voltage switching",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 0.85 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "0.85 Ω max at 10 V",
-          "rdsOn": "0.85 Ω max at 10 V",
-          "package": "TO-220",
-          "application": "SMPS and high-voltage power supplies"
+          "rDsOn": "0.85 Ω max at 10 V"
         },
         {
           "partNumber": "IRF740",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "400 V | 0.55 Ω max at 10 V",
+          "package": "TO-220",
+          "application": "Offline power supplies and motor drives",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "400 V | 0.55 Ω max at 10 V",
           "vDs": "400 V",
-          "vds": "400 V",
-          "rDsOn": "0.55 Ω max at 10 V",
-          "rdsOn": "0.55 Ω max at 10 V",
-          "package": "TO-220",
-          "application": "Power supply primary stages"
+          "rDsOn": "0.55 Ω max at 10 V"
         },
         {
           "partNumber": "IRFP460",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "500 V | 0.27 Ω max at 10 V",
+          "package": "TO-247",
+          "application": "High-power SMPS, welding and inverters",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 0.27 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "0.27 Ω max at 10 V",
-          "rdsOn": "0.27 Ω max at 10 V",
-          "package": "TO-247",
-          "application": "Industrial power supplies and inverters"
+          "rDsOn": "0.27 Ω max at 10 V"
         },
         {
           "partNumber": "IRF630",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "200 V | 0.40 Ω max at 10 V",
+          "package": "TO-220",
+          "application": "Medium-voltage switching and solenoid drivers",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 0.40 Ω max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "0.40 Ω max at 10 V",
-          "rdsOn": "0.40 Ω max at 10 V",
-          "package": "TO-220",
-          "application": "Medium-voltage DC switching"
+          "rDsOn": "0.40 Ω max at 10 V"
         },
         {
           "partNumber": "IRFZ44N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 17.5 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "General motor control and DC-DC converters",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 17.5 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "17.5 mΩ max at 10 V",
-          "rdsOn": "17.5 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Low-voltage DC-DC and motor drives"
+          "rDsOn": "17.5 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF9Z34N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-55 V | 0.1 Ω max at -10 V",
+          "package": "TO-220",
+          "application": "High-side switching and reverse-polarity protection",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-55 V | 0.1 Ω max at -10 V",
           "vDs": "-55 V",
-          "vds": "-55 V",
-          "rDsOn": "0.1 Ω max at -10 V",
-          "rdsOn": "0.1 Ω max at -10 V",
-          "package": "TO-220",
-          "application": "High-side switching and reverse-polarity protection"
+          "rDsOn": "0.1 Ω max at -10 V"
         },
         {
           "partNumber": "SI2302",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel logic level",
+          "ratings": "20 V | 85 mΩ max at 4.5 V",
+          "package": "SOT-23",
+          "application": "Compact embedded control and logic-level load switching",
+          "brand": "Vishay",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "20 V | 85 mΩ max at 4.5 V",
           "vDs": "20 V",
-          "vds": "20 V",
-          "rDsOn": "85 mΩ max at 4.5 V",
-          "rdsOn": "85 mΩ max at 4.5 V",
-          "package": "SOT-23",
-          "application": "Small loads, 3.3 V and 5 V logic"
+          "rDsOn": "85 mΩ max at 4.5 V"
         }
       ],
       "howToPick": {
@@ -1175,7 +1242,7 @@
     },
     "mosfetCalculator": {
       "h2": "MOSFET Thermal and Power Loss Calculator",
-      "defaultPart": "IRF740",
+      "defaultPart": "IRF840",
       "defaultIrms": 1,
       "defaultRdsOn": 550,
       "defaultTa": 40,
@@ -1394,13 +1461,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Thane",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Navi Mumbai",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-navi-mumbai",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Navi Mumbai | Mirai Technologies",
+    "metaTitle": "Navi Mumbai Electronic Components | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Navi Mumbai's TTC, Rabale and Mahape units. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Navi Mumbai",
     "secondaryKeywords": "electronic components dealer in Navi Mumbai, MOSFET distributor in Navi Mumbai, buy electronic components Navi Mumbai, semiconductor distributor Navi Mumbai, MOSFET dealer Navi Mumbai, power MOSFET supplier Navi Mumbai, electronic components TTC Industrial Area, electronic components Rabale, electronic components Mahape, SMD MOSFET Navi Mumbai, electronic components with GST invoice, IRF7413 Navi Mumbai, IRLR2905 Navi Mumbai, FDD4141 Navi Mumbai",
@@ -1488,7 +1630,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -1524,7 +1666,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -1545,107 +1687,93 @@
         {
           "partNumber": "IRF7413",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "30 V | 11 mΩ max at 10 V",
+          "package": "SO-8",
+          "application": "Compact DC-DC conversion and laptop power rails",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "30 V | 11 mΩ max at 10 V",
           "vDs": "30 V",
-          "vds": "30 V",
-          "rDsOn": "11 mΩ max at 10 V",
-          "rdsOn": "11 mΩ max at 10 V",
-          "package": "SO-8",
-          "application": "Compact DC-DC converters"
+          "rDsOn": "11 mΩ max at 10 V"
         },
         {
           "partNumber": "IRLR2905",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel logic level",
+          "ratings": "55 V | 27 mΩ max at 10 V",
+          "package": "TO-252 (DPAK)",
+          "application": "Automotive electronics and logic-level switching",
+          "brand": "Infineon",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "55 V | 27 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "27 mΩ max at 10 V",
-          "rdsOn": "27 mΩ max at 10 V",
-          "package": "TO-252 (DPAK)",
-          "application": "Surface-mount motor drives and load switching"
+          "rDsOn": "27 mΩ max at 10 V"
         },
         {
           "partNumber": "FDD4141",
           "manufacturer": "onsemi",
-          "brand": "onsemi",
           "polarity": "P-channel",
+          "ratings": "-40 V | 12 mΩ at -10 V",
+          "package": "TO-252 (DPAK)",
+          "application": "Reverse battery protection and high-side load switches",
+          "brand": "onsemi",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-40 V | 12 mΩ at -10 V",
           "vDs": "-40 V",
-          "vds": "-40 V",
-          "rDsOn": "12 mΩ at -10 V",
-          "rdsOn": "12 mΩ at -10 V",
-          "package": "TO-252 (DPAK)",
-          "application": "Reverse-battery protection and high-side loads"
+          "rDsOn": "12 mΩ at -10 V"
         },
         {
           "partNumber": "IRF540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 44 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Inverter stages and DC motor drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 44 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "44 mΩ max at 10 V",
-          "rdsOn": "44 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Industrial switching and solenoid drivers"
+          "rDsOn": "44 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF3205",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 8 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "High-current battery drives and UPS inverters",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 8 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "8 mΩ max at 10 V",
-          "rdsOn": "8 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "High-current battery and motor switching"
+          "rDsOn": "8 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF9540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-100 V | 117 mΩ max at -10 V",
+          "package": "TO-220",
+          "application": "Industrial high-side switching",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-100 V | 117 mΩ max at -10 V",
           "vDs": "-100 V",
-          "vds": "-100 V",
-          "rDsOn": "117 mΩ max at -10 V",
-          "rdsOn": "117 mΩ max at -10 V",
-          "package": "TO-220",
-          "application": "High-side industrial load switching"
+          "rDsOn": "117 mΩ max at -10 V"
         },
         {
           "partNumber": "SI2302",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel logic level",
+          "ratings": "20 V | 85 mΩ max at 4.5 V",
+          "package": "SOT-23",
+          "application": "Sub-5V logic switching on IoT sensor nodes",
+          "brand": "Vishay",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "20 V | 85 mΩ max at 4.5 V",
           "vDs": "20 V",
-          "vds": "20 V",
-          "rDsOn": "85 mΩ max at 4.5 V",
-          "rdsOn": "85 mΩ max at 4.5 V",
-          "package": "SOT-23",
-          "application": "Microcontroller-driven load switching"
+          "rDsOn": "85 mΩ max at 4.5 V"
         }
       ],
       "howToPick": {
@@ -1662,7 +1790,7 @@
     },
     "mosfetCalculator": {
       "h2": "MOSFET Thermal and Power Loss Calculator",
-      "defaultPart": "IRLR2905",
+      "defaultPart": "IRF7413",
       "defaultIrms": 5,
       "defaultRdsOn": 27,
       "defaultTa": 45,
@@ -1880,13 +2008,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Navi Mumbai",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Nashik",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-nashik",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Nashik | Mirai Technologies",
+    "metaTitle": "Nashik Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Nashik's Ambad and Satpur MIDC units. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Nashik",
     "secondaryKeywords": "electronic components dealer in Nashik, MOSFET distributor in Nashik, buy electronic components Nashik, semiconductor distributor Nashik, MOSFET dealer Nashik, power MOSFET supplier Nashik, MOSFET for solar inverter, inverter MOSFET Nashik, electronic components Ambad MIDC, electronic components Satpur MIDC, relay supplier Nashik, electronic components with GST invoice, IRFP260N Nashik, IRFP250N Nashik, IRF640N Nashik",
@@ -1974,7 +2177,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -2010,7 +2213,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -2031,107 +2234,93 @@
         {
           "partNumber": "IRFP260N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 40 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "Industrial inverters and high-power motor drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 40 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "40 mΩ max at 10 V",
-          "rdsOn": "40 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "Solar inverters and heavy motor drives"
+          "rDsOn": "40 mΩ max at 10 V"
         },
         {
           "partNumber": "IRFP250N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 75 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "Power supplies and audio amplifiers",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 75 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "75 mΩ max at 10 V",
-          "rdsOn": "75 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "Inverter and amplifier stages"
+          "rDsOn": "75 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF640N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 150 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Medium-power switching and motor drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 150 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "150 mΩ max at 10 V",
-          "rdsOn": "150 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Medium-power DC switching"
+          "rDsOn": "150 mΩ max at 10 V"
         },
         {
           "partNumber": "IRFB4110",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 4.5 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "High-efficiency motor drives and electric mobility",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 4.5 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "4.5 mΩ max at 10 V",
-          "rdsOn": "4.5 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "High-efficiency BLDC motor drives"
+          "rDsOn": "4.5 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF3205",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 8 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Low-voltage high-current inverters",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 8 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "8 mΩ max at 10 V",
-          "rdsOn": "8 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "12V and 24V inverter stages"
+          "rDsOn": "8 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 44 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "General industrial power switching",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 44 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "44 mΩ max at 10 V",
-          "rdsOn": "44 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "General-purpose power switching"
+          "rDsOn": "44 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF9540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-100 V | 117 mΩ max at -10 V",
+          "package": "TO-220",
+          "application": "High-side DC switching circuits",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-100 V | 117 mΩ max at -10 V",
           "vDs": "-100 V",
-          "vds": "-100 V",
-          "rDsOn": "117 mΩ max at -10 V",
-          "rdsOn": "117 mΩ max at -10 V",
-          "package": "TO-220",
-          "application": "High-side polarity protection"
+          "rDsOn": "117 mΩ max at -10 V"
         }
       ],
       "howToPick": {
@@ -2367,13 +2556,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Nashik",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Chhatrapati Sambhajinagar",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-chhatrapati-sambhajinagar",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Chhatrapati Sambhajinagar | Mirai Technologies",
+    "metaTitle": "Chh. Sambhajinagar Electronic Components | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Waluj and Shendra MIDC units in Chhatrapati Sambhajinagar (Aurangabad). CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Chhatrapati Sambhajinagar",
     "secondaryKeywords": "electronic components distributor in Aurangabad, MOSFET distributor in Chhatrapati Sambhajinagar, buy electronic components Aurangabad, semiconductor distributor Aurangabad, MOSFET dealer Aurangabad, power MOSFET supplier Aurangabad, electronic components Waluj MIDC, electronic components Shendra MIDC, relay supplier Aurangabad, industrial automation components Aurangabad, electronic components with GST invoice, IRL540N Aurangabad, IRLZ44N Aurangabad, STP55NF06 Aurangabad",
@@ -2457,7 +2721,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -2493,7 +2757,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -2514,107 +2778,93 @@
         {
           "partNumber": "IRL540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel logic level",
+          "ratings": "100 V | 44 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Direct 5V microcontroller-driven solenoids and actuators",
+          "brand": "Infineon",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "100 V | 44 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "44 mΩ max at 10 V",
-          "rdsOn": "44 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "24V solenoid drivers and PLC outputs"
+          "rDsOn": "44 mΩ max at 10 V"
         },
         {
           "partNumber": "IRLZ44N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel logic level",
+          "ratings": "55 V | 22 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Logic-level automotive and automation switching",
+          "brand": "Infineon",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "55 V | 22 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "22 mΩ max at 10 V",
-          "rdsOn": "22 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Microcontroller logic-level switching"
+          "rDsOn": "22 mΩ max at 10 V"
         },
         {
           "partNumber": "STP55NF06",
           "manufacturer": "STMicroelectronics",
-          "brand": "STMicroelectronics",
           "polarity": "N-channel",
+          "ratings": "60 V | 18 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Automotive solenoids and DC motor control",
+          "brand": "STMicroelectronics",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "60 V | 18 mΩ max at 10 V",
           "vDs": "60 V",
-          "vds": "60 V",
-          "rDsOn": "18 mΩ max at 10 V",
-          "rdsOn": "18 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Automotive and machine-tool drives"
+          "rDsOn": "18 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 44 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Standard 10V gate drive industrial switching",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 44 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "44 mΩ max at 10 V",
-          "rdsOn": "44 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "General power switching"
+          "rDsOn": "44 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF9Z34N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-55 V | 0.1 Ω max at -10 V",
+          "package": "TO-220",
+          "application": "High-side switching and reverse-polarity protection",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-55 V | 0.1 Ω max at -10 V",
           "vDs": "-55 V",
-          "vds": "-55 V",
-          "rDsOn": "0.1 Ω max at -10 V",
-          "rdsOn": "0.1 Ω max at -10 V",
-          "package": "TO-220",
-          "application": "High-side load switches"
+          "rDsOn": "0.1 Ω max at -10 V"
         },
         {
           "partNumber": "IRF830",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "500 V | 1.5 Ω max at 10 V",
+          "package": "TO-220",
+          "application": "High-voltage auxiliary supplies and lighting",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 1.5 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "1.5 Ω max at 10 V",
-          "rdsOn": "1.5 Ω max at 10 V",
-          "package": "TO-220",
-          "application": "Auxiliary power supplies and lighting"
+          "rDsOn": "1.5 Ω max at 10 V"
         },
         {
           "partNumber": "SI2302",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel logic level",
+          "ratings": "20 V | 85 mΩ max at 4.5 V",
+          "package": "SOT-23",
+          "application": "Compact embedded control and logic-level load switching",
+          "brand": "Vishay",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "20 V | 85 mΩ max at 4.5 V",
           "vDs": "20 V",
-          "vds": "20 V",
-          "rDsOn": "85 mΩ max at 4.5 V",
-          "rdsOn": "85 mΩ max at 4.5 V",
-          "package": "SOT-23",
-          "application": "Compact 3.3V/5V embedded circuits"
+          "rDsOn": "85 mΩ max at 4.5 V"
         }
       ],
       "howToPick": {
@@ -2850,13 +3100,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Chhatrapati Sambhajinagar",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Nagpur",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-nagpur",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Nagpur | Mirai Technologies",
+    "metaTitle": "Nagpur Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Nagpur's Hingna, Butibori and MIHAN units. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Nagpur",
     "secondaryKeywords": "electronic components dealer in Nagpur, MOSFET distributor in Nagpur, buy electronic components Nagpur, semiconductor distributor Nagpur, MOSFET dealer Nagpur, power MOSFET supplier Nagpur, inverter MOSFET Nagpur, electronic components Hingna MIDC, electronic components Butibori, electronic components MIHAN, defence electronics components supplier, electronic components with GST invoice, IRFP064N Nagpur, IRF4905 Nagpur, IRFP4668 Nagpur",
@@ -2948,7 +3273,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -2984,7 +3309,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -3005,107 +3330,93 @@
         {
           "partNumber": "IRFP064N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 8 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "Heavy-duty low-voltage inverter stages",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 8 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "8 mΩ max at 10 V",
-          "rdsOn": "8 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "High-current inverter and battery stages"
+          "rDsOn": "8 mΩ max at 10 V"
         },
         {
           "partNumber": "IRFP4668",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 9.7 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "High-power industrial inverters and telecom rectifiers",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 9.7 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "9.7 mΩ max at 10 V",
-          "rdsOn": "9.7 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "Heavy-duty inverters and industrial drives"
+          "rDsOn": "9.7 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF4905",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-55 V | 20 mΩ max at -10 V",
+          "package": "TO-220",
+          "application": "High-current P-channel battery disconnection",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-55 V | 20 mΩ max at -10 V",
           "vDs": "-55 V",
-          "vds": "-55 V",
-          "rDsOn": "20 mΩ max at -10 V",
-          "rdsOn": "20 mΩ max at -10 V",
-          "package": "TO-220",
-          "application": "High-current reverse-battery protection"
+          "rDsOn": "20 mΩ max at -10 V"
         },
         {
           "partNumber": "IRF1404",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "40 V | 4 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Ultra-low RDS(on) high-current motor drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "40 V | 4 mΩ max at 10 V",
           "vDs": "40 V",
-          "vds": "40 V",
-          "rDsOn": "4 mΩ max at 10 V",
-          "rdsOn": "4 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Ultra-low R_DS(on) battery applications"
+          "rDsOn": "4 mΩ max at 10 V"
         },
         {
           "partNumber": "STW20NK50Z",
           "manufacturer": "STMicroelectronics",
-          "brand": "STMicroelectronics",
           "polarity": "N-channel",
+          "ratings": "500 V | 0.27 Ω max at 10 V",
+          "package": "TO-247",
+          "application": "Zener-protected high-voltage industrial SMPS",
+          "brand": "STMicroelectronics",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 0.27 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "0.27 Ω max at 10 V",
-          "rdsOn": "0.27 Ω max at 10 V",
-          "package": "TO-247",
-          "application": "High-voltage SMPS and welding stages"
+          "rDsOn": "0.27 Ω max at 10 V"
         },
         {
           "partNumber": "IRF540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 44 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Standard industrial power switching",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 44 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "44 mΩ max at 10 V",
-          "rdsOn": "44 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Industrial DC load switching"
+          "rDsOn": "44 mΩ max at 10 V"
         },
         {
           "partNumber": "SI2302",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel logic level",
+          "ratings": "20 V | 85 mΩ max at 4.5 V",
+          "package": "SOT-23",
+          "application": "Sensor nodes and 3.3V/5V logic interfacing",
+          "brand": "Vishay",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "20 V | 85 mΩ max at 4.5 V",
           "vDs": "20 V",
-          "vds": "20 V",
-          "rDsOn": "85 mΩ max at 4.5 V",
-          "rdsOn": "85 mΩ max at 4.5 V",
-          "package": "SOT-23",
-          "application": "Small-signal and sensor switching"
+          "rDsOn": "85 mΩ max at 4.5 V"
         }
       ],
       "howToPick": {
@@ -3122,7 +3433,7 @@
     },
     "mosfetCalculator": {
       "h2": "MOSFET Thermal and Power Loss Calculator",
-      "defaultPart": "IRFP064N",
+      "defaultPart": "IRFP4668",
       "defaultIrms": 15,
       "defaultRdsOn": 8,
       "defaultTa": 50,
@@ -3342,13 +3653,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Nagpur",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Kolhapur",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-kolhapur",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Kolhapur | Mirai Technologies",
+    "metaTitle": "Kolhapur Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Kolhapur's Gokul Shirgaon and Shiroli MIDC foundry and engineering units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Kolhapur",
     "secondaryKeywords": "electronic components dealer in Kolhapur, MOSFET distributor in Kolhapur, buy electronic components Kolhapur, semiconductor distributor Kolhapur, MOSFET dealer Kolhapur, power MOSFET supplier Kolhapur, welding inverter MOSFET, induction heating MOSFET, electronic components Gokul Shirgaon MIDC, electronic components Shiroli MIDC, relay supplier Kolhapur, electronic components with GST invoice, IRFP460 Kolhapur, IRFP250N Kolhapur, IRFP260N Kolhapur",
@@ -3440,7 +3826,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -3476,7 +3862,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -3497,107 +3883,93 @@
         {
           "partNumber": "IRFP460",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "500 V | 0.27 Ω max at 10 V",
+          "package": "TO-247",
+          "application": "Welding machines and induction heating",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 0.27 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "0.27 Ω max at 10 V",
-          "rdsOn": "0.27 Ω max at 10 V",
-          "package": "TO-247",
-          "application": "Welding machines and induction heating"
+          "rDsOn": "0.27 Ω max at 10 V"
         },
         {
           "partNumber": "IRFP250N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 75 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "Power supplies and motor drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 75 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "75 mΩ max at 10 V",
-          "rdsOn": "75 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "Foundry equipment and inverter stages"
+          "rDsOn": "75 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF840",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "500 V | 0.85 Ω max at 10 V",
+          "package": "TO-220",
+          "application": "SMPS and industrial offline converters",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 0.85 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "0.85 Ω max at 10 V",
-          "rdsOn": "0.85 Ω max at 10 V",
-          "package": "TO-220",
-          "application": "SMPS and machine-tool controls"
+          "rDsOn": "0.85 Ω max at 10 V"
         },
         {
           "partNumber": "IRFP260N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 40 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "High-power inverters and industrial drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 40 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "40 mΩ max at 10 V",
-          "rdsOn": "40 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "High-power industrial motor drives"
+          "rDsOn": "40 mΩ max at 10 V"
         },
         {
           "partNumber": "STP55NF06",
           "manufacturer": "STMicroelectronics",
-          "brand": "STMicroelectronics",
           "polarity": "N-channel",
+          "ratings": "60 V | 18 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Foundry and agricultural equipment drives",
+          "brand": "STMicroelectronics",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "60 V | 18 mΩ max at 10 V",
           "vDs": "60 V",
-          "vds": "60 V",
-          "rDsOn": "18 mΩ max at 10 V",
-          "rdsOn": "18 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Actuators and DC-DC power"
+          "rDsOn": "18 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF3205",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 8 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "High-current low-voltage inverters",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 8 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "8 mΩ max at 10 V",
-          "rdsOn": "8 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "12V/24V battery management"
+          "rDsOn": "8 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF9540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-100 V | 117 mΩ max at -10 V",
+          "package": "TO-220",
+          "application": "High-side DC switching circuits",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-100 V | 117 mΩ max at -10 V",
           "vDs": "-100 V",
-          "vds": "-100 V",
-          "rDsOn": "117 mΩ max at -10 V",
-          "rdsOn": "117 mΩ max at -10 V",
-          "package": "TO-220",
-          "application": "Reverse-polarity and high-side isolation"
+          "rDsOn": "117 mΩ max at -10 V"
         }
       ],
       "howToPick": {
@@ -3833,13 +4205,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Kolhapur",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Solapur",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-solapur",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Solapur | Mirai Technologies",
+    "metaTitle": "Solapur Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Solapur's Akkalkot Road MIDC, textile and engineering units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Solapur",
     "secondaryKeywords": "electronic components dealer in Solapur, MOSFET distributor in Solapur, buy electronic components Solapur, semiconductor distributor Solapur, MOSFET dealer Solapur, power MOSFET supplier Solapur, solar pump controller MOSFET, inverter MOSFET Solapur, electronic components Akkalkot Road MIDC, electronic spare parts Solapur, relay supplier Solapur, electronic components with GST invoice, IRFZ44N Solapur, IRF3205 Solapur, IRF540N Solapur",
@@ -3931,7 +4378,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -3967,7 +4414,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -3988,107 +4435,93 @@
         {
           "partNumber": "IRFZ44N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 17.5 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Solar pump controllers and textile drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 17.5 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "17.5 mΩ max at 10 V",
-          "rdsOn": "17.5 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Solar pump controllers and DC drives"
+          "rDsOn": "17.5 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF3205",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "55 V | 8 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Battery-powered inverters and solar PV systems",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "55 V | 8 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "8 mΩ max at 10 V",
-          "rdsOn": "8 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Battery charging and inverter bridges"
+          "rDsOn": "8 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 44 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "General motor control and industrial switching",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 44 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "44 mΩ max at 10 V",
-          "rdsOn": "44 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Solenoids and pump valve control"
+          "rDsOn": "44 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF640N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 150 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Medium-power switching and pump drives",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 150 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "150 mΩ max at 10 V",
-          "rdsOn": "150 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Medium-voltage solar applications"
+          "rDsOn": "150 mΩ max at 10 V"
         },
         {
           "partNumber": "IRFP250N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 75 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "High-power industrial inverters",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 75 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "75 mΩ max at 10 V",
-          "rdsOn": "75 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "High-power pump inverters"
+          "rDsOn": "75 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF740",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "400 V | 0.55 Ω max at 10 V",
+          "package": "TO-220",
+          "application": "High-voltage offline converters",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "400 V | 0.55 Ω max at 10 V",
           "vDs": "400 V",
-          "vds": "400 V",
-          "rDsOn": "0.55 Ω max at 10 V",
-          "rdsOn": "0.55 Ω max at 10 V",
-          "package": "TO-220",
-          "application": "Offline power supplies"
+          "rDsOn": "0.55 Ω max at 10 V"
         },
         {
           "partNumber": "IRF9540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-100 V | 117 mΩ max at -10 V",
+          "package": "TO-220",
+          "application": "High-side switching and reverse-polarity protection",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-100 V | 117 mΩ max at -10 V",
           "vDs": "-100 V",
-          "vds": "-100 V",
-          "rDsOn": "117 mΩ max at -10 V",
-          "rdsOn": "117 mΩ max at -10 V",
-          "package": "TO-220",
-          "application": "High-side solar disconnect switches"
+          "rDsOn": "117 mΩ max at -10 V"
         }
       ],
       "howToPick": {
@@ -4324,13 +4757,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Solapur",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Ahmednagar",
     "state": "Maharashtra",
     "slug": "/electronic-component-distributor-in-ahmednagar",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Ahmednagar | Mirai Technologies",
+    "metaTitle": "Ahmednagar Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Ahmednagar (Ahilyanagar) Nagapur MIDC, dairy, sugar and engineering units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Ahmednagar",
     "secondaryKeywords": "electronic components distributor in Ahilyanagar, MOSFET distributor in Ahmednagar, buy electronic components Ahmednagar, semiconductor distributor Ahmednagar, MOSFET dealer Ahmednagar, power MOSFET supplier Ahmednagar, VFD repair components Ahmednagar, inverter MOSFET Ahmednagar, electronic components Nagapur MIDC, electronic components Shirdi, electronic components Sangamner, relay supplier Ahmednagar, electronic components with GST invoice, IRF3710 Ahmednagar, IRFB4110 Ahmednagar, IRFP250N Ahmednagar",
@@ -4426,7 +4934,7 @@
         "connectors": {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -4462,7 +4970,7 @@
         {
           "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
           "items": [
-            "Pin headers, JST connectors, terminal blocks, FFC/FPC and USB/DC connectors",
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
             "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
           ]
         }
@@ -4483,107 +4991,93 @@
         {
           "partNumber": "IRF3710",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 23 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Dairy chiller drives and industrial pumps",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 23 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "23 mΩ max at 10 V",
-          "rdsOn": "23 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Dairy refrigeration and pump drives"
+          "rDsOn": "23 mΩ max at 10 V"
         },
         {
           "partNumber": "IRFB4110",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "100 V | 4.5 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "High-efficiency motor drives and food processing equipment",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "100 V | 4.5 mΩ max at 10 V",
           "vDs": "100 V",
-          "vds": "100 V",
-          "rDsOn": "4.5 mΩ max at 10 V",
-          "rdsOn": "4.5 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "High-efficiency chiller motor control"
+          "rDsOn": "4.5 mΩ max at 10 V"
         },
         {
           "partNumber": "IRFP250N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel",
+          "ratings": "200 V | 75 mΩ max at 10 V",
+          "package": "TO-247",
+          "application": "High-power industrial inverters",
+          "brand": "Infineon",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "200 V | 75 mΩ max at 10 V",
           "vDs": "200 V",
-          "vds": "200 V",
-          "rDsOn": "75 mΩ max at 10 V",
-          "rdsOn": "75 mΩ max at 10 V",
-          "package": "TO-247",
-          "application": "Heavy processing equipment drives"
+          "rDsOn": "75 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF840",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "500 V | 0.85 Ω max at 10 V",
+          "package": "TO-220",
+          "application": "SMPS and high-voltage offline converters",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 0.85 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "0.85 Ω max at 10 V",
-          "rdsOn": "0.85 Ω max at 10 V",
-          "package": "TO-220",
-          "application": "SMPS and industrial controls"
+          "rDsOn": "0.85 Ω max at 10 V"
         },
         {
           "partNumber": "IRFP460",
           "manufacturer": "Vishay",
-          "brand": "Vishay",
           "polarity": "N-channel",
+          "ratings": "500 V | 0.27 Ω max at 10 V",
+          "package": "TO-247",
+          "application": "Industrial motor drives and power supplies",
+          "brand": "Vishay",
           "channel": "N-channel",
           "type": "N-channel",
-          "ratings": "500 V | 0.27 Ω max at 10 V",
           "vDs": "500 V",
-          "vds": "500 V",
-          "rDsOn": "0.27 Ω max at 10 V",
-          "rdsOn": "0.27 Ω max at 10 V",
-          "package": "TO-247",
-          "application": "Large power supplies and drives"
+          "rDsOn": "0.27 Ω max at 10 V"
         },
         {
           "partNumber": "IRLZ44N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "N-channel logic level",
+          "ratings": "55 V | 22 mΩ max at 10 V",
+          "package": "TO-220",
+          "application": "Microcontroller-driven switching at 5V logic",
+          "brand": "Infineon",
           "channel": "N-channel logic level",
           "type": "N-channel logic level",
-          "ratings": "55 V | 22 mΩ max at 10 V",
           "vDs": "55 V",
-          "vds": "55 V",
-          "rDsOn": "22 mΩ max at 10 V",
-          "rdsOn": "22 mΩ max at 10 V",
-          "package": "TO-220",
-          "application": "Microcontroller logic-level switching"
+          "rDsOn": "22 mΩ max at 10 V"
         },
         {
           "partNumber": "IRF9540N",
           "manufacturer": "Infineon",
-          "brand": "Infineon",
           "polarity": "P-channel",
+          "ratings": "-100 V | 117 mΩ max at -10 V",
+          "package": "TO-220",
+          "application": "High-side switching and reverse-polarity protection",
+          "brand": "Infineon",
           "channel": "P-channel",
           "type": "P-channel",
-          "ratings": "-100 V | 117 mΩ max at -10 V",
           "vDs": "-100 V",
-          "vds": "-100 V",
-          "rDsOn": "117 mΩ max at -10 V",
-          "rdsOn": "117 mΩ max at -10 V",
-          "package": "TO-220",
-          "application": "High-side protection switches"
+          "rDsOn": "117 mΩ max at -10 V"
         }
       ],
       "howToPick": {
@@ -4821,13 +5315,88 @@
           ]
         }
       ]
+    },
+    "whatWeSupplyDetailed": {
+      "h2": "What We Supply in Ahmednagar",
+      "categories": {
+        "active": {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        "passives": {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        "diodes": {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        "connectors": {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      },
+      "groups": [
+        {
+          "title": "Active Components",
+          "items": [
+            "Integrated circuits from Texas Instruments, STMicroelectronics, NXP, Microchip and Analog Devices",
+            "Power MOSFETs from Infineon, ON Semi, STMicroelectronics and Vishay",
+            "BJT transistors, plus IGBTs on request (send part numbers to confirm availability)",
+            "Microcontrollers for industrial automation, IoT and embedded electronics",
+            "Voltage regulators: buck, boost and LDO"
+          ]
+        },
+        {
+          "title": "Passive Components (1,700+ SKUs)",
+          "items": [
+            "SMD chip resistors, 1% precision, 0402 to 1210, rated -55°C to +155°C",
+            "Through-hole resistors, E24 values, 1/4W to 1W (1,300+ resistor SKUs in total)",
+            "SMD ceramic capacitors (MLCC), 384+ SKUs, 0402 to 1812, C0G/NP0 and X7R, 16V to 50V",
+            "Radial electrolytic and SMD tantalum capacitors",
+            "SMD power inductors, 390+ SKUs, shielded ferrite"
+          ]
+        },
+        {
+          "title": "Diodes, LEDs and Timing (485+ Diode SKUs)",
+          "items": [
+            "Zener, Schottky, rectifier and TVS diodes",
+            "LEDs and crystal oscillators"
+          ]
+        },
+        {
+          "title": "Connectors and Electromechanical (340+ Connectors, 185+ Electromechanical)",
+          "items": [
+            "Pin headers, JST connectors, terminal blocks, FFC/FPC connectors and USB/DC connectors",
+            "Switches, and electromechanical or reed relays with 3V to 24V DC coils and up to 10A contacts"
+          ]
+        }
+      ]
     }
   },
   {
     "city": "Chennai",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-chennai",
-    "metaTitle": "Electronic Component Distributor in Chennai | Genuine ICs, MOSFETs & Passives | Mirai Technologies",
+    "metaTitle": "Chennai Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Authorized electronic components distributor serving Chennai's auto, EMS, telecom and R&D teams since 1999. Genuine parts, CoC, RoHS/REACH checks, GST invoice, low MOQ.",
     "primaryKeyword": "electronic component distributor Chennai",
     "secondaryKeywords": "semiconductor distributor Chennai, MOSFET supplier Chennai, MLCC supplier Chennai, buy ICs Chennai, electronic components Ambattur, electronic components Guindy",
@@ -5180,7 +5749,7 @@
     "city": "Coimbatore",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-coimbatore",
-    "metaTitle": "Electronic Components Supplier in Coimbatore | Relays, Diodes, Capacitors | Mirai Technologies",
+    "metaTitle": "Coimbatore Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine relays, rectifiers, MOSFETs, capacitors and terminal blocks for Coimbatore's pump, motor, textile machinery and control panel builders. CoC and GST invoice.",
     "primaryKeyword": "electronic components Coimbatore",
     "secondaryKeywords": "relay supplier Coimbatore, rectifier diode Coimbatore, terminal block Coimbatore, pump controller components, electronic component distributor Coimbatore",
@@ -5530,7 +6099,7 @@
     "city": "Hosur",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-hosur",
-    "metaTitle": "Electronic Component Distributor in Hosur | MOSFETs, MCUs, Connectors | Mirai Technologies",
+    "metaTitle": "Hosur Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, MCUs, TVS diodes and connectors for Hosur's EV, two-wheeler and electronics manufacturers. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components Hosur",
     "secondaryKeywords": "MOSFET supplier Hosur, EV components Hosur, TVS diode Hosur, electronic component distributor Hosur",
@@ -5872,7 +6441,7 @@
     "city": "Sriperumbudur",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-sriperumbudur",
-    "metaTitle": "Electronic Components Sriperumbudur | EMS & Electronics Supplier | Mirai Technologies",
+    "metaTitle": "Sriperumbudur Electronic Components | Mirai",
     "metaDescription": "Volume passives, ICs and connectors for Sriperumbudur–Oragadam EMS and electronics plants. Buffer stock, CoC, RoHS/REACH verification, GST invoice.",
     "primaryKeyword": "EMS component supplier Sriperumbudur",
     "secondaryKeywords": "electronic components Oragadam, MLCC supplier Sriperumbudur, electronic component distributor Sriperumbudur",
@@ -6211,7 +6780,7 @@
     "city": "Tiruppur",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-tiruppur",
-    "metaTitle": "Electronic Components Tiruppur | Relays, Regulators, Diodes | Mirai Technologies",
+    "metaTitle": "Tiruppur Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine relays, MCUs, diodes and capacitors for Tiruppur's knitwear machinery, dyeing and effluent plants. Low MOQ, CoC, GST invoice.",
     "primaryKeyword": "electronic components Tiruppur",
     "secondaryKeywords": "relay supplier Tiruppur, electronic spare parts Tiruppur, capacitor supplier Tiruppur",
@@ -6559,7 +7128,7 @@
     "city": "Madurai",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-madurai",
-    "metaTitle": "Electronic Component Supplier in Madurai | Genuine ICs & Passives | Mirai Technologies",
+    "metaTitle": "Madurai Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine ICs, passives, switches and connectors for Madurai's manufacturers, service engineers and startups. Low MOQ, CoC, GST invoice. Serving buyers since 1999.",
     "primaryKeyword": "electronic components Madurai",
     "secondaryKeywords": "electronic spare parts Madurai, IC supplier Madurai, LED supplier Madurai, electronic component distributor Madurai",
@@ -6911,7 +7480,7 @@
     "city": "Tiruchirappalli",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-tiruchirappalli",
-    "metaTitle": "Electronic Components Tiruchirappalli (Trichy) | Traceable Supplier | Mirai Technologies",
+    "metaTitle": "Tiruchirappalli Electronic Components | Mirai",
     "metaDescription": "CoC-backed, ESD-safe handled components for Trichy's boiler, defence and railway ecosystem. ISO 9001:2015 certified distributor, GST invoice.",
     "primaryKeyword": "electronic components Trichy",
     "secondaryKeywords": "defence electronics components supplier, traceable components CoC, tantalum capacitor Trichy, electronic components Tiruchirappalli",
@@ -7250,7 +7819,7 @@
     "city": "Salem",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-salem",
-    "metaTitle": "Electronic Components Supplier in Salem | Rectifiers, MOSFETs, Relays | Mirai Technologies",
+    "metaTitle": "Salem Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine rectifiers, MOSFETs, relays and capacitors for Salem's steel, power electronics and machinery industries. CoC and GST invoice.",
     "primaryKeyword": "electronic components Salem",
     "secondaryKeywords": "rectifier diode Salem, MOSFET Salem, power electronics components Salem, relay supplier Salem",
@@ -7602,7 +8171,7 @@
     "city": "Erode",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-erode",
-    "metaTitle": "Electronic Components Supplier in Erode | Resistors, LEDs, MCUs, Relays | Mirai Technologies",
+    "metaTitle": "Erode Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine resistors, LEDs, MCUs, relays and capacitors for Erode's textile units, campuses and makers. Low MOQ, CoC, GST invoice.",
     "primaryKeyword": "electronic components Erode",
     "secondaryKeywords": "resistor and LED supplier Erode, electronic project components Erode, electronic component distributor Erode",
@@ -7942,7 +8511,7 @@
     "city": "Vellore",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-vellore",
-    "metaTitle": "Electronic Component Distributor in Vellore | ICs, MCUs, Passives | Mirai Technologies",
+    "metaTitle": "Vellore Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine ICs, MCUs and passives for Vellore's R&D labs, medical device teams, leather-belt automation and campuses. Low MOQ, CoC, GST invoice.",
     "primaryKeyword": "electronic components Vellore",
     "secondaryKeywords": "microcontroller supplier Vellore, IC distributor Vellore, electronic components Katpadi, components for research labs India",
@@ -8282,7 +8851,7 @@
     "city": "Mysuru",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-mysuru",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Mysuru | Mirai Technologies",
+    "metaTitle": "Mysuru Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Mysuru's Hebbal, Belagola and Nanjangud units. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Mysuru",
     "secondaryKeywords": "electronic components distributor in Mysore, MOSFET distributor in Mysuru, buy electronic components Mysore, semiconductor distributor Mysore, MOSFET dealer Mysore, power MOSFET supplier Mysore, LED driver MOSFET, SMPS MOSFET Mysore, electronic components Hebbal industrial area, electronic components Nanjangud, electronic components Belagola, relay supplier Mysore, electronic components with GST invoice, IRF830 Mysore, STP10NK60Z Mysore, IRF840 Mysore",
@@ -8796,7 +9365,7 @@
     "city": "Hubballi-Dharwad",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-hubballi-dharwad",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Hubballi-Dharwad | Mirai Technologies",
+    "metaTitle": "Hubballi-Dharwad Electronic Components | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Hubballi-Dharwad's Gokul Road, Tarihal and Belur units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Hubballi, electronic components distributor in Dharwad, MOSFET distributor in Hubballi",
     "secondaryKeywords": "buy electronic components Hubli, semiconductor distributor Hubli, MOSFET dealer Hubli, power MOSFET supplier Hubli Dharwad, solenoid driver MOSFET, 24V MOSFET Hubli, electronic components Gokul Road, electronic components Tarihal, electronic components Belur Dharwad, relay supplier Hubli, electronic components with GST invoice, IRFB4115 Hubli, IRF640N Hubli, IRFP250N Hubli",
@@ -9310,7 +9879,7 @@
     "city": "Belagavi",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-belagavi",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Belagavi | Mirai Technologies",
+    "metaTitle": "Belagavi Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Belagavi's Udyambag, Macche and Khanapur Road foundry and engineering units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Belagavi, electronic components distributor in Belgaum, MOSFET distributor in Belagavi",
     "secondaryKeywords": "buy electronic components Belgaum, semiconductor distributor Belgaum, MOSFET dealer Belgaum, power MOSFET supplier Belgaum, induction furnace MOSFET, CNC drive components Belgaum, solenoid driver MOSFET, electronic components Udyambag, electronic components Macche, electronic components Khanapur Road, relay supplier Belgaum, electronic components with GST invoice, IRFP4332 Belgaum, IRFP4568 Belgaum, IRF2807 Belgaum",
@@ -9829,7 +10398,7 @@
     "city": "Mangaluru",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-mangaluru",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Mangaluru | Mirai Technologies",
+    "metaTitle": "Mangaluru Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Mangaluru's Baikampady, Yeyyadi and port-belt units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Mangaluru, electronic components distributor in Mangalore, MOSFET distributor in Mangaluru",
     "secondaryKeywords": "buy electronic components Mangalore, semiconductor distributor Mangalore, MOSFET dealer Mangalore, power MOSFET supplier Mangalore, marine battery charger MOSFET, boat inverter components Mangalore, cold storage drive components, electronic components Baikampady, electronic components Yeyyadi, relay supplier Mangalore, electronic components with GST invoice, IRF1010E Mangalore, IRFZ48N Mangalore, STP80NF55-06 Mangalore",
@@ -10344,7 +10913,7 @@
     "city": "Tumakuru",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-tumakuru",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Tumakuru | Mirai Technologies",
+    "metaTitle": "Tumakuru Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Tumakuru's Vasanthanarasapura, Antharasanahalli and Tiptur units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Tumakuru, electronic components distributor in Tumkur, MOSFET distributor in Tumakuru",
     "secondaryKeywords": "buy electronic components Tumkur, semiconductor distributor Tumkur, MOSFET dealer Tumkur, power MOSFET supplier Tumkur, solar inverter MOSFET, MPPT charge controller components, solar pump controller components, electronic components Vasanthanarasapura, electronic components Antharasanahalli, electronic components Tiptur, relay supplier Tumkur, electronic components with GST invoice, IRFP4110 Tumkur, IRFB3077 Tumkur, IRFP22N60K Tumkur",
@@ -10878,7 +11447,7 @@
     "city": "Davanagere",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-davanagere",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Davanagere | Mirai Technologies",
+    "metaTitle": "Davanagere Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Davanagere's industrial areas, Harihar and agri-processing units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Davanagere, electronic components distributor in Davangere, MOSFET distributor in Davanagere",
     "secondaryKeywords": "buy electronic components Davangere, semiconductor distributor Davangere, MOSFET dealer Davangere, power MOSFET supplier Davangere, rice mill drive components, solar pump controller MOSFET, VFD repair components Davangere, electronic components Harihar, electronic spare parts Davangere, relay supplier Davangere, electronic components with GST invoice, IRFB3207 Davangere, IRFP4227 Davangere, STP11NM60 Davangere",
@@ -11392,7 +11961,7 @@
     "city": "Ballari",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-ballari",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Ballari | Mirai Technologies",
+    "metaTitle": "Ballari Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Ballari's steel, mining, welding and denim units. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Ballari, electronic components distributor in Bellary, MOSFET distributor in Ballari",
     "secondaryKeywords": "buy electronic components Bellary, semiconductor distributor Bellary, MOSFET dealer Bellary, power MOSFET supplier Bellary, welding inverter MOSFET, crane drive components Bellary, VFD repair components Bellary, electronic components Hosapete, electronic components Toranagallu, electronic spare parts Bellary, relay supplier Bellary, electronic components with GST invoice, IRFP90N20D Bellary, IRFP264N Bellary, IRFP27N60K Bellary",
@@ -11907,8 +12476,8 @@
     "city": "Bengaluru",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-bengaluru",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Bengaluru | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Bengaluru's Peenya, Electronic City and Whitefield teams. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
+    "metaTitle": "Bengaluru Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, passives & relays for Bengaluru's Peenya, Electronic City & Whitefield teams. CoC, GST invoice, low MOQ. Authorized distributor.",
     "primaryKeyword": "electronic components distributor in Bengaluru, electronic components dealer in Bengaluru, MOSFET distributor in Bengaluru",
     "secondaryKeywords": "buy electronic components Bangalore, semiconductor distributor Bangalore, MOSFET dealer Bangalore, power MOSFET supplier Bangalore, MOSFET for BLDC motor controller, EV electronic components Bangalore, drone electronic components Bangalore, electronic components Peenya, electronic components Electronic City, electronic components Whitefield, alternative to SP Road electronic components, electronic components with GST invoice, IRFB7430 Bangalore, IRFB4110 Bangalore, IRF1405 Bangalore",
     "h1": "Electronic Components and MOSFET Distributor in Bengaluru: Genuine Parts for Peenya, Electronic City and Whitefield",
@@ -12257,40 +12826,16 @@
     },
     "internalLinks": [
       {
-        "text": "MOSFETs",
-        "url": "/products/mosfet-transistor"
-      },
-      {
-        "text": "Integrated Circuits",
-        "url": "/products/integrated-circuit"
-      },
-      {
-        "text": "Microcontrollers",
-        "url": "/products/microcontrollers"
-      },
-      {
-        "text": "Capacitors",
-        "url": "/products/passive-components"
-      },
-      {
-        "text": "Resistors",
-        "url": "/products/passive-components"
-      },
-      {
-        "text": "Diodes",
-        "url": "/products/diodes-rectifiers"
-      },
-      {
-        "text": "Relays",
-        "url": "/products/optocouplers"
-      },
-      {
         "text": "Hosur",
         "url": "/electronic-component-distributor-in-hosur"
       },
       {
         "text": "Mysuru",
         "url": "/electronic-component-distributor-in-mysuru"
+      },
+      {
+        "text": "Hubballi-Dharwad",
+        "url": "/electronic-component-distributor-in-hubballi-dharwad"
       },
       {
         "text": "Tumakuru",
@@ -12436,7 +12981,7 @@
     "city": "Shivamogga",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-shivamogga",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Shivamogga | Mirai Technologies",
+    "metaTitle": "Shivamogga Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Shivamogga's Machenahalli, Bhadravathi and Malnad units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Shivamogga, electronic components distributor in Shimoga, MOSFET distributor in Shivamogga",
     "secondaryKeywords": "buy electronic components Shimoga, semiconductor distributor Shimoga, MOSFET dealer Shimoga, power MOSFET supplier Shimoga, inverter MOSFET Shimoga, pump controller components Shimoga, areca processing machine components, solar charge controller MOSFET, electronic components Machenahalli, electronic components Bhadravathi, electronic spare parts Shimoga, relay supplier Shimoga, electronic components with GST invoice, IRFP3710 Shimoga, IRFP054N Shimoga, IRF3315 Shimoga",
@@ -12950,7 +13495,7 @@
     "city": "Kalaburagi",
     "state": "Karnataka",
     "slug": "/electronic-component-distributor-in-kalaburagi",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Kalaburagi | Mirai Technologies",
+    "metaTitle": "Kalaburagi Electronic Component & MOSFET Distributor | Mirai",
     "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Kalaburagi's dal-mill, cement-belt and solar-pump units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Kalaburagi, electronic components distributor in Gulbarga, MOSFET distributor in Kalaburagi",
     "secondaryKeywords": "buy electronic components Gulbarga, semiconductor distributor Gulbarga, MOSFET dealer Gulbarga, power MOSFET supplier Gulbarga, dal mill drive components, solar pump controller MOSFET, VFD repair components Gulbarga, inverter MOSFET Gulbarga, electronic components Nandur Kesaratagi, electronic spare parts Gulbarga, relay supplier Gulbarga, electronic components with GST invoice, IRFP150N Gulbarga, IRFB4227 Gulbarga, STP12NM50 Gulbarga",
@@ -13465,8 +14010,8 @@
     "city": "Ahmedabad",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-ahmedabad",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Ahmedabad | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Ahmedabad's Naroda, Odhav, Vatva and Sanand units. CoC, IGST invoice, low MOQ. Since 1999.",
+    "metaTitle": "Ahmedabad Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Ahmedabad's Naroda, Odhav, Vatva and Sanand units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Ahmedabad",
     "secondaryKeywords": "electronic components dealer in Ahmedabad, MOSFET distributor in Ahmedabad, buy electronic components Ahmedabad, semiconductor distributor Ahmedabad, MOSFET dealer Ahmedabad, power MOSFET supplier Ahmedabad, solar inverter MOSFET Ahmedabad, LED driver MOSFET, electronic components Naroda GIDC, electronic components Vatva, electronic components Odhav, electronic components Sanand, electronic components Relief Road Ahmedabad, relay supplier Ahmedabad, electronic components with GST invoice, IRFP4004 Ahmedabad, SPP20N60C3 Ahmedabad, IRFP240 Ahmedabad",
     "h1": "Electronic Components and MOSFET Distributor in Ahmedabad: Genuine Parts for Naroda, Odhav, Vatva and Sanand",
@@ -13903,8 +14448,8 @@
     "city": "Surat",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-surat",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Surat | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Surat's Sachin, Pandesara and Hazira textile, embroidery and diamond units. CoC, IGST invoice, low MOQ.",
+    "metaTitle": "Surat Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Surat's Sachin, Pandesara and Hazira textile, embroidery and diamond units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Surat",
     "secondaryKeywords": "electronic components dealer in Surat, MOSFET distributor in Surat, buy electronic components Surat, semiconductor distributor Surat, MOSFET dealer Surat, power MOSFET supplier Surat, embroidery machine components, servo drive MOSFET, BLDC motor driver MOSFET Surat, loom drive components Surat, diamond polishing machine components, electronic components Sachin GIDC, electronic components Pandesara, electronic components Hazira, relay supplier Surat, electronic components with GST invoice, IRFP2907 Surat, IRFP3206 Surat, IRFB4310 Surat",
     "h1": "Electronic Components and MOSFET Distributor in Surat: Genuine Parts for Sachin, Pandesara, Hazira and the Textile-Diamond Belt",
@@ -14336,8 +14881,8 @@
     "city": "Vadodara",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-vadodara",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Vadodara | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Vadodara's Makarpura, Waghodia, Savli and Nandesari units. CoC, IGST invoice, low MOQ. Since 1999.",
+    "metaTitle": "Vadodara Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Vadodara's Makarpura, Waghodia, Savli and Nandesari units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Vadodara",
     "secondaryKeywords": "electronic components distributor in Baroda, MOSFET distributor in Vadodara, buy electronic components Baroda, semiconductor distributor Vadodara, MOSFET dealer Baroda, power MOSFET supplier Vadodara, VFD repair components Vadodara, DC charger MOSFET, 110V DC system components, electronic components Makarpura GIDC, electronic components Waghodia, electronic components Savli, electronic components Nandesari, relay supplier Vadodara, electronic components with GST invoice, IRFB4615 Vadodara, IRFP4321 Vadodara, IRFP350 Vadodara",
     "h1": "Electronic Components and MOSFET Distributor in Vadodara (Baroda): Genuine Parts for Makarpura, Waghodia, Savli and Nandesari",
@@ -14778,8 +15323,8 @@
     "city": "Rajkot",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-rajkot",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Rajkot | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Rajkot's Aji, Bhaktinagar, Metoda and Shapar engineering and foundry units. CoC, IGST invoice, low MOQ.",
+    "metaTitle": "Rajkot Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Rajkot's Aji, Bhaktinagar, Metoda and Shapar engineering and foundry units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Rajkot",
     "secondaryKeywords": "electronic components dealer in Rajkot, MOSFET distributor in Rajkot, buy electronic components Rajkot, semiconductor distributor Rajkot, MOSFET dealer Rajkot, power MOSFET supplier Rajkot, diesel engine electronics components, pump controller MOSFET Rajkot, CNC drive components Rajkot, welding inverter MOSFET Rajkot, electronic components Aji GIDC, electronic components Metoda GIDC, electronic components Bhaktinagar, relay supplier Rajkot, electronic components with GST invoice, IRFP4710 Rajkot, IRF1407 Rajkot, STW12NK80Z Rajkot",
     "h1": "Electronic Components and MOSFET Distributor in Rajkot: Genuine Parts for Aji, Bhaktinagar, Metoda and Shapar-Veraval",
@@ -15215,8 +15760,8 @@
     "city": "Gandhinagar",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-gandhinagar",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Gandhinagar | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Gandhinagar's GIDC estates, GIFT City, Infocity and IIT labs. CoC, IGST invoice, low MOQ. Since 1999.",
+    "metaTitle": "Gandhinagar Electronic Components | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Gandhinagar's GIDC estates, GIFT City, Infocity and IIT labs. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Gandhinagar",
     "secondaryKeywords": "electronic components dealer in Gandhinagar, MOSFET distributor in Gandhinagar, buy electronic components Gandhinagar, semiconductor distributor Gandhinagar, MOSFET dealer Gandhinagar, power MOSFET supplier Gandhinagar, UPS MOSFET Gandhinagar, LED street light driver components, EV charger components Gujarat, electronic components for IIT labs, electronic components GIDC Gandhinagar, electronic components Kalol, electronic components Chhatral, relay supplier Gandhinagar, electronic components with GST invoice, IRFB4110 Gandhinagar, IRFR3607 Gandhinagar, STP20NM60FP Gandhinagar",
     "h1": "Electronic Components and MOSFET Distributor in Gandhinagar: Genuine Parts for GIDC Sectors, GIFT City, Infocity and Campus Labs",
@@ -15645,8 +16190,8 @@
     "city": "Morbi",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-morbi",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Morbi | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Morbi's ceramic tile, sanitaryware and clock units. CoC, IGST invoice, low MOQ. Authorized distributor since 1999.",
+    "metaTitle": "Morbi Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Morbi's ceramic tile, sanitaryware and clock units. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Morbi",
     "secondaryKeywords": "electronic components dealer in Morbi, MOSFET distributor in Morbi, buy electronic components Morbi, semiconductor distributor Morbi, MOSFET dealer Morbi, power MOSFET supplier Morbi, ceramic tile plant drive components, ball mill VFD repair components, hydraulic press controller components, wall clock electronic components Morbi, crystal oscillator supplier Morbi, electronic spare parts Morbi, electronic components Wankaner road, relay supplier Morbi, electronic components with GST invoice, IRFP4468 Morbi, IRFP4137 Morbi, IRFP31N50L Morbi",
     "h1": "Electronic Components and MOSFET Distributor in Morbi: Genuine Parts for Ceramic Tile Plants, Press Lines and Clock Makers",
@@ -16074,8 +16619,8 @@
     "city": "Jamnagar",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-jamnagar",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Jamnagar | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Jamnagar's brass-parts, forging, plating and port-belt units. CoC, IGST invoice, low MOQ. Since 1999.",
+    "metaTitle": "Jamnagar Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Jamnagar's brass-parts, forging, plating and port-belt units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Jamnagar",
     "secondaryKeywords": "electronic components dealer in Jamnagar, MOSFET distributor in Jamnagar, buy electronic components Jamnagar, semiconductor distributor Jamnagar, MOSFET dealer Jamnagar, power MOSFET supplier Jamnagar, electroplating rectifier MOSFET, induction heating MOSFET Jamnagar, brass industry electronic components, CNC drive components Jamnagar, marine battery charger components, electronic components Shankar Tekri GIDC, electronic spare parts Jamnagar, relay supplier Jamnagar, electronic components with GST invoice, IRFP3306 Jamnagar, IRFB7440 Jamnagar, IRFP4768 Jamnagar",
     "h1": "Electronic Components and MOSFET Distributor in Jamnagar: Genuine Parts for Brass, Forging, Plating and Port-Belt Units",
@@ -16507,8 +17052,8 @@
     "city": "Vapi",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-vapi",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Vapi | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Vapi GIDC's chemical, dyes and pharma plants. CoC, IGST invoice, low MOQ. Authorized distributor since 1999.",
+    "metaTitle": "Vapi Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Vapi GIDC's chemical, dyes and pharma plants. CoC, GST invoice, low MOQ. Authorized distributor since 1999.",
     "primaryKeyword": "electronic components distributor in Vapi",
     "secondaryKeywords": "electronic components dealer in Vapi, MOSFET distributor in Vapi, buy electronic components Vapi, semiconductor distributor Vapi, MOSFET dealer Vapi, power MOSFET supplier Vapi, VFD repair components Vapi, pump drive MOSFET, chemical plant electronic spares, effluent treatment plant panel components, electronic components Vapi GIDC, electronic components Sarigam, electronic components Daman, electronic components Silvassa, relay supplier Vapi, electronic components with GST invoice, IRF1018E Vapi, IRFB3306 Vapi, IRF640 Vapi",
     "h1": "Electronic Components and MOSFET Distributor in Vapi: Genuine Parts for Chemical, Dyes and Pharma Plants in Vapi GIDC",
@@ -16941,8 +17486,8 @@
     "city": "Bharuch-Ankleshwar",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-bharuch-ankleshwar",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Bharuch-Ankleshwar | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Ankleshwar, Panoli, Jhagadia and Dahej chemical and petrochemical units. CoC, IGST invoice, low MOQ.",
+    "metaTitle": "Bharuch-Ankleshwar Electronic Components | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Ankleshwar, Panoli, Jhagadia and Dahej chemical and petrochemical units. CoC, GST invoice, low MOQ.",
     "primaryKeyword": "electronic components distributor in Bharuch-Ankleshwar",
     "secondaryKeywords": "electronic components distributor in Ankleshwar, electronic components distributor in Bharuch, MOSFET distributor in Ankleshwar, buy electronic components Ankleshwar, semiconductor distributor Bharuch, MOSFET dealer Ankleshwar, power MOSFET supplier Bharuch, VFD repair components Ankleshwar, DC charger MOSFET, chemical plant electronic spares, effluent treatment plant panel components, electronic components Dahej, electronic components Panoli, electronic components Jhagadia, electronic components Ankleshwar GIDC, relay supplier Ankleshwar, electronic components with GST invoice, IRFS4115 Ankleshwar, IPP60R190C6 Ankleshwar, FQP9N90C Ankleshwar",
     "h1": "Electronic Components and MOSFET Distributor in Bharuch-Ankleshwar: Genuine Parts for Ankleshwar, Panoli, Jhagadia and Dahej",
@@ -17375,8 +17920,8 @@
     "city": "Bhavnagar",
     "state": "Gujarat",
     "slug": "/electronic-component-distributor-in-bhavnagar",
-    "metaTitle": "Electronic Components & MOSFET Distributor in Bhavnagar | Mirai Technologies",
-    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Bhavnagar's Alang-Sosiya, Chitra and Sidsar units. CoC, IGST invoice, low MOQ. Since 1999.",
+    "metaTitle": "Bhavnagar Electronic Component & MOSFET Distributor | Mirai",
+    "metaDescription": "Genuine MOSFETs, ICs, capacitors, resistors, connectors and relays for Bhavnagar's Alang-Sosiya, Chitra and Sidsar units. CoC, GST invoice, low MOQ. Since 1999.",
     "primaryKeyword": "electronic components distributor in Bhavnagar",
     "secondaryKeywords": "electronic components dealer in Bhavnagar, MOSFET distributor in Bhavnagar, buy electronic components Bhavnagar, semiconductor distributor Bhavnagar, MOSFET dealer Bhavnagar, power MOSFET supplier Bhavnagar, welding inverter MOSFET Bhavnagar, winch crane drive components, marine battery charger components, diamond polishing machine components, onion dehydration plant electronic spares, electronic components Alang, electronic components Chitra GIDC, electronic components Sihor, relay supplier Bhavnagar, electronic components with GST invoice, IRFP4310Z Bhavnagar, IRFP4229 Bhavnagar, STW48N60M2 Bhavnagar",
     "h1": "Electronic Components and MOSFET Distributor in Bhavnagar: Genuine Parts for Alang-Sosiya, Chitra, Sidsar and the Coastal Belt",
@@ -26868,9 +27413,9 @@
     "city": "Tirunelveli",
     "state": "Tamil Nadu",
     "slug": "/electronic-component-distributor-in-tirunelveli",
-    "metaTitle": "Component Distributor in Tirunelveli | Mirai Tech",
-    "metaDescription": "Authorized distributor of Power MOSFETs, IGBTs, ICs & semiconductors in Tirunelveli. Genuine parts, fast delivery, CoC, GST invoice. Low MOQ.",
-    "h1": "Electronic Component Distributor in Tirunelveli — Power MOSFETs, IGBTs & ICs",
+    "metaTitle": "Tirunelveli Electronic Components Distributor | Mirai",
+    "metaDescription": "Authorized distributor of Power MOSFETs, ICs & semiconductors in Tirunelveli. Genuine parts, fast delivery, CoC, GST invoice. Low MOQ.",
+    "h1": "Electronic Component Distributor in Tirunelveli: Power MOSFETs, ICs & Passives",
     "h2s": [
       "Why Procurement Engineers in Tirunelveli Trust Mirai Technologies",
       "Semiconductor Products Available for Delivery to Tirunelveli",

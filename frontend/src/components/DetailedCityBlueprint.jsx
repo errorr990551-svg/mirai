@@ -422,14 +422,14 @@ const DetailedCityBlueprint = ({
                     <tbody className="divide-y divide-slate-100 text-sm">
                       {page.mosfetDistributor.popularParts.map((part, pIdx) => (
                         <tr key={pIdx} className="hover:bg-slate-50/80 transition-colors">
-                          <td className="p-4 font-bold text-slate-900 font-mono text-xs">{part.partNumber}</td>
-                          <td className="p-4 text-slate-600 text-xs">{part.manufacturer || part.brand}</td>
-                          <td className="p-4 text-xs font-semibold text-slate-700">{part.polarity || part.channel}</td>
+                          <td className="p-4 font-bold text-slate-900 font-mono text-xs">{part.partNumber || ''}</td>
+                          <td className="p-4 text-slate-600 text-xs">{part.manufacturer || part.brand || ''}</td>
+                          <td className="p-4 text-xs font-semibold text-slate-700">{part.polarity || part.channel || part.type || ''}</td>
                           <td className="p-4 text-xs font-mono text-slate-700 bg-slate-50/50">
-                            {part.ratings || `${part.vDs || part.vds || ''} | ${part.rDsOn || part.rdsOn || ''} ${(part.iD || part.id) ? `| ${part.iD || part.id}` : ''}`}
+                            {part.ratings || [part.vDs || part.vds, part.rDsOn || part.rdsOn, part.iD || part.id].filter(Boolean).join(' | ')}
                           </td>
-                          <td className="p-4 text-xs text-slate-600">{part.package}</td>
-                          <td className="p-4 text-xs text-slate-600">{part.application}</td>
+                          <td className="p-4 text-xs text-slate-600">{part.package || ''}</td>
+                          <td className="p-4 text-xs text-slate-600">{part.application || part.applications || ''}</td>
                           <td className="p-4 text-right">
                             <button
                               onClick={scrollToForm}
@@ -848,9 +848,17 @@ const DetailedCityBlueprint = ({
 
             <span className="font-bold block mb-2 text-slate-800 uppercase tracking-wider">Browse Product Lines:</span>
             <div className="flex flex-wrap gap-x-4 gap-y-2 mb-6">
-              {(categories || []).slice(0, 10).map((cat) => (
-                <Link key={cat.slug} to={`/products/${cat.slug}`} className="hover:text-mirai-primary hover:underline">
-                  {cat.name}
+              {[
+                { name: "MOSFETs", slug: "mosfet-transistor" },
+                { name: "Integrated Circuits", slug: "integrated-circuit" },
+                { name: "Microcontrollers", slug: "microcontroller" },
+                { name: "Capacitors", slug: "capacitor" },
+                { name: "Resistors", slug: "resistor" },
+                { name: "Diodes", slug: "diode" },
+                { name: "Relays", slug: "relay" }
+              ].map((prod) => (
+                <Link key={prod.slug} to={`/products/${prod.slug}`} className="hover:text-mirai-primary hover:underline font-semibold text-slate-600">
+                  {prod.name}
                 </Link>
               ))}
             </div>

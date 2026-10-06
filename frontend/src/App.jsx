@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { updateMeta, injectOrganizationSchema } from './utils/seo';
 import HeroSection from './components/HeroSection';
@@ -129,8 +129,20 @@ function App() {
               <Route key={page.slug} path={page.slug} element={<CitySEOPage page={page} />} />
             ))}
             <Route path="*" element={
-              <div className="pt-32 pb-20 text-center min-h-[60vh] flex items-center justify-center">
-                <h2 className="text-3xl font-bold text-slate-400">Page under construction</h2>
+              <div className="pt-36 pb-24 text-center min-h-[60vh] flex flex-col items-center justify-center px-4">
+                <span className="text-mirai-primary font-bold text-sm uppercase tracking-widest mb-3">Error 404</span>
+                <h1 className="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Page Not Found</h1>
+                <p className="text-slate-600 max-w-md mx-auto mb-8 text-base">
+                  The page you are looking for does not exist or has been moved. Check the URL or return to our catalog.
+                </p>
+                <div className="flex gap-4">
+                  <Link to="/" className="bg-mirai-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-blue-600 transition-colors">
+                    Back to Home
+                  </Link>
+                  <Link to="/products" className="border border-slate-300 text-slate-700 font-semibold px-6 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+                    Browse Products
+                  </Link>
+                </div>
               </div>
             } />
           </Routes>
