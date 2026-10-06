@@ -1527,11 +1527,11 @@ cityPages.forEach(page => {
                 ${page.mosfetDistributor.popularParts.map(part => `
                   <tr>
                     <td><strong>${part.partNumber}</strong></td>
-                    <td>${part.manufacturer}</td>
-                    <td>${part.polarity}</td>
-                    <td>${part.vDs} | ${part.rDsOn}</td>
-                    <td>${part.package}</td>
-                    <td>${part.application}</td>
+                    <td>${part.manufacturer || part.brand || ''}</td>
+                    <td>${part.polarity || part.channel || part.type || ''}</td>
+                    <td>${part.ratings ? part.ratings : `${part.vDs || part.vds || ''} | ${part.rDsOn || part.rdsOn || ''}`}</td>
+                    <td>${part.package || ''}</td>
+                    <td>${part.application || part.applications || ''}</td>
                   </tr>
                 `).join('')}
               </tbody>
@@ -1554,7 +1554,29 @@ cityPages.forEach(page => {
     const mosfetCalculatorHtml = page.mosfetCalculator ? `
       <section style="margin-top: 32px; background-color: #f8fafc; padding: 24px; border-radius: 8px; border: 1px solid #e2e8f0;">
         <h2>${page.mosfetCalculator.h2}</h2>
-        <p style="margin-top: 8px; color: #475569;">${page.mosfetCalculator.purpose}</p>
+        <div class="mosfet-calc" style="margin-top: 16px; background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #cbd5e1;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+            <label style="display: flex; flex-direction: column; font-size: 13px; font-weight: 600;">Current (A) <input id="mc-i" type="number" value="${page.mosfetCalculator.defaultIrms || 5}" step="0.1" style="padding: 6px; border: 1px solid #cbd5e1; border-radius: 4px; margin-top: 4px;"></label>
+            <label style="display: flex; flex-direction: column; font-size: 13px; font-weight: 600;">R_DS(on) (mΩ) <input id="mc-r" type="number" value="${page.mosfetCalculator.defaultRdsOn || 25}" step="0.1" style="padding: 6px; border: 1px solid #cbd5e1; border-radius: 4px; margin-top: 4px;"></label>
+            <label style="display: flex; flex-direction: column; font-size: 13px; font-weight: 600;">Ambient (°C) <input id="mc-ta" type="number" value="${page.mosfetCalculator.defaultTa || 40}" style="padding: 6px; border: 1px solid #cbd5e1; border-radius: 4px; margin-top: 4px;"></label>
+            <label style="display: flex; flex-direction: column; font-size: 13px; font-weight: 600;">θ_JA (°C/W) <input id="mc-th" type="number" value="${page.mosfetCalculator.defaultThetaJa || 40}" style="padding: 6px; border: 1px solid #cbd5e1; border-radius: 4px; margin-top: 4px;"></label>
+          </div>
+          <button type="button" onclick="mcCalc()" style="background: #2563eb; color: #fff; padding: 8px 16px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Calculate</button>
+          <p id="mc-out" style="margin-top: 12px; font-weight: bold; color: #1e293b;"></p>
+        </div>
+        <script>
+        function mcCalc(){
+          var i=+document.getElementById('mc-i').value,
+              r=+document.getElementById('mc-r').value/1000,
+              ta=+document.getElementById('mc-ta').value,
+              th=+document.getElementById('mc-th').value;
+          var p=i*i*r, tj=ta+p*th, s='Safe';
+          if(tj>175) s='Exceeds 175°C max, part will fail';
+          else if(tj>125) s='Warning';
+          document.getElementById('mc-out').textContent =
+            'P_cond = '+p.toFixed(2)+' W, T_J = '+tj.toFixed(1)+'°C ('+s+')';
+        }
+        </script>
         <div style="margin-top: 16px; font-family: monospace; font-size: 14px; background: #fff; padding: 12px; border-radius: 4px; border: 1px solid #cbd5e1;">
           <p><strong>Formulas:</strong></p>
           <p>Conduction loss: P_cond = (I_RMS)^2 × R_DS(on)</p>
@@ -1562,7 +1584,9 @@ cityPages.forEach(page => {
         </div>
         ${page.mosfetCalculator.workedExample ? `
           <div style="margin-top: 16px;">
-            <p><strong>Worked Example (${page.mosfetCalculator.workedExample.part}):</strong> ${page.mosfetCalculator.workedExample.note || ''}</p>
+            <p><strong>${typeof page.mosfetCalculator.workedExample === 'string'
+              ? (page.mosfetCalculator.workedExample.startsWith('Worked Example') ? page.mosfetCalculator.workedExample : `Worked Example: ${page.mosfetCalculator.workedExample}`)
+              : `Worked Example (${page.mosfetCalculator.workedExample.part || ''}): ${page.mosfetCalculator.workedExample.note || ''}`}</strong></p>
           </div>
         ` : ''}
         <p style="margin-top: 16px; font-size: 12px; color: #64748b; font-style: italic;">${page.mosfetCalculator.disclaimer || ''}</p>

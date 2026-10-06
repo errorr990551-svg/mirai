@@ -227,9 +227,9 @@ const AboutUs = () => {
             <div className="lg:col-span-5 relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100">
                 <img 
-                  src="/about.webp" 
-                  alt="Mirai Technologies Mumbai office and component stock room facility" 
-                  className="w-full h-[420px] object-cover object-[12%_center]"
+                  src="/WhatsApp Image 2026-10-06 at 7.20.46 AM.jpeg" 
+                  alt="Mirai Technologies authorized distributor office nameplate at Lamington Road, Mumbai" 
+                  className="w-full h-[420px] object-cover object-center"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-slate-900 text-white p-6 rounded-2xl shadow-xl border border-slate-800">
@@ -298,21 +298,44 @@ const AboutUs = () => {
 
       {/* SECTION 4: OUR SOURCING PHILOSOPHY */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-          <span className="text-mirai-primary font-bold text-xs uppercase tracking-widest block mb-2">Core Principles</span>
-          <h2 className="text-3xl sm:text-4xl font-heading font-black text-slate-900 mb-6 leading-tight">
-            Our Sourcing Philosophy: Supply Stability Comes First
-          </h2>
-          <div className="space-y-5 text-slate-600 text-base sm:text-lg leading-relaxed">
-            <p>
-              A production line is only as steady as its supply chain. When the market is hit by shortages and grey-market counterfeits, one fake part can scrap a whole batch.
-            </p>
-            <p>
-              That is why we guarantee 100% genuine, traceable parts. We buy directly from manufacturers or authorized franchise lines, and genuine parts ship with a Certificate of Conformance (CoC).
-            </p>
-            <p>
-              We also carry buffer stock under rolling forecasts. If you share your forecast, we can keep stock ready for you, so a shortage elsewhere does not become a shutdown for you. When a part goes end-of-life or out of stock, our team helps with expert cross-referencing to find a suitable alternative.
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left: Office Workstation Image */}
+            <div className="lg:col-span-5 relative order-2 lg:order-1">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100">
+                <img 
+                  src="/image 2.jpeg" 
+                  alt="Mirai Technologies Mumbai office operations and workstation" 
+                  className="w-full h-[460px] object-cover object-center"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-slate-900 text-white p-5 rounded-2xl shadow-xl border border-slate-800 hidden sm:block">
+                <div className="text-sm font-bold text-white flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Active Stock &amp; Sourcing
+                </div>
+                <div className="text-xs text-slate-400 mt-1">Lamington Road Headquarters</div>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
+              <span className="text-mirai-primary font-bold text-xs uppercase tracking-widest block">Core Principles</span>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black text-slate-900 leading-tight">
+                Our Sourcing Philosophy: Supply Stability Comes First
+              </h2>
+              <div className="space-y-5 text-slate-600 text-base sm:text-lg leading-relaxed">
+                <p>
+                  A production line is only as steady as its supply chain. When the market is hit by shortages and grey-market counterfeits, one fake part can scrap a whole batch.
+                </p>
+                <p>
+                  That is why we guarantee 100% genuine, traceable parts. We buy directly from manufacturers or authorized franchise lines, and genuine parts ship with a Certificate of Conformance (CoC).
+                </p>
+                <p>
+                  We also carry buffer stock under rolling forecasts. If you share your forecast, we can keep stock ready for you, so a shortage elsewhere does not become a shutdown for you. When a part goes end-of-life or out of stock, our team helps with expert cross-referencing to find a suitable alternative.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
