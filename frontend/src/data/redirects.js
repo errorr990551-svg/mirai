@@ -56,6 +56,12 @@ export const redirectsMap = {
   "/integrated-circuits-supplier-hyderabad": "/electronic-component-distributor-in-hyderabad",
   "/electronic-component-distributor-in-aurangabad": "/electronic-component-distributor-in-chhatrapati-sambhajinagar",
   "/aurangabad": "/electronic-component-distributor-in-chhatrapati-sambhajinagar",
+  "/electronic-component-distributor-in-mahabubnagar": "/electronic-component-distributor-in-mahbubnagar",
+  "/electronic-component-distributor-in-patancheru": "/electronic-component-distributor-in-sangareddy-patancheru",
+  "/electronic-component-distributor-in-sangareddy": "/electronic-component-distributor-in-sangareddy-patancheru",
+  "/electronic-component-distributor-in-godavarikhani": "/electronic-component-distributor-in-ramagundam-godavarikhani",
+  "/electronic-component-distributor-in-ramagundam": "/electronic-component-distributor-in-ramagundam-godavarikhani",
+  "/electronic-component-distributor-in-hanamkonda": "/electronic-component-distributor-in-warangal",
 };
 
 // Default fallback redirect for unknown city pages
