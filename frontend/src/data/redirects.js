@@ -62,6 +62,7 @@ export const redirectsMap = {
   "/electronic-component-distributor-in-godavarikhani": "/electronic-component-distributor-in-ramagundam-godavarikhani",
   "/electronic-component-distributor-in-ramagundam": "/electronic-component-distributor-in-ramagundam-godavarikhani",
   "/electronic-component-distributor-in-hanamkonda": "/electronic-component-distributor-in-warangal",
+  "/electronic-component-distributor-in-maheshtala": "/electronic-component-distributor-in-kolkata",
 };
 
 // Default fallback redirect for unknown city pages
