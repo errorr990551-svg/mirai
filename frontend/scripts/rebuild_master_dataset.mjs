@@ -5,6 +5,7 @@ import { tnCitiesData } from './tn_cities_data.js';
 import { mhCitiesData } from './mh_cities_data.js';
 import { karnatakaCitiesData } from './karnataka_cities_data.js';
 import { gujaratCitiesData } from './gujarat_cities_data.js';
+import { mpCitiesData } from './mp_cities_data.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const cityPagesPath = path.join(__dirname, '../src/data/cityPages.json');
@@ -35,6 +36,7 @@ const tnCityNames = new Set(tnCitiesData.map(c => c.city.toLowerCase()));
 const mhCityNames = new Set(mhCitiesData.map(c => c.city.toLowerCase()));
 const kaCityNames = new Set(karnatakaCitiesData.map(c => c.city.toLowerCase()));
 const gjCityNames = new Set(gujaratCitiesData.map(c => c.city.toLowerCase()));
+const mpCityNames = new Set(mpCitiesData.map(c => c.city.toLowerCase()));
 mhCityNames.add('aurangabad');
 kaCityNames.add('hubli-dharwad');
 kaCityNames.add('bangalore');
@@ -143,7 +145,16 @@ const formattedGjCities = gujaratCitiesData.map(c => ({
   schema: createCitySchema(c)
 }));
 
-// 5. Clean up other existing cities
+// 5. Format MP cities
+const formattedMpCities = mpCitiesData.map(c => ({
+  ...c,
+  canonicalUrl: `https://miraitechnologies.net${c.slug}`,
+  hasDetailedBlueprint: true,
+  schemaTypeFlags: "LocalBusiness, FAQPage, BreadcrumbList",
+  schema: createCitySchema(c)
+}));
+
+// 6. Clean up other existing cities
 const keptCities = existingCityPages
   .filter(p => {
     if (slugsToRemove.has(p.slug)) return false;
@@ -151,6 +162,7 @@ const keptCities = existingCityPages
     if (p.state === 'Maharashtra' && mhCityNames.has(p.city.toLowerCase())) return false;
     if (p.state === 'Karnataka' && kaCityNames.has(p.city.toLowerCase())) return false;
     if (p.state === 'Gujarat' && gjCityNames.has(p.city.toLowerCase())) return false;
+    if (p.state === 'Madhya Pradesh' && mpCityNames.has(p.city.toLowerCase())) return false;
     return true;
   })
   .map(p => {
@@ -211,6 +223,7 @@ console.log(`Formatted MH cities: ${formattedMhCities.length}`);
 console.log(`Formatted TN cities: ${formattedTnCities.length}`);
 console.log(`Formatted KA cities: ${formattedKaCities.length}`);
 console.log(`Formatted GJ cities: ${formattedGjCities.length}`);
+console.log(`Formatted MP cities: ${formattedMpCities.length}`);
 console.log(`Kept other cities: ${keptCities.length}`);
 
 const finalCityPages = [
@@ -218,6 +231,7 @@ const finalCityPages = [
   ...formattedTnCities,
   ...formattedKaCities,
   ...formattedGjCities,
+  ...formattedMpCities,
   ...keptCities
 ];
 
