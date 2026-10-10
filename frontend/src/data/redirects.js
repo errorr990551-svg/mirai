@@ -61,8 +61,9 @@ export const redirectsMap = {
   "/electronic-component-distributor-in-sangareddy": "/electronic-component-distributor-in-sangareddy-patancheru",
   "/electronic-component-distributor-in-godavarikhani": "/electronic-component-distributor-in-ramagundam-godavarikhani",
   "/electronic-component-distributor-in-ramagundam": "/electronic-component-distributor-in-ramagundam-godavarikhani",
-  "/electronic-component-distributor-in-hanamkonda": "/electronic-component-distributor-in-warangal",
   "/electronic-component-distributor-in-maheshtala": "/electronic-component-distributor-in-kolkata",
+  "/electronic-component-distributor-in-tirupati": "/electronic-component-distributor-in-tirupati-sri-city",
+  "/electronic-component-distributor-in-nandyal": "/electronic-component-distributor-in-kurnool",
 };
 
 // Default fallback redirect for unknown city pages
