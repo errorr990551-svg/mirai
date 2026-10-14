@@ -143,20 +143,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Agency Signature */}
-          <div className="mt-6 pt-4 border-t border-white/[0.03] flex justify-center items-center">
-            <a 
-              href="https://errorr.in" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="group inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-xs text-slate-400 hover:text-white transition-all duration-300 px-4 py-2 rounded-full bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-mirai-primary/50 shadow-lg shadow-black/40 hover:shadow-mirai-primary/10 tracking-wide text-center"
-            >
-              <span>Designed and Promoted by</span>
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-mirai-primary to-mirai-accent group-hover:underline decoration-mirai-primary underline-offset-4">errorr.in</span>
-              <span className="hidden sm:inline text-slate-600">•</span>
-              <span className="text-slate-400 group-hover:text-slate-200 font-medium">Best Digital Marketing Company in India</span>
-            </a>
-          </div>
 
       </div>
     </footer>

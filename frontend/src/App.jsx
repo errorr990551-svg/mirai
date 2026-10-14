@@ -16,6 +16,7 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import PopupForm from './components/PopupForm';
 import ContactUnlockModal from './components/ContactUnlockModal';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import { ContactProvider } from './context/ContactContext';
 import ScrollToTop from './components/ScrollToTop';
 import ProductsPage from './components/ProductsPage';
@@ -148,6 +149,7 @@ function App() {
           </Routes>
           
           <Footer />
+          <FloatingWhatsApp />
         </div>
       </Router>
     </ContactProvider>
