@@ -39,7 +39,8 @@ if ($res !== TRUE) {
     exit;
 }
 
-$extracted = $zip->extractTo(__DIR__);
+$target_dir = __DIR__;
+$extracted = $zip->extractTo($target_dir);
 $zip->close();
 
 if (!$extracted) {

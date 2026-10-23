@@ -66,7 +66,7 @@ jobs:
           server: ${{ steps.ftp_config.outputs.clean_server }}
           username: ${{ steps.ftp_config.outputs.clean_user }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/
+          server-dir: ./
           local-dir: ./deploy_staging/
           dangerous-clean-slate: false
 
@@ -75,8 +75,21 @@ jobs:
           echo "Waiting 3 seconds for FTP sync..."
           sleep 3
           echo "Triggering extraction on Hostinger server..."
-          RESPONSE=$(curl -s -S -k -L -A "Mozilla/5.0 (GitHubActions CI/CD)" --retry 4 --retry-delay 3 --max-time 180 "https://miraitechnologies.net/deploy_extract.php?token=${{ steps.package.outputs.deploy_token }}")
+          URL="https://miraitechnologies.net/deploy_extract.php?token=${{ steps.package.outputs.deploy_token }}"
+          RESPONSE=$(curl -s -S -k -L -A "Mozilla/5.0 (GitHubActions CI/CD)" --retry 4 --retry-delay 3 --max-time 180 "$URL")
           echo "Server Response: $RESPONSE"
+
+          # Fallback check in case FTP user was at parent root
+          if [[ "$RESPONSE" != *"DEPLOY_SUCCESS"* ]]; then
+            echo "Checking fallback nested public_html location..."
+            FALLBACK_URL="https://miraitechnologies.net/public_html/deploy_extract.php?token=${{ steps.package.outputs.deploy_token }}"
+            FALLBACK_RESP=$(curl -s -S -k -L -A "Mozilla/5.0 (GitHubActions CI/CD)" --max-time 180 "$FALLBACK_URL")
+            echo "Fallback Response: $FALLBACK_RESP"
+            if [[ "$FALLBACK_RESP" == *"DEPLOY_SUCCESS"* ]]; then
+              RESPONSE="$FALLBACK_RESP"
+            fi
+          fi
+
           if [[ "$RESPONSE" == *"DEPLOY_SUCCESS"* ]]; then
             echo "🎉 Site deployed and extracted successfully on Hostinger!"
           else
