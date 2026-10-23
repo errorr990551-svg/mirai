@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -29,11 +30,22 @@ jobs:
         working-directory: frontend
         run: npm run build
 
+      - name: 🧹 Prepare Clean FTP Server Address
+        id: ftp_config
+        env:
+          RAW_SERVER: ${{ secrets.FTP_SERVER }}
+          RAW_USER: ${{ secrets.FTP_USERNAME }}
+        run: |
+          CLEAN_SERVER=$(echo "$RAW_SERVER" | sed -E 's|^[a-zA-Z]+://||' | sed 's|/.*||' | tr -d '[:space:]')
+          CLEAN_USER=$(echo "$RAW_USER" | tr -d '[:space:]')
+          echo "clean_server=$CLEAN_SERVER" >> $GITHUB_OUTPUT
+          echo "clean_user=$CLEAN_USER" >> $GITHUB_OUTPUT
+
       - name: 🚀 Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ steps.ftp_config.outputs.clean_server }}
+          username: ${{ steps.ftp_config.outputs.clean_user }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/
           local-dir: ./frontend/dist/
